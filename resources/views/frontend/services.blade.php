@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('title', 'Home')
+@section('title', 'Our Services')
 @section('page')
 
 
@@ -20,7 +20,7 @@
                 </li>
               </ul>
               <div class="mt-3 col-xl-12 col-lg-12 col-md-12 text-lg-center">
-                <a style="color: #fff;" href="{{ '/contact' }}" class="animate-btn-style2">All Members</a>
+                <a style="color: #fff;" href="{{ '/contact' }}" class="animate-btn-style2">We are available to assist you.</a>
               </div>
             </div>
           </div>
@@ -28,8 +28,132 @@
       </div>
     </section>
     <!-- Page Title End -->
-    <!-- Price Section Start -->
+
+
     <section class="service-inner-page-section-style1 pdt-110 pdb-80">
+        <div class="section-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="service-style1">
+                  <div class="service-inner">
+                    <i class="service-icon webextheme-icon-003-staircase"></i>
+                    <h4 class="service-title">Interior work</h4>
+                    <div class="services-count"></div>
+                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <div class="services-link">
+                      <a class="text-btn" href="service-architecture.html">Read More</a>
+                    </div>
+                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="service-style1">
+                  <div class="service-inner">
+                    <i class="service-icon webextheme-icon-armchair"></i>
+                    <h4 class="service-title">Light Decoration</h4>
+                    <div class="services-count"></div>
+                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <div class="services-link">
+                      <a class="text-btn" href="service-architecture.html">Read More</a>
+                    </div>
+                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="service-style1">
+                  <div class="service-inner">
+                    <i class="service-icon webextheme-icon-kitchen"></i>
+                    <h4 class="service-title">Kitchen Design</h4>
+                    <div class="services-count"></div>
+                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <div class="services-link">
+                      <a class="text-btn" href="service-architecture.html">Read More</a>
+                    </div>
+                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="service-style1">
+                  <div class="service-inner">
+                    <i class="service-icon webextheme-icon-architect"></i>
+                    <h4 class="service-title">Home Decoration</h4>
+                    <div class="services-count"></div>
+                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <div class="services-link">
+                      <a class="text-btn" href="service-architecture.html">Read More</a>
+                    </div>
+                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="service-style1">
+                  <div class="service-inner">
+                    <i class="service-icon webextheme-icon-003-staircase"></i>
+                    <h4 class="service-title">Interior work</h4>
+                    <div class="services-count"></div>
+                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <div class="services-link">
+                      <a class="text-btn" href="service-architecture.html">Read More</a>
+                    </div>
+                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="service-style1">
+                  <div class="service-inner">
+                    <i class="service-icon webextheme-icon-armchair"></i>
+                    <h4 class="service-title">Light Decoration</h4>
+                    <div class="services-count"></div>
+                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <div class="services-link">
+                      <a class="text-btn" href="service-architecture.html">Read More</a>
+                    </div>
+                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="service-style1">
+                  <div class="service-inner">
+                    <i class="service-icon webextheme-icon-kitchen"></i>
+                    <h4 class="service-title">Kitchen Design</h4>
+                    <div class="services-count"></div>
+                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <div class="services-link">
+                      <a class="text-btn" href="service-architecture.html">Read More</a>
+                    </div>
+                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="service-style1">
+                  <div class="service-inner">
+                    <i class="service-icon webextheme-icon-architect"></i>
+                    <h4 class="service-title">Home Decoration</h4>
+                    <div class="services-count"></div>
+                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <div class="services-link">
+                      <a class="text-btn" href="service-architecture.html">Read More</a>
+                    </div>
+                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    <!-- Price Section Start -->
+    {{-- <section class="service-inner-page-section-style1 pdt-110 pdb-80">
       <div class="section-content">
         <div class="container">
           <div class="row">
@@ -129,7 +253,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
     <!-- Price Section End -->
     <!-- Call to Action Start -->
     <section>
@@ -153,59 +277,7 @@
       </div>
     </section>
     <!-- Call to Action End -->
-    <!-- Testimonials Section Start -->
-    <section class="testimonial-style2-section pdt-105 pdb-110 bg-no-repeat bg-cover bg-pos-cb" data-background="images/bg/abs-bg7.png">
-      <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-8">
-              <div class="title-box-center">
-                <h5 class="sub-title-line-bottom text-primary-color mrb-10">Testimonials</h5>
-                <h2 class="title">What Our <span class="text-primary-color">Client's</span> Say</h2>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section-content">
-        <div class="container">
-          <div class="row">
-            <div class="owl-carousel testmonial_3col testimonial-style2 text-left">
-              <div class="testimonial-item">
-                <div class="testimonial-thumb">
-                  <img src="images/testimonials/testimonial-img1.jpg" alt="" />
-                </div>
-                <div class="testimonial-content">
-                  <p class="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit oluptatibus blanditiis amet optio fugiat nisi est repellendus iusto quis harum laboriosam nostrum unde distinctio</p>
-                  <h4 class="client-name">Aurther Maxwell</h4>
-                  <h6 class="client-designation">CEO, Apple Inc.</h6>
-                </div>
-              </div>
-              <div class="testimonial-item">
-                <div class="testimonial-thumb">
-                  <img src="images/testimonials/testimonial-img3.jpg" alt="" />
-                </div>
-                <div class="testimonial-content">
-                  <p class="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit oluptatibus blanditiis amet optio fugiat nisi est repellendus iusto quis harum laboriosam nostrum unde distinctio</p>
-                  <h4 class="client-name">Aurther Maxwell</h4>
-                  <h6 class="client-designation">CEO, Apple Inc.</h6>
-                </div>
-              </div>
-              <div class="testimonial-item">
-                <div class="testimonial-thumb">
-                  <img src="images/testimonials/testimonial-img2.jpg" alt="" />
-                </div>
-                <div class="testimonial-content">
-                  <p class="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit oluptatibus blanditiis amet optio fugiat nisi est repellendus iusto quis harum laboriosam nostrum unde distinctio</p>
-                  <h4 class="client-name">Aurther Maxwell</h4>
-                  <h6 class="client-designation">CEO, Apple Inc.</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
 
   @endsection

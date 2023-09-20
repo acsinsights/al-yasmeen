@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('title', 'Home')
+@section('title', 'Contact Us')
 @section('page')
 
 
@@ -11,13 +11,10 @@
           <div class="row">
             <div class="col-xl-12">
               <div class="breadcrumb-area">
-                <h2 class="page-title">Showcasing Our Success <br> Stories
-                </h2>
+                <h2 class="page-title">Contact Us</h2>
                 <ul class="breadcrumbs-link">
-                  <li><a href="index.html">Explore a few of our accomplished projects that <br> demonstrate our abilities.
-
-                  </a></li>
-
+                  <li><a href="index.html">Home</a></li>
+                  <li class="active">Contact Us</li>
                 </ul>
               </div>
             </div>

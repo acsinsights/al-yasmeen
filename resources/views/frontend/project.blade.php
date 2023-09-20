@@ -1,5 +1,5 @@
 @extends('frontend.layouts.app')
-@section('title', 'Home')
+@section('title', 'Featured Projects')
 @section('page')
 
 
@@ -167,28 +167,6 @@
 
       </section>
       <!-- Project Section End -->
-      <!-- Call to Action Start -->
-      <section>
-        <div class="call-to-action">
-          <div class="container">
-            <div class="call-to-action-inner">
-              <div class="call-to-action-left">
-                <div class="call-to-action-icon">
-                  <span class="webexflaticon flaticon-email-1"></span>
-                </div>
-                <div class="call-to-action-content">
-                  <p class="call-to-action-sub-title">We are ready to help you</p>
-                  <h3 class="call-to-action-title">Need Any Interior Design Help?</h3>
-                </div>
-              </div>
-              <div class="call-to-action-btn-box mrt-md-30">
-                <a href="page-contact-us.html" class="animate-btn-style4">Contact With Us</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Call to Action End -->
       <!-- Testimonials Section Start -->
       <section class="testimonial-style2-section pdt-105 pdb-110 bg-no-repeat bg-cover bg-pos-cb" data-background="{{ asset('user-assets/images/bg/abs-bg7.png') }}">
         <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">

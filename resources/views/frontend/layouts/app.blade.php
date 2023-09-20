@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title> AL Yasmeen| @yield('title') </title>
+    <title> AL Yasmeen | @yield('title') </title>
     @include('frontend.layouts.header')
 
 </head>
@@ -49,7 +49,7 @@
       </a>
       <div class="logo-box">
         <a href="{{ '/' }}" aria-label="logo image">
-          <img src="{{ asset('user-assets\images\logo-light.svg') }}" width="165" height="72" alt="logo" />
+          <img style="width:108px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
         </a>
       </div>
       <div class="mobile-nav-container"></div>

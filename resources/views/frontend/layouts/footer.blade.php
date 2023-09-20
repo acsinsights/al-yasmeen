@@ -1,5 +1,5 @@
     <!-- Footer Area Start -->
-    <footer class="footer bg-cover" data-background="images/bg/5.jpg" data-overlay-dark="98">
+    <footer class="footer bg-cover" data-background="{{ asset('user-assets/images/bg/5.jpg') }}" data-overlay-dark="98">
         <div class="footer-main-area">
           <div class="footer-section-obj1">
             <img src="images/objects/footer-obj1.png" alt="" />

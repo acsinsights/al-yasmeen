@@ -32,7 +32,7 @@
           <div class="main-menu-wrapper">
             <div class="main-menu-logo">
               <a href="{{ '/' }}">
-                <img src="{{ asset('user-assets\images\logo-dark.svg') }}" width="165" height="72" alt="logo" />
+                <img style="width:108px;"  src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
               </a>
             </div>
             <ul class="main-nav-menu">
@@ -70,9 +70,9 @@
                 <span></span>
                 <span></span>
               </a>
-              <a href="#" class="search-toggler">
+              {{-- <a href="#" class="search-toggler">
                 <i class="base-icon-search-1"></i>
-              </a>
+              </a> --}}
               <div class="header-contact-info">
                 <div class="header-contact-info-icon">
                   <i class="base-icon-011-phone-1"></i>

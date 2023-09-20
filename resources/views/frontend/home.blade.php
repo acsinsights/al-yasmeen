@@ -63,7 +63,7 @@
   </section>
   <!-- Home Slider End -->
   <!-- Feature Work Section Area Start -->
-  <section class="about-section pdt-110 pdb-105 bg-no-repeat bg-cover bg-pos-cb" data-background="images/bg/abs-bg3.png" data-overlay-light="4" style="background-image: url(&quot;images/bg/abs-bg3.png&quot;);">
+  <section class="about-section pdt-110 pdb-105 bg-no-repeat bg-cover bg-pos-cb" data-background="{{ asset('user-assets/images/bg/abs-bg3.png') }}  " data-overlay-light="4" style="background-image: url(/user-assets/images/bg/abs-bg3.png);">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-8 col-xl-6 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
@@ -175,20 +175,34 @@
           </div>
 
         </div>
+    </div>
+</div>
+</section>
 
+
+
+
+
+
+
+
+
+<section style="padding-bottom: 100px;" class="why-choose-us-style2-section bg-white bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-lg-80" data-background="{{ asset('user-assets/images/bg/16.jpg') }}" data-overlay-dark="98" style="background-image: url(&quot;images/bg/16.jpg&quot;);">
+    <div class="why-choose-us-style2-obj1">
+      <img src="{{ asset('user-assets/images/objects/why-choose-us-style2-obj1.png') }}" alt="">
+    </div>
+    <div class="why-choose-us-style2-obj2">
+      <img src="{{ asset('user-assets/images/objects/why-choose-us-style2-obj2.png') }}" alt="">
+    </div>
+    <div class="section-content">
+      <div class="container">
      <div class="row">
-          <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
-            <div class="why-choose-us-full-img shine-effect mrb-lg-60">
-              <img class="img-full" src="{{ asset('user-assets/images/about/divider-img2.jpg') }}" alt="">
-              <img class="quality-badge1 img-full js-tilt" src="{{ asset('user-assets/images/about/certificate2.png') }}" alt="">
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-12 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
-            <h5 class="side-line-left text-primary-color mrb-10">Our Values </h5>
-            <h2 class="text-white mrb-40 mrb-sm-40">Why Choose Us?</h2>
-            <p class="text-white mrb-45"> The heart of our business activities lies in its interior fit-out division, demonstrating our commitment to effective communication with both customers and colleagues</p>
-            <div class="row">
-              <div class="col-xl-6 col-lg-4 col-md-6">
+          <div class="col-md-12  col-lg-12 col-xl-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
+            <h5 style="padding-left: 1px" class=" text-center text-primary-color mrb-10">Our Values </h5>
+            <h2 class="text-white text-center mrb-40 mrb-sm-40">Why Choose Us?</h2>
+            <p class="text-white text-center mrb-45"> The heart of our business activities lies in its interior fit-out division, demonstrating our commitment to effective communication with both customers and colleagues</p>
+            <div class="row justify-content-center text-center">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="icon-box-style1 mrb-md-40">
                   <div class="featured-icon">
                     <i class="webexflaticon webextheme-icon-kitchen"></i>
@@ -199,7 +213,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-6 col-lg-4 col-md-6">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="icon-box-style1 mrb-md-40">
                   <div class="featured-icon">
                     <i class="webexflaticon webextheme-icon-architect-4"></i>
@@ -210,7 +224,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-6 col-lg-4 col-md-6">
+              <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="icon-box-style1">
                   <div class="featured-icon">
                     <i class="webexflaticon base-icon-166-money"></i>
@@ -221,7 +235,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-6 col-lg-4 col-md-6">
+            &nbsp;
+              <div style="margin-top: 30px" class="col-xl-3 col-lg-4 col-md-6">
                 <div class="icon-box-style1">
                   <div class="featured-icon">
                     <i class="webexflaticon base-icon-166-money"></i>
@@ -233,7 +248,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-12 col-lg-4 col-md-6">
+              <div  style="margin-top: 30px" class="col-xl-3  col-lg-4 col-md-6">
                 <div class="icon-box-style1">
                   <div class="featured-icon">
                     <i class="webexflaticon base-icon-166-money"></i>
