@@ -6,27 +6,43 @@
 
 
     <!-- Page Title Start -->
-    <section class="page-title-section">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="breadcrumb-area">
-                <h2 class="page-title">Showcasing Our Success <br> Stories
-                </h2>
-                <ul class="breadcrumbs-link">
-                  <li><a href="index.html">Explore a few of our accomplished projects that <br> demonstrate our abilities.
 
-                  </a></li>
-
-                </ul>
-              </div>
-            </div>
+<section class="page-title-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="breadcrumb-area">
+            <h2 class="page-title">Projects</h2>
+            <ul class="breadcrumbs-link">
+              <li><a href="{{ asset('/') }}">Home</a></li>
+              <li class="active">Projects</li>
+            </ul>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
+
       <!-- Page Title End -->
       <!-- Project Section Start -->
       <section class="pdt-110 pdb-80">
+        <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-xl-8">
+                  <div class="title-box-center">
+                      <h2 class="title"> Showcasing Our Success Stories</h2>
+                      <ul style="margin-top: 10px" class="breadcrumbs-link">
+                        <li><a style="color: black" href="index.html">Explore a few of our accomplished projects that <br> demonstrate our abilities.
+                        </a></li>
+
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="section-content">
           <div class="container">
             <div class="row">

@@ -6,24 +6,23 @@
 
 
     <!-- Page Title Start -->
+
     <section class="page-title-section">
         <div class="container">
           <div class="row">
             <div class="col-xl-12">
               <div class="breadcrumb-area">
-                <h2 class="page-title">About Us
-                </h2>
+                <h2 class="page-title">About Us</h2>
                 <ul class="breadcrumbs-link">
-                  <li><a href="index.html">Explore a few of our accomplished projects that <br> demonstrate our abilities.
-
-                  </a></li>
-
+                  <li><a href="{{ asset('/') }}">Home</a></li>
+                  <li class="active">About Us</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
+
       <!-- Page Title End -->
       <section class="about-section pdt-110 pdb-105 bg-no-repeat bg-cover bg-pos-cb" data-background="http://127.0.0.1:8084/user-assets/images/bg/abs-bg3.png  " data-overlay-light="4" style="background-image: url(/user-assets/images/bg/abs-bg3.png);">
         <div class="container">
@@ -44,7 +43,7 @@
               <h2 class="mrb-45 mrb-lg-35">Providing design <span class="text-primary-color"> beyond imagination </span> &amp; transforming spaces into works of art</h2>
               <p class="about-text-block mrb-40">Making Exceptional interiors The pursuit of excellence, inventiveness, and specialized solutions fuels our passion. Planning, design, and project management are all included in our comprehensive services. We create functional works of art in all kinds of settings, from hotels to offices, fusing creativity with utility.
             </p>
-              <div class="row mrb-30 mrb-lg-40">
+              {{-- <div class="row mrb-30 mrb-lg-40">
                 <div class="col-xl-6 col-lg-6 col-md-12">
                   <ul class="order-list primary-color">
                     <li>business applications through</li>
@@ -57,7 +56,7 @@
                     <li>catalysts for chang the Seamlessly</li>
                   </ul>
                 </div>
-              </div>
+              </div> --}}
               <div class="row no-gutters">
                 <div class="col-xl-7 col-lg-7 col-md-6 col-sm-6">
                   <div class="featured-icon-box mrb-15">
@@ -90,28 +89,141 @@
           </div>
         </div>
       </section>
-      <!-- Call to Action Start -->
-      <section>
-        <div class="call-to-action">
+
+
+
+
+      <section class="why-choose-us-style2-section bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-lg-80" data-background="images/bg/16.jpg" data-overlay-dark="98" style="background-image: url(&quot;images/bg/16.jpg&quot;);">
+        <div class="why-choose-us-style2-obj1">
+          <img src="http://127.0.0.1:8084/user-assets/images/objects/why-choose-us-style2-obj1.png" alt="">
+        </div>
+        <div class="why-choose-us-style2-obj2">
+          <img src="http://127.0.0.1:8084/user-assets/images/objects/why-choose-us-style2-obj2.png" alt="">
+        </div>
+        <div class="section-content">
           <div class="container">
-            <div class="call-to-action-inner">
-              <div class="call-to-action-left">
-                <div class="call-to-action-icon">
-                  <span class="webexflaticon flaticon-email-1"></span>
-                </div>
-                <div class="call-to-action-content">
-                  <p class="call-to-action-sub-title">We are ready to help you</p>
-                  <h3 class="call-to-action-title">Need Any Interior Design Help?</h3>
-                </div>
+            <div style="align-items: center;" class="row mrb-110">
+              <div class="col-md-12 col-lg-12 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                <h5 class="text-primary-color mrb-10"></h5>
+                <h2 class="text-white mrb-30 mrb-sm-30">
+            <span class="text-primary-color">Our Mission<br> </span>
+                </h2>
+                <p class="text-white mrb-40">Our mission is to transform, inspire, and motivate people through the use
+                    of advanced fit-out solutions in venues. By providing personalized designs
+                    and flawless execution, we aim to be the pinnacle of quality and go above
+                    and beyond for our clients. We aspire to design spaces that have a lasting
+                    influence and improve how people live, work, and interact with their surroundings. We are incessantly in search of excellence</p>
+
               </div>
-              <div class="call-to-action-btn-box mrt-md-30">
-                <a href="page-contact-us.html" class="animate-btn-style4">Contact With Us</a>
+              <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
+                <div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container" style="height: 397.5px;">
+                  <!-- The before image is first -->
+                  <img src="http://127.0.0.1:8084/user-assets/images/before-after/3.jpg" alt="img1" class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
+                  <!-- The after image is last -->
+                  <img src="http://127.0.0.1:8084/user-assets/images/before-after/4.jpg" alt="img1" class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
+                <div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div><div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div></div></div></div>
+              </div>
+            </div>
+            <div style="align-items: center;" class="row mrb-110">
+                <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
+                    <div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container" style="height: 397.5px;">
+                      <!-- The before image is first -->
+                      <img src="http://127.0.0.1:8084/user-assets/images/before-after/3.jpg" alt="img1" class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
+                      <!-- The after image is last -->
+                      <img src="http://127.0.0.1:8084/user-assets/images/before-after/4.jpg" alt="img1" class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
+                    <div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div><div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div></div></div></div>
+                  </div>
+              <div class="col-md-12 col-lg-12 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                <h5 class=" text-primary-color mrb-10"></h5>
+                <h2 class="text-white mrb-30 mrb-sm-30">
+              <span class="text-primary-color">Our Vision<br> </span>
+                </h2>
+                <p class="text-white mrb-40">To lead advancement in the field by redefining fit-out solutions with creativity and unmatched craftsmanship. We strive to establish new standards
+                    and design environments that astonish viewers and improve the quality of
+                    human interaction through our persistent dedication to innovation and
+                    client satisfaction.</p>
+
+              </div>
+
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section style="padding-bottom: 100px; background-image: url(&quot;http://127.0.0.1:8084/user-assets/images/bg/16.jpg&quot;);" class="why-choose-us-style2-section bg-white bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-lg-80" data-background="http://127.0.0.1:8084/user-assets/images/bg/16.jpg" data-overlay-light="98">
+
+        <div class="section-content">
+          <div class="container">
+         <div class="row">
+              <div class="col-md-12  col-lg-12 col-xl-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
+                <h5 style="padding-left: 1px" class=" text-center text-primary-color mrb-10"></h5>
+                <h2 class="text-dark text-center mrb-40 mrb-sm-40">Our Values </h2>
+                <p class="text-dark text-center mrb-45"> The heart of our business activities lies in its interior fit-out division, demonstrating our commitment to effective communication with both customers and colleagues</p>
+                <div class="row justify-content-center text-center">
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="icon-box-style1 mrb-md-40">
+                      <div class="featured-icon">
+                        <i class="webexflaticon webextheme-icon-kitchen"></i>
+                      </div>
+                      <div class="icon-box-content">
+                        <h4 class="text-dark icon-box-title">Excellence </h4>
+                        <p class="icon-box-desc">Committed to excellence from concept to execution, we maintain the highest standards with meticulous attention.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="icon-box-style1 mrb-md-40">
+                      <div class="featured-icon">
+                        <i class="webexflaticon webextheme-icon-architect-4"></i>
+                      </div>
+                      <div class="icon-box-content">
+                        <h4 class="text-dark icon-box-title">Innovation </h4>
+                        <p class="icon-box-desc">We relentlessly pursue innovation, pushing boundaries to create uniquely inspiring spaces.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="icon-box-style1">
+                      <div class="featured-icon">
+                        <i class="webexflaticon base-icon-166-money"></i>
+                      </div>
+                      <div class="icon-box-content">
+                        <h4 class=" text-dark icon-box-title">Customer-Centric</h4>
+                        <p class="icon-box-desc">We attentively listen and collaborate, tailoring fit-out solutions to meet your aspirations.Quickly productivate time strategic mirina magna</p>
+                      </div>
+                    </div>
+                  </div>
+                &nbsp;
+                  <div style="margin-top: 30px" class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="icon-box-style1">
+                      <div class="featured-icon">
+                        <i class="webexflaticon base-icon-166-money"></i>
+                      </div>
+                      <div class="icon-box-content">
+                        <h4 class="text-dark icon-box-title">Integrity </h4>
+                        <p class="icon-box-desc">Our bedrock is trust and integrity, fostering enduring relationships through ethical, transparent, and honest interactions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="margin-top: 30px" class="col-xl-3  col-lg-4 col-md-6">
+                    <div class="icon-box-style1">
+                      <div class="featured-icon">
+                        <i class="webexflaticon base-icon-166-money"></i>
+                      </div>
+                      <div class="icon-box-content">
+                        <h4 class="text-dark icon-box-title">Passion </h4>
+                        <p class="icon-box-desc">Driven by our passion, we tackle each project with zeal and commitment, crafting exceptional spaces that enhance lives.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- Call to Action End -->
+
       <!-- Testimonials Section Start -->
       <section class="testimonial-style2-section pdt-105 pdb-110 bg-no-repeat bg-cover bg-pos-cb" data-background="{{ asset('user-assets/images/bg/abs-bg7.png') }}">
         <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">

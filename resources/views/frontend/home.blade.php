@@ -62,8 +62,67 @@
     </div>
   </section>
   <!-- Home Slider End -->
+
+    <!-- Feature Work Section Area Start -->
+    <section class="feature-work-section pdt-110 pdb-105" data-background="images/bg/14.jpg" data-overlay-light="96">
+        <div class="section-content">
+          <div class="container">
+            <div class="row">
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <h5 class="side-line-left text-primary-color mrb-10">Our Works</h5>
+                <h2 class="mrb-45">Our Feature <span class="text-primary-color">Works</span></h2>
+                <a href="page-services-style-01.html" class="animate-btn-style2 mrb-sm-60">All Services</a>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="service-style1">
+                  <div class="service-inner">
+                    <i class="service-icon webextheme-icon-armchair"></i>
+                    <h4 class="service-title">Light Decoration</h4>
+                    <div class="services-count"></div>
+                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <div class="services-link">
+                      <a class="text-btn" href="service-architecture.html">Read More</a>
+                    </div>
+                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="service-style1">
+                  <div class="service-inner">
+                    <i class="service-icon webextheme-icon-kitchen"></i>
+                    <h4 class="service-title">Kitchen Design</h4>
+                    <div class="services-count"></div>
+                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <div class="services-link">
+                      <a class="text-btn" href="service-architecture.html">Read More</a>
+                    </div>
+                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="service-style1">
+                  <div class="service-inner">
+                    <i class="service-icon webextheme-icon-architect"></i>
+                    <h4 class="service-title">Kitchen Decoration</h4>
+                    <div class="services-count"></div>
+                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <div class="services-link">
+                      <a class="text-btn" href="service-architecture.html">Read More</a>
+                    </div>
+                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Offer Section Start -->
+
   <!-- Feature Work Section Area Start -->
-  <section class="about-section pdt-110 pdb-105 bg-no-repeat bg-cover bg-pos-cb" data-background="{{ asset('user-assets/images/bg/abs-bg3.png') }}  " data-overlay-light="4" style="background-image: url(/user-assets/images/bg/abs-bg3.png);">
+  <section class="about-section  pdb-105 bg-no-repeat bg-cover bg-pos-cb" data-background="{{ asset('user-assets/images/bg/abs-bg3.png') }}  " data-overlay-light="4" style="background-image: url(/user-assets/images/bg/abs-bg3.png);">
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-8 col-xl-6 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
@@ -82,7 +141,7 @@
           <h2 class="mrb-45 mrb-lg-35">Providing design <span class="text-primary-color"> beyond imagination </span> &amp; transforming spaces into works of art</h2>
           <p class="about-text-block mrb-40">Making Exceptional interiors The pursuit of excellence, inventiveness, and specialized solutions fuels our passion. Planning, design, and project management are all included in our comprehensive services. We create functional works of art in all kinds of settings, from hotels to offices, fusing creativity with utility.
         </p>
-          <div class="row mrb-30 mrb-lg-40">
+          {{-- <div class="row mrb-30 mrb-lg-40">
             <div class="col-xl-6 col-lg-6 col-md-12">
               <ul class="order-list primary-color">
                 <li>business applications through</li>
@@ -95,7 +154,7 @@
                 <li>catalysts for chang the Seamlessly</li>
               </ul>
             </div>
-          </div>
+          </div> --}}
           <div class="row no-gutters">
             <div class="col-xl-7 col-lg-7 col-md-6 col-sm-6">
               <div class="featured-icon-box mrb-15">
@@ -138,14 +197,18 @@
     </div>
     <div class="section-content">
       <div class="container">
-        <div class="row mrb-110">
+        <div style="align-items: center;" class="row mrb-110">
           <div class="col-md-12 col-lg-12 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
-            <h5 class="side-line-left text-primary-color mrb-10">Our Mission</h5>
+            <h5 class="text-primary-color mrb-10"></h5>
             <h2 class="text-white mrb-30 mrb-sm-30">
-              Our Company <span class="text-primary-color">Make You<br> </span>Feel More Confident
+        <span class="text-primary-color">Our Mission<br> </span>
             </h2>
-            <p class="text-white mrb-40">We inspire and transform spaces with advanced fit-out solutions, relentlessly pursuing excellence.</p>
-            <a href="page-news.html" class="animate-btn-style3">All News</a>
+            <p class="text-white mrb-40">Our mission is to transform, inspire, and motivate people through the use
+                of advanced fit-out solutions in venues. By providing personalized designs
+                and flawless execution, we aim to be the pinnacle of quality and go above
+                and beyond for our clients. We aspire to design spaces that have a lasting
+                influence and improve how people live, work, and interact with their surroundings. We are incessantly in search of excellence</p>
+
           </div>
           <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
             <div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container" style="height: 397.5px;">
@@ -156,7 +219,7 @@
             <div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div></div></div>
           </div>
         </div>
-        <div class="row mrb-110">
+        <div style="align-items: center;" class="row mrb-110">
             <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
                 <div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container" style="height: 397.5px;">
                   <!-- The before image is first -->
@@ -166,12 +229,15 @@
                 <div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div></div></div>
               </div>
           <div class="col-md-12 col-lg-12 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
-            <h5 class="side-line-left text-primary-color mrb-10">Our Vision</h5>
+            <h5 class=" text-primary-color mrb-10"></h5>
             <h2 class="text-white mrb-30 mrb-sm-30">
-              Our Company <span class="text-primary-color">Make You<br> </span>Feel More Confident
+          <span class="text-primary-color">Our Vision<br> </span>
             </h2>
-            <p class="text-white mrb-40">Redefining fit-out solutions through creativity and unmatched craftsmanship, setting new standards for innovative environments and client satisfaction.</p>
-            <a href="page-news.html" class="animate-btn-style3">All News</a>
+            <p class="text-white mrb-40">To lead advancement in the field by redefining fit-out solutions with creativity and unmatched craftsmanship. We strive to establish new standards
+                and design environments that astonish viewers and improve the quality of
+                human interaction through our persistent dedication to innovation and
+                client satisfaction.</p>
+
           </div>
 
         </div>
@@ -187,20 +253,15 @@
 
 
 
-<section style="padding-bottom: 100px;" class="why-choose-us-style2-section bg-white bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-lg-80" data-background="{{ asset('user-assets/images/bg/16.jpg') }}" data-overlay-dark="98" style="background-image: url(&quot;images/bg/16.jpg&quot;);">
-    <div class="why-choose-us-style2-obj1">
-      <img src="{{ asset('user-assets/images/objects/why-choose-us-style2-obj1.png') }}" alt="">
-    </div>
-    <div class="why-choose-us-style2-obj2">
-      <img src="{{ asset('user-assets/images/objects/why-choose-us-style2-obj2.png') }}" alt="">
-    </div>
+<section style="padding-bottom: 100px;" class="why-choose-us-style2-section bg-white bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-lg-80" data-background="{{ asset('user-assets/images/bg/16.jpg') }}" data-overlay-light="98" style="background-image: url(&quot;images/bg/16.jpg&quot;);">
+
     <div class="section-content">
       <div class="container">
      <div class="row">
           <div class="col-md-12  col-lg-12 col-xl-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
-            <h5 style="padding-left: 1px" class=" text-center text-primary-color mrb-10">Our Values </h5>
-            <h2 class="text-white text-center mrb-40 mrb-sm-40">Why Choose Us?</h2>
-            <p class="text-white text-center mrb-45"> The heart of our business activities lies in its interior fit-out division, demonstrating our commitment to effective communication with both customers and colleagues</p>
+            <h5 style="padding-left: 1px" class=" text-center text-primary-color mrb-10"></h5>
+            <h2 class="text-dark text-center mrb-40 mrb-sm-40">Our Values </h2>
+            <p class="text-dark text-center mrb-45"> The heart of our business activities lies in its interior fit-out division, demonstrating our commitment to effective communication with both customers and colleagues</p>
             <div class="row justify-content-center text-center">
               <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="icon-box-style1 mrb-md-40">
@@ -208,7 +269,7 @@
                     <i class="webexflaticon webextheme-icon-kitchen"></i>
                   </div>
                   <div class="icon-box-content">
-                    <h4 class="icon-box-title">Excellence </h4>
+                    <h4 class="text-dark icon-box-title">Excellence </h4>
                     <p class="icon-box-desc">Committed to excellence from concept to execution, we maintain the highest standards with meticulous attention.</p>
                   </div>
                 </div>
@@ -219,7 +280,7 @@
                     <i class="webexflaticon webextheme-icon-architect-4"></i>
                   </div>
                   <div class="icon-box-content">
-                    <h4 class="icon-box-title">Innovation </h4>
+                    <h4 class="text-dark icon-box-title">Innovation </h4>
                     <p class="icon-box-desc">We relentlessly pursue innovation, pushing boundaries to create uniquely inspiring spaces.</p>
                   </div>
                 </div>
@@ -230,7 +291,7 @@
                     <i class="webexflaticon base-icon-166-money"></i>
                   </div>
                   <div class="icon-box-content">
-                    <h4 class="icon-box-title">Customer-Centric</h4>
+                    <h4 class=" text-dark icon-box-title">Customer-Centric</h4>
                     <p class="icon-box-desc">We attentively listen and collaborate, tailoring fit-out solutions to meet your aspirations.Quickly productivate time strategic mirina magna</p>
                   </div>
                 </div>
@@ -242,7 +303,7 @@
                     <i class="webexflaticon base-icon-166-money"></i>
                   </div>
                   <div class="icon-box-content">
-                    <h4 class="icon-box-title">Integrity </h4>
+                    <h4 class="text-dark icon-box-title">Integrity </h4>
                     <p class="icon-box-desc">Our bedrock is trust and integrity, fostering enduring relationships through ethical, transparent, and honest interactions.
                     </p>
                   </div>
@@ -254,7 +315,7 @@
                     <i class="webexflaticon base-icon-166-money"></i>
                   </div>
                   <div class="icon-box-content">
-                    <h4 class="icon-box-title">Passion </h4>
+                    <h4 class="text-dark icon-box-title">Passion </h4>
                     <p class="icon-box-desc">Driven by our passion, we tackle each project with zeal and commitment, crafting exceptional spaces that enhance lives.</p>
                   </div>
                 </div>
@@ -270,7 +331,7 @@
 
 
   <!-- Project Section Start -->
-  <section class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-105" data-background="images/bg/abs-bg3.png" data-overlay-dark="4">
+  <section style="    padding-bottom: 100px;" class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-105" data-background="images/bg/abs-bg3.png" data-overlay-dark="4">
     <div class="section-title mrb-60 mrb-md-15 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
       <div class="container">
         <div class="row align-items-end">
@@ -283,7 +344,7 @@
               </h2>
             </div>
           </div>
-          <div class="col-xl-4 col-lg-5 col-md-12 text-lg-end">
+          <div class="col-xl-4 col-lg-5 col-md-12 text-lg-start">
             <p class="text-white mrb-0 mrb-md-40">Lorem ipsum dolor sit amet consectetur adipiscing augue curae duis pellentesque proin, quam faucibus accumsan feugiat donec aliquet</p>
           </div>
         </div>

@@ -51,9 +51,9 @@
                       <i class="base-icon-map"></i>
                     </div>
                     <div class="contact-details mrl-30">
-                      <h5 class="icon-box-title mrb-10">New York Address</h5>
-                      <p class="mrb-0">60 Broklyn Street USA</p>
-                    </div>
+                        <h5 class="icon-box-title mrb-10">Email Us</h5>
+                        <p class="mrb-0"><a style="color: #555" href="mailto:sales@alyasmeen.com">sales@alyasmeen.com</a> </p>
+                      </div>
                   </div>
                 </div>
                 <div class="col-lg-6 col-xl-6">
@@ -62,33 +62,12 @@
                       <i class="base-icon-map"></i>
                     </div>
                     <div class="contact-details mrl-30">
-                      <h5 class="icon-box-title mrb-10">Australia Address</h5>
-                      <p class="mrb-0">121 King Street, Melbourne</p>
-                    </div>
+                        <h5 class="icon-box-title mrb-10">Phone Number</h5>
+                        <p class="mrb-0"> <a style="color: #555" href="tel:+123-456-7890"> +123-456-7890</a></p>
+                      </div>
                   </div>
                 </div>
-                <div class="col-lg-6 col-xl-6">
-                  <div class="contact-block d-flex mrb-30">
-                    <div class="contact-icon">
-                      <i class="base-icon-094-email-2"></i>
-                    </div>
-                    <div class="contact-details mrl-30">
-                      <h5 class="icon-box-title mrb-10">Email Us</h5>
-                      <p class="mrb-0">example@gmail.com</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-xl-6">
-                  <div class="contact-block d-flex mrb-30">
-                    <div class="contact-icon">
-                      <i class="base-icon-phone-2"></i>
-                    </div>
-                    <div class="contact-details mrl-30">
-                      <h5 class="icon-box-title mrb-10">Phone Number</h5>
-                      <p class="mrb-0">+96 223-528-8542</p>
-                    </div>
-                  </div>
-                </div>
+            
               </div>
             </div>
           </div>

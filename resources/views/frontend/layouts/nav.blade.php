@@ -32,23 +32,22 @@
           <div class="main-menu-wrapper">
             <div class="main-menu-logo">
               <a href="{{ '/' }}">
-                <img style="width:108px;"  src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
+                <img style="width:170px;"  src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
               </a>
             </div>
             <ul class="main-nav-menu">
-              <li>
+              <li class=" {{ URL::current() == url('/') ? 'active' : '' }}">
                 <a href="{{ '/' }}">Home</a>
-
               </li>
-              <li>
+              <li class="active {{ URL::current() == url('/services') ? 'active' : '' }}">
                 <a href="{{ '/services' }}">Services</a>
 
               </li>
-              <li>
+              <li class="{{ URL::current() == url('/project') ? 'active' : '' }}">
                 <a href="{{ '/project' }}">Projects</a>
 
               </li>
-              <li>
+              <li class="{{ URL::current() == url('/about') ? 'active' : '' }}">
                 <a href="{{ '/about' }}">About Us</a>
 
               </li>

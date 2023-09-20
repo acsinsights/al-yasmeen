@@ -5,32 +5,41 @@
 
 
 
-    <!-- Page Title Start -->
-    <section class="page-title-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-xl-12">
-            <div class="breadcrumb-area">
-              <h2 class="page-title"> Transform Ordinary Places with <br> Our Fit Out Expertise!
-              </h2>
-              <ul class="breadcrumbs-link">
-                <li><a href="index.html">At  Al Yasmeen, we turn rooms into extraordinary spaces, <br> handling every aspect from planning to completion.
-                </a></li>
-
-                </li>
-              </ul>
-              <div class="mt-3 col-xl-12 col-lg-12 col-md-12 text-lg-center">
-                <a style="color: #fff;" href="{{ '/contact' }}" class="animate-btn-style2">We are available to assist you.</a>
-              </div>
-            </div>
+<section class="page-title-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="breadcrumb-area">
+            <h2 class="page-title">Services</h2>
+            <ul class="breadcrumbs-link">
+              <li><a href="{{ asset('/') }}">Home</a></li>
+              <li class="active">Services</li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Page Title End -->
+    </div>
+  </section>
 
 
-    <section class="service-inner-page-section-style1 pdt-110 pdb-80">
+    <section class="service-inner-page-section-style1 pdt-70 pdb-80">
+        <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-xl-8">
+                  <div class="title-box-center">
+                      <h2 class="title"> Transform Ordinary Places with <br> Our Fit Out Expertise!</h2>
+                      <ul style="margin-top: 10px" class="breadcrumbs-link">
+                        <li><a style="color: black" href="index.html">At  Al Yasmeen, we turn rooms into extraordinary spaces, <br> handling every aspect from planning to completion.
+                        </a></li>
+
+                        </li>
+                      </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="section-content">
           <div class="container">
             <div class="row">
@@ -266,11 +275,11 @@
               </div>
               <div class="call-to-action-content">
                 <p class="call-to-action-sub-title">We are ready to help you</p>
-                <h3 class="call-to-action-title">Need Any Interior Design Help?</h3>
+                <h3 class="call-to-action-title">We are available to assist you.</h3>
               </div>
             </div>
             <div class="call-to-action-btn-box mrt-md-30">
-              <a href="page-contact-us.html" class="animate-btn-style4">Contact With Us</a>
+              <a href="{{ '/contact' }}" class="animate-btn-style4">Contact With Us</a>
             </div>
           </div>
         </div>

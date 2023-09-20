@@ -49,14 +49,14 @@
       </a>
       <div class="logo-box">
         <a href="{{ '/' }}" aria-label="logo image">
-          <img style="width:108px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
+          <img style="width:170px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
         </a>
       </div>
       <div class="mobile-nav-container"></div>
       <ul class="list-items mobile-sidebar-contact">
         <li><span class="fa fa-map-marker-alt mrr-10 text-primary-color"></span>121 King Street, Australia</li>
-        <li><span class="fas fa-envelope mrr-10 text-primary-color"></span><a href="mailto:example@gmail.com">example@gmail.com</a></li>
-        <li><span class="fas fa-phone-alt mrr-10 text-primary-color"></span><a href="tel:123456789">+12 345 666 789</a></li>
+        <li><span class="fas fa-envelope mrr-10 text-primary-color"></span><a href="mailto:sales@alyasmeen.com">sales@alyasmeen.com</a></li>
+        <li><span class="fas fa-phone-alt mrr-10 text-primary-color"></span><a href="tel:+123-456-7890">+123-456-7890</a></li>
       </ul>
       <ul class="social-list list-primary-color">
         <li>
