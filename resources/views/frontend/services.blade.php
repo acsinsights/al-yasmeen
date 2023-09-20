@@ -1,0 +1,211 @@
+@extends('frontend.layouts.app')
+@section('title', 'Home')
+@section('page')
+
+
+
+
+    <!-- Page Title Start -->
+    <section class="page-title-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="breadcrumb-area">
+              <h2 class="page-title"> Transform Ordinary Places with <br> Our Fit Out Expertise!
+              </h2>
+              <ul class="breadcrumbs-link">
+                <li><a href="index.html">At  Al Yasmeen, we turn rooms into extraordinary spaces, <br> handling every aspect from planning to completion.
+                </a></li>
+
+                </li>
+              </ul>
+              <div class="mt-3 col-xl-12 col-lg-12 col-md-12 text-lg-center">
+                <a style="color: #fff;" href="{{ '/contact' }}" class="animate-btn-style2">All Members</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- Price Section Start -->
+    <section class="service-inner-page-section-style1 pdt-110 pdb-80">
+      <div class="section-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6">
+              <div class="service-style1">
+                <div class="service-inner">
+                  <i class="service-icon webextheme-icon-003-staircase"></i>
+                  <h4 class="service-title">Facilities</h4>
+                  <div class="services-count"></div>
+                 <ul class="service-description">
+                  <li>&#x2022; Planning / Feasibility analysis</li>
+                  <li>&#x2022; Cost Analysis</li>
+                  <li>&#x2022; Interior Design / Space Planning</li>
+                  <li>&#x2022; Budget Preparation</li>
+                  <li>&#x2022; Construction Documentation</li>
+                  <li>&#x2022; Specification</li>
+                 </ul>
+                  <div class="services-link">
+                    <a class="text-btn" href="service-architecture.html">Read More</a>
+                  </div>
+                  <div class="service-inner-obj"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6">
+              <div class="service-style1">
+                <div class="service-inner">
+                  <i class="service-icon webextheme-icon-armchair"></i>
+                  <h4 class="service-title">Design & Build</h4>
+                  <div class="services-count"></div>
+                  <ul class="service-description">
+                    <li>&#x2022; New Construction / Renovation / Remodeling
+                    </li>
+                    <li>&#x2022; Design and Engineering Team Coordination</li>
+                    <li>&#x2022;Concept / Construction Documents / Specification</li>
+                    <li>&#x2022; M.E.P services</li>
+                    <li>&#x2022; Furniture Production and Sourcing</li>
+
+                   </ul>
+                  <div class="services-link">
+                    <a class="text-btn" href="service-architecture.html">Read More</a>
+                  </div>
+                  <div class="service-inner-obj"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6">
+              <div class="service-style1">
+                <div class="service-inner">
+                  <i class="service-icon webextheme-icon-kitchen"></i>
+                  <h4 class="service-title">Project Management</h4>
+                  <div class="services-count"></div>
+             <ul class="service-description">
+                  <li>&#x2022; Value Engineering
+                  </li>
+                  <li>&#x2022; Construction Management Services</li>
+                  <li>&#x2022; Interior Design / Space Planning</li>
+                  <li>&#x2022; Cost Control</li>
+                  <li>&#x2022; Construction Documentation and Specification</li>
+
+                 </ul>
+                  <div class="services-link">
+                    <a class="text-btn" href="service-architecture.html">Read More</a>
+                  </div>
+                  <div class="service-inner-obj"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6">
+              <div class="service-style1">
+                <div class="service-inner">
+                  <i class="service-icon webextheme-icon-architect"></i>
+                  <h4 class="service-title">Sectors We Serve</h4>
+                  <div class="services-count"></div>
+             <ul class="service-description">
+                  <li>&#x2022; Hotel & Leisure
+                  </li>
+                  <li>&#x2022;Healthcare</li>
+                  <li>&#x2022;Commercial Offices
+                  </li>
+                  <li>&#x2022; Retail Interiors
+                  </li>
+                  <li>&#x2022; F & B Interiors</li>
+                  <li>&#x2022; Educational</li>
+                  <li>&#x2022; Public Sector
+                  </li>
+                 </ul>
+                  <div class="services-link">
+                    <a class="text-btn" href="service-architecture.html">Read More</a>
+                  </div>
+                  <div class="service-inner-obj"></div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Price Section End -->
+    <!-- Call to Action Start -->
+    <section>
+      <div class="call-to-action">
+        <div class="container">
+          <div class="call-to-action-inner">
+            <div class="call-to-action-left">
+              <div class="call-to-action-icon">
+                <span class="webexflaticon flaticon-email-1"></span>
+              </div>
+              <div class="call-to-action-content">
+                <p class="call-to-action-sub-title">We are ready to help you</p>
+                <h3 class="call-to-action-title">Need Any Interior Design Help?</h3>
+              </div>
+            </div>
+            <div class="call-to-action-btn-box mrt-md-30">
+              <a href="page-contact-us.html" class="animate-btn-style4">Contact With Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Call to Action End -->
+    <!-- Testimonials Section Start -->
+    <section class="testimonial-style2-section pdt-105 pdb-110 bg-no-repeat bg-cover bg-pos-cb" data-background="images/bg/abs-bg7.png">
+      <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-8">
+              <div class="title-box-center">
+                <h5 class="sub-title-line-bottom text-primary-color mrb-10">Testimonials</h5>
+                <h2 class="title">What Our <span class="text-primary-color">Client's</span> Say</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="container">
+          <div class="row">
+            <div class="owl-carousel testmonial_3col testimonial-style2 text-left">
+              <div class="testimonial-item">
+                <div class="testimonial-thumb">
+                  <img src="images/testimonials/testimonial-img1.jpg" alt="" />
+                </div>
+                <div class="testimonial-content">
+                  <p class="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit oluptatibus blanditiis amet optio fugiat nisi est repellendus iusto quis harum laboriosam nostrum unde distinctio</p>
+                  <h4 class="client-name">Aurther Maxwell</h4>
+                  <h6 class="client-designation">CEO, Apple Inc.</h6>
+                </div>
+              </div>
+              <div class="testimonial-item">
+                <div class="testimonial-thumb">
+                  <img src="images/testimonials/testimonial-img3.jpg" alt="" />
+                </div>
+                <div class="testimonial-content">
+                  <p class="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit oluptatibus blanditiis amet optio fugiat nisi est repellendus iusto quis harum laboriosam nostrum unde distinctio</p>
+                  <h4 class="client-name">Aurther Maxwell</h4>
+                  <h6 class="client-designation">CEO, Apple Inc.</h6>
+                </div>
+              </div>
+              <div class="testimonial-item">
+                <div class="testimonial-thumb">
+                  <img src="images/testimonials/testimonial-img2.jpg" alt="" />
+                </div>
+                <div class="testimonial-content">
+                  <p class="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit oluptatibus blanditiis amet optio fugiat nisi est repellendus iusto quis harum laboriosam nostrum unde distinctio</p>
+                  <h4 class="client-name">Aurther Maxwell</h4>
+                  <h6 class="client-designation">CEO, Apple Inc.</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  @endsection
