@@ -26,9 +26,6 @@ Route::get('/contact', [HomeController::class, 'contact']);
 
 
 
-
-
-
 Route::group(['prefix' => 'admin'], function () {
 
 Route::group(['middleware' => 'admin.guest'], function () {
@@ -41,10 +38,12 @@ Route::group(['middleware' => 'admin.auth'], function () {
     Route::get('/login', [DashboardController::class, 'login'])->name('admin.login');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
+    Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
 
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 });
 });

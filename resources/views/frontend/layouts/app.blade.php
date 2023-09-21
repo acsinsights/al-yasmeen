@@ -4,9 +4,7 @@
 <head>
     <title> AL Yasmeen | @yield('title') </title>
     @include('frontend.layouts.header')
-
 </head>
-
 <body>
     <!-- Preloader Start -->
     <section>

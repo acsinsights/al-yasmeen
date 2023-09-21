@@ -11,8 +11,11 @@ class DashboardController extends Controller
     {
         return view('admin.dashboard');
     }
-    protected function login()
+    public function profile()
     {
-        return view('admin.login');
+        // $users = User::all();
+        return view('admin.profile');
     }
+
+
 }
