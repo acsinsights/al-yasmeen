@@ -1,0 +1,354 @@
+/*================================================================================
+	Item Name: Vuexy - Vuejs, HTML & Laravel Admin Dashboard Template
+	Version: 2.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+.star-widget input {
+    display: none;
+}
+
+.star-widget label {
+    font-size: 20px;
+    color: #444;
+    /* padding: 10px; */
+    float: right;
+    transition: all .2s ease;
+}
+
+/* input:not(:checked)~label:hover,
+input:not(:checked)~label:hover~label {
+    color: black;
+} */
+
+input:checked~label {
+    color: gold;
+
+}
+
+#rate-1:checked~.rating-desc:before {
+    content: "Poor😋";
+}
+
+#rate-2:checked~.rating-desc:before {
+    content: "Not bad";
+}
+
+#rate-3:checked~.rating-desc:before {
+    content: "Average";
+}
+
+#rate-4:checked~.rating-desc:before {
+    content: "Good😋";
+}
+
+#rate-5:checked~.rating-desc:before {
+    content: "Excellent😋";
+}
+
+*/ .rating-desc {
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 0 10px 0;
+    text-align: center;
+    transition: all .2s ease;
+}
+
+.star-rating-bx {
+    /* background-color: #f38282; */
+    /* box-shadow: 0px 4px 40px 0px rgb(0 0 0 / 5%); */
+    border-radius: 10px;
+    /* padding: 40px; */
+}
+
+.p-card{
+    padding-left: 1px!important;
+    flex-direction: row!important;
+    gap: 20px!important;
+    background-color: #212332!important;
+}
+
+
+
+
+
+@media (max-width:576px) {
+    .star-rating-bx {
+        padding: 20px 15px;
+    }
+    .p-card{
+        padding-left: 1px!important;
+        flex-direction: column!important;
+        gap: 20px!important;
+        background-color: #212332!important;
+    }
+}
+
+.star-icon {
+    padding-bottom: 20px;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+#error-comment,
+#error-rating {
+    color: red;
+}
+
+.testimonial__rating a {
+    text-decoration: none;
+    color: #f6a400;
+}
+
+.alert-message {
+    position: absolute;
+    top: -5%;
+    right: 0;
+    z-index: 100;
+}
+
+.toggle-button-cover {
+    display: table-cell;
+    position: relative;
+    width: 200px;
+    height: 140px;
+    box-sizing: border-box;
+}
+
+.button-cover {
+    height: 100px;
+    margin: 20px;
+    /* background-color: #efefef00;
+    box-shadow: 0 10px 20px -8px #c5d6d6; */
+    border-radius: 4px;
+}
+
+/* .button-cover:before {
+    counter-increment: button-counter;
+    content: counter(button-counter);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #d7e3e3;
+    font-size: 12px;
+    line-height: 1;
+    padding: 5px;
+} */
+
+.button-cover,
+.knobs,
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.button {
+    position: relative;
+    top: 50%;
+    width: 74px;
+    height: 36px;
+    margin: -20px auto 0 auto;
+    overflow: hidden;
+}
+
+.button.r,
+.button.r .layer {
+    border-radius: 100px;
+}
+
+.button.b2 {
+    border-radius: 2px;
+}
+
+.checkbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs {
+    z-index: 2;
+}
+
+.layer {
+    width: 100%;
+    background-color: #ebf7fc;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+/* Button 3 */
+#button-3 .knobs:before {
+    content: "YES";
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    width: 40px;
+    height: 35px;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+    vertical-align: center;
+}
+
+#button-3 .checkbox:active+.knobs:before {
+    width: 46px;
+    border-radius: 100px;
+}
+
+#button-3 .checkbox:checked:active+.knobs:before {
+    margin-left: -26px;
+}
+
+#button-3 .checkbox:checked+.knobs:before {
+    content: "NO";
+    left: 42px;
+    background-color: #f44336;
+}
+
+#button-3 .checkbox:checked~.layer {
+    background-color: #fcebeb;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #7367f0;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.client-table{
+    background-color: #f3f2f7;border-top-left-radius: 1rem; border-top-right-radius: 1rem;vertical-align: top;
+    text-transform: uppercase;
+    font-size: 0.857rem;
+    letter-spacing: 0.5px;
+    color: #323234;
+    font-weight: bold;
+
+}
+
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#margin-zero {
+    display: table-cell;
+    position: relative;
+    box-sizing: border-box;
+    width: 118px !important;
+    height: 65px !important;
+}
+
+#button-cover {
+    height: 21px;
+    margin: 20px;
+    border-radius: 4px;
+}
+
+#margin-zero2 {
+    display: table-cell;
+    position: relative;
+    box-sizing: border-box;
+    width: 118px !important;
+    height: 41px !important;
+}
+
+#button-cover2 {
+    height: 0px;
+    margin: 20px;
+    border-radius: 4px;
+}
+
+
+.testi-text {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background: #d6d6d6;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4d4e50;
+    border-radius: 20px;
+}
