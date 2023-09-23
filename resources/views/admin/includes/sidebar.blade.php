@@ -29,9 +29,7 @@
                 </li>
                 <li class=" navigation-header"><span data-i18n="Posts &amp; Pages">Posts</span><i data-feather="more-horizontal"></i>
                 </li>
-
-
-       <li class="nav-item "><a class="d-flex align-items-center" href="#"><i class="fa-solid fa-table-cells"></i><span class="menu-title text-truncate" data-i18n="Email">All Posts</span></a>
+       <li class="nav-item "><a class="d-flex align-items-center" href="{{ route('admin.allprojects') }}""><i class="fa-solid fa-table-cells"></i><span class="menu-title text-truncate" data-i18n="Email">All Projects</span></a>
                 </li>
 
 

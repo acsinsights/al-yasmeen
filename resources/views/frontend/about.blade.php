@@ -24,16 +24,16 @@
       </section>
 
       <!-- Page Title End -->
-      <section class="about-section pdt-110 pdb-105 bg-no-repeat bg-cover bg-pos-cb" data-background="http://127.0.0.1:8084/user-assets/images/bg/abs-bg3.png  " data-overlay-light="4" style="background-image: url(/user-assets/images/bg/abs-bg3.png);">
+      <section class="about-section pdt-110 pdb-105 bg-no-repeat bg-cover bg-pos-cb" data-background="{{ asset('user-assets/images/bg/abs-bg3.png') }}" data-overlay-light="4" style="background-image: url(user-assets/images/bg/abs-bg3.png);">
         <div class="container">
           <div class="row">
             <div class="col-md-12 col-lg-8 col-xl-6 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
               <div class="about-image-box-style1 about-side-line mrr-60 mrr-lg-0">
                 <figure class="about-image1 js-tilt d-none d-md-block d-lg-block d-xl-block">
-                  <img class="img-full" src="http://127.0.0.1:8084/user-assets/images/about/about-sm1.jpg" alt="">
+                  <img class="img-full" src="{{ asset('user-assets/images/about/about-sm1.jpg') }}" alt="">
                 <div class="js-tilt-glare" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none;"><div class="js-tilt-glare-inner" style="position: absolute; top: 50%; left: 50%; background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%); width: 840px; height: 840px; transform: rotate(180deg) translate(-50%, -50%); transform-origin: 0% 0%; opacity: 0;"></div></div><div class="js-tilt-glare" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none;"><div class="js-tilt-glare-inner" style="position: absolute; top: 50%; left: 50%; background-image: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%); width: 840px; height: 840px; transform: rotate(180deg) translate(-50%, -50%); transform-origin: 0% 0%; opacity: 0;"></div></div></figure>
                 <figure class="about-image2">
-                  <img class="img-full" src="http://127.0.0.1:8084/user-assets/images/about/about-lg1.jpg" alt="">
+                  <img class="img-full" src="{{ asset('user-assets/images/about/about-lg1.jpg') }}" alt="">
                 </figure>
               </div>
             </div>
@@ -95,10 +95,10 @@
 
       <section class="why-choose-us-style2-section bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-lg-80" data-background="images/bg/16.jpg" data-overlay-dark="98" style="background-image: url(&quot;images/bg/16.jpg&quot;);">
         <div class="why-choose-us-style2-obj1">
-          <img src="http://127.0.0.1:8084/user-assets/images/objects/why-choose-us-style2-obj1.png" alt="">
+          <img src="{{ asset('user-assets/images/objects/why-choose-us-style2-obj1.png') }}" alt="">
         </div>
         <div class="why-choose-us-style2-obj2">
-          <img src="http://127.0.0.1:8084/user-assets/images/objects/why-choose-us-style2-obj2.png" alt="">
+          <img src="{{ asset('user-assets/images/objects/why-choose-us-style2-obj2.png') }}" alt="">
         </div>
         <div class="section-content">
           <div class="container">
@@ -118,9 +118,9 @@
               <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
                 <div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container" style="height: 397.5px;">
                   <!-- The before image is first -->
-                  <img src="http://127.0.0.1:8084/user-assets/images/before-after/3.jpg" alt="img1" class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
+                  <img src="{{ asset('user-assets/images/before-after/3.jpg') }}" alt="img1" class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
                   <!-- The after image is last -->
-                  <img src="http://127.0.0.1:8084/user-assets/images/before-after/4.jpg" alt="img1" class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
+                  <img src="{{ asset('user-assets/images/before-after/4.jpg') }}" alt="img1" class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
                 <div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div><div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div></div></div></div>
               </div>
             </div>
@@ -128,9 +128,9 @@
                 <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
                     <div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container" style="height: 397.5px;">
                       <!-- The before image is first -->
-                      <img src="http://127.0.0.1:8084/user-assets/images/before-after/3.jpg" alt="img1" class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
+                      <img src="{{ asset('user-assets/images/before-after/3.jpg') }}" alt="img1" class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
                       <!-- The after image is last -->
-                      <img src="http://127.0.0.1:8084/user-assets/images/before-after/4.jpg" alt="img1" class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
+                      <img src="{{ asset('user-assets/images/before-after/4.jpg') }}" alt="img1" class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
                     <div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div><div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div></div></div></div>
                   </div>
               <div class="col-md-12 col-lg-12 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">

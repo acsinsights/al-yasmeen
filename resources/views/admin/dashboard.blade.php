@@ -47,7 +47,7 @@
                                         </div>
                                     </div>
                                     <h2 class="font-weight-bolder mt-1"></h2>
-                                    <p class="card-text">Total Posts</p>
+                                    <p class="card-text">Total Projects</p>
                                 </div>
                                 <div id="gained-chart"></div>
                             </div>

@@ -228,7 +228,7 @@
                         </span>
                     </span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user"><a class="dropdown-item" href="{{ 'admin/profile' }}">
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user"><a class="dropdown-item" href="{{ route('admin.profile') }}">
                         <i class="mr-50" data-feather="user"></i> Profile</a>
                         <form class="dropdown-item dropdown-menu-right"  method="POST" action="{{ route('logout') }}">
                             @csrf

@@ -43,119 +43,64 @@
         <div class="section-content">
           <div class="container">
             <div class="row">
-              <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="service-style1">
-                  <div class="service-inner">
-                    <i class="service-icon webextheme-icon-003-staircase"></i>
-                    <h4 class="service-title">Interior work</h4>
-                    <div class="services-count"></div>
-                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
-                    <div class="services-link">
-                      <a class="text-btn" href="service-architecture.html">Read More</a>
+
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                  <div class="service-style1">
+                    <div class="service-inner">
+                      <i class="service-icon webextheme-icon-armchair"></i>
+                      <h4 class="service-title">Laboratory Solutions</h4>
+                      <div class="services-count"></div>
+                      <p class="service-description">We supply a range of products, including safety cabinets, ventilated equipment, modular lab furniture, and more.</p>
+                      <div class="services-link">
+                        <a class="text-btn" href="service-architecture.html">Read More</a>
+                      </div>
+                      <div class="service-inner-obj"></div>
                     </div>
-                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                  <div class="service-style1">
+                    <div class="service-inner1 service-inner ">
+                      <i class="service-icon webextheme-icon-kitchen"></i>
+                      <h4 class="service-title">Datacenter Solutions</h4>
+                      <div class="services-count"></div>
+                      <p class="service-description">Explore tailored data center solutions with construction and classification based on design and tier ratings.</p>
+                      <div class="services-link">
+                        <a class="text-btn" href="service-architecture.html">Read More</a>
+                      </div>
+                      <div class="service-inner-obj"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                  <div class="service-style1">
+                    <div class="service-inner2 service-inner">
+                      <i class="service-icon webextheme-icon-architect"></i>
+                      <h4 class="service-title">Audio-Video Solutions</h4>
+                      <div class="services-count"></div>
+                      <p class="service-description">We promise exceptional entertainment, from Dolby Atmos setups to home theater automation.</p>
+                      <div class="services-link">
+                        <a class="text-btn" href="service-architecture.html">Read More</a>
+                      </div>
+                      <div class="service-inner-obj"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6">
+                  <div class="service-style1">
+                    <div class="service-inner3 service-inner">
+                      <i class="service-icon webextheme-icon-architect"></i>
+                      <h4 class="service-title"> Fit Out Solution</h4>
+                      <div class="services-count"></div>
+                      <p class="service-description">Our Fit Out Solutions cover every step, from project planning to completion, ensuring your vision becomes reality.</p>
+                      <div class="services-link">
+                        <a class="text-btn" href="service-architecture.html">Read More</a>
+                      </div>
+                      <div class="service-inner-obj"></div>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="service-style1">
-                  <div class="service-inner">
-                    <i class="service-icon webextheme-icon-armchair"></i>
-                    <h4 class="service-title">Light Decoration</h4>
-                    <div class="services-count"></div>
-                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
-                    <div class="services-link">
-                      <a class="text-btn" href="service-architecture.html">Read More</a>
-                    </div>
-                    <div class="service-inner-obj"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="service-style1">
-                  <div class="service-inner">
-                    <i class="service-icon webextheme-icon-kitchen"></i>
-                    <h4 class="service-title">Kitchen Design</h4>
-                    <div class="services-count"></div>
-                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
-                    <div class="services-link">
-                      <a class="text-btn" href="service-architecture.html">Read More</a>
-                    </div>
-                    <div class="service-inner-obj"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="service-style1">
-                  <div class="service-inner">
-                    <i class="service-icon webextheme-icon-architect"></i>
-                    <h4 class="service-title">Home Decoration</h4>
-                    <div class="services-count"></div>
-                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
-                    <div class="services-link">
-                      <a class="text-btn" href="service-architecture.html">Read More</a>
-                    </div>
-                    <div class="service-inner-obj"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="service-style1">
-                  <div class="service-inner">
-                    <i class="service-icon webextheme-icon-003-staircase"></i>
-                    <h4 class="service-title">Interior work</h4>
-                    <div class="services-count"></div>
-                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
-                    <div class="services-link">
-                      <a class="text-btn" href="service-architecture.html">Read More</a>
-                    </div>
-                    <div class="service-inner-obj"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="service-style1">
-                  <div class="service-inner">
-                    <i class="service-icon webextheme-icon-armchair"></i>
-                    <h4 class="service-title">Light Decoration</h4>
-                    <div class="services-count"></div>
-                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
-                    <div class="services-link">
-                      <a class="text-btn" href="service-architecture.html">Read More</a>
-                    </div>
-                    <div class="service-inner-obj"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="service-style1">
-                  <div class="service-inner">
-                    <i class="service-icon webextheme-icon-kitchen"></i>
-                    <h4 class="service-title">Kitchen Design</h4>
-                    <div class="services-count"></div>
-                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
-                    <div class="services-link">
-                      <a class="text-btn" href="service-architecture.html">Read More</a>
-                    </div>
-                    <div class="service-inner-obj"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="service-style1">
-                  <div class="service-inner">
-                    <i class="service-icon webextheme-icon-architect"></i>
-                    <h4 class="service-title">Home Decoration</h4>
-                    <div class="services-count"></div>
-                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
-                    <div class="services-link">
-                      <a class="text-btn" href="service-architecture.html">Read More</a>
-                    </div>
-                    <div class="service-inner-obj"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

@@ -1,10 +1,13 @@
 <?php
-
 use App\Http\Controllers\ProfileController;
+
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
+
+use App\Http\Controllers\frontend\HomeController;
 
 use App\Http\Controllers\admin\DashboardController;
-use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\admin\AllprojectsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,12 +41,31 @@ Route::group(['middleware' => 'admin.auth'], function () {
     Route::get('/login', [DashboardController::class, 'login'])->name('admin.login');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
+
+
+
+    Route::any('/allprojects', [AllprojectsController::class, 'allprojects'])->name('admin.allprojects');
+
+     Route::post('/add-project', [AllprojectsController::class, 'addproject']);
+     Route::get('/editproject', [AllprojectsController::class, 'editproject'])->name('admin.editproject');
+     Route::get('/add-project', [AllprojectsController::class, 'create'])->name('admin.add-project');
+     Route::post('/addproject', [AllprojectsController::class, 'store'])->name('admin.addproject');
+
+     Route::delete('/deleteproject/{id}', [AllprojectsController::class, 'destroy']);
+     Route::get('/editproject/{id}', [AllprojectsController::class, 'edit']);
+     Route::delete('/delete-project-image/{id}', [AllprojectsController::class, 'deletecover']);
+     Route::any('/updateproject/{id}', [AllprojectsController::class, 'update']);
+
+
+
+
+
     Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
 
 
-    // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 });
 });

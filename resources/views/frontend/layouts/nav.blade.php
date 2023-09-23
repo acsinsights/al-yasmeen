@@ -39,7 +39,7 @@
               <li class=" {{ URL::current() == url('/') ? 'active' : '' }}">
                 <a href="{{ '/' }}">Home</a>
               </li>
-              <li class="active {{ URL::current() == url('/services') ? 'active' : '' }}">
+              <li class=" {{ URL::current() == url('/services') ? 'active' : '' }}">
                 <a href="{{ '/services' }}">Services</a>
 
               </li>

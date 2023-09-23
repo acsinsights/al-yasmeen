@@ -94,20 +94,18 @@
 
                                         <!-- general tab -->
                                         <div role="tabpanel" class="tab-pane active" id="account-vertical-general" aria-labelledby="account-pill-general" aria-expanded="true">
-                                            <form action="/admin/update-profile/{{ Auth::guard('admin')->user()->id }}" method="POST"
+                                            <form action="" method="POST"
                                                 enctype="multipart/form-data">
                                                 @csrf
                                                 @method('put')
                                             <!-- header media -->
                                             <div class="mb-20 media">
                                                 <a href="javascript:void(0);" class="mr-25">
-                                                    <img src="/profile/{{ Auth::guard('admin')->user()->profile_img }}" id="account-upload-img" class="rounded mr-50" alt="profile image" height="80" width="80">
+                                                    <img src="{{ asset('admin-assets/images/avatars/1-small.png') }}" id="account-upload-img" class="rounded mr-50" alt="profile image" height="80" width="80">
                                                 </a>
                                                 <!-- upload and reset button -->
                                                 <div class="media-body mt-75 ml-1">
-
                                                     <label for="account-upload" class="btn btn-sm btn-primary mb-75 mr-75">Change Profile Picture</label>
-
                                                     <input type="file" name="cover" id="account-upload" hidden="" accept="image/*">
                                                     {{-- <button class="btn btn-sm btn-outline-secondary mb-75">Reset</button> --}}
                                                     <p>Dimensions 85x85 px</p>
@@ -115,7 +113,6 @@
                                                 <!--/ upload and reset button -->
                                             </div>
                                             <!--/ header media -->
-
                                             <!-- form -->
                                             <form class="validate-form mt-2">
                                                 <div style="margin-top: 15px;" class="row">
@@ -123,27 +120,34 @@
                                                         <div class="form-group">
                                                             <label for="account-username">Full Name</label>
                                                             <input type="text" class="form-control" id="account-username" name="name" placeholder="Username"
-                                                            value="{{ Auth::guard('admin')->user()->name }}">
+                                                            value="{{ Auth::user()->name }}">
                                                         </div>
                                                     </div>
+                                                    {{-- <div class="col-12 col-sm-6">
+                                                        <div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg">
+                                                            <div class="max-w-xl">
+                                                                @include('profile.partials.delete-user-form')
+                                                            </div>
+                                                        </div>
+                                                    </div> --}}
                                                     <div class="col-12 col-sm-6">
                                                         <div class="form-group">
                                                             <label for="account-name">Company Name</label>
-                                                            <input type="text" class="form-control" id="account-name" name="company_name" placeholder="Name" value="{{ Auth::guard('admin')->user()->company_name }}">
+                                                            <input type="text" class="form-control" id="account-name" name="company_name" placeholder="Name" value="{{ Auth::user()->company_name }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-sm-6">
                                                         <div class="form-group">
                                                             <label for="account-e-mail">Email (for contact and smtp
                                                                 purpose)</label>
-                                                            <input type="email" class="form-control" id="account-e-mail" name="email" placeholder="Email" value=" {{ Auth::guard('admin')->user()->email }}">
+                                                            <input type="email" class="form-control" id="account-e-mail" name="email" placeholder="Email" value="{{ Auth::user()->email }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-12 col-sm-6">
                                                         <div class="form-group">
                                                             <label for="account-company">Phone No.</label>
                                                             <input type="text" class="form-control" id="account-company" name="phone" minlength="10"
-                                                            maxlength="10" placeholder="Enter Your Phone No."value=" {{ Auth::guard('admin')->user()->phone }}">
+                                                            maxlength="10" placeholder="Enter Your Phone No."value="{{ Auth::user()->phone_no }}">
                                                         </div>
                                                     </div>
                                                     {{-- <div class="col-12 mt-75">
@@ -169,7 +173,7 @@
                                             <!-- form -->
 
 
-                                                <form action="/admin/update-pass/{{ Auth::guard('admin')->user()->id }}" method="POST"
+                                                <form action="" method="POST"
                                                     enctype="multipart/form-data">
                                                     @csrf
                                                     @method('put')

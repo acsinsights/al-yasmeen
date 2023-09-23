@@ -20,7 +20,7 @@
 
             </p>
             <div class="btn-box">
-              <a href="page-contact-us.html" class="animate-btn-style3">Get in touch</a>
+              <a href="{{ '/contact' }}" class="animate-btn-style3">Get in touch</a>
             </div>
           </div>
         </div>
@@ -67,19 +67,20 @@
     <section class="feature-work-section pdt-110 pdb-105" data-background="images/bg/14.jpg" data-overlay-light="96">
         <div class="section-content">
           <div class="container">
-            <div class="row">
-              <div class="col-xl-3 col-lg-6 col-md-6">
-                <h5 class="side-line-left text-primary-color mrb-10">Our Works</h5>
+            <div class="col-xl-12 text-center col-lg-12 col-md-12">
+                {{-- <h5 class="side-line-left text-primary-color mrb-10">Our Works</h5> --}}
                 <h2 class="mrb-45">Our Feature <span class="text-primary-color">Works</span></h2>
-                <a href="page-services-style-01.html" class="animate-btn-style2 mrb-sm-60">All Services</a>
+                {{-- <a href="page-services-style-01.html" class="animate-btn-style2 mrb-sm-60">All Services</a> --}}
               </div>
+            <div class="row">
+
               <div class="col-xl-3 col-lg-6 col-md-6">
                 <div class="service-style1">
                   <div class="service-inner">
                     <i class="service-icon webextheme-icon-armchair"></i>
-                    <h4 class="service-title">Light Decoration</h4>
+                    <h4 class="service-title">Laboratory Solutions</h4>
                     <div class="services-count"></div>
-                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <p class="service-description">We supply a range of products, including safety cabinets, ventilated equipment, modular lab furniture, and more.</p>
                     <div class="services-link">
                       <a class="text-btn" href="service-architecture.html">Read More</a>
                     </div>
@@ -89,11 +90,11 @@
               </div>
               <div class="col-xl-3 col-lg-6 col-md-6">
                 <div class="service-style1">
-                  <div class="service-inner">
+                  <div class="service-inner1 service-inner">
                     <i class="service-icon webextheme-icon-kitchen"></i>
-                    <h4 class="service-title">Kitchen Design</h4>
+                    <h4 class="service-title">Datacenter Solutions</h4>
                     <div class="services-count"></div>
-                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <p class="service-description">Explore tailored data center solutions with construction and classification based on design and tier ratings.</p>
                     <div class="services-link">
                       <a class="text-btn" href="service-architecture.html">Read More</a>
                     </div>
@@ -103,11 +104,25 @@
               </div>
               <div class="col-xl-3 col-lg-6 col-md-6">
                 <div class="service-style1">
-                  <div class="service-inner">
+                  <div class="service-inner2 service-inner">
                     <i class="service-icon webextheme-icon-architect"></i>
-                    <h4 class="service-title">Kitchen Decoration</h4>
+                    <h4 class="service-title">Audio-Video Solutions</h4>
                     <div class="services-count"></div>
-                    <p class="service-description">Lorem ipsum dolor sit amet consectetur adipiscing ipsum rephen elit libero facilisis etiam ridiculus</p>
+                    <p class="service-description">We promise exceptional entertainment, from Dolby Atmos setups to home theater automation.</p>
+                    <div class="services-link">
+                      <a class="text-btn" href="service-architecture.html">Read More</a>
+                    </div>
+                    <div class="service-inner-obj"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-lg-6 col-md-6">
+                <div class="service-style1">
+                  <div class="service-inner3 service-inner">
+                    <i class="service-icon webextheme-icon-architect"></i>
+                    <h4 class="service-title"> Fit Out Solution</h4>
+                    <div class="services-count"></div>
+                    <p class="service-description">Our Fit Out Solutions cover every step, from project planning to completion, ensuring your vision becomes reality.</p>
                     <div class="services-link">
                       <a class="text-btn" href="service-architecture.html">Read More</a>
                     </div>
@@ -213,12 +228,15 @@
           <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
             <div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container" style="height: 397.5px;">
               <!-- The before image is first -->
-              <img src="{{ asset('user-assets/images/before-after/3.jpg') }}" alt="img1" class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
+              <img src="{{ asset('user-assets/images/before-after/1.jpg') }}" alt="img1" class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
               <!-- The after image is last -->
-              <img src="{{ asset('user-assets/images/before-after/4.jpg') }}" alt="img1" class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
+              <img src="{{ asset('user-assets/images/before-after/2.jpg') }}" alt="img1" class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
             <div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div></div></div>
           </div>
         </div>
+
+
+
         <div style="align-items: center;" class="row mrb-110">
             <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
                 <div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container" style="height: 397.5px;">
@@ -260,13 +278,17 @@
      <div class="row">
           <div class="col-md-12  col-lg-12 col-xl-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
             <h5 style="padding-left: 1px" class=" text-center text-primary-color mrb-10"></h5>
-            <h2 class="text-dark text-center mrb-40 mrb-sm-40">Our Values </h2>
+            <div class="col-xl-12 text-center col-lg-12 col-md-12">
+                {{-- <h5 class="side-line-left text-primary-color mrb-10">Our Works</h5> --}}
+                <h2 class="mrb-45">Our <span class="text-primary-color">Values</span></h2>
+                {{-- <a href="page-services-style-01.html" class="animate-btn-style2 mrb-sm-60">All Services</a> --}}
+              </div>
             <p class="text-dark text-center mrb-45"> The heart of our business activities lies in its interior fit-out division, demonstrating our commitment to effective communication with both customers and colleagues</p>
             <div class="row justify-content-center text-center">
               <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="icon-box-style1 mrb-md-40">
-                  <div class="featured-icon">
-                    <i class="webexflaticon webextheme-icon-kitchen"></i>
+                  <div style="margin-bottom: 1px!important;" class="featured-icon">
+                <img src="{{ asset('user-assets/images/service/excellence.svg') }}" alt="">
                   </div>
                   <div class="icon-box-content">
                     <h4 class="text-dark icon-box-title">Excellence </h4>
@@ -276,8 +298,8 @@
               </div>
               <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="icon-box-style1 mrb-md-40">
-                  <div class="featured-icon">
-                    <i class="webexflaticon webextheme-icon-architect-4"></i>
+                  <div style="margin-bottom: 1px!important;" class="featured-icon">
+                    <img src="{{ asset('user-assets/images/service/innovation.svg') }}" alt="">
                   </div>
                   <div class="icon-box-content">
                     <h4 class="text-dark icon-box-title">Innovation </h4>
@@ -287,8 +309,8 @@
               </div>
               <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="icon-box-style1">
-                  <div class="featured-icon">
-                    <i class="webexflaticon base-icon-166-money"></i>
+                  <div style="margin-bottom: 1px!important;" class="featured-icon">
+                    <img src="{{ asset('user-assets/images/service/customer-centric.svg') }}" alt="">
                   </div>
                   <div class="icon-box-content">
                     <h4 class=" text-dark icon-box-title">Customer-Centric</h4>
@@ -299,8 +321,8 @@
             &nbsp;
               <div style="margin-top: 30px" class="col-xl-3 col-lg-4 col-md-6">
                 <div class="icon-box-style1">
-                  <div class="featured-icon">
-                    <i class="webexflaticon base-icon-166-money"></i>
+                  <div style="margin-bottom: 1px!important;" class="featured-icon">
+                       <img src="{{ asset('user-assets/images/service/integrity.svg') }}" alt="">
                   </div>
                   <div class="icon-box-content">
                     <h4 class="text-dark icon-box-title">Integrity </h4>
@@ -311,8 +333,8 @@
               </div>
               <div  style="margin-top: 30px" class="col-xl-3  col-lg-4 col-md-6">
                 <div class="icon-box-style1">
-                  <div class="featured-icon">
-                    <i class="webexflaticon base-icon-166-money"></i>
+                  <div style="margin-bottom: 1px!important;" class="featured-icon">
+                       <img src="{{ asset('user-assets/images/service/passion.svg') }}" alt="">
                   </div>
                   <div class="icon-box-content">
                     <h4 class="text-dark icon-box-title">Passion </h4>
@@ -356,19 +378,25 @@
           <div class="col-xl-12">
             <div class="project-item-style1-wrapper">
               <div class="owl-carousel projects_4col">
+
+
+                @foreach ($projects as $project)
+
+
                 <div class="project-item-style1">
                   <div class="project-item-thumb">
-                    <img class="img-full" src="{{ asset('user-assets/images/projects/project_01.jpg ') }}" alt="" />
-                    <div class="project-item-link-icon">
+                    <img class="img-full" src="{{ $project->media ? asset('projects-img/' . $project->media) : '' }}" alt="" />
+                    {{-- <div class="project-item-link-icon">
                       <a href="page-project-details.html"><i class="base-icon-next"></i></a>
-                    </div>
+                    </div> --}}
                     <div class="project-item-details">
-                      <h6 class="project-item-category">Interior</h6>
-                      <h4 class="project-item-title"><a href="page-single-project-item">Interior work</a></h4>
+                      <h6 class="project-item-category">{{ $project->projecttitle }}</h6>
+                      <h4 class="project-item-title"><a href="{{ $project->hyperlinks }}">{{ $project->subservice }}</a></h4>
                     </div>
                   </div>
                 </div>
-                <div class="project-item-style1">
+                @endforeach
+              {{--    <div class="project-item-style1">
                   <div class="project-item-thumb">
                     <img class="img-full" src="{{ asset('user-assets/images/projects/project_02.jpg ') }}" alt="" />
                     <div class="project-item-link-icon">
@@ -380,7 +408,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="project-item-style1">
+
+               <div class="project-item-style1">
                   <div class="project-item-thumb">
                     <img class="img-full" src="{{ asset('user-assets/images/projects/project_03.jpg ') }}" alt="" />
                     <div class="project-item-link-icon">
@@ -427,7 +456,7 @@
                       <h4 class="project-item-title"><a href="page-project-details.html">Architecture</a></h4>
                     </div>
                   </div>
-                </div>
+                </div> --}}
               </div>
             </div>
           </div>

@@ -6935,7 +6935,7 @@ select {
   position: relative;
   display: block;
   overflow: hidden;
-  padding: 45px 45px 40px 45px;
+  padding: 45px 30px 40px 27px;
   z-index: 1;
   background: var(--bg-white);
   box-shadow: var(--box-shadow);
@@ -7039,6 +7039,72 @@ select {
   -o-transition: all 400ms ease;
   transition: all 400ms ease;
 }
+.service-style1 .service-inner1:after {
+  background-image: url(../images/bg/1.jpg);
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: calc(100% + 40px);
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0;
+  -moz-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  -webkit-transform: translateX(-30px);
+  transform: translateX(-30px);
+  -moz-transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+.service-style1 .service-inner2:after {
+  background-image: url(../images/bg/3.jpg);
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: calc(100% + 40px);
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0;
+  -moz-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  -webkit-transform: translateX(-30px);
+  transform: translateX(-30px);
+  -moz-transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+.service-style1 .service-inner3:after {
+  background-image: url(../images/bg/4.jpg);
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: calc(100% + 40px);
+  height: 100%;
+  background-size: cover;
+  z-index: -1;
+  opacity: 0;
+  -moz-transform: translateX(-30px);
+  -o-transform: translateX(-30px);
+  -ms-transform: translateX(-30px);
+  -webkit-transform: translateX(-30px);
+  transform: translateX(-30px);
+  -moz-transition: all 400ms ease;
+  -webkit-transition: all 400ms ease;
+  -ms-transition: all 400ms ease;
+  -o-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
 .service-style1 .service-inner:before {
   position: absolute;
   top: 0;
@@ -7055,6 +7121,10 @@ select {
   opacity: 0;
   z-index: 0;
 }
+
+
+
+
 .service-style1:hover .service-inner .service-inner-obj:after {
   opacity: 0;
 }
@@ -10429,6 +10499,11 @@ select {
 .border-top-bottom {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
+}
+
+
+.active a{
+    color: #b98e75!important;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string("projecttitle");
             $table->string("subservice");
-            $table->text("cover");
-            $table->text("cover");
-            $table->string('hyperlinks', 300)->after('status')->nullable();
+            $table->text("media");
+            $table->string('date', 100);
+            $table->string('hyperlinks', 300);
             $table->timestamps();
         });
     }
