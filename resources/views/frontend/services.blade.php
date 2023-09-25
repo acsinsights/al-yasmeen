@@ -5,7 +5,7 @@
 
 
 
-<section class="page-title-section">
+<section class="page-title-section1 page-title-section">
     <div class="container">
       <div class="row">
         <div class="col-xl-12">
@@ -47,7 +47,7 @@
                 <div class="col-xl-3 col-lg-6 col-md-6">
                   <div class="service-style1">
                     <div class="service-inner">
-                      <i class="service-icon webextheme-icon-armchair"></i>
+                        <img src="{{ asset('user-assets/images/service/excellence.svg') }}" class="sericon">
                       <h4 class="service-title">Laboratory Solutions</h4>
                       <div class="services-count"></div>
                       <p class="service-description">We supply a range of products, including safety cabinets, ventilated equipment, modular lab furniture, and more.</p>

@@ -6,7 +6,7 @@
 
 
     <!-- Page Title Start -->
-    <section class="page-title-section">
+    <section class="page-title-section4 page-title-section">
         <div class="container">
           <div class="row">
             <div class="col-xl-12">
@@ -68,7 +68,7 @@
                   </div>
                 </div>
 
-                
+
               </div>
             </div>
           </div>

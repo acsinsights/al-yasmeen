@@ -3657,6 +3657,46 @@ a {
   position: relative;
   padding: 105px 0;
 }
+.page-title-section1 {
+  background-position: center;
+  background-color: #f8f8f8;
+  background-image: url(../images/bg/1.jpg);
+  display: flex;
+  align-items: end;
+  min-height: 405px;
+  position: relative;
+  padding: 105px 0;
+}
+.page-title-section2 {
+  background-position: center;
+  background-color: #f8f8f8;
+  background-image: url(../images/bg/5.jpg);
+  display: flex;
+  align-items: end;
+  min-height: 405px;
+  position: relative;
+  padding: 105px 0;
+}
+.page-title-section3 {
+  background-position: center;
+  background-color: #f8f8f8;
+  background-image: url(../images/bg/3.jpg);
+  display: flex;
+  align-items: end;
+  min-height: 405px;
+  position: relative;
+  padding: 105px 0;
+}
+.page-title-section4 {
+  background-position: center;
+  background-color: #f8f8f8;
+  background-image: url(../images/bg/4.jpg);
+  display: flex;
+  align-items: end;
+  min-height: 405px;
+  position: relative;
+  padding: 105px 0;
+}
 .page-title-section .breadcrumb-area {
   text-align: center;
   z-index: 2;
@@ -10501,9 +10541,11 @@ select {
   border-bottom: 1px solid #eee;
 }
 
-
 .active a{
     color: #b98e75!important;
 }
 
+.sericon:hover{
+    color: red !important;
+}
 /*# sourceMappingURL=style.css.map */
