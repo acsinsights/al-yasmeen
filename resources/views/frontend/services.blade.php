@@ -51,9 +51,9 @@
                       <h4 class="service-title">Laboratory Solutions</h4>
                       <div class="services-count"></div>
                       <p class="service-description">We supply a range of products, including safety cabinets, ventilated equipment, modular lab furniture, and more.</p>
-                      <div class="services-link">
+                      {{-- <div class="services-link">
                         <a class="text-btn" href="service-architecture.html">Read More</a>
-                      </div>
+                      </div> --}}
                       <div class="service-inner-obj"></div>
                     </div>
                   </div>
@@ -65,9 +65,9 @@
                       <h4 class="service-title">Datacenter Solutions</h4>
                       <div class="services-count"></div>
                       <p class="service-description">Explore tailored data center solutions with construction and classification based on design and tier ratings.</p>
-                      <div class="services-link">
+                      {{-- <div class="services-link">
                         <a class="text-btn" href="service-architecture.html">Read More</a>
-                      </div>
+                      </div> --}}
                       <div class="service-inner-obj"></div>
                     </div>
                   </div>
@@ -79,9 +79,9 @@
                       <h4 class="service-title">Audio-Video Solutions</h4>
                       <div class="services-count"></div>
                       <p class="service-description">We promise exceptional entertainment, from Dolby Atmos setups to home theater automation.</p>
-                      <div class="services-link">
+                      {{-- <div class="services-link">
                         <a class="text-btn" href="service-architecture.html">Read More</a>
-                      </div>
+                      </div> --}}
                       <div class="service-inner-obj"></div>
                     </div>
                   </div>
@@ -93,9 +93,9 @@
                       <h4 class="service-title"> Fit Out Solution</h4>
                       <div class="services-count"></div>
                       <p class="service-description">Our Fit Out Solutions cover every step, from project planning to completion, ensuring your vision becomes reality.</p>
-                      <div class="services-link">
+                      {{-- <div class="services-link">
                         <a class="text-btn" href="service-architecture.html">Read More</a>
-                      </div>
+                      </div> --}}
                       <div class="service-inner-obj"></div>
                     </div>
                   </div>
