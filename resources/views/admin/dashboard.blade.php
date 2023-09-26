@@ -27,7 +27,7 @@
                                         </div>
                                     </div>
                                     <div class="text-center">
-                                        <h1 class="mb-1 text-white">Welcome </h1>
+                                        <h1 class="mb-1 text-white">Welcome {{ Auth::user()->name }}</h1>
                                         <p class="card-text m-auto w-75">
                                             You Can Now Manage Your Portfolio From Here.
                                         </p>
@@ -46,7 +46,7 @@
                                             <i data-feather="package" class="font-medium-5"></i>
                                         </div>
                                     </div>
-                                    <h2 class="font-weight-bolder mt-1"></h2>
+                                    <h2 class="font-weight-bolder mt-1">{{ $projects->count() }}</h2>
                                     <p class="card-text">Total Projects</p>
                                 </div>
                                 <div id="gained-chart"></div>
@@ -63,7 +63,7 @@
                                             <i data-feather="users" class="font-medium-5"></i>
                                         </div>
                                     </div>
-                                    <h2 class="font-weight-bolder mt-1">0</h2>
+                                    <h2 class="font-weight-bolder mt-1">0{{ $users->count() }}</h2>
                                     <p class="card-text">Total Users</p>
                                 </div>
                                 <div id="order-chart"></div>

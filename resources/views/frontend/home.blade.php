@@ -379,7 +379,6 @@
             <div class="project-item-style1-wrapper">
               <div class="owl-carousel projects_4col">
 
-
                 @foreach ($projects as $project)
 
 
@@ -396,6 +395,7 @@
                   </div>
                 </div>
                 @endforeach
+
               {{--    <div class="project-item-style1">
                   <div class="project-item-thumb">
                     <img class="img-full" src="{{ asset('user-assets/images/projects/project_02.jpg ') }}" alt="" />

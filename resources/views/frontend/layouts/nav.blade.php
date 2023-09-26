@@ -5,12 +5,9 @@
             <ul class="topbar-info">
               <li>
                 <i class="base-icon-email1"></i>
-                <a href="mailto:example@gmail.com">example@gmail.com</a>
+                <a href="mailto:sales@alyasmeen.com">sales@alyasmeen.com</a>
               </li>
-              <li>
-                <i class="base-icon-pin2"></i>
-                121 King Street, Melbourne, Australia
-              </li>
+
             </ul>
             <ul class="topbar-social">
               <li>

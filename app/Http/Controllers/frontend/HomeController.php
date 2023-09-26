@@ -9,11 +9,15 @@ use App\Models\Image;
 
 class HomeController extends Controller
 {
-    public function index()
-    {
-        $projects = Project::all();
-        return view('frontend.home')->with('projects', $projects);
-    }
+    // public function index()
+    // {
+    //     return view('frontend.home');
+    // }
+     public function index()
+     {
+         $projects = Project::all();
+         return view('frontend.home')->with('projects', $projects);
+     }
     public function services()
     {
         return view('frontend.services');

@@ -47,10 +47,10 @@
                       <a href="#"><i class="fas fa-phone-alt mrr-10"></i>+088 234 432 15565</a>
                     </div>
                     <div class="mrb-10">
-                      <a href="#"><i class="fas fa-envelope mrr-10"></i>sample@yourdomain.com</a>
+                      <a href="mailto:sales@alyasmeen.com"><i class="fas fa-envelope mrr-10"></i>sales@alyasmeen.com</a>
                     </div>
                     <div class="mrb-0">
-                      <a href="#"><i class="fas fa-globe mrr-10"></i>www.domainname.com</a>
+                      <a href="#"><i class="fas fa-globe mrr-10"></i>www.alyasmeen.com</a>
                     </div>
                   </address>
                 </div>
@@ -81,7 +81,7 @@
             <div class="row pdt-30 pdb-30 footer-copyright-area">
               <div class="col-xl-12">
                 <div class="text-center">
-                  <span>Copyright by WebexTheme © 2023. All rights reserved </span>
+                  <span>Copyright by AL Yasmeen © 2023. All rights reserved </span>
                 </div>
               </div>
             </div>

@@ -4,7 +4,6 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
 use App\Models\Project;
 use Illuminate\Support\Facades\File;
 
@@ -23,8 +22,6 @@ class AllprojectsController extends Controller
         return view('admin.add-project');
     }
 
-
-
        // ?Store function for projects
        public function store(Request $request)
        {
@@ -37,7 +34,7 @@ class AllprojectsController extends Controller
                    "projecttitle" => $request->projecttitle,
                    "subservice" => $request->subservice,
                    "media" => $imageName,
-                   "date" => $request-> $date,
+                   "date" => $request->date,
                    "hyperlinks" => $request->hyperlinks,
 
                ]);
