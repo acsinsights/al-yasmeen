@@ -20,6 +20,11 @@ class DashboardController extends Controller
          $users = User::all();
         return view('admin.profile');
     }
+    protected function inbox()
+    {
+        $forms= Message::all();
+        return view('admin.form',compact('forms'));
+    }
 
 
 }

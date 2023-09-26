@@ -159,7 +159,7 @@
                 </div>
               </div>
             </div>
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-xl-12">
                   <nav class="pagination-nav pdt-30">
                     <ul class="pagination-list">
@@ -176,7 +176,7 @@
                     </ul>
                   </nav>
                 </div>
-              </div>
+              </div> --}}
           </div>
 
         </div>
@@ -184,7 +184,7 @@
       </section>
       <!-- Project Section End -->
       <!-- Testimonials Section Start -->
-      <section class="testimonial-style2-section pdt-105 pdb-110 bg-no-repeat bg-cover bg-pos-cb" data-background="{{ asset('user-assets/images/bg/abs-bg7.png') }}">
+      <section class="testimonial-style2-section pdt-30 pdb-110 bg-no-repeat bg-cover bg-pos-cb" data-background="{{ asset('user-assets/images/bg/abs-bg7.png') }}">
         <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
           <div class="container">
             <div class="row justify-content-center">

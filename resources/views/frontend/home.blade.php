@@ -81,9 +81,9 @@
                     <h4 class="service-title">Laboratory Solutions</h4>
                     <div class="services-count"></div>
                     <p class="service-description">We supply a range of products, including safety cabinets, ventilated equipment, modular lab furniture, and more.</p>
-                    <div class="services-link">
+                    {{-- <div class="services-link">
                       <a class="text-btn" href="service-architecture.html">Read More</a>
-                    </div>
+                    </div> --}}
                     <div class="service-inner-obj"></div>
                   </div>
                 </div>
@@ -95,9 +95,9 @@
                     <h4 class="service-title">Datacenter Solutions</h4>
                     <div class="services-count"></div>
                     <p class="service-description">Explore tailored data center solutions with construction and classification based on design and tier ratings.</p>
-                    <div class="services-link">
+                    {{-- <div class="services-link">
                       <a class="text-btn" href="service-architecture.html">Read More</a>
-                    </div>
+                    </div> --}}
                     <div class="service-inner-obj"></div>
                   </div>
                 </div>
@@ -105,13 +105,13 @@
               <div class="col-xl-3 col-lg-6 col-md-6">
                 <div class="service-style1">
                   <div class="service-inner2 service-inner">
-                    <i class="service-icon webextheme-icon-architect"></i>
+                    <i class="service-icon webextheme-icon-art-and-design-1"></i>
                     <h4 class="service-title">Audio-Video Solutions</h4>
                     <div class="services-count"></div>
                     <p class="service-description">We promise exceptional entertainment, from Dolby Atmos setups to home theater automation.</p>
-                    <div class="services-link">
+                    {{-- <div class="services-link">
                       <a class="text-btn" href="service-architecture.html">Read More</a>
-                    </div>
+                    </div> --}}
                     <div class="service-inner-obj"></div>
                   </div>
                 </div>
@@ -123,9 +123,9 @@
                     <h4 class="service-title"> Fit Out Solution</h4>
                     <div class="services-count"></div>
                     <p class="service-description">Our Fit Out Solutions cover every step, from project planning to completion, ensuring your vision becomes reality.</p>
-                    <div class="services-link">
+                    {{-- <div class="services-link">
                       <a class="text-btn" href="service-architecture.html">Read More</a>
-                    </div>
+                    </div> --}}
                     <div class="service-inner-obj"></div>
                   </div>
                 </div>
@@ -353,13 +353,13 @@
 
 
   <!-- Project Section Start -->
-  <section style="    padding-bottom: 100px;" class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-105" data-background="images/bg/abs-bg3.png" data-overlay-dark="4">
+  <section style="    padding-bottom: 100px;" class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-105" >
     <div class="section-title mrb-60 mrb-md-15 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
       <div class="container">
         <div class="row align-items-end">
           <div class="col-xl-8 col-lg-7 col-md-12">
             <div class="title-box-center">
-              <h5 class="side-line-left text-primary-color mrb-10">Our Projects</h5>
+              <h5 class="side-line-left text-white mrb-10">Our Projects</h5>
               <h2 class="text-white mrb-md-40 mrb-sm-30">
                 Our Outstanding <br />
                 <span class="text-primary-color">Latest Proejcts</span> & Works

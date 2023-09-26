@@ -44,6 +44,15 @@ Route::group(['middleware' => 'admin.auth'], function () {
 
 
 
+    Route::get('/message/{id}', [DashboardController::class, 'formmessage'])->name('admin.message');
+    Route::get('/inbox', [DashboardController::class, 'inbox'])->name('admin.inbox');
+    Route::delete('/f-delete/{id}', [DashboardController::class, 'd_form']);
+    Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
+
+
+
+
+
     Route::any('/allprojects', [AllprojectsController::class, 'allprojects'])->name('admin.allprojects');
 
      Route::post('/add-project', [AllprojectsController::class, 'addproject']);

@@ -83,15 +83,15 @@
 @import url("custom-animation.css");
 @import url("kursor.css");
 :root {
-  --primary-color: #b98e75;
-  --primary-color-rgb: 185, 142, 117;
+  --primary-color: linear-gradient(45deg, #205999, #1083c6);
+  --primary-color-rgb:  linear-gradient(45deg, #205999, #1083c6);
   --primary-color2: #111;
   --primary-color2-rgb: 17, 17, 17;
   --primary-color3: #33d687;
   --primary-color3-rgb: 51, 214, 135;
   --primary-color4: #fab758;
   --primary-color4-rgb: 250, 183, 88;
-  --secondary-color: #252531;
+  --secondary-color:  linear-gradient(45deg, #205999, #1083c6);
   --secondary-color-rgb: 37, 37, 49;
   --secondary-color2: #353666;
   --secondary-color2-rgb: 37, 37, 49;
@@ -146,8 +146,8 @@
   --header2-nav-child-font-size: 15px;
   --header2-nav--child-font-weight: 500;
   --box-shadow: 6px 6px 25px 0px rgba(0, 0, 0, 0.08);
-  --text-categories: #b5b5b5;
-  --footer-text-color: #bbb7c2;
+  --text-categories: #ffffff;
+  --footer-text-color:  #000000;
 }
 
 /*========================================*/
@@ -175,11 +175,11 @@
   background-color: var(--primary-color);
 }
 
-::selection {
+/* ::selection {
   background: var(--primary-color);
   color: var(--text-white);
   text-shadow: none;
-}
+} */
 
 .img-full {
   width: 100%;
@@ -1888,8 +1888,8 @@ div[class*='kursor'].kursor--1.kursor--down {
 }
 @media (min-width: 992px) {
   .header-style-03 .main-menu .main-menu-wrapper {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 3px;
+    padding-right: 3px;
   }
 }
 .header-style-03 .main-menu .main-menu-wrapper .main-nav-menu {
@@ -2518,7 +2518,7 @@ a {
 }
 
 .footer-copyright-area {
-  background: #303441;
+  background: #fff;
 }
 
 .footer-border-top {
@@ -3732,7 +3732,7 @@ a {
   font-size: 14px;
 }
 .page-title-section .breadcrumb-area .breadcrumbs-link li.active {
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
   text-decoration: underline;
 }
 .page-title-section .breadcrumb-area .breadcrumbs-link li:last-child:after {
@@ -4131,7 +4131,7 @@ a {
   background: var(--primary-color);
 }
 .cs-btn-one.btn-primary-color {
-  background: var(--primary-color);
+ background: linear-gradient(45deg, #205999, #1083c6);;
 }
 .cs-btn-one.btn-primary-color.hover-white:hover {
   background: var(--bg-white);
@@ -7058,7 +7058,7 @@ select {
   opacity: 0.4;
 }
 .service-style1 .service-inner:after {
-  background-image: url(../images/bg/2.jpg);
+  background-image: url(../images/bg/laboratory-solution.jpg);
   position: absolute;
   content: "";
   top: 0;
@@ -7080,7 +7080,7 @@ select {
   transition: all 400ms ease;
 }
 .service-style1 .service-inner1:after {
-  background-image: url(../images/bg/1.jpg);
+  background-image: url(../images/bg/datacentar-solution.jpg);
   position: absolute;
   content: "";
   top: 0;
@@ -7102,7 +7102,7 @@ select {
   transition: all 400ms ease;
 }
 .service-style1 .service-inner2:after {
-  background-image: url(../images/bg/3.jpg);
+  background-image: url(../images/bg/audio-video-solution.jpg);
   position: absolute;
   content: "";
   top: 0;
@@ -7124,7 +7124,7 @@ select {
   transition: all 400ms ease;
 }
 .service-style1 .service-inner3:after {
-  background-image: url(../images/bg/4.jpg);
+  background-image: url(../images/bg/fitout-solution.jpg);
   position: absolute;
   content: "";
   top: 0;
@@ -10171,7 +10171,7 @@ select {
 }
 
 [data-overlay-dark]:before {
-  background: var(--secondary-color);
+    background: linear-gradient(45deg, #205999, #1083c6);
 }
 
 [data-overlay-light]:before {
@@ -10246,7 +10246,7 @@ select {
 [data-overlay-light="8"]:before,
 [data-overlay-primary-color="8"]:before,
 [data-overlay-secondary-color="8"]:before {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 [data-overlay-dark="9"]:before,
@@ -10542,7 +10542,7 @@ select {
 }
 
 .active a{
-    color: #b98e75!important;
+    color: #147abc!important;
 }
 
 .sericon:hover{

@@ -1,6 +1,7 @@
     <!-- Header Area Start -->
     <header class="header-style-03">
         <div class="header-topbar">
+            <div class="container">
           <div class="topbar-wrapper">
             <ul class="topbar-info">
               <li>
@@ -25,11 +26,15 @@
             </ul>
           </div>
         </div>
+        </div>
+
+
         <nav class="main-menu sticky-header">
+            <div class="container">
           <div class="main-menu-wrapper">
             <div class="main-menu-logo">
               <a href="{{ '/' }}">
-                <img style="width:170px;"  src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
+                <img style="width:200px;"  src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
               </a>
             </div>
             <ul class="main-nav-menu">
@@ -75,11 +80,12 @@
                 </div>
                 <div class="header-contact-info-text">
                   <p class="call-text">Call Anytime</p>
-                  <h5 class="phone-no"><a href="tel:123456789">+12 345 666 789</a></h5>
+                  <h5 class="phone-no"><a href="tel:12345666789">+12 345 666 789</a></h5>
                 </div>
               </div>
             </div>
           </div>
         </nav>
+    </div>
       </header>
       <!-- Header Area End -->
