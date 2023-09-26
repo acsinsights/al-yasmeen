@@ -15,6 +15,7 @@
               <div class="txt-loading">
                 <span data-text-preloader="A" class="letters-loading">A</span>
                 <span data-text-preloader="L" class="letters-loading">L</span>
+                <span data-text-preloader="-" class="letters-loading">-</span>
                 <span data-text-preloader="Y" class="letters-loading">Y</span>
                 <span data-text-preloader="A" class="letters-loading">A</span>
                 <span data-text-preloader="S" class="letters-loading">S</span>
