@@ -75,7 +75,7 @@
                 <i class="base-icon-search-1"></i>
               </a> --}}
               <div class="header-contact-info">
-                <div class="header-contact-info-icon">
+                <div style="    background: linear-gradient(45deg, #205999, #1083c6);" class="header-contact-info-icon">
                   <i class="base-icon-011-phone-1"></i>
                 </div>
                 <div class="header-contact-info-text">

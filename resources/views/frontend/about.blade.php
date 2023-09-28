@@ -150,20 +150,24 @@
     </div>
     </section>
 
-    <section style="padding-bottom: 100px; background-image: url(&quot;http://127.0.0.1:8084/user-assets/images/bg/16.jpg&quot;);" class="why-choose-us-style2-section bg-white bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-lg-80" data-background="http://127.0.0.1:8084/user-assets/images/bg/16.jpg" data-overlay-light="98">
+    <section style="padding-bottom: 100px;" class="why-choose-us-style2-section bg-white bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-lg-80" data-background="{{ asset('user-assets/images/bg/16.jpg') }}" data-overlay-light="98" style="background-image: url(&quot;images/bg/16.jpg&quot;);">
 
         <div class="section-content">
           <div class="container">
          <div class="row">
               <div class="col-md-12  col-lg-12 col-xl-12 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
                 <h5 style="padding-left: 1px" class=" text-center text-primary-color mrb-10"></h5>
-                <h2 class="text-dark text-center mrb-40 mrb-sm-40">Our Values </h2>
+                <div class="col-xl-12 text-center col-lg-12 col-md-12">
+                    {{-- <h5 class="side-line-left text-primary-color mrb-10">Our Works</h5> --}}
+                    <h2 class="mrb-45">Our <span class="text-primary-color">Values</span></h2>
+                    {{-- <a href="page-services-style-01.html" class="animate-btn-style2 mrb-sm-60">All Services</a> --}}
+                  </div>
                 <p class="text-dark text-center mrb-45"> The heart of our business activities lies in its interior fit-out division, demonstrating our commitment to effective communication with both customers and colleagues</p>
                 <div class="row justify-content-center text-center">
                   <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="icon-box-style1 mrb-md-40">
-                      <div class="featured-icon">
-                        <i class="webexflaticon webextheme-icon-kitchen"></i>
+                      <div style="margin-bottom: 1px!important;" class="featured-icon">
+                    <img src="{{ asset('user-assets/images/service/excellence.svg') }}" alt="">
                       </div>
                       <div class="icon-box-content">
                         <h4 class="text-dark icon-box-title">Excellence </h4>
@@ -173,8 +177,8 @@
                   </div>
                   <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="icon-box-style1 mrb-md-40">
-                      <div class="featured-icon">
-                        <i class="webexflaticon webextheme-icon-architect-4"></i>
+                      <div style="margin-bottom: 1px!important;" class="featured-icon">
+                        <img src="{{ asset('user-assets/images/service/innovation.svg') }}" alt="">
                       </div>
                       <div class="icon-box-content">
                         <h4 class="text-dark icon-box-title">Innovation </h4>
@@ -184,8 +188,8 @@
                   </div>
                   <div class="col-xl-3 col-lg-4 col-md-6">
                     <div class="icon-box-style1">
-                      <div class="featured-icon">
-                        <i class="webexflaticon base-icon-166-money"></i>
+                      <div style="margin-bottom: 1px!important;" class="featured-icon">
+                        <img src="{{ asset('user-assets/images/service/customer-centric.svg') }}" alt="">
                       </div>
                       <div class="icon-box-content">
                         <h4 class=" text-dark icon-box-title">Customer-Centric</h4>
@@ -196,8 +200,8 @@
                 &nbsp;
                   <div style="margin-top: 30px" class="col-xl-3 col-lg-4 col-md-6">
                     <div class="icon-box-style1">
-                      <div class="featured-icon">
-                        <i class="webexflaticon base-icon-166-money"></i>
+                      <div style="margin-bottom: 1px!important;" class="featured-icon">
+                           <img src="{{ asset('user-assets/images/service/integrity.svg') }}" alt="">
                       </div>
                       <div class="icon-box-content">
                         <h4 class="text-dark icon-box-title">Integrity </h4>
@@ -206,10 +210,10 @@
                       </div>
                     </div>
                   </div>
-                  <div style="margin-top: 30px" class="col-xl-3  col-lg-4 col-md-6">
+                  <div  style="margin-top: 30px" class="col-xl-3  col-lg-4 col-md-6">
                     <div class="icon-box-style1">
-                      <div class="featured-icon">
-                        <i class="webexflaticon base-icon-166-money"></i>
+                      <div style="margin-bottom: 1px!important;" class="featured-icon">
+                           <img src="{{ asset('user-assets/images/service/passion.svg') }}" alt="">
                       </div>
                       <div class="icon-box-content">
                         <h4 class="text-dark icon-box-title">Passion </h4>
@@ -285,4 +289,6 @@
       <!-- Testimonials Section End -->
 
 
-  @endsection
+
+
+      @endsection

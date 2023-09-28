@@ -81,7 +81,8 @@
             <div class="row pdt-30 pdb-30 footer-copyright-area">
               <div class="col-xl-12">
                 <div class="text-center">
-                  <span>Copyright by AL Yasmeen © 2023. All rights reserved </span>
+                  <span>Copyright ©2023 AL Yasmeen All Rights Reserved Developed by <span><a style="
+                    color: #04733b;" href="https://acsinsights.com/">ACS Insights</a></span> </span>
                 </div>
               </div>
             </div>

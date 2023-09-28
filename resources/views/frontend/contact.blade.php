@@ -99,7 +99,7 @@
                     </div>
                     <div class="col-lg-8">
                       <div class="form-group">
-                        <button type="submit" class="animate-btn-style3 btn-md mrb-lg-60">Submit Now</button>
+                        <button style="border: 1px solid black;" type="submit" class="animate-btn-style3 btn-md mrb-lg-60">Submit Now</button>
                       </div>
                     </div>
                   </div>
