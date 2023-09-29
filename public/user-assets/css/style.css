@@ -6858,6 +6858,9 @@ select {
   left: 0;
   top: 0;
   z-index: 0;
+    background: linear-gradient(360deg, #000000, #130c05);
+    opacity: 0.75;
+
 }
 .experience .experience-year {
   z-index: 1;
@@ -10552,3 +10555,39 @@ select {
     color: red !important;
 }
 /*# sourceMappingURL=style.css.map */
+
+
+
+
+
+
+
+.project-details{
+    margin-top: 20px;
+}
+
+.company-description{
+    display: flex;
+    align-items: self-end;
+}
+.project-box{
+
+    display: flex;
+    gap: 30px;
+
+}
+
+.pro-box {
+    padding: 40px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 30px;
+}
+.slider-box{
+    border-radius: 30px;
+}
+@media only screen and (min-width: 200px) and (max-width: 700px) {
+    .company-description{
+        display: flex;
+        flex-direction: column;
+    }
+}

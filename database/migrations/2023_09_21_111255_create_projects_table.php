@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string("projecttitle");
             $table->string("subservice");
             $table->longText("media");
+            $table->longText("gallery");
             $table->string('date');
             $table->string('hyperlinks');
             $table->timestamps();

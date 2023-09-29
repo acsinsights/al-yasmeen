@@ -95,11 +95,11 @@
 
       <section class="why-choose-us-style2-section bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-lg-80" data-background="images/bg/16.jpg" data-overlay-dark="98" style="background-image: url(&quot;images/bg/16.jpg&quot;);">
         <div class="why-choose-us-style2-obj1">
-          <img src="{{ asset('user-assets/images/objects/why-choose-us-style2-obj1.png') }}" alt="">
-        </div>
-        <div class="why-choose-us-style2-obj2">
-          <img src="{{ asset('user-assets/images/objects/why-choose-us-style2-obj2.png') }}" alt="">
-        </div>
+            <img src="{{ asset('user-assets/images/objects/why-choose-us-style2-obj1.png') }}" alt="">
+          </div>
+          <div class="why-choose-us-style2-obj2">
+            <img src="{{ asset('user-assets/images/objects/why-choose-us-style2-obj2.png') }}" alt="">
+          </div>
         <div class="section-content">
           <div class="container">
             <div style="align-items: center;" class="row mrb-110">
@@ -116,12 +116,12 @@
 
               </div>
               <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="800ms" style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
-                <div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container" style="height: 397.5px;">
+                <div class="twentytwenty-wrapper twentytwenty-horizontal"><div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container" style="height: 397.5px;">
                   <!-- The before image is first -->
-                  <img src="{{ asset('user-assets/images/before-after/3.jpg') }}" alt="img1" class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
+                  <img src="{{ asset('user-assets/images/before-after/1.jpg') }}" alt="img1" class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
                   <!-- The after image is last -->
-                  <img src="{{ asset('user-assets/images/before-after/4.jpg') }}" alt="img1" class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
-                <div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div><div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div></div></div></div>
+                  <img src="{{ asset('user-assets/images/before-after/2.jpg') }}" alt="img1" class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
+                <div class="twentytwenty-overlay"><div class="twentytwenty-before-label" data-content="Before"></div><div class="twentytwenty-after-label" data-content="After"></div></div><div class="twentytwenty-handle" style="left: 318px;"><span class="twentytwenty-left-arrow"></span><span class="twentytwenty-right-arrow"></span></div></div></div>
               </div>
             </div>
             <div style="align-items: center;" class="row mrb-110">

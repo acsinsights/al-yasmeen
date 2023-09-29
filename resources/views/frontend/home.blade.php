@@ -389,14 +389,14 @@
                       <a href="page-project-details.html"><i class="base-icon-next"></i></a>
                     </div> --}}
                     <div class="project-item-details">
-                      <h6 class="project-item-category">{{ $project->projecttitle }}</h6>
-                      <h4 class="project-item-title"><a href="{{ $project->hyperlinks }}">{{ $project->subservice }}</a></h4>
+                      <h6 style="color: #fff" class="project-item-category">{{ $project->projecttitle }}</h6>
+                      <h4 class="project-item-title"><a style="color: #fff!important"  href="{{ $project->hyperlinks }}">{{ $project->subservice }}</a></h4>
                     </div>
                   </div>
                 </div>
                 @endforeach
 
-              {{--    <div class="project-item-style1">
+              {{--<div class="project-item-style1">
                   <div class="project-item-thumb">
                     <img class="img-full" src="{{ asset('user-assets/images/projects/project_02.jpg ') }}" alt="" />
                     <div class="project-item-link-icon">

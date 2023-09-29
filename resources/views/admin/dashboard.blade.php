@@ -19,8 +19,10 @@
                         <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="card card-congratulations">
                                 <div class="card-body text-center">
-                                    <img src="{{ asset('admin-assets/images/elements/decore-left.png')}}" class="congratulations-img-left" alt="card-img-left">
-                                    <img src="{{ asset('admin-assets/images/elements/decore-right.png')}}" class="congratulations-img-right" alt="card-img-right">
+                                    <img src="{{ asset('admin-assets/images/elements/decore-left.png') }}"
+                                        class="congratulations-img-left" alt="card-img-left">
+                                    <img src="{{ asset('admin-assets/images/elements/decore-right.png') }}"
+                                        class="congratulations-img-right" alt="card-img-right">
                                     <div class="avatar avatar-xl bg-primary shadow">
                                         <div class="avatar-content">
                                             <i data-feather="award" class="font-large-1"></i>
@@ -180,6 +182,124 @@
                     </div> --}}
                 </section>
 
+
+                <div class="row">
+                    {{-- <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="card-header border-bottom-0">
+                                <h3 class="card-title">Sales Activity</h3>
+                            </div>
+                            <div class="card-body pt-0">
+                                <div class="chart-wrapper">
+                                    <div id="statistics"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> --}}
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    Recent Messages
+                                </h3>
+                                <div class="card-options">
+                                    <a href="{{ route('admin.inbox') }}" class="btn btn-sm btn-primary">View All</a>
+                                </div>
+                            </div>
+                            <div class="card-body p-0">
+                                <ul class="recent-activity">
+
+                                    @foreach ($forms as $form)
+                                        @if ($form->date == $mytime)
+                                            <a href="/admin/message/{{ $form->id }}">
+                                                <li class="mb-5 mt-5">
+                                                    <div>
+                                                        <span
+                                                            class="activity-timeline bg-primary text-white text-upper">{{ $form->name[0] }}</span>
+                                                        <div class="activity-timeline-content">
+                                                            <span
+                                                                class="font-weight-normal1 fs-13">{{ $form->name }}</span><span
+                                                                class="text-muted fs-12 float-end">{{ $form->email }}</span>
+                                                            <span class="activity-sub-content text-info fs-11"></span>
+
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </a>
+                                        @endif
+                                    @endforeach
+
+                                    {{-- <li class="mb-5">
+                                        <div>
+                                            <span class="activity-timeline bg-success text-white">2</span>
+                                            <div class="activity-timeline-content">
+                                                <span class="font-weight-normal1 fs-13">New Sale,</span><span
+                                                    class="text-muted fs-12 float-end">1day ago</span>
+                                                <span class="activity-sub-content text-danger fs-11">76% Profit
+                                                    earned.</span>
+                                                <p class="text-muted fs-12 mt-1">$2,546 income earned in today
+                                                    sale</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-5">
+                                        <div>
+                                            <span class="activity-timeline bg-warning text-white">3</span>
+                                            <div class="activity-timeline-content">
+                                                <span class="font-weight-normal1 fs-13">New Customers,</span><span
+                                                    class="text-muted fs-12 float-end">7.45pm</span>
+                                                <span class="activity-sub-content text-success fs-11">24% New
+                                                    customers</span>
+                                                <p class="text-muted fs-12 mt-1">1.3k new customers reached us
+                                                    this year</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-5">
+                                        <div>
+                                            <span class="activity-timeline bg-info text-white">4</span>
+                                            <div class="activity-timeline-content">
+                                                <span class="font-weight-normal1 fs-13">New Reviews,</span><span
+                                                    class="text-muted fs-12 float-end">1min ago</span>
+                                                <span class="activity-sub-content text-warning fs-11">96% Positive
+                                                    reviews.</span>
+                                                <p class="text-muted fs-12 mt-1">There are 500 plus new reviews
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-5">
+                                        <div>
+                                            <span class="activity-timeline bg-danger text-white">5</span>
+                                            <div class="activity-timeline-content">
+                                                <span class="font-weight-normal1 fs-13">Customer
+                                                    Visits,</span><span class="text-muted fs-12 float-end">today</span>
+                                                <span class="activity-sub-content text-secondary fs-11">33% target
+                                                    achieved.</span>
+                                                <p class="text-muted fs-12 mt-1">daily 20 plus new customers
+                                                    visits us</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-5 border-bottom-0">
+                                        <div>
+                                            <span class="activity-timeline bg-teal text-white">6</span>
+                                            <div class="activity-timeline-content">
+                                                <span class="font-weight-normal1 fs-13">Sale
+                                                    Consistency,</span><span class="text-muted fs-12 float-end">3
+                                                    days ago</span>
+                                                <span class="activity-sub-content text-teal fs-11">90%
+                                                    growth.</span>
+                                                <p class="text-muted fs-12 mt-1">More than 5 Sales happening every
+                                                    week</p>
+                                            </div>
+                                        </div>
+                                    </li> --}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>

@@ -98,9 +98,18 @@
 
                                             <div class="col-lg-6 col-md-12">
                                                 <div class="form-group">
-                                                    <label for="customFile">Media (Cover Image) &nbsp;<span class="text-danger">(388 × 460 px)</span></label>
+                                                    <label for="customFile">Media (Cover/Featured Image) &nbsp;<span class="text-danger">(388 × 460 px)</span></label>
                                                     <div class="custom-file">
                                                         <input type="file" name="cover" class="custom-file-input" id="customFile">
+                                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="form-group">
+                                                    <label for="customFile">Media (Gallery Images) &nbsp;<span class="text-danger">(388 × 460 px)</span></label>
+                                                    <div class="custom-file">
+                                                        <input type="file" name="cover" multiple="multiple" class="custom-file-input" id="customFile">
                                                         <label class="custom-file-label" for="customFile">Choose file</label>
                                                     </div>
                                                 </div>

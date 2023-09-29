@@ -12,6 +12,7 @@ class Message extends Model
         'id',
         'name',
         'email',
+        'date',
         'phone',
         'message',
     ];

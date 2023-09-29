@@ -26,7 +26,7 @@ Route::get('/project', [HomeController::class, 'project']);
 Route::get('/contact', [HomeController::class, 'contact']);
 
 
-
+Route::put('/submit', [HomeController::class, 'submit']);
 
 
 Route::group(['prefix' => 'admin'], function () {
@@ -60,7 +60,7 @@ Route::group(['middleware' => 'admin.auth'], function () {
      Route::get('/add-project', [AllprojectsController::class, 'create'])->name('admin.add-project');
      Route::post('/addproject', [AllprojectsController::class, 'store'])->name('admin.addproject');
 
-     Route::delete('/deleteproject/{id}', [AllprojectsController::class, 'destroy']);
+     Route::any('/deleteproject/{id}', [AllprojectsController::class, 'destroy']);
      Route::get('/editproject/{id}', [AllprojectsController::class, 'edit']);
      Route::delete('/delete-project-image/{id}', [AllprojectsController::class, 'deletecover']);
      Route::any('/updateproject/{id}', [AllprojectsController::class, 'update']);
@@ -71,11 +71,9 @@ Route::group(['middleware' => 'admin.auth'], function () {
 
     Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
 
-
     // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
 });
 });
 require __DIR__.'/auth.php';

@@ -63,7 +63,8 @@
                   <li><a href="page-news-details.html">News Details</a></li>
                 </ul>
               </li> --}}
-              <li><a href="{{ '/contact' }}">Contact</a></li>
+              <li class="{{ URL::current() == url('/contact') ? 'active' : '' }}">
+                <a href="{{ '/contact' }}">Contact</a></li>
             </ul>
             <div class="main-menu-right">
               <a href="#" class="mobile-nav-toggler">

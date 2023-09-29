@@ -7,7 +7,7 @@
                   {{-- <img src="{{ asset('user-assets/img/logo/adfj.svg') }}" class="header-brand-img desktop-lgo"
                     alt="AdFj Studios" style="margin-right: 70px;"> --}}
                     <a href="{{ '/' }}" aria-label="logo image">
-                        <img style="width:120px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
+                        <img style="width:180px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
                       </a>
 
                         {{-- <h2 class="brand-text">ADFJ</h2> --}}
