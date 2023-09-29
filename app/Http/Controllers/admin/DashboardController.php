@@ -25,6 +25,12 @@ class DashboardController extends Controller
         $mytime = Carbon::now()->format('Y-m-d');
         return view('admin.dashboard', compact('projects', 'users','forms','mytime'));
     }
+    public function testimonial()
+    {
+        return view('admin.alltestimonial');
+    }
+
+    
     public function profile()
     {
          $users = User::all();

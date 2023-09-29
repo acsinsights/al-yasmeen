@@ -1,7 +1,9 @@
 @extends('admin.includes.app')
-@section('title', 'Add Projects')
+@section('title', 'Dashboard')
 @section('content')
 
+{{-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet"> --}}
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <!-- BEGIN: Content-->
     <div class="app-content content ">
         <div class="content-overlay"></div>
@@ -11,12 +13,12 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">Add Project</h2>
+                            <h2 class="content-header-title float-left mb-0">Edit Testimonial Here</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="index.html">Dashboard</a>
+                                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item"><a href="#">Add Project</a>
+                                    <li class="breadcrumb-item"><a href="#">Edit Testimonial Here</a>
                                     </li>
 
                                 </ol>
@@ -24,6 +26,7 @@
                         </div>
                     </div>
                 </div>
+
                 {{-- <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
                     <div class="form-group breadcrumb-right">
                         <div class="dropdown">
@@ -44,76 +47,61 @@
                                 </div> --}}
 
                                 <div class="card-body">
-                                    <form class="form" action="/admin/addproject" method="post" enctype="multipart/form-data">
+                                    <form class="form" action="/admin/updatetestimonial/{{ $testimonials->id }}" method="post"
+                                        enctype="multipart/form-data">
                                         @csrf
+                                        @method('put')
                                         <div class="row">
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group">
-                                                    <label for="first-name-column">Project Title</label>
-                                                    <input type="text" id="first-name-column" class="form-control" placeholder="write your project title here" name="projecttitle" required>
+                                                    <label for="first-name-column">Customer Name</label>
+                                                    <input type="text"  id="first-name-column" class="form-control" value="{{ $testimonials->custname }}" placeholder="name" name="name" >
                                                 </div>
                                             </div>
 
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group">
-                                                    <label for="country-floating">Sub Service</label>
-                                                    <input type="text" id="country-floating" class="form-control" name="subservice" placeholder="subservice" required>
+                                                    <label for="first-name-column">Customer Designation</label>
+                                                    <input type="text"  id="first-name-column" class="form-control" value="{{ $testimonials->custdesignation }}" placeholder="Customer Designation" name="custdesignation" >
                                                 </div>
                                             </div>
-
-                                            <div class="col-md-6 col-12">
-                                                <div class="form-group">
-                                                    <label for="country-floating">Hyperlink(optional)</label>
-                                                    <input type="url" id="country-floating" class="form-control" name="hyperlinks" placeholder="put hyperlink here">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-6 col-12">
-                                                <div class="form-group">
-                                                    <label for="company-column">Date</label>
-                                                    <input type="date" id="company-column" class="form-control" name="date" placeholder="Date" required>
-                                                </div>
-                                            </div>
-
-                                            {{--
-                                            <label class="m-2">Media (Cover Image) &nbsp;<span class="text-danger">(570 × 600
-                                                px)</span></label>
-                                        <input type="file" id="input-file-now-custom-3" class="form-control" name="cover"
-                                            required> --}}
-
-
-                                            {{-- <div class="media">
-
-
-                                                <div class="media-body mt-75 ml-1">
-                                                    <label>Media (Cover Image) &nbsp;<span class="text-danger">(570 × 600
-                                                        px)</span></label> <br>
-
-                                                    <input type="file" id="account-upload" name="cover"  accept="image/*">
-                                           <br>
-                                                    <p>Allowed JPG, GIF or PNG. Max size of 800kB</p>
-                                                </div>
-
-                                            </div> --}}
-
                                             <div class="col-lg-6 col-md-12">
                                                 <div class="form-group">
-                                                    <label for="customFile">Media (Cover/Featured Image) &nbsp;<span class="text-danger">(388 × 460 px)</span></label>
+                                                    <label for="customFile">Media (Cover Image) &nbsp;<span class="text-danger">(570 × 600
+                                                        px)</span></label>
                                                     <div class="custom-file">
                                                         <input type="file" name="cover" class="custom-file-input" id="customFile">
                                                         <label class="custom-file-label" for="customFile">Choose file</label>
                                                     </div>
                                                 </div>
                                             </div>
-                                           <div class="col-lg-6 col-md-12">
+                                            <div class="col-md-6 col-12">
                                                 <div class="form-group">
-                                                    <label for="customFile">Media (Gallery Images) &nbsp;<span class="text-danger">(388 × 460 px)</span></label>
-                                                    <div class="custom-file">
-                                                        <input type="file" name="gallery" multiple="multiple" class="custom-file-input" id="customFile">
-                                                        <label class="custom-file-label" for="customFile">Choose file</label>
-                                                    </div>
+                                                    <label for="first-name-column">Date</label>
+                                                    <input type="date"  id="first-name-column" class="form-control" value="{{ $testimonials->date }}" placeholder="Customer Designation" name="date" >
                                                 </div>
-                                            </div> 
+                                            </div>
+                                            <div class="col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label for="first-name-column">Customer Company Name</label>
+                                                    <input type="text"  id="first-name-column" class="form-control" value="{{ $testimonials->custcompany }}" placeholder="Customer Company name" name="custcompany" >
+                                                </div>
+                                            </div>
+
+                                          <div class="col-md-6 col-12">
+                                            <div class="form-group">
+                                                <label for="first-name-column">Customer Review</label>
+                                                <textarea class="form-control" name="review" maxlength="120" id="" cols="30" rows="3">{{ $testimonials->custreview }}</textarea>
+                                                <div class="text-right" id="count">
+                                                    <span id="current_count">0</span>
+                                                    <span id="maximum_count">/ 120</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+
 
                                             <div class="col-12">
                                                 <button type="submit" class="btn btn-primary mr-1">Submit</button>
@@ -132,5 +120,13 @@
         </div>
     </div>
     <!-- END: Content-->
-
+    <script type="text/javascript">
+        $('textarea').keyup(function() {
+            var characterCount = $(this).val().length,
+                current_count = $('#current_count'),
+                maximum_count = $('#maximum_count'),
+                count = $('#count');
+                current_count.text(characterCount);
+        });
+        </script>
 @endsection

@@ -51,49 +51,24 @@
 
                         <div class="project-box">
                             <div class="col-xl-6 pro-box col-lg-4 col-md-6">
-                            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-indicators">
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+
+                                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
                                         class="active" aria-current="true" aria-label="Slide 1"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
                                         aria-label="Slide 2"></button>
-                                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
                                         aria-label="Slide 3"></button>
-                                </div>
-                                <div class="carousel-inner slider-box">
+                                    </div>
+                                    <div class="carousel-inner slider-box">
+                                    @foreach ($projects as $project)
                                     <div class="carousel-item  active">
-                                        <img src="{{ asset('user-assets/images/about/about-sm1.jpg') }}"
+                                        <img src="{{ $project->media ? asset('projects-img/'    . $project->media) : '' }}"
                                             class="d-block w-100"
                                             alt="">
-                                        {{-- <div class="carousel-caption d-none d-md-block">
-                                            <h5>First slide label</h5>
-                                            <p>Some representative placeholder content for the first slide.</p>
-                                        </div> --}}
                                     </div>
-
-
-                                    
-                                    <div class="carousel-item">
-                                        <img src="{{ asset('user-assets/images/about/about-sm1.jpg') }}"
-                                            class="d-block w-100"
-                                            alt="">
-                                        {{-- <div class="carousel-caption d-none d-md-block">
-                                            <h5>Second slide label</h5>
-                                            <p>Some representative placeholder content for the second slide.</p>
-                                        </div> --}}
-                                    </div>
-
-
-
-                                    <div class="carousel-item">
-                                        <img src="{{ asset('user-assets/images/about/about-sm1.jpg') }}"
-                                            class="d-block w-100"
-                                            alt="">
-                                        {{-- <div class="carousel-caption d-none d-md-block">
-                                            <h5>Third slide label</h5 <p>Some representative placeholder content for the
-                                            third slide.</p>
-                                        </div> --}}
-                                    </div>
+                                    @endforeach
                                 </div>
                                 <button class="carousel-control-prev" type="button"
                                     data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -106,9 +81,7 @@
                                     <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
-
                             <div class="project-details">
-
                                 <div class="company-details">
                                     <h4>Advanced Technology Company (ATC) K.S.C.P</h4>
                                     <h3>Ministry of Water – Fume Hood &
@@ -243,7 +216,7 @@
 
     <!-- Project Section End -->
     <!-- Testimonials Section Start -->
-    <section class="testimonial-style2-section pdt-30 pdb-110 bg-no-repeat bg-cover bg-pos-cb"
+    <section class="testimonial-style2-section pdt-40 pdb-110 bg-no-repeat bg-cover bg-pos-cb"
         data-background="{{ asset('user-assets/images/bg/abs-bg7.png') }}">
         <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
             <div class="container">
@@ -261,50 +234,26 @@
             <div class="container">
                 <div class="row">
                     <div class="owl-carousel testmonial_3col testimonial-style2 text-left">
-                        <div class="testimonial-item">
-                            <div class="testimonial-thumb">
-                                <img src="{{ asset('user-assets/images/testimonials/testimonial-img1.jpg') }}"
-                                    alt="" />
+                        @foreach ($testimonials as $tt)
+                            <div class="testimonial-item">
+                                <div class="testimonial-thumb">
+                                    <img src="/testiimages/{{ $tt->custimg }}"
+                                        alt="" />
+                                </div>
+                                <div class="testimonial-content">
+                                    <p class="comments"> {{ $tt->custreview }}</p>
+                                    <h4 class="client-name">{{ $tt->custname }}</h4>
+                                    <h6 class="client-designation">{{ $tt->custdesignation }}, {{ $tt->custcompany }}</h6>
+                                </div>
                             </div>
-                            <div class="testimonial-content">
-                                <p class="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit oluptatibus
-                                    blanditiis amet optio fugiat nisi est repellendus iusto quis harum laboriosam nostrum
-                                    unde distinctio</p>
-                                <h4 class="client-name">Aurther Maxwell</h4>
-                                <h6 class="client-designation">CEO, Apple Inc.</h6>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <div class="testimonial-thumb">
-                                <img src="{{ asset('user-assets/images/testimonials/testimonial-img3.jpg') }}"
-                                    alt="" />
-                            </div>
-                            <div class="testimonial-content">
-                                <p class="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit oluptatibus
-                                    blanditiis amet optio fugiat nisi est repellendus iusto quis harum laboriosam nostrum
-                                    unde distinctio</p>
-                                <h4 class="client-name">Aurther Maxwell</h4>
-                                <h6 class="client-designation">CEO, Apple Inc.</h6>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <div class="testimonial-thumb">
-                                <img src="{{ asset('user-assets/images/testimonials/testimonial-img2.jpg') }}"
-                                    alt="" />
-                            </div>
-                            <div class="testimonial-content">
-                                <p class="comments">Lorem ipsum dolor sit amet, consectetur adipisicing elit oluptatibus
-                                    blanditiis amet optio fugiat nisi est repellendus iusto quis harum laboriosam nostrum
-                                    unde distinctio</p>
-                                <h4 class="client-name">Aurther Maxwell</h4>
-                                <h6 class="client-designation">CEO, Apple Inc.</h6>
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
 
 

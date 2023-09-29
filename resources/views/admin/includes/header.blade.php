@@ -216,9 +216,9 @@
                 </li> --}}
                 <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="javascript:void(0);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="user-nav d-sm-flex d-none">
-                        {{-- <span class="user-name font-weight-bolder"></span>{{ Auth::guard('admin')->user()->name }}<span class="user-status">Admin</span></div> --}}
+                       <span class="user-name font-weight-bolder"></span>{{ Auth::user()->name }}<span class="user-status">Admin</span></div>
 
-                        {{-- <img src="/profile/{{ Auth::guard('admin')->user()->profile_img }}" id="account-upload-img" class="rounded mr-50" alt="profile image" height="80" width="80"> --}}
+                         {{-- <img src="/profile/{{ Auth::guard('admin')->user()->profile_img }}" id="account-upload-img" class="rounded mr-50" alt="profile image" height="80" width="80"> --}}
                         {{-- <img src="" id="account-upload-img" class="rounded mr-50" alt="profile image" height="80" width="80"> --}}
 
                         <span class="avatar"><img class="round" src="{{ asset('admin-assets/images/avatars/6-small.png') }}" alt="avatar" height="40" width="40">

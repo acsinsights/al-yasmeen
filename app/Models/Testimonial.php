@@ -4,18 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Image;
 
-class Project extends Model
+class Testimonial extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'projecttitle',
-        'subservice',
+        'custname',
+        'custdesignation',
+        'custreview',
+        'custimg',
+        'custcompany',
         'date',
-        'media',
-       'gallery',
-        'hyperlinks',
+        'created_at',
     ];
     public function images()
     {

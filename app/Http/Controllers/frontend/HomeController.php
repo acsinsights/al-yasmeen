@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\Image;
 use App\Models\Message;
-
+use App\Models\Testimonial;
 use Carbon\Carbon;
 
 use Illuminate\Support\Facades\File;
@@ -29,11 +29,14 @@ class HomeController extends Controller
     }
     public function project()
     {
-        return view('frontend.project');
+        $projects = Project::all();
+        $testimonials = Testimonial::all();
+        return view('frontend.project' ,compact('projects','testimonials'));
     }
     public function about()
     {
-        return view('frontend.about');
+        $testimonials = Testimonial::all();
+        return view('frontend.about' ,compact('testimonials'));
     }
     public function contact()
     {

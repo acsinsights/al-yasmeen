@@ -8,6 +8,7 @@ use App\Http\Controllers\frontend\HomeController;
 
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\AllprojectsController;
+use App\Http\Controllers\admin\TestimonialController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -58,7 +59,10 @@ Route::group(['middleware' => 'admin.auth'], function () {
      Route::post('/add-project', [AllprojectsController::class, 'addproject']);
      Route::get('/editproject', [AllprojectsController::class, 'editproject'])->name('admin.editproject');
      Route::get('/add-project', [AllprojectsController::class, 'create'])->name('admin.add-project');
+
      Route::post('/addproject', [AllprojectsController::class, 'store'])->name('admin.addproject');
+
+    Route::post('/addproject', [AllprojectsController::class, 'multiplestore'])->name('admin.addproject');
 
      Route::any('/deleteproject/{id}', [AllprojectsController::class, 'destroy']);
      Route::get('/editproject/{id}', [AllprojectsController::class, 'edit']);
@@ -70,6 +74,45 @@ Route::group(['middleware' => 'admin.auth'], function () {
 
 
     Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
+
+
+
+
+
+
+
+
+// testimonial start
+
+
+
+Route::get('/alltestimonial', [TestimonialController::class, 'index'])->name('admin.alltestimonial');
+Route::get('/addtestimonial', [TestimonialController::class, 'create'])->name('admin.addtestimonial');
+Route::post('/add-testimonial', [TestimonialController::class, 'store'])->name('admin.add-testimonial');
+
+
+Route::delete('/deletetestimonial/{id}', [TestimonialController::class, 'destroy']);
+Route::get('/edittestimonial/{id}', [TestimonialController::class, 'edit']);
+Route::delete('/delete-testimonial-image/{id}', [TestimonialController::class, 'deletecover']);
+Route::any('/updatetestimonial/{id}', [TestimonialController::class, 'update']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

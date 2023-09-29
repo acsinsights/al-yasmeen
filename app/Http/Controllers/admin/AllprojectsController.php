@@ -43,6 +43,36 @@ class AllprojectsController extends Controller
            return redirect("/admin/allprojects")->with('success', 'Post Created Successfully');
        }
 
+        public function multiplestore(Request $request)
+        {
+            if ($request->hasfile("gallery")) {
+                $file = $request->file("gallery");
+                $gallery=array();
+
+                foreach ($file as $fp)
+                {
+                    $gallery = time() . '_' . $fp->getClientOriginalName();
+                    $fp->move(\public_path("gallery/"),$gallery);
+                    $gallery[] = [
+                        'gallery' => $gallery,
+                    ];
+                }
+                $project = new Project([
+                    "gallery" => $gallery,
+                ]);
+                $project->save();
+        }
+        return redirect("/admin/allprojects")->with('success','Project Created Successfully');
+        }
+
+
+
+
+
+
+
+
+
        // ?Edit function for peojects
        public function edit($id)
        {

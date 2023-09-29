@@ -380,8 +380,6 @@
               <div class="owl-carousel projects_4col">
 
                 @foreach ($projects as $project)
-
-
                 <div class="project-item-style1">
                   <div class="project-item-thumb">
                     <img class="img-full" src="{{ $project->media ? asset('projects-img/' . $project->media) : '' }}" alt="" />
@@ -395,7 +393,6 @@
                   </div>
                 </div>
                 @endforeach
-
               {{--<div class="project-item-style1">
                   <div class="project-item-thumb">
                     <img class="img-full" src="{{ asset('user-assets/images/projects/project_02.jpg ') }}" alt="" />
