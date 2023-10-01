@@ -4,7 +4,7 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Project; 
+use App\Models\Project;
 use App\Models\Message;
 use App\Models\Testimonial;
 use Carbon\Carbon;
@@ -17,36 +17,30 @@ class HomeController extends Controller
     // {
     //     return view('frontend.home');
     // }
-     public function index()
-     {
-         $projects = Project::all();
-         return view('frontend.home')->with('projects', $projects);
-     }
+    public function index()
+    {
+        $projects = Project::all();
+        return view('frontend.home')->with('projects', $projects);
+    }
     public function services()
     {
         return view('frontend.services');
     }
     public function project()
     {
-        $projects = Project::all();
+        $projects = Project::with('images')->get();
         $testimonials = Testimonial::all();
-        return view('frontend.project' ,compact('projects','testimonials'));
+        return view('frontend.project', compact('projects', 'testimonials'));
     }
     public function about()
     {
         $testimonials = Testimonial::all();
-        return view('frontend.about' ,compact('testimonials'));
+        return view('frontend.about', compact('testimonials'));
     }
     public function contact()
     {
         return view('frontend.contact');
     }
-
-
-
-
-
-
 
     protected function submit(Request $request)
     {

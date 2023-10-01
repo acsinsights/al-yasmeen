@@ -24,8 +24,8 @@ use App\Http\Controllers\admin\TestimonialController;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/services', [HomeController::class, 'services']);
-Route::get('/project', [HomeController::class, 'project']);
 Route::get('/contact', [HomeController::class, 'contact']);
+Route::get('/projects', [HomeController::class, 'project']);
 
 Route::put('/submit', [HomeController::class, 'submit']);
 
