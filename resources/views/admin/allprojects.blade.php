@@ -29,11 +29,7 @@
                 </div>
                 <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
                     <div class="card-options">
-                        <form style="margin-right: 67px;" action="" method="post">
-                            @csrf
-                            @method('put')
-
-                            <a href="{{ route('admin.add-project') }}" class="btn btn-primary mr-1">Add Project</a>
+                        <a href="{{ route('admin.project.create') }}" class="btn btn-primary mr-1">Add Project</a>
                     </div>
 
 
@@ -60,7 +56,7 @@
                                             <th style="text-align: right;">#No</th>
                                             <th style="text-align: center;">Media</th>
                                             <th>Project Title</th>
-                                             <th>date</th>
+                                            <th>date</th>
                                             <th>Sub-Service</th>
                                             <th style="text-align: center;">Edit</th>
                                             <th style="text-align: center;">Delete</th>
@@ -69,21 +65,25 @@
                                     </thead>
                                     <tbody>
                                         @if ($projects->isNotEmpty())
-                                            @foreach ($projects as $key=> $project)
+                                            @foreach ($projects as $key => $project)
                                                 <tr style="vertical-align: middle;">
-                                                    <th  style="text-align: center;" scope="row">
-                                                        {{ $key+1 }}</th>
-                                                    <td style="text-align: center;"><img src="/projects-img/{{ $project->media }}" class="img-responsive"
-                                                            style="max-height:100px; max-width:100px" alt="" srcset="">
+                                                    <th style="text-align: center;" scope="row">
+                                                        {{ $key + 1 }}</th>
+                                                    <td style="text-align: center;"><img
+                                                            src="/projects-img/{{ $project->media }}" class="img-responsive"
+                                                            style="max-height:100px; max-width:100px" alt=""
+                                                            srcset="">
                                                     </td>
                                                     <td>{{ $project->projecttitle }}</td>
-                                              <td>{{ $project->date }}</td>
-                                                    <td>{{ $project->subservice  }}</td>
-                                                    <td style="text-align: center;"> <a href="/admin/editproject/{{ $project->id }}"
+                                                    <td>{{ $project->date }}</td>
+                                                    <td>{{ $project->subservice }}</td>
+                                                    <td style="text-align: center;"> <a
+                                                            href="/admin/editproject/{{ $project->id }}"
                                                             class="btn btn-flat-primary border">Edit</a>
                                                     </td>
                                                     <td style="text-align: center;">
-                                                        <a class="btn btn-flat-danger border" onclick="return confirm('Are you sure?');"
+                                                        <a class="btn btn-flat-danger border"
+                                                            onclick="return confirm('Are you sure?');"
                                                             href="/admin/deleteproject/{{ $project->id }}">Delete</a>
                                                     </td>
                                                     {{-- @if ($post->featured_post == 1)

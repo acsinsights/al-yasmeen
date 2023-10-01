@@ -1,4 +1,5 @@
 <?php
+
 use App\Http\Controllers\ProfileController;
 
 use Illuminate\Support\Facades\Route;
@@ -7,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\frontend\HomeController;
 
 use App\Http\Controllers\admin\DashboardController;
-use App\Http\Controllers\admin\AllprojectsController;
+use App\Http\Controllers\admin\ProjectController;
 use App\Http\Controllers\admin\TestimonialController;
 /*
 |--------------------------------------------------------------------------
@@ -26,97 +27,53 @@ Route::get('/services', [HomeController::class, 'services']);
 Route::get('/project', [HomeController::class, 'project']);
 Route::get('/contact', [HomeController::class, 'contact']);
 
-
 Route::put('/submit', [HomeController::class, 'submit']);
 
 
 Route::group(['prefix' => 'admin'], function () {
 
-Route::group(['middleware' => 'admin.guest'], function () {
- Route::get('/dashboard', function () {
-     return view('dashboard');
- })->middleware(['auth', 'verified'])->name('dashboard');
+    Route::group(['middleware' => 'admin.guest'], function () {
+        Route::get('/dashboard', function () {
+            return view('dashboard');
+        })->middleware(['auth', 'verified'])->name('dashboard');
+    });
+    Route::group(['middleware' => 'admin.auth'], function () {
+
+        Route::redirect('/', '/admin/dashboard', 301)->name('admin.index');
+
+        Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+        Route::get('/message/{id}', [DashboardController::class, 'formmessage'])->name('admin.message');
+        Route::get('/inbox', [DashboardController::class, 'inbox'])->name('admin.inbox');
+        Route::delete('/f-delete/{id}', [DashboardController::class, 'd_form']);
+        Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
+
+        Route::get('/projects', [ProjectController::class, 'index'])->name('admin.project.index');
+        Route::get('/projects/create', [ProjectController::class, 'create'])->name('admin.project.create');
+        Route::post('/projects/store', [ProjectController::class, 'store'])->name('admin.project.store');
+        Route::get('/projects/edit/{id}', [ProjectController::class, 'edit'])->name('admin.project.edit');
+        Route::post('/projects/update/{id}', [ProjectController::class, 'update'])->name('admin.project.update');
+        Route::post('/projects/destroy/{id}', [ProjectController::class, 'destroy'])->name('admin.project.destroy');
+
+
+
+
+
+        Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
+
+        Route::get('/alltestimonial', [TestimonialController::class, 'index'])->name('admin.alltestimonial');
+        Route::get('/addtestimonial', [TestimonialController::class, 'create'])->name('admin.addtestimonial');
+        Route::post('/add-testimonial', [TestimonialController::class, 'store'])->name('admin.add-testimonial');
+
+
+        Route::delete('/deletetestimonial/{id}', [TestimonialController::class, 'destroy']);
+        Route::get('/edittestimonial/{id}', [TestimonialController::class, 'edit']);
+        Route::delete('/delete-testimonial-image/{id}', [TestimonialController::class, 'deletecover']);
+        Route::any('/updatetestimonial/{id}', [TestimonialController::class, 'update']);
+
+
+        // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+        // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+        // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    });
 });
-Route::group(['middleware' => 'admin.auth'], function () {
-
-    Route::get('/login', [DashboardController::class, 'login'])->name('admin.login');
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-
-
-
-
-    Route::get('/message/{id}', [DashboardController::class, 'formmessage'])->name('admin.message');
-    Route::get('/inbox', [DashboardController::class, 'inbox'])->name('admin.inbox');
-    Route::delete('/f-delete/{id}', [DashboardController::class, 'd_form']);
-    Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
-
-
-
-
-
-    Route::any('/allprojects', [AllprojectsController::class, 'allprojects'])->name('admin.allprojects');
-
-     Route::post('/add-project', [AllprojectsController::class, 'addproject']);
-     Route::get('/editproject', [AllprojectsController::class, 'editproject'])->name('admin.editproject');
-     Route::get('/add-project', [AllprojectsController::class, 'create'])->name('admin.add-project');
-
-     Route::post('/addproject', [AllprojectsController::class, 'store'])->name('admin.addproject');
-
-    Route::post('/addproject', [AllprojectsController::class, 'multiplestore'])->name('admin.addproject');
-
-     Route::any('/deleteproject/{id}', [AllprojectsController::class, 'destroy']);
-     Route::get('/editproject/{id}', [AllprojectsController::class, 'edit']);
-     Route::delete('/delete-project-image/{id}', [AllprojectsController::class, 'deletecover']);
-     Route::any('/updateproject/{id}', [AllprojectsController::class, 'update']);
-
-
-
-
-
-    Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
-
-
-
-
-
-
-
-
-// testimonial start
-
-
-
-Route::get('/alltestimonial', [TestimonialController::class, 'index'])->name('admin.alltestimonial');
-Route::get('/addtestimonial', [TestimonialController::class, 'create'])->name('admin.addtestimonial');
-Route::post('/add-testimonial', [TestimonialController::class, 'store'])->name('admin.add-testimonial');
-
-
-Route::delete('/deletetestimonial/{id}', [TestimonialController::class, 'destroy']);
-Route::get('/edittestimonial/{id}', [TestimonialController::class, 'edit']);
-Route::delete('/delete-testimonial-image/{id}', [TestimonialController::class, 'deletecover']);
-Route::any('/updatetestimonial/{id}', [TestimonialController::class, 'update']);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-});
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

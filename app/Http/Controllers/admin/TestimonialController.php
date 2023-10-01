@@ -4,8 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Testimonial;
-use App\Models\Image;
+use App\Models\Testimonial; 
 use Illuminate\Support\Facades\File;
 
 class TestimonialController extends Controller

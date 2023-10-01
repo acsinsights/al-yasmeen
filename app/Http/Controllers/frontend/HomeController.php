@@ -4,8 +4,7 @@ namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Project;
-use App\Models\Image;
+use App\Models\Project; 
 use App\Models\Message;
 use App\Models\Testimonial;
 use Carbon\Carbon;
