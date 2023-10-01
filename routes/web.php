@@ -48,6 +48,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
 
         Route::get('/projects', [ProjectController::class, 'index'])->name('admin.project.index');
+        Route::get('/projects/show/{id}', [ProjectController::class, 'show'])->name('admin.project.show');
         Route::get('/projects/create', [ProjectController::class, 'create'])->name('admin.project.create');
         Route::post('/projects/store', [ProjectController::class, 'store'])->name('admin.project.store');
         Route::get('/projects/edit/{id}', [ProjectController::class, 'edit'])->name('admin.project.edit');

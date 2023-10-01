@@ -43,8 +43,6 @@
                                             <th style="text-align: right;">#No</th>
                                             <th style="text-align: center;">Media</th>
                                             <th>Project Title</th>
-                                            <th>date</th>
-                                            <th>Company Name</th>
                                             <th style="text-align: center;">Action</th>
                                         </tr>
                                     </thead>
@@ -59,14 +57,21 @@
                                                         alt="">
                                                 </td>
                                                 <td>{{ $project->title }}</td>
-                                                <td>{{ $project->date }}</td>
-                                                <td>{{ $project->company_name }}</td>
-                                                <td style="text-align: center;"> <a
-                                                        href="{{ route('admin.project.edit', $project->id) }}"
-                                                        class="btn btn-flat-primary border">Edit</a>
+                                                <td style="text-align: center;">
+                                                    <a href="{{ route('admin.project.show', $project->id) }}"
+                                                        class="btn btn-flat-success border">
+                                                        View
+                                                    </a>
+                                                    <a href="{{ route('admin.project.edit', $project->id) }}"
+                                                        class="btn btn-flat-primary border">
+                                                        Edit
+                                                    </a>
                                                     <a class="btn btn-flat-danger border"
                                                         onclick="return confirm('Are you sure?');"
-                                                        href="{{ route('admin.project.destroy', $project->id) }}">Delete</a>
+                                                        href="{{ route('admin.project.destroy', $project->id) }}">
+                                                        Delete
+                                                    </a>
+
                                                 </td>
                                             </tr>
                                         @empty

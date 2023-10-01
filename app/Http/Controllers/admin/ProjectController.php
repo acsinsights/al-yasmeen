@@ -16,6 +16,11 @@ class ProjectController extends Controller
         $projects = Project::latest()->paginate(10);
         return view('admin.project.index', compact('projects'));
     }
+    public function show($id)
+    {
+        $project = Project::findOrFail($id);
+        return view('admin.project.show', compact('project'));
+    }
     public function create()
     {
         return view('admin.project.create');
