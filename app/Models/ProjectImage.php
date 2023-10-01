@@ -9,6 +9,11 @@ use App\Models\Project;
 class ProjectImage extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'project_id',
+        'image',
+        'alt',
+    ];
 
     public function project()
     {

@@ -26,7 +26,7 @@
                 </div>
                 <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
                     <div class="card-options">
-                        <a href="{{ route('admin.project.create') }}" class="btn btn-primary mr-1">
+                        <a href="{{ route('admin.project.image.create', $project->id) }}" class="btn btn-primary mr-1">
                             Add Image
                         </a>
                     </div>
@@ -35,7 +35,6 @@
             <div class="content-body">
                 <div class="card">
                     <div class="card-body">
-
                         <div class="row" id="basic-table">
                             <div class="col-md-6 col-12 mb-2">
                                 <b>
@@ -81,6 +80,35 @@
                                 </b>
                                 <br>
                                 {{ $project->description }}
+                            </div>
+                            <div class="col-12 mb-2">
+                                <div class="row">
+
+                                    @forelse ($images as $img)
+                                        <div class="col-lg-3 col-md-4 col-6">
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <img class="card-img-top img-fluid"
+                                                            src="{{ url('project/image/' . $img->image) }}"
+                                                            alt="Card image cap">
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <a onclick="return confirm('Are you sure?')" class="btn btn-danger"
+                                                            href="{{ route('admin.project.image.destroy', [$project->id, $img->id]) }}">
+                                                            Delete
+                                                            <i class="fa fa-trash"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @empty
+                                        <div class="text-danger col-12">
+                                            No Image Found
+                                        </div>
+                                    @endforelse
+                                </div>
                             </div>
                         </div>
 

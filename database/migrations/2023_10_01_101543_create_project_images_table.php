@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('project_id');
             $table->foreign('project_id')->references('id')->on('projects')->constrained()->onDelete('cascade');
+            $table->string('image'); 
             $table->string('alt')->nullable();
             $table->timestamps();
         });

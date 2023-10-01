@@ -55,6 +55,9 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/projects/update/{id}', [ProjectController::class, 'update'])->name('admin.project.update');
         Route::get('/projects/destroy/{id}', [ProjectController::class, 'destroy'])->name('admin.project.destroy');
 
+        Route::get('/projects/{project_id}/image/create', [ProjectController::class, 'create_image'])->name('admin.project.image.create');
+        Route::post('/projects/{project_id}/image/store', [ProjectController::class, 'store_image'])->name('admin.project.image.store');
+        Route::get('/projects/{project_id}/image/destroy/{image_id}', [ProjectController::class, 'destroy_image'])->name('admin.project.image.destroy');
 
 
 

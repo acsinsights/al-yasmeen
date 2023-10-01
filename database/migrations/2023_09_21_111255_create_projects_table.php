@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string("title");
             $table->string("company_name");
             $table->string("company_logo");
-            $table->string("description");
+            $table->longText("description");
             $table->string("preview_img");
             $table->string("location");
             $table->string('date');

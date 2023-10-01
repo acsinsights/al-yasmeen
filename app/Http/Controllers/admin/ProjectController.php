@@ -19,7 +19,8 @@ class ProjectController extends Controller
     public function show($id)
     {
         $project = Project::findOrFail($id);
-        return view('admin.project.show', compact('project'));
+        $images = $project->images()->get();
+        return view('admin.project.show', compact('project', 'images'));
     }
     public function create()
     {
@@ -32,7 +33,7 @@ class ProjectController extends Controller
             "company_name" => "required|string",
             "company_logo" => "required|image|mimes:jpeg,png,jpg|max:1024",
             "description" => "required|string",
-            "preview_img" => "required|image|mimes:jpeg,png,jpg|max:1024",
+            "preview_img" => "required|image|mimes:jpeg,png,jpg|max:1024|dimensions:ratio=16/9",
             "location" => "required|string",
             "date" => "required|date",
         ]);
@@ -79,7 +80,7 @@ class ProjectController extends Controller
             "company_name" => "required|string",
             "company_logo" => "nullable|image|mimes:jpeg,png,jpg|max:1024",
             "description" => "required|string",
-            "preview_img" => "nullable|image|mimes:jpeg,png,jpg|max:1024",
+            "preview_img" => "nullable|image|mimes:jpeg,png,jpg|max:1024|dimensions:ratio=16/9",
             "location" => "required|string",
             "date" => "required|date",
         ]);
@@ -133,5 +134,42 @@ class ProjectController extends Controller
         }
         $project->delete();
         return back()->with('success', 'Project deleted successfully.');
+    }
+
+    public function create_image($project_id)
+    {
+        $project = Project::findOrFail($project_id);
+        return view('admin.project.image.create', compact('project'));
+    }
+    public function store_image($project_id, Request $request)
+    {
+        $request->validate([
+            "project_image" => "required|image|mimes:jpeg,png,jpg|max:1024",
+            "image_alt" => "nullable|string",
+        ]);
+        $project = Project::findOrFail($project_id);
+        if ($request->hasFile("project_image")) {
+            $image_file = $request->file("project_image");
+            $image_image =  ImageResizer::resizeImage($image_file, 300);
+            $image_name = Str::slug($project->title) . "_" . time() . "_" . $image_file->getClientOriginalName();
+            $destinationPath = public_path('project/image/');
+            $image_image->save($destinationPath . $image_name);
+            $project->images()->create([
+                "project_id" => $project->id,
+                "image" => $image_name,
+                "alt" => $request->image_alt,
+            ]);
+        }
+        return redirect()->route('admin.project.show', $project->id)->with('success', 'Project image created successfully.');
+    }
+    public function destroy_image($project_id, $image_id)
+    {
+        $project = Project::findOrFail($project_id);
+        $image = $project->images()->findOrFail($image_id);
+        if (File::exists("project/image/" . $image->image)) {
+            File::delete("project/image/" . $image->image);
+        }
+        $image->delete();
+        return back()->with('success', 'Project image deleted successfully.');
     }
 }
