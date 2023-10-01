@@ -52,7 +52,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/projects/store', [ProjectController::class, 'store'])->name('admin.project.store');
         Route::get('/projects/edit/{id}', [ProjectController::class, 'edit'])->name('admin.project.edit');
         Route::post('/projects/update/{id}', [ProjectController::class, 'update'])->name('admin.project.update');
-        Route::post('/projects/destroy/{id}', [ProjectController::class, 'destroy'])->name('admin.project.destroy');
+        Route::get('/projects/destroy/{id}', [ProjectController::class, 'destroy'])->name('admin.project.destroy');
 
 
 
