@@ -53,7 +53,7 @@
                                 <table style="width: 105%;" class="table">
                                     <thead>
                                         <tr>
-                                            <th style="text-align: right;">#No</th>
+                                            <th style="text-align: center;">#No</th>
                                             <th style="text-align: center;">Media</th>
                                             <th>Project Title</th>
                                             <th>date</th>

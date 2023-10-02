@@ -100,7 +100,7 @@
                                                     @enderror
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 col-12">
+                                            {{-- <div class="col-md-6 col-12">
                                                 <div class="form-group">
                                                     <label for="company_logo">Company Logo
                                                         <span class="text-danger">
@@ -155,7 +155,65 @@
                                                         </span>
                                                     @enderror
                                                 </div>
+                                            </div> --}}
+                                            <div class="col-6 mb-2">
+                                                <div class="border rounded p-2">
+                                                    <h4 class="mb-1">Featured Image</h4>
+                                                    <div class="media flex-column flex-md-row">
+                                                        <img src="{{ url('project/preview/' . $project->preview_img) }}" id="blog-feature-image" class="rounded mr-2 mb-1 mb-md-0" width="100" height="100" alt="Blog Featured Image">
+                                                        <div class="media-body">
+                                                            <small class="text-muted">Required image resolution 800x400, image size 10mb.</small>
+                                                            <p class="my-50">
+                                                                <a href="javascript:void(0);" id="blog-image-text"></a>
+                                                            </p>
+                                                            <div class="d-inline-block">
+                                                                <div class="form-group mb-0">
+                                                                    <div class="custom-file">
+                                                                        <input type="file" name="preview_img" class="custom-file-input" id="preview_img">
+                                                                        <label class="custom-file-label" for="preview_img">Choose file</label>
+                                                                    </div>
+                                                                    @error('company_logo')
+                                                                    <span class="text-danger">
+                                                                        {{ $message }}
+                                                                    </span>
+                                                                @enderror
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
+
+
+
+                                            <div class="col-6 mb-2">
+                                                <div class="border rounded p-2">
+                                                    <h4 class="mb-1">Company Logo</h4>
+                                                    <div class="media flex-column flex-md-row">
+                                                        <img src="{{ url('project/client/' . $project->company_logo) }}" id="blog-feature-image" class="rounded mr-2 mb-1 mb-md-0" width="100" height="100" alt="Blog Featured Image">
+                                                        <div class="media-body">
+                                                            <small class="text-muted">Required image resolution 800x400, image size 10mb.</small>
+                                                            <p class="my-50">
+                                                                <a href="javascript:void(0);" id="blog-image-text"></a>
+                                                            </p>
+                                                            <div class="d-inline-block">
+                                                                <div class="form-group mb-0">
+                                                                    <div class="custom-file">
+                                                                        <input type="file" name="company_logo" class="custom-file-input" id="company_logo">
+                                                                        <label class="custom-file-label" for="company_logo">Choose file</label>
+                                                                    </div>
+                                                                    @error('company_logo')
+                                                                    <span class="text-danger">
+                                                                        {{ $message }}
+                                                                    </span>
+                                                                @enderror
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <div class="col-12">
                                                 <button type="submit" class="btn btn-primary mr-1">Submit</button>
                                             </div>

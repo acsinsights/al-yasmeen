@@ -33,7 +33,7 @@ class ProjectController extends Controller
             "company_name" => "required|string",
             "company_logo" => "required|image|mimes:jpeg,png,jpg|max:1024",
             "description" => "required|string",
-            "preview_img" => "required|image|mimes:jpeg,png,jpg|max:1024|dimensions:ratio=16/9",
+            "preview_img" => "required|image|mimes:jpeg,png,jpg",
             "location" => "required|string",
             "date" => "required|date",
         ]);
@@ -80,7 +80,8 @@ class ProjectController extends Controller
             "company_name" => "required|string",
             "company_logo" => "nullable|image|mimes:jpeg,png,jpg|max:1024",
             "description" => "required|string",
-            "preview_img" => "nullable|image|mimes:jpeg,png,jpg|max:1024|dimensions:ratio=16/9",
+            "preview_img" => "nullable|image|mimes:jpeg,png,jpg|max:1024",
+            // "preview_img" => "nullable|image|mimes:jpeg,png,jpg|max:1024|dimensions:ratio=16/9",
             "location" => "required|string",
             "date" => "required|date",
         ]);

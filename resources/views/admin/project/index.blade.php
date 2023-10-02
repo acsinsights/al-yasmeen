@@ -37,10 +37,10 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="table-responsive">
-                                <table style="width: 105%;" class="table">
+                                <table class="table">
                                     <thead>
                                         <tr>
-                                            <th style="text-align: right;">#No</th>
+                                            <th style="text-align: center;">#No</th>
                                             <th style="text-align: center;">Media</th>
                                             <th>Project Title</th>
                                             <th style="text-align: center;">Action</th>

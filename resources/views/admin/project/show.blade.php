@@ -7,6 +7,9 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-header row">
+
+
+
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
@@ -24,6 +27,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
                     <div class="card-options">
                         <a href="{{ route('admin.project.image.create', $project->id) }}" class="btn btn-primary mr-1">
@@ -31,8 +35,75 @@
                         </a>
                     </div>
                 </div>
+
+
+                <div class="content-detached content-left">
+                    <div class="">
+                        <div class="blog-detail-wrapper">
+                            <div class="row">
+                                <div class="p-5 ">
+                                    <div class="card">
+                                        <img style="height: 400px;width:400px;"
+                                            src="{{ url('project/preview/' . $project->preview_img) }}"
+                                            class="img-fluid card-img-top" alt="Blog Detail Pic">
+                                        <div class="card-body">
+                                            <h4 class="card-title"> {{ $project->title }}</h4>
+                                            <p class="card-text mb-2">
+                                                {{ $project->description }}
+                                            </p>
+
+                                            <div class="align-items-center media">
+                                                <div class=" mr-2">
+                                                    <h6>Location-{{ $project->location }} </h6>
+                                                    <h6>Date-{{ $project->location }}</h6>
+                                                </div>
+
+                                                <div class="avatar mr-2">
+                                                    <img src="{{ url('project/client/' . $project->company_logo) }}"
+                                                        width="60" height="60" alt="Avatar">
+                                                </div>
+
+                                            </div>
+                                            <hr class="my-2">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 pt-5">
+                                    <div class="row">
+                                        @forelse ($images as $img)
+                                            <div class="col-lg-4 col-md-4 col-6">
+                                                <div class="card">
+                                                    <div class="card-content">
+                                                        <div class="card-body">
+                                                            <img class="card-img-top img-fluid"
+                                                                src="{{ url('project/image/' . $img->image) }}"
+                                                                alt="Card image cap">
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <a onclick="return confirm('Are you sure?')"
+                                                                class="btn btn-danger"
+                                                                href="{{ route('admin.project.image.destroy', [$project->id, $img->id]) }}">
+
+                                                                <i class="fa fa-trash"></i>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @empty
+                                            <div class="text-danger col-12">
+                                                No Image Found
+                                            </div>
+                                        @endforelse
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="content-body">
+            {{-- <div class="content-body">
                 <div class="card">
                     <div class="card-body">
                         <div class="row" id="basic-table">
@@ -114,7 +185,40 @@
 
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @endsection

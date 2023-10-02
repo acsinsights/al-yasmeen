@@ -45,8 +45,8 @@
                 <a href="{{ '/services' }}">Services</a>
 
               </li>
-              <li class="{{ URL::current() == url('/project') ? 'active' : '' }}">
-                <a href="{{ '/project' }}">Projects</a>
+              <li class="{{ URL::current() == url('/projects') ? 'active' : '' }}">
+                <a href="{{ '/projects' }}">Projects</a>
 
               </li>
               <li class="{{ URL::current() == url('/about') ? 'active' : '' }}">
