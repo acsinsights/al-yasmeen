@@ -60,7 +60,7 @@
                                                 <td style="text-align: center;">
                                                     <a href="{{ route('admin.project.show', $project->id) }}"
                                                         class="btn btn-flat-success border">
-                                                        View
+                                                        All Projects
                                                     </a>
                                                     <a href="{{ route('admin.project.edit', $project->id) }}"
                                                         class="btn btn-flat-primary border">
