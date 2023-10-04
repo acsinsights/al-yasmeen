@@ -110,21 +110,10 @@
                                                     <div class="col-12 col-sm-6">
                                                         <x-input-label for="company_name" :value="__('Company Name')" />
                                                         <x-text-input id="company_name" name="company_name" type="text"
-                                                            class="form-control" value="{{ Auth::user()->company_name }}" autofocus
-                                                            autocomplete="company_name" />
+                                                            class="form-control" value="{{ Auth::user()->company_name }}"
+                                                            autofocus autocomplete="company_name" />
                                                         <x-input-error class="mt-2" :messages="$errors->get('company_name')" />
                                                     </div>
-
-
-                                                    {{-- <div class="col-12 col-sm-6">
-                                                        <div class="form-group">
-                                                            <label for="account-name">Company Name</label>
-                                                            <input type="text" class="form-control" id="account-name"
-                                                                name="company_name" placeholder="Name"
-                                                                value="{{ Auth::user()->company_name }}">
-                                                            <x-input-error class="mt-2" :messages="$errors->get('company_name')" />
-                                                        </div>
-                                                    </div> --}}
                                                     {{-- <div class="col-12 col-sm-6">
                                                         <div class="form-group">
                                                             <label for="account-e-mail">Email (for contact and smtp
@@ -135,7 +124,6 @@
                                                             <x-input-error class="mt-2" :messages="$errors->get('email')" />
                                                         </div>
                                                     </div> --}}
-
                                                     <div class="col-12 col-sm-6">
                                                         <x-input-label for="email" :value="__('Email')" />
                                                         <x-text-input id="email" name="email" type="email"
@@ -143,7 +131,7 @@
                                                             autocomplete="email" />
                                                         <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
-                                                            {{-- @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
+                                                        {{-- @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
                                                             <div>
                                                                 <p class="text-sm mt-2 text-gray-800 dark:text-gray-200">
                                                                     {{ __('Your email address is unverified.') }}
@@ -160,11 +148,7 @@
                                                                 @endif
                                                             </div>
                                                         @endif --}}
-
                                                     </div>
-
-
-
                                                     <div class="col-12 col-sm-6">
                                                         <div class="form-group">
                                                             <label for="account-company">Phone No.</label>

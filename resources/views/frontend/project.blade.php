@@ -62,7 +62,6 @@
                                         @endforelse
                                     </div>
                                     <div class="carousel-inner slider-box">
-
                                         <div class="carousel-item  active">
                                             <img src="{{ url('project/preview/' . $project->preview_img) }}"
                                                 class="d-block w-100" alt="{{ $project->title }}">
@@ -74,7 +73,6 @@
                                             </div>
                                         @empty
                                         @endforelse
-
                                     </div>
                                     <button class="carousel-control-prev" type="button"
                                         data-bs-target="#project-slider-{{ $project_key }}" data-bs-slide="prev">
@@ -88,23 +86,23 @@
                                     </button>
                                 </div>
                                 <div class="project-details">
-
                                     <div class="company-details">
-                                        <h4>{{ $project->company_name }}</h4>
-                                        <h3>{{ $project->title }}</h3>
-                                        <p>
+                                        <h6>{{ $project->company_name }}</h6>
+                                        <h4>{{ $project->title }}</h4>
+                                        {{-- <p>
                                             {{ $project->description }}
-                                        </p>
-                                        <div class="company-description">
-                                            <div class="col-xl-8 col-lg-8 col-md-12">
-                                                <h5>
-                                                    {{ date('d-m-Y', strtotime($project->date)) }}
-                                                </h5>
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-12">
-                                                <img src="{{ url('project/client/' . $project->company_logo) }}"
+                                        </p> --}}
+                                        <div class="  company-description">
+                                            <div  class="col-xl-8 col-lg-4 mt-4 col-md-12">
+                                                <img style="height: 100px;" src="{{ url('project/client/' . $project->company_logo) }}"
                                                     alt="company-logo">
                                             </div>
+                                            <div class="col-xl-4 col-lg-8 col-md-12">
+                                                <h5>
+                                                    Date:  {{ date('d-m-Y', strtotime($project->date)) }}
+                                                </h5>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>

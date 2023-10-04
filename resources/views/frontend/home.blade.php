@@ -32,17 +32,20 @@
                             <div class="row">
                                 <div class="col-xl-12">
                                     <div class="mrb-20">
-                                        <input type="text" placeholder="Name" name="name" class="form-control" required />
+                                        <input type="text" placeholder="Name" name="name" class="form-control"
+                                            required />
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="mrb-20">
-                                        <input type="phone" placeholder="Phone" name="phone" class="form-control" required />
+                                        <input type="phone" placeholder="Phone" name="phone" class="form-control"
+                                            required />
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="mrb-20">
-                                        <input type="email" placeholder="Email" name="email" class="form-control" required />
+                                        <input type="email" placeholder="Email" name="email" class="form-control"
+                                            required />
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
@@ -202,7 +205,8 @@
                                 </div>
                                 <div class="featured-content">
                                     <h4 class="featured-title">Exclusive Design</h4>
-                                    <p class="featured-desc">Elevate spaces with exclusive design expertise, creating extraordinary works of art.</p>
+                                    <p class="featured-desc">Elevate spaces with exclusive design expertise, creating
+                                        extraordinary works of art.</p>
                                 </div>
                             </div>
                             <div class="featured-icon-box mrb-sm-40">
@@ -211,7 +215,8 @@
                                 </div>
                                 <div class="featured-content">
                                     <h4 class="featured-title">Professional Team</h4>
-                                    <p class="featured-desc mrb-0">Trust our skilled team for vision-to-reality excellence and innovation.</p>
+                                    <p class="featured-desc mrb-0">Trust our skilled team for vision-to-reality excellence
+                                        and innovation.</p>
                                 </div>
                             </div>
                         </div>
@@ -430,7 +435,8 @@
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-5 col-md-12 text-lg-start">
-                        <p class="text-white mrb-0 mrb-md-40">Discover Our Outstanding Recent Projects in Innovative Fit-Out Solutions, Where Vision Meets Reality to Redefine Spaces.</p>
+                        <p class="text-white mrb-0 mrb-md-40">Discover Our Outstanding Recent Projects in Innovative
+                            Fit-Out Solutions, Where Vision Meets Reality to Redefine Spaces.</p>
                     </div>
                 </div>
             </div>
@@ -445,7 +451,8 @@
                                 @foreach ($projects as $project)
                                     <div class="project-item-style1">
                                         <div class="project-item-thumb">
-                                            <img class="img-full"src="{{ url('project/preview/' . $project->preview_img) }}"alt="" />
+                                            <img
+                                                class="img-full"src="{{ url('project/preview/' . $project->preview_img) }}"alt="" />
                                             <div class="project-item-details">
                                                 <h6 style="color: #fff" class="project-item-category">
                                                     {{ $project->title }}

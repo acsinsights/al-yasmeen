@@ -7,6 +7,7 @@
         <div class="header-navbar-shadow"></div>
         <div class="content-wrapper">
             <div class="content-header row">
+
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
@@ -64,14 +65,14 @@
                                                             src="{{ url('project/image/' . $img->image) }}"
                                                             alt="Card image cap">
                                                     </div>
-                                                    {{-- <div class="card-footer">
+                                                    <div class="card-footer">
                                                         <a onclick="return confirm('Are you sure?')"
                                                             class="btn btn-danger"
                                                             href="{{ route('admin.project.image.destroy', [$project->id, $img->id]) }}">
 
                                                             <i class="fa fa-trash"></i>
                                                         </a>
-                                                    </div> --}}
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

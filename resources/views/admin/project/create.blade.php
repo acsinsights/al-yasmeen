@@ -102,7 +102,7 @@
                                                 <div class="form-group">
                                                     <label for="location">Location</label>
                                                     <input type="text" id="location" class="form-control"
-                                                        name="location" placeholder="Company Name"
+                                                        name="location" placeholder="Location"
                                                         value="{{ old('location') }}">
                                                     @error('location')
                                                         <span class="text-danger">

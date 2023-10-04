@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('profile_img')->default('profile_av.png');
             // $table->integer('phone_no');
             // $table->string('username');
-            // $table->string('company_name');
+            $table->string('company_name');
             $table->rememberToken();
             $table->timestamps();
         });

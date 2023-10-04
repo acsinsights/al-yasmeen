@@ -79,7 +79,7 @@
                 </div>
               </div> --}}
                     <div class="row no-gutters">
-                        <div class="col-xl-7 col-lg-7 col-md-6 col-sm-6">
+                        <div class="col-xl-12 col-lg-7 col-md-6 col-sm-6">
                             <div class="featured-icon-box mrb-15">
                                 <div class="featured-icon">
                                     <i class="webexflaticon webextheme-icon-003-staircase"></i>
@@ -101,12 +101,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
+                        {{-- <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
                             <div class="experience">
                                 <p class="experience-text">We have more than years of experience</p>
                                 <h4 class="experience-year">14+</h4>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

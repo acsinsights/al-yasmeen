@@ -1,17 +1,18 @@
     <!-- BEGIN: Main Menu-->
     <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
-        <div style="   margin-bottom: 20px;margin-left: 4px;" class="navbar-header">
+        <div style="margin-bottom: 20px;" class="navbar-header">
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item mr-auto"><a class="navbar-brand" href="index.html">
                         {{-- <img src="{{ asset('user-assets/img/logo/adfj.svg') }}" class="header-brand-img desktop-lgo"
                     alt="AdFj Studios" style="margin-right: 70px;"> --}}
                         <a href="{{ '/' }}" aria-label="logo image">
-                            <img style="width:180px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}"
+                            <img style="width:190px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}"
                                 width="132" height="72" alt="logo" />
                         </a>
 
                         {{-- <h2 class="brand-text">ADFJ</h2> --}}
-                    </a></li>
+                    </a>
+                </li>
 
                 <li class="nav-item nav-toggle">
                     <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
@@ -87,7 +88,7 @@
                 </li> --}}
                 <li class=" nav-item {{ URL::current() == route('admin.enquiryinbox') ? 'active' : '' }}">
                     <a class="d-flex align-items-center" href="{{ route('admin.enquiryinbox') }}">
-                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-solid fa-address-book"></i>
                         <span class="menu-title text-truncate" data-i18n="Colors">
                             Contact Form
                         </span>
@@ -96,7 +97,7 @@
 
                 <li class=" nav-item {{ URL::current() == route('admin.inbox') ? 'active' : '' }}">
                     <a class="d-flex align-items-center" href="{{ route('admin.inbox') }}">
-                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <i class="fa-solid fa-table-columns"></i>
                         <span class="menu-title text-truncate" data-i18n="Colors">
                           Enquiry Form
                         </span>
