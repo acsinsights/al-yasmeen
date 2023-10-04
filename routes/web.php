@@ -74,9 +74,8 @@ Route::group(['prefix' => 'admin'], function () {
         Route::delete('/delete-testimonial-image/{id}', [TestimonialController::class, 'deletecover']);
         Route::any('/updatetestimonial/{id}', [TestimonialController::class, 'update']);
 
-
         // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-        // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
         // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
 });

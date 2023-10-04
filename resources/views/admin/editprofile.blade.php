@@ -101,13 +101,11 @@
                                             <!-- header media -->
                                             <div class="mb-20 media">
                                                 <a href="javascript:void(0);" class="mr-25">
-                                                    <img src="/profile/{{ Auth::guard('admin')->user()->profile_img }}" id="account-upload-img" class="rounded mr-50" alt="profile image" height="80" width="80">
+                                                    <img src="/profile-img/{{ Auth::guard('admin')->user()->profile_img }}" id="account-upload-img" class="rounded mr-50" alt="profile image" height="80" width="80">
                                                 </a>
                                                 <!-- upload and reset button -->
                                                 <div class="media-body mt-75 ml-1">
-
                                                     <label for="account-upload" class="btn btn-sm btn-primary mb-75 mr-75">Change Profile Picture</label>
-
                                                     <input type="file" name="cover" id="account-upload" hidden="" accept="image/*">
                                                     {{-- <button class="btn btn-sm btn-outline-secondary mb-75">Reset</button> --}}
                                                     <p>Dimensions 85x85 px</p>
@@ -115,7 +113,6 @@
                                                 <!--/ upload and reset button -->
                                             </div>
                                             <!--/ header media -->
-
                                             <!-- form -->
                                             <form class="validate-form mt-2">
                                                 <div style="margin-top: 15px;" class="row">
@@ -134,8 +131,7 @@
                                                     </div>
                                                     <div class="col-12 col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="account-e-mail">Email (for contact and smtp
-                                                                purpose)</label>
+                                                            <label for="account-e-mail">Email (for contact and smtp purpose)</label>
                                                             <input type="email" class="form-control" id="account-e-mail" name="email" placeholder="Email" value=" {{ Auth::guard('admin')->user()->email }}">
                                                         </div>
                                                     </div>

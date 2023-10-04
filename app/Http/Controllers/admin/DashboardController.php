@@ -30,12 +30,15 @@ class DashboardController extends Controller
         return view('admin.alltestimonial');
     }
 
-    
+
+
     public function profile()
     {
-         $users = User::all();
-        return view('admin.profile');
+        $users = User::all();
+        return view('admin.profile', compact('users'));
     }
+
+
 
 
     protected function formmessage(Request $request,$id)
@@ -48,7 +51,6 @@ class DashboardController extends Controller
         $forms= Message::all();
         return view('admin.form',compact('forms'));
     }
-
 
     protected function d_form($id)
     {
