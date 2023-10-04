@@ -85,14 +85,24 @@
                 </li>
                 {{-- <li class=" nav-item {{ URL::current() == route('admin.our-clientlele') ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('admin.our-clientlele') }}"><i class="fa-solid fa-users"></i><span class="menu-title text-truncate" data-i18n="Typography">Client Logo</span></a>
                 </li> --}}
-                <li class=" nav-item {{ URL::current() == route('admin.inbox') ? 'active' : '' }}">
-                    <a class="d-flex align-items-center" href="{{ route('admin.inbox') }}">
+                <li class=" nav-item {{ URL::current() == route('admin.enquiryinbox') ? 'active' : '' }}">
+                    <a class="d-flex align-items-center" href="{{ route('admin.enquiryinbox') }}">
                         <i class="fa-solid fa-star-half-stroke"></i>
                         <span class="menu-title text-truncate" data-i18n="Colors">
                             Contact Form
                         </span>
                     </a>
                 </li>
+
+                <li class=" nav-item {{ URL::current() == route('admin.inbox') ? 'active' : '' }}">
+                    <a class="d-flex align-items-center" href="{{ route('admin.inbox') }}">
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                        <span class="menu-title text-truncate" data-i18n="Colors">
+                          Enquiry Form
+                        </span>
+                    </a>
+                </li>
+
 
 
 

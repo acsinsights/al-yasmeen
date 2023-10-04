@@ -28,6 +28,7 @@ Route::get('/contact', [HomeController::class, 'contact']);
 Route::get('/projects', [HomeController::class, 'project']);
 
 Route::put('/submit', [HomeController::class, 'submit']);
+Route::put('/enquirysubmit', [HomeController::class, 'enquirysubmit']);
 
 
 Route::group(['prefix' => 'admin'], function () {
@@ -42,10 +43,23 @@ Route::group(['prefix' => 'admin'], function () {
         Route::redirect('/', '/admin/dashboard', 301)->name('admin.index');
 
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+
+
+        // contact form
         Route::get('/message/{id}', [DashboardController::class, 'formmessage'])->name('admin.message');
         Route::get('/inbox', [DashboardController::class, 'inbox'])->name('admin.inbox');
         Route::delete('/f-delete/{id}', [DashboardController::class, 'd_form']);
         Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
+
+
+        // enquiry form
+
+        Route::get('/enquiryinbox', [DashboardController::class, 'enquiryinbox'])->name('admin.enquiryinbox');
+        Route::delete('/enquiry-delete/{id}', [DashboardController::class, 'enquiry_form']);
+        Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
+
+
+
 
         Route::get('/projects', [ProjectController::class, 'index'])->name('admin.project.index');
         Route::get('/projects/show/{id}', [ProjectController::class, 'show'])->name('admin.project.show');

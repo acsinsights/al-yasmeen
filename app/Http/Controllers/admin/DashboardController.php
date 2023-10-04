@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\User;
+use App\Models\Enquiry;
 
 use App\Models\Message;
 use Carbon\Carbon;
@@ -30,16 +31,11 @@ class DashboardController extends Controller
         return view('admin.alltestimonial');
     }
 
-
-
     public function profile()
     {
         $users = User::all();
         return view('admin.profile', compact('users'));
     }
-
-
-
 
     protected function formmessage(Request $request,$id)
     {
@@ -52,10 +48,31 @@ class DashboardController extends Controller
         return view('admin.form',compact('forms'));
     }
 
+    protected function enquiryinbox()
+    {
+        $enquiryforms= Enquiry::all();
+        return view('admin.enquiry-form.enquiryform',compact('enquiryforms'));
+    }
+
+    protected function enquiry()
+    {
+        $enquiryforms= Enquiry::all();
+        return view('admin.enquiry-form',compact('enquiryforms'));
+    }
+
     protected function d_form($id)
     {
+        // contact form
         $forms = Message::findOrFail($id);
         $forms->delete();
+        return back()->with('success', 'Deleted successfully');
+    }
+
+    protected function enquiry_form($id)
+    {
+        // enquiry form
+        $enquiryforms = Enquiry::findOrFail($id);
+        $enquiryforms->delete();
         return back()->with('success', 'Deleted successfully');
     }
 

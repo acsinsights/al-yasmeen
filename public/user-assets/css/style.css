@@ -5076,7 +5076,8 @@ select {
   content: "";
   height: 2px;
   width: 50px;
-  background: var(--primary-color);
+  /* background: var(--primary-color); */
+  background: #fff;
   left: 10px;
   bottom: 12px;
 }
@@ -5087,7 +5088,8 @@ select {
   position: absolute;
   left: 0;
   bottom: 8px;
-  background: var(--primary-color);
+  /* background: var(--primary-color); */
+  background: #fff;
 }
 .side-line-left.white:after {
   background: var(--bg-white);

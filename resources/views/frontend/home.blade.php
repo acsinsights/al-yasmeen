@@ -1,9 +1,6 @@
 @extends('frontend.layouts.app')
 @section('title', 'Home')
 @section('page')
-
-
-
     <section class="home_banner_03 shape-position pdt-120 pdt-lg-105 pdb-120"
         data-background="{{ asset('user-assets/images/bg/17.jpg') }}" data-overlay-dark="8">
         <div class="home-style-03-shpe1"></div>
@@ -29,26 +26,28 @@
                 <div class="col-md-12 col-lg-10 col-xl-5 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                     <div class="request-a-call-back-form-style2">
                         <h3 class="mrt-0 mrb-30">Need Any Help?</h3>
-                        <form action="#">
+                        <form action="/submit" name="contactForm" method="post">
+                            @csrf
+                            @method('put')
                             <div class="row">
                                 <div class="col-xl-12">
                                     <div class="mrb-20">
-                                        <input type="text" placeholder="Name" class="form-control" />
+                                        <input type="text" placeholder="Name" name="name" class="form-control" required />
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="mrb-20">
-                                        <input type="phone" placeholder="Phone" class="form-control" />
+                                        <input type="phone" placeholder="Phone" name="phone" class="form-control" required />
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="mrb-20">
-                                        <input type="email" placeholder="Email" class="form-control" />
+                                        <input type="email" placeholder="Email" name="email" class="form-control" required />
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="mrb-20">
-                                        <textarea rows="4" name="message" placeholder="Messages" class="form-control" required=""></textarea>
+                                        <textarea rows="4" name="message" name="message" placeholder="Messages" class="form-control" required=""></textarea>
                                     </div>
                                 </div>
                                 <div class="col-xl-12">
@@ -57,7 +56,9 @@
                                             class="cs-btn-one btn-primary-color btn-square btn-block">Request
                                             Submit</button>
                                     </div>
+                                    @include('admin.message')
                                 </div>
+
                             </div>
                         </form>
                     </div>
@@ -194,7 +195,7 @@
             </div>
           </div> --}}
                     <div class="row no-gutters">
-                        <div class="col-xl-7 col-lg-7 col-md-6 col-sm-6">
+                        <div class="col-xl-12 col-lg-7 col-md-6 col-sm-6">
                             <div class="featured-icon-box mrb-15">
                                 <div class="featured-icon">
                                     <i class="webexflaticon webextheme-icon-003-staircase"></i>
@@ -214,12 +215,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
+                        {{-- <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6">
                             <div class="experience">
                                 <p class="experience-text">We have more than years of experience</p>
                                 <h4 class="experience-year">14+</h4>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

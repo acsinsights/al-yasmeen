@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\Message;
+use App\Models\Enquiry;
 use App\Models\Testimonial;
 use Carbon\Carbon;
 
@@ -54,6 +55,19 @@ class HomeController extends Controller
             "message" => $request->message,
         ]);
         $form->save();
+
+        return back()->with('success', 'Form submitted successfully');
+    }
+    protected function enquirysubmit(Request $request)
+    {
+        $enquiryforms = new Enquiry([
+            "name" => $request->name,
+            "email" => $request->email,
+            "phone" => $request->phone,
+            'date' => Carbon::now()->format('Y-m-d'),
+            "message" => $request->message,
+        ]);
+        $enquiryforms->save();
 
         return back()->with('success', 'Form submitted successfully');
     }

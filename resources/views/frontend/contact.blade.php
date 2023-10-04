@@ -75,7 +75,7 @@
                 <div class="col-xl-6">
                     @include('admin.message')
                     <div class="contact-form">
-                        <form action="/submit" name="contactForm" method="post">
+                        <form action="/enquirysubmit" name="contactForm" method="post">
                               @csrf
                                 @method('put')
                             <div class="row">

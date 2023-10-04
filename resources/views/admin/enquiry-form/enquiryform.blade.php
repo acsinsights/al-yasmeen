@@ -19,12 +19,12 @@
                 <div class="content-header-left col-md-9 col-12 mb-2">
                     <div class="row breadcrumbs-top">
                         <div class="col-12">
-                            <h2 class="content-header-title float-left mb-0">All Enquiries</h2>
+                            <h2 class="content-header-title float-left mb-0">All Messages</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a>
                                     </li>
-                                    <li class="breadcrumb-item active">All Enquiries
+                                    <li class="breadcrumb-item active">All Messages
                                     </li>
                                 </ol>
                             </div>
@@ -43,7 +43,7 @@
                                 <div class="inbox-body">
                                     <div class="table-responsive">
                                         <table class="table table-inbox table-hover text-nowrap">
-                                            @if ($forms->isNotEmpty())
+                                            @if ($enquiryforms->isNotEmpty())
                                                 {{-- <thead>
                                                     <th colspan="5" class="text-right">
                                                         <form action="/admin/all-delete" method="POST">
@@ -64,7 +64,7 @@
                                                     </th>
                                                 </thead> --}}
                                                 <tbody>
-                                                    @foreach ($forms as $fm)
+                                                    @foreach ($enquiryforms as $fm)
                                                         @csrf
                                                         @method('put')
                                                         <a href="/admin/message/{{ $fm->id }}">
@@ -101,7 +101,7 @@
                                                                     </a>
                                                                 </td>
                                                                 <td colspan="1" class="text-right">
-                                                                    <form action="/admin/f-delete/{{ $fm->id }}" method="POST">
+                                                                    <form action="/admin/enquiry-delete/{{ $fm->id }}" method="POST">
                                                                         @csrf
                                                                         @method('delete')
                                                                         <button type="submit" class="btn btn-danger">
