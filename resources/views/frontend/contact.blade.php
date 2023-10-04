@@ -40,7 +40,6 @@
                         <li>
                             <a href="#"><i class="fab fa-instagram"></i></a>
                         </li>
-                     
                     </ul>
                 </div>
                 <div class="col-md-12 col-lg-12 col-xl-8">
@@ -69,8 +68,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>
@@ -104,8 +101,7 @@
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="form-group">
-                                        <button style="border: 1px solid black;" type="submit"
-                                            class="animate-btn-style3 btn-md mrb-lg-60">Submit Now</button>
+                                        <button style="border: 1px solid black;" type="submit" class="animate-btn-style3 btn-md mrb-lg-60">Submit Now</button>
                                     </div>
                                 </div>
                             </div>

@@ -156,17 +156,6 @@
     <!-- END: Content-->
 
 
-
-
-
-
-
-
-
-
-
-
-
 {{--
 <div class="container">
 <div class="row">
