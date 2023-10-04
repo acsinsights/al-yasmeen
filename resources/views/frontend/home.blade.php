@@ -276,9 +276,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
                 <div style="align-items: center;" class="row mrb-110">
                     <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms"
                         data-wow-duration="800ms"
@@ -315,20 +312,10 @@
                             client satisfaction.</p>
 
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-
-
     <section style="padding-bottom: 100px;"
         class="why-choose-us-style2-section bg-white bg-no-repeat bg-cover bg-pos-cb pdt-110 pdb-lg-80"
         data-background="{{ asset('user-assets/images/bg/16.jpg') }}" data-overlay-light="98"
@@ -462,16 +449,15 @@
                                                 <h6 style="color: #fff" class="project-item-category">
                                                     {{ $project->title }}
                                                 </h6>
-                                                <h4 class="project-item-title">
+                                                {{-- <h4 class="project-item-title">
                                                     <a style="color: #fff!important"
                                                         href="{{ $project->hyperlinks }}">{{ $project->title }}
                                                     </a>
-                                                </h4>
+                                                </h4> --}}
                                             </div>
                                         </div>
                                     </div>
                                 @endforeach
-
                             </div>
                         </div>
                     </div>

@@ -67,6 +67,7 @@
                                                     <input type="url" id="country-floating" class="form-control" name="hyperlinks" placeholder="put hyperlink here">
                                                 </div>
                                             </div>
+
                                             <div class="col-md-6 col-12">
                                                 <div class="form-group">
                                                     <label for="company-column">Date</label>

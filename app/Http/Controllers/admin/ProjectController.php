@@ -30,6 +30,7 @@ class ProjectController extends Controller
     {
         $request->validate([
             "title" => "required|string|min:3|max:255",
+            "sub_title" => "required|string|min:3|max:255",
             "company_name" => "required|string",
             "company_logo" => "required|image|mimes:jpeg,png,jpg|max:1024",
             "description" => "required|string",
@@ -55,6 +56,7 @@ class ProjectController extends Controller
 
         $project = new Project();
         $project->title = $request->title;
+        $project->sub_title = $request->sub_title;
         $project->company_name = $request->company_name;
         $project->company_logo = $company_logo_name;
         $project->description = $request->description;
