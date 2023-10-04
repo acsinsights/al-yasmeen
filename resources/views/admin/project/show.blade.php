@@ -35,9 +35,72 @@
                         </a>
                     </div>
                 </div>
+                <section class="app-ecommerce-details">
+                    <div class="card">
+                        <!-- Product Details starts -->
+                        <div class="card-body">
+                            <div class="row my-2">
+                                <div class="col-12 col-md-5 d-flex align-items-center justify-content-center mb-2 mb-md-0">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <img src="{{ url('project/preview/' . $project->preview_img) }}" class="img-fluid product-img" alt="Project image">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-7">
+                                    <h2 style="font-weight: 800"> {{ $project->title }}</h2>
 
 
-                <div class="content-detached content-left">
+                                    <p class="card-text">
+                                        {{ $project->description }}
+                                    </p>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Product Details ends -->
+
+
+                        <!-- Related Products starts -->
+                        <div class="card-body">
+                            <div class=" text-center">
+                                <h4>Other Images</h4>
+
+                            </div>
+                            <div class="col-12 pt-5">
+                                <div class="row">
+                                    @forelse ($images as $img)
+                                        <div class="col-lg-3 col-md-4 col-6">
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <img class="card-img-top img-fluid"
+                                                            src="{{ url('project/image/' . $img->image) }}"
+                                                            alt="Card image cap">
+                                                    </div>
+                                                    {{-- <div class="card-footer">
+                                                        <a onclick="return confirm('Are you sure?')"
+                                                            class="btn btn-danger"
+                                                            href="{{ route('admin.project.image.destroy', [$project->id, $img->id]) }}">
+
+                                                            <i class="fa fa-trash"></i>
+                                                        </a>
+                                                    </div> --}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @empty
+                                        <div class="text-danger col-12">
+                                            No Image Found
+                                        </div>
+                                    @endforelse
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Related Products ends -->
+                    </div>
+                </section>
+
+                {{-- <div class="content-detached content-left">
                     <div class="">
                         <div class="blog-detail-wrapper">
                             <div class="row">
@@ -101,7 +164,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
             {{-- <div class="content-body">
                 <div class="card">
