@@ -80,7 +80,7 @@ class ProjectController extends Controller
             "company_name" => "required|string",
             "company_logo" => "nullable|image|mimes:jpeg,png,jpg|max:1024",
             "description" => "required|string",
-            "preview_img" => "nullable|image|mimes:jpeg,png,jpg|max:1024",
+            "preview_img" => "nullable|image|mimes:jpeg,png,jpg|max:1920",
             // "preview_img" => "nullable|image|mimes:jpeg,png,jpg|max:1024|dimensions:ratio=16/9",
             "location" => "required|string",
             "date" => "required|date",
@@ -145,7 +145,7 @@ class ProjectController extends Controller
     public function store_image($project_id, Request $request)
     {
         $request->validate([
-            "project_image" => "required|image|mimes:jpeg,png,jpg|max:1024",
+            "project_image" => "required|image|mimes:jpeg,png,jpg|max:1920",
             "image_alt" => "nullable|string",
         ]);
         $project = Project::findOrFail($project_id);
