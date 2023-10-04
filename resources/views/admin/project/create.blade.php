@@ -66,7 +66,8 @@
                                                 <div class="form-group">
                                                     <label for="company_name">Company Name</label>
                                                     <input type="text" id="company_name" class="form-control"
-                                                        name="company_name" placeholder="Company Name" value="{{ old('company_name') }}">
+                                                        name="company_name" placeholder="Company Name"
+                                                        value="{{ old('company_name') }}">
                                                     @error('company_name')
                                                         <span class="text-danger">
                                                             {{ $message }}
@@ -101,7 +102,8 @@
                                                 <div class="form-group">
                                                     <label for="location">Location</label>
                                                     <input type="text" id="location" class="form-control"
-                                                        name="location" placeholder="Company Name" value="{{ old('location') }}">
+                                                        name="location" placeholder="Company Name"
+                                                        value="{{ old('location') }}">
                                                     @error('location')
                                                         <span class="text-danger">
                                                             {{ $message }}
@@ -130,7 +132,7 @@
                                                     @enderror
                                                 </div>
                                             </div>
-                                            <div class=" col-12">
+                                            <div class="col-6">
                                                 <div class="form-group">
                                                     <label for="description">Description</label>
                                                     <textarea name="description" id="description" rows="5" class="form-control" placeholder="Description">{{ old('description') }}</textarea>
@@ -139,6 +141,93 @@
                                                             {{ $message }}
                                                         </span>
                                                     @enderror
+                                                </div>
+                                            </div>
+                                               <div class="col-12">
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group">
+                                                        <label for="project_image"> Many Image
+                                                            <span class="text-danger">
+                                                                (300 x 200 px)
+                                                            </span>
+                                                        </label>
+                                                        <div class="custom-file">
+                                                            <input type="file" name="project_image"
+                                                                class="custom-file-input" id="project_image">
+                                                            <label class="custom-file-label" for="project_image">
+                                                                Choose file
+                                                            </label>
+                                                        </div>
+                                                        @error('project_image')
+                                                            <span class="text-danger">
+                                                                {{ $message }}
+                                                            </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group">
+                                                        <label for="project_image"> Many Image
+                                                            <span class="text-danger">
+                                                                (300 x 200 px)
+                                                            </span>
+                                                        </label>
+                                                        <div class="custom-file">
+                                                            <input type="file" name="project_image"
+                                                                class="custom-file-input" id="project_image">
+                                                            <label class="custom-file-label" for="project_image">
+                                                                Choose file
+                                                            </label>
+                                                        </div>
+                                                        @error('project_image')
+                                                            <span class="text-danger">
+                                                                {{ $message }}
+                                                            </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group">
+                                                        <label for="project_image"> Many Image
+                                                            <span class="text-danger">
+                                                                (300 x 200 px)
+                                                            </span>
+                                                        </label>
+                                                        <div class="custom-file">
+                                                            <input type="file" name="project_image"
+                                                                class="custom-file-input" id="project_image">
+                                                            <label class="custom-file-label" for="project_image">
+                                                                Choose file
+                                                            </label>
+                                                        </div>
+                                                        @error('project_image')
+                                                            <span class="text-danger">
+                                                                {{ $message }}
+                                                            </span>
+                                                        @enderror
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3 col-12">
+                                                    <div class="form-group">
+                                                        <label for="project_image"> Many Image
+                                                            <span class="text-danger">
+                                                                (300 x 200 px)
+                                                            </span>
+                                                        </label>
+                                                        <div class="custom-file">
+                                                            <input type="file" name="project_image"
+                                                                class="custom-file-input" id="project_image">
+                                                            <label class="custom-file-label" for="project_image">
+                                                                Choose file
+                                                            </label>
+                                                        </div>
+                                                        @error('project_image')
+                                                            <span class="text-danger">
+                                                                {{ $message }}
+                                                            </span>
+                                                        @enderror
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="col-12">

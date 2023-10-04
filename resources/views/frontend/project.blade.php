@@ -3,10 +3,7 @@
 @section('page')
 
 
-
-
     <!-- Page Title Start -->
-
     <section class="page-title-section3 page-title-section">
         <div class="container">
             <div class="row">
@@ -22,8 +19,8 @@
             </div>
         </div>
     </section>
-
     <!-- Page Title End -->
+
     <!-- Project Section Start -->
     <section class="pdt-110 pdb-80">
         <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms"
@@ -47,11 +44,10 @@
         </div>
         <div class="section-content">
             <div class="container">
-                <div class="row d-flex">
-
+                <div class="row">
                     <div class="project-box">
                         @forelse ($projects as $project_key=> $project)
-                            <div class="col-xl-6 pro-box col-lg-4 col-md-6">
+                            <div class="col-xl-6 pro-box col-lg-6 col-md-6 ">
                                 <div id="project-slider-{{ $project_key }}" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#project-slider-{{ $project_key }}"
@@ -95,7 +91,7 @@
 
                                     <div class="company-details">
                                         <h4>{{ $project->company_name }}</h4>
-                                        <h3>{{ $project->title }}Title - Adarsh jadhav Company</h3>
+                                        <h3>{{ $project->title }}</h3>
                                         <p>
                                             {{ $project->description }}
                                         </p>

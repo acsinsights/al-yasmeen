@@ -40,19 +40,17 @@
                         <li>
                             <a href="#"><i class="fab fa-instagram"></i></a>
                         </li>
-                        <li>
-                            <a href="#"><i class="fab fa-google-plus"></i></a>
-                        </li>
+                     
                     </ul>
                 </div>
                 <div class="col-md-12 col-lg-12 col-xl-8">
                     <div class="row">
                         <div class="col-lg-6 col-xl-6">
-                            <div class="contact-block d-flex mrb-30">
+                            <div style="background-color: #f0f9ff;" class="contact-block d-flex mrb-30">
                                 <div class="contact-icon">
                                     <i class="base-icon-014-mail"></i>
                                 </div>
-                                <div class="contact-details mrl-30">
+                                <div style="background-color: #f0f9ff;" class="contact-details mrl-30">
                                     <h5 class="icon-box-title mrb-10">Email Us</h5>
                                     <p class="mrb-0"><a style="color: #555"
                                             href="mailto:sales@alyasmeen.com">sales@alyasmeen.com</a> </p>
@@ -60,7 +58,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 col-xl-6">
-                            <div class="contact-block d-flex mrb-30">
+                            <div style="background-color: #f0f9ff;" class="contact-block d-flex mrb-30">
                                 <div class="contact-icon">
                                     <i class="base-icon-011-phone-1"></i>
                                 </div>
@@ -85,23 +83,23 @@
                                 @method('put')
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div class="form-group mrb-25">
-                                        <input type="text" name="name" placeholder="Name" class="form-control" required>
+                                    <div  class="form-group mrb-25">
+                                        <input style="background-color: #f0f9ff;!important" type="text" name="name" placeholder="Name" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group mrb-25">
-                                        <input type="text" name="phone" placeholder="Phone" class="form-control" required>
+                                        <input style="background-color: #f0f9ff;!important" type="text" name="phone" placeholder="Phone" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group mrb-25">
-                                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                                        <input style="background-color: #f0f9ff;!important" type="email" name="email" placeholder="Email" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group mrb-25">
-                                        <textarea rows="5" name="message" placeholder="Messages" class="form-control" required></textarea>
+                                        <textarea style="background-color: #f0f9ff;!important" rows="5" name="message" placeholder="Messages" class="form-control" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-lg-8">

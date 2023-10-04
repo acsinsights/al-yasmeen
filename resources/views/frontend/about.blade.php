@@ -58,8 +58,7 @@
                     style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInRight;">
                     <h5 class="side-line-left subtitle text-primary-color">About Our Company</h5>
 
-                    <h2 class="mrb-45 mrb-lg-35">Providing design <span class="text-primary-color"> beyond imagination
-                        </span> &amp; transforming spaces into works of art</h2>
+                    <h2 class="mrb-45 mrb-lg-35">Creating imaginative designs, turning spaces into art.</h2>
                     <p class="about-text-block mrb-40">Making Exceptional interiors The pursuit of excellence,
                         inventiveness, and specialized solutions fuels our passion. Planning, design, and project management
                         are all included in our comprehensive services. We create functional works of art in all kinds of
@@ -348,7 +347,7 @@
                                 </div>
                             </div>
                         @endforeach
-            
+
                     </div>
                 </div>
             </div>

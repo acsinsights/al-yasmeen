@@ -173,8 +173,7 @@
                     style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInRight;">
                     <h5 class="side-line-left subtitle text-primary-color">About Our Company</h5>
 
-                    <h2 class="mrb-45 mrb-lg-35">Providing design <span class="text-primary-color"> beyond imagination
-                        </span> &amp; transforming spaces into works of art</h2>
+                    <h2 class="mrb-45 mrb-lg-35">Creating imaginative designs, turning spaces into art.</h2>
                     <p class="about-text-block mrb-40">Making Exceptional interiors The pursuit of excellence,
                         inventiveness, and specialized solutions fuels our passion. Planning, design, and project management
                         are all included in our comprehensive services. We create functional works of art in all kinds of
@@ -202,8 +201,7 @@
                                 </div>
                                 <div class="featured-content">
                                     <h4 class="featured-title">Exclusive Design</h4>
-                                    <p class="featured-desc">Quickly productivate just in time strategic theme lacus mirina
-                                        magna</p>
+                                    <p class="featured-desc">Elevate spaces with exclusive design expertise, creating extraordinary works of art.</p>
                                 </div>
                             </div>
                             <div class="featured-icon-box mrb-sm-40">
@@ -212,8 +210,7 @@
                                 </div>
                                 <div class="featured-content">
                                     <h4 class="featured-title">Professional Team</h4>
-                                    <p class="featured-desc mrb-0">Quickly productivate just in time strategic theme lacus
-                                        mirina magna</p>
+                                    <p class="featured-desc mrb-0">Trust our skilled team for vision-to-reality excellence and innovation.</p>
                                 </div>
                             </div>
                         </div>
@@ -445,8 +442,7 @@
                         </div>
                     </div>
                     <div class="col-xl-4 col-lg-5 col-md-12 text-lg-start">
-                        <p class="text-white mrb-0 mrb-md-40">Lorem ipsum dolor sit amet consectetur adipiscing augue curae
-                            duis pellentesque proin, quam faucibus accumsan feugiat donec aliquet</p>
+                        <p class="text-white mrb-0 mrb-md-40">Discover Our Outstanding Recent Projects in Innovative Fit-Out Solutions, Where Vision Meets Reality to Redefine Spaces.</p>
                     </div>
                 </div>
             </div>

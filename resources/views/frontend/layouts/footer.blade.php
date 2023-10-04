@@ -27,14 +27,14 @@
               </div>
               <div class="col-xl-2 col-lg-6">
                 <div class="widget footer-widget">
-                  <h5 class="widget-title text-black mrb-30">Services</h5>
+                  <h5 class="widget-title text-black mrb-30">Navigation</h5>
                   <ul class="footer-widget-list">
-                    <li><a href="service-architecture.html">Architecture</a></li>
-                    <li><a href="service-interior-work.html">Interior Work</a></li>
-                    <li><a href="service-kitchen-design.html">Kitchen Design</a></li>
-                    <li><a href="service-decoration-art.html">Decoration Art</a></li>
-                    <li><a href="service-renovation.html">Renovation</a></li>
-                    <li><a href="service-exterior-design.html">Exterior Design</a></li>
+                    <li><a href="{{ '/' }}">Home</a></li>
+                    <li><a href="{{ '/services' }}">Services</a></li>
+                    <li><a href="{{ '/projects' }}">Projects</a></li>
+                    <li><a href=" {{ '/about' }}">About Us</a></li>
+
+
                   </ul>
                 </div>
               </div>
