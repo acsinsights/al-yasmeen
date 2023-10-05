@@ -8,7 +8,7 @@
             <img src="images/objects/footer-obj2.png" alt="" />
           </div>
           <div class="container">
-            <div class="row pdb-65">
+            <div class="row">
               <div class="col-xl-4 col-lg-6">
                 <div class="widget footer-widget mrr-60 mrr-md-0">
                   <h5 class="widget-title text-black mrb-30">Newsletter</h5>
@@ -57,9 +57,7 @@
               </div>
               <div class="col-xl-3 col-lg-6">
                 <div class="widget footer-widget mrr-60 mrr-md-0">
-                  <div class="footer-logo">
-                    <img src="images/logo-light.svg" alt="" class="mrb-25" />
-                  </div>
+                  
                   <p class="mrb-25">There are many vari of pass but majority have suffered some injected of a humour</p>
                   <ul class="social-list">
                     <li>
@@ -78,7 +76,7 @@
                 </div>
               </div>
             </div>
-            <div class="row pdt-30 pdb-30 footer-copyright-area">
+            <div class="row pdt-30 footer-copyright-area">
               <div class="col-xl-12">
                 <div class="text-center">
                   <span>Copyright ©2023 AL Yasmeen All Rights Reserved Developed by <span><a style="

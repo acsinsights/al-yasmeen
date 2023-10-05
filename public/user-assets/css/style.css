@@ -2045,7 +2045,8 @@ div[class*='kursor'].kursor--1.kursor--down {
   display: block;
   width: 22px;
   height: 2px;
-  background-color: var(--secondary-color);
+  /* background-color: var(--secondary-color); */
+  background-color: black;
 }
 .header-style-03 .main-menu .main-menu-wrapper .main-menu-right .mobile-nav-toggler span:nth-child(2) {
   margin-top: 6px;
@@ -2357,6 +2358,7 @@ div[class*='kursor'].kursor--1.kursor--down {
 
 .mobile-nav-wrapper.expanded .mobile-nav-content {
   opacity: 1;
+  background: #ffffff;
   visibility: visible;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -2406,7 +2408,7 @@ div[class*='kursor'].kursor--1.kursor--down {
 
 .mobile-menu-list > li > a {
   font-size: 16px;
-  color: var(--text-white);
+  /* color: var(--text-white); */
   display: block;
   line-height: 42px;
 }
@@ -2460,10 +2462,10 @@ div[class*='kursor'].kursor--1.kursor--down {
   margin-bottom: 30px;
 }
 .mobile-sidebar-contact li {
-  color: var(--text-white);
+  /* color: var(--text-white); */
 }
 .mobile-sidebar-contact li a {
-  color: var(--text-white);
+  /* color: var(--text-white); */
 }
 .mobile-sidebar-contact li a:hover {
   color: var(--text-white);
@@ -2481,7 +2483,8 @@ div[class*='kursor'].kursor--1.kursor--down {
   width: 2px;
   height: 100%;
   display: block;
-  background-color: var(--bg-white);
+  /* background-color: var(--bg-white); */
+  background-color: #000;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -10590,6 +10593,43 @@ select {
         flex-direction: column;
     }
 
+    .company-description{
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+    }
+}
+@media only screen and (min-width: 200px) and (max-width: 700px) {
+
+    .project-box{
+        flex-direction: column;
+    }
+
+    .our-mission-row{
+        margin-top: 1px;
+        flex-direction: column-reverse;
+        margin-bottom: -41px;
+    }
+    .our-vision-row{
+
+        margin-bottom: -41px;
+    }
+    .service-sec{
+        flex-direction: column-reverse;
+    }
+    .o-mission-heading{
+        margin-top: 37px;
+    }
+    .service-sec-spacing{
+        margin-bottom: 9px;
+    }
+.ser-sec-heading{
+    margin-top: 25px;
+}
+
+.ser-title{
+    font-size: 1.8rem;
+}
     .company-description{
         display: flex;
         flex-direction: column;

@@ -18,7 +18,7 @@
                     <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon" data-feather="search"></i></a>
                         <div class="search-input">
                             <div class="search-input-icon"><i data-feather="search"></i></div>
-                            <input name="search" value="{{ Request::get('search')}}" class="form-control input" type="text" placeholder="Explore ADFJ..." tabindex="-1" data-search="search">
+                            <input name="search" value="{{ Request::get('search')}}" class="form-control input" type="text" placeholder="Explore AL Yasmeen..." tabindex="-1" data-search="search">
                             <div class="search-input-close"><i data-feather="x"></i></div>
 
                         </div>

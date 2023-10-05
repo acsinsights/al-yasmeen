@@ -243,11 +243,11 @@
         </div>
         <div class="section-content">
             <div class="container">
-                <div style="align-items: center;" class="row mrb-110">
+                <div style="align-items: center;" class="our-mission-row row mrb-110">
                     <div class="col-md-12 col-lg-12 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms"
                         style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
                         <h5 class="text-primary-color mrb-10"></h5>
-                        <h2 class="text-white mrb-30 mrb-sm-30">
+                        <h2 class="text-white mrb-30 o-mission-heading mrb-sm-30">
                             <span class="text-primary-color">Our Mission<br> </span>
                         </h2>
                         <p class="text-white mrb-40">Our mission is to transform, inspire, and motivate people through the
@@ -263,7 +263,7 @@
                         data-wow-duration="800ms"
                         style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
                         <div class="twentytwenty-wrapper twentytwenty-horizontal">
-                            <div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container"
+                            <div class="before-after-slider1 style2 twentytwenty-container"
                                 style="height: 397.5px;">
                                 <!-- The before image is first -->
                                 <img src="{{ asset('user-assets/images/before-after/1.jpg') }}" alt="img1"
@@ -282,7 +282,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="align-items: center;" class="row mrb-110">
+                <div style="align-items: center;" class="our-vision-row row mrb-110">
                     <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms"
                         data-wow-duration="800ms"
                         style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
@@ -308,7 +308,7 @@
                     <div class="col-md-12 col-lg-12 col-xl-6 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="800ms"
                         style="visibility: visible; animation-duration: 800ms; animation-delay: 0ms; animation-name: fadeInUp;">
                         <h5 class=" text-primary-color mrb-10"></h5>
-                        <h2 class="text-white mrb-30 mrb-sm-30">
+                        <h2 class="text-white o-mission-heading mrb-30 mrb-sm-30">
                             <span class="text-primary-color">Our Vision<br> </span>
                         </h2>
                         <p class="text-white mrb-40">To lead advancement in the field by redefining fit-out solutions with
