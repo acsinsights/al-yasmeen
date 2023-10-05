@@ -430,7 +430,7 @@
                             <h5 class="side-line-left text-white mrb-10">Our Projects</h5>
                             <h2 class="text-white mrb-md-40 mrb-sm-30">
                                 Our Outstanding <br />
-                                <span class="text-primary-color">Latest Proejcts</span> & Works
+                                <span class="text-primary-color">Latest Projects</span> & Works
                             </h2>
                         </div>
                     </div>
