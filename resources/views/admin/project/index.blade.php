@@ -63,7 +63,7 @@
                                                    View
                                                     </a>
                                                     <a href="{{ route('admin.project.image.create', $project->id) }}"
-                                                        class="btn btn-flat-success border">
+                                                        class="btn btn-flat-warning border">
                                                       Add More Images
                                                     </a>
                                                     <a href="{{ route('admin.project.edit', $project->id) }}"
