@@ -53,7 +53,6 @@ Route::group(['prefix' => 'admin'], function () {
 
 
         // enquiry form
-
         Route::get('/enquiryinbox', [DashboardController::class, 'enquiryinbox'])->name('admin.enquiryinbox');
         Route::delete('/enquiry-delete/{id}', [DashboardController::class, 'enquiry_form']);
         Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);

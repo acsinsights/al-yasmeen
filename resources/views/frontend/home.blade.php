@@ -26,7 +26,7 @@
                 <div class="col-md-12 col-lg-10 col-xl-5 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                     <div class="request-a-call-back-form-style2">
                         <h3 class="mrt-0 mrb-30">Need Any Help?</h3>
-                        <form action="/submit" name="contactForm" method="post">
+                        <form action="/enquirysubmit" name="contactForm" method="post">
                             @csrf
                             @method('put')
                             <div class="row">

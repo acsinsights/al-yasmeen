@@ -45,7 +45,7 @@
         <div class="section-content">
             <div class="container">
                 <div class="row">
-                    <div class="project-box">
+                    <div class="project-box col-12 col-xl-12">
                         @forelse ($projects as $project_key=> $project)
                             <div class="col-xl-6 pro-box col-lg-6 col-md-6 ">
                                 <div id="project-slider-{{ $project_key }}" class="carousel slide" data-bs-ride="carousel">
@@ -101,6 +101,7 @@
                                                 </h5>
                                             </div>
                                             <div  class="col-xl-4 col-lg-4 mt-4 col-md-12">
+
                                                 <img style="height: 100px;" src="{{ url('project/client/' . $project->company_logo) }}"
                                                     alt="company-logo">
                                                     <h5 style="font-weight: 100;">

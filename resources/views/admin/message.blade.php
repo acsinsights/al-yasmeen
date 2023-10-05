@@ -1,3 +1,7 @@
+
+
+
+
 @if (Session::has('error'))
 
 
@@ -39,4 +43,7 @@
         </div>
     </div>
 </div>
+
+
 @endif
+

@@ -164,7 +164,6 @@
                                                             href="{{ route('admin.project.image.destroy', [$project->id, $img->id]) }}">
                                                             Delete
                                                         </a>
-
                                                     </div>
                                                 </div>
                                             </div>
