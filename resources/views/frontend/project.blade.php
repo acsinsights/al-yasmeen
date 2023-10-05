@@ -89,20 +89,26 @@
                                     <div class="company-details">
                                         <h6>{{ $project->company_name }}</h6>
                                         <h4>{{ $project->title }}</h4>
-                                        {{-- <p>
-                                            {{ $project->description }}
-                                        </p> --}}
-                                        <div class="  company-description">
-                                            <div  class="col-xl-8 col-lg-4 mt-4 col-md-12">
-                                                <img style="height: 100px;" src="{{ url('project/client/' . $project->company_logo) }}"
-                                                    alt="company-logo">
-                                            </div>
+                                        <div style="margin-top: 28px!important;" class="company-description">
+
                                             <div class="col-xl-4 col-lg-8 col-md-12">
-                                                <h5>
-                                                    Date:  {{ date('d-m-Y', strtotime($project->date)) }}
+                                                <h5 style="font-weight: 100;">
+                                                    Location: <br>{{ $project->location }}
                                                 </h5>
                                             </div>
+                                            <div class="col-xl-4 col-lg-8 col-md-12">
+                                                <h5 style="font-weight: 100;">
+                                                    Date: <br> {{ date('d-m-Y', strtotime($project->date)) }}
+                                                </h5>
+                                            </div>
+                                            <div  class="col-xl-4 col-lg-4 mt-4 col-md-12">
 
+                                                <img style="height: 100px;" src="{{ url('project/client/' . $project->company_logo) }}"
+                                                    alt="company-logo">
+                                                    <h5 style="font-weight: 100;">
+                                                        Company Logo
+                                                    </h5>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

@@ -19,7 +19,7 @@ WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BET
     color: #444;
     /* padding: 10px; */
     float: right;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 }
 
 /* input:not(:checked)~label:hover,
@@ -27,28 +27,27 @@ input:not(:checked)~label:hover~label {
     color: black;
 } */
 
-input:checked~label {
+input:checked ~ label {
     color: gold;
-
 }
 
-#rate-1:checked~.rating-desc:before {
+#rate-1:checked ~ .rating-desc:before {
     content: "Poor😋";
 }
 
-#rate-2:checked~.rating-desc:before {
+#rate-2:checked ~ .rating-desc:before {
     content: "Not bad";
 }
 
-#rate-3:checked~.rating-desc:before {
+#rate-3:checked ~ .rating-desc:before {
     content: "Average";
 }
 
-#rate-4:checked~.rating-desc:before {
+#rate-4:checked ~ .rating-desc:before {
     content: "Good😋";
 }
 
-#rate-5:checked~.rating-desc:before {
+#rate-5:checked ~ .rating-desc:before {
     content: "Excellent😋";
 }
 
@@ -58,7 +57,7 @@ input:checked~label {
     font-weight: 600;
     margin: 5px 0 10px 0;
     text-align: center;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
 }
 
 .star-rating-bx {
@@ -68,26 +67,22 @@ input:checked~label {
     /* padding: 40px; */
 }
 
-.p-card{
-    padding-left: 1px!important;
-    flex-direction: row!important;
-    gap: 20px!important;
-    background-color: #212332!important;
+.p-card {
+    padding-left: 1px !important;
+    flex-direction: row !important;
+    gap: 20px !important;
+    background-color: #212332 !important;
 }
 
-
-
-
-
-@media (max-width:576px) {
+@media (max-width: 576px) {
     .star-rating-bx {
         padding: 20px 15px;
     }
-    .p-card{
-        padding-left: 1px!important;
-        flex-direction: column!important;
-        gap: 20px!important;
-        background-color: #212332!important;
+    .p-card {
+        padding-left: 1px !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        background-color: #212332 !important;
     }
 }
 
@@ -214,25 +209,24 @@ input:checked~label {
     vertical-align: center;
 }
 
-#button-3 .checkbox:active+.knobs:before {
+#button-3 .checkbox:active + .knobs:before {
     width: 46px;
     border-radius: 100px;
 }
 
-#button-3 .checkbox:checked:active+.knobs:before {
+#button-3 .checkbox:checked:active + .knobs:before {
     margin-left: -26px;
 }
 
-#button-3 .checkbox:checked+.knobs:before {
+#button-3 .checkbox:checked + .knobs:before {
     content: "NO";
     left: 42px;
     background-color: #f44336;
 }
 
-#button-3 .checkbox:checked~.layer {
+#button-3 .checkbox:checked ~ .layer {
     background-color: #fcebeb;
 }
-
 
 .switch {
     position: relative;
@@ -248,7 +242,6 @@ input:checked~label {
     height: 0;
 }
 
-
 /* The slider */
 .slider {
     position: absolute;
@@ -258,8 +251,8 @@ input:checked~label {
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
 
 .slider:before {
@@ -270,34 +263,35 @@ input:checked~label {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
 
-input:checked+.slider {
+input:checked + .slider {
     background-color: #7367f0;
 }
 
-input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
 
-.client-table{
-    background-color: #f3f2f7;border-top-left-radius: 1rem; border-top-right-radius: 1rem;vertical-align: top;
+.client-table {
+    background-color: #f3f2f7;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    vertical-align: top;
     text-transform: uppercase;
     font-size: 0.857rem;
     letter-spacing: 0.5px;
     color: #323234;
     font-weight: bold;
-
 }
-
 
 /* Rounded sliders */
 .slider.round {
@@ -336,7 +330,6 @@ input:checked+.slider:before {
     border-radius: 4px;
 }
 
-
 .testi-text {
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -351,4 +344,20 @@ input:checked+.slider:before {
 ::-webkit-scrollbar-thumb {
     background: #4d4e50;
     border-radius: 20px;
+}
+
+@media only screen and (min-width: 1601px) and (max-width: 4000px) {
+    .projectimg-responsive {
+        object-fit: fill;
+        width: 592px;
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 979px) and (max-width: 1600px) {
+    .projectimg-responsive {
+        object-fit: fill;
+        width: 592px;
+        height: 400px;
+    }
 }
