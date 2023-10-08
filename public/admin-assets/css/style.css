@@ -301,7 +301,11 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-
+.err-msg{
+    color: red!important;
+    list-style: none;
+    padding: 0.71rem 1rem;
+}
 #margin-zero {
     display: table-cell;
     position: relative;
