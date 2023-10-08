@@ -82,14 +82,21 @@
                                                         class="btn btn-flat-primary border">Edit</a>
                                                 </td>
                                                 <td style="text-align: center;">
-                                                    <form action="/admin/deletetestimonial/{{ $tsti->id }}"
+                                                    {{-- <form action="/admin/deletetestimonial/{{ $tsti->id }}"
                                                         method="post">
                                                         <button class="btn btn-flat-danger border"
                                                             onclick="return confirm('Are you sure?');"
                                                             type="submit">Delete</button>
                                                         @csrf
                                                         @method('delete')
-                                                    </form>
+                                                    </form> --}}
+
+                                                    <a class="btn btn-flat-danger border"
+                                                    onclick="return confirm('Are you sure?');"
+                                                    href="{{ route('admin.deletetestimonial', $tsti->id) }}">
+                                                    Delete
+                                                </a>
+
                                                 </td>
                                             </tr>
                                         @endforeach

@@ -82,7 +82,7 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/add-testimonial', [TestimonialController::class, 'store'])->name('admin.add-testimonial');
 
 
-        Route::delete('/deletetestimonial/{id}', [TestimonialController::class, 'destroy']);
+        Route::get('/deletetestimonial/{id}', [TestimonialController::class, 'destroy'])->name('admin.deletetestimonial');
         Route::get('/edittestimonial/{id}', [TestimonialController::class, 'edit']);
         Route::delete('/delete-testimonial-image/{id}', [TestimonialController::class, 'deletecover']);
         Route::any('/updatetestimonial/{id}', [TestimonialController::class, 'update']);
