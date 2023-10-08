@@ -45,9 +45,9 @@
         <div class="section-content">
             <div class="container">
                 <div class="row">
-                    <div class="project-box col-12 col-xl-12">
+                    <div  class="project-box projects-container">
                         @forelse ($projects as $project_key=> $project)
-                            <div class="col-xl-6 pro-box col-lg-6 col-md-6 ">
+                            <div class="pro-box   ">
                                 <div id="project-slider-{{ $project_key }}" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#project-slider-{{ $project_key }}"

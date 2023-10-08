@@ -10563,7 +10563,11 @@ select {
 
 
 
-
+.projects-container{
+    display: grid!important;
+    grid-template-columns: repeat(auto-fit,minmax(430px, 1fr));
+    grid-gap: 30px;
+}
 
 
 
@@ -10603,6 +10607,13 @@ select {
 
     .project-box{
         flex-direction: column;
+    }
+
+
+    .projects-container{
+        display: grid!important;
+        grid-template-columns: repeat(auto-fit,minmax(370px, 0fr));
+        grid-gap: 30px;
     }
 
     .our-mission-row{
