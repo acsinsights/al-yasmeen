@@ -55,19 +55,10 @@
 
                         <!-- right content section -->
                         <div class="col-md-9">
-                            @include('admin.message')
-                            @if (session('message'))
-                                <h5 class="alert alert-success mb-2">{{ session('message') }}</h5>
-                            @endif
 
-                            @if ($errors->any())
-                                <ul style="color: rgb(255, 255, 255)!important" class="alert alert-danger">
-                                    @foreach ($errors->all() as $error)
-                                        <li style="color: rgb(255, 255, 255)!important" class=" alert-danger">
-                                            {{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            @endif
+                            {{-- <x-input-error :messages="$errors->updatePassword->get('current_password')" class="alert alert-danger alert-validation-msg err-msg" />
+                            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="alert alert-danger alert-validation-msg err-msg" />
+                            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="alert alert-danger alert-validation-msg err-msg" /> --}}
                             <div class="card">
                                 <div class="card-body">
                                     <div class="tab-content">
@@ -78,14 +69,12 @@
                                                 class="mt-6 space-y-6">
                                                 @csrf
                                                 @method('patch')
-
-                                                <div class="mb-20 media">
+                                                {{-- <div class="mb-20 media">
                                                     <a href="javascript:void(0);" class="mr-25">
-                                                        <img src="{{ asset('admin-assets/images/avatars/1-small.png') }}"
+                                                        <img src="/profile-img/{{ Auth::user()->profile_img }}"
                                                             id="account-upload-img" class="rounded mr-50"
                                                             alt="profile image" height="80" width="80">
                                                     </a>
-
                                                     <div class="media-body mt-75 ml-1">
                                                         <label for="account-upload"
                                                             class="btn btn-sm btn-primary mb-75 mr-75">Change Profile
@@ -94,9 +83,7 @@
                                                             hidden="" accept="image/*">
                                                         <p>Dimensions (85x85) px</p>
                                                     </div>
-
-                                                </div>
-
+                                                </div> --}}
                                                 {{-- <form class="validate-form mt-2"> --}}
                                                 <div style="margin-top: 15px;" class="row">
                                                     <div class="col-12 col-sm-6">
@@ -151,11 +138,10 @@
                                                     </div>
                                                     <div class="col-12 col-sm-6">
                                                         <div class="form-group">
-                                                            <label for="account-company">Phone No.</label>
-                                                            <input type="text" class="form-control"
-                                                                id="account-company" name="phone" minlength="10"
-                                                                maxlength="10" placeholder="Enter Your Phone No."
-                                                                value="{{ Auth::user()->phone_no }}">
+                                                            <x-input-label for="phone_no" :value="__('phone no')" />
+                                                            <x-text-input id="phone_no" name="phone_no" type="text"
+                                                                class="form-control" value="{{ Auth::user()->phone_no }}" autofocus
+                                                                autocomplete="phone_no" />
                                                             <x-input-error class="mt-2" :messages="$errors->get('phone_no')" />
                                                         </div>
                                                     </div>
@@ -193,7 +179,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <x-input-error :messages="$errors->updatePassword->get('current_password')" />
+                                                            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="err-msg"/>
                                                         </div>
                                                     </div>
 
@@ -211,7 +197,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <x-input-error :messages="$errors->updatePassword->get('password')" />
+                                                            <x-input-error :messages="$errors->updatePassword->get('password')" class="err-msg/>
                                                         </div>
                                                     </div>
 
@@ -230,9 +216,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <x-input-error :messages="$errors->updatePassword->get(
-                                                                'password_confirmation',
-                                                            )" />
+                                                            <x-input-error :messages="$errors->updatePassword->get('password_confirmation', )" class="err-msg/>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">

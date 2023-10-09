@@ -13,7 +13,7 @@
                 <div class="widget footer-widget mrr-60 mrr-md-0">
                   <h5 class="widget-title text-black mrb-30">Newsletter</h5>
                   <p class="mrb-30">Seamlessly visualize quality intellectual ideal without collaboration superior montes soon maecenas capita idea listically</p>
-                  <div class="newsletter-from">
+                  {{-- <div class="newsletter-from">
                     <div class="email">
                       <input type="email" name="EMAIL" placeholder="Enter your email" required="" />
                     </div>
@@ -22,7 +22,7 @@
                         <i class="base-icon-arrow-right"></i>
                       </button>
                     </div>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
               <div class="col-xl-2 col-lg-6">
@@ -44,7 +44,7 @@
                   <address class="mrb-0">
                     <p>32 Dora Creek, tuntable creek, New South Wales 2480, Australia</p>
                     <div class="mrb-10">
-                      <a href="#"><i class="fas fa-phone-alt mrr-10"></i>+088 234 432 15565</a>
+                      <a href="tel:+12345666789"><i class="fas fa-phone-alt mrr-10"></i>+12 345 666 789</a>
                     </div>
                     <div class="mrb-10">
                       <a href="mailto:sales@alyasmeen.com"><i class="fas fa-envelope mrr-10"></i>sales@alyasmeen.com</a>
@@ -57,7 +57,7 @@
               </div>
               <div class="col-xl-3 col-lg-6">
                 <div class="widget footer-widget mrr-60 mrr-md-0">
-                  
+
                   <p class="mrb-25">There are many vari of pass but majority have suffered some injected of a humour</p>
                   <ul class="social-list">
                     <li>

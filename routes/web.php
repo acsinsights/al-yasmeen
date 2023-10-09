@@ -75,6 +75,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 
+
         Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
 
         Route::get('/alltestimonial', [TestimonialController::class, 'index'])->name('admin.alltestimonial');

@@ -12,10 +12,8 @@
             <div class="content-header row">
             </div>
             <div class="content-body">
-                <!-- Dashboard Analytics Start -->
                 <section id="dashboard-analytics">
                     <div class="row match-height">
-                        <!-- Greetings Card starts -->
                         <div class="col-lg-6 col-md-12 col-sm-12">
                             <div class="card card-congratulations">
                                 <div class="card-body text-center">
@@ -37,9 +35,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Greetings Card ends -->
-
-                        <!-- Subscribers Chart Card starts -->
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="card">
                                 <div class="card-header flex-column align-items-start pb-0">
@@ -54,9 +49,6 @@
                                 <div id="gained-chart"></div>
                             </div>
                         </div>
-                        <!-- Subscribers Chart Card ends -->
-
-                        <!-- Orders Chart Card starts -->
                         <div class="col-lg-3 col-sm-6 col-12">
                             <div class="card">
                                 <div class="card-header flex-column align-items-start pb-0">
@@ -71,7 +63,6 @@
                                 <div id="order-chart"></div>
                             </div>
                         </div>
-                        <!-- Orders Chart Card ends -->
                     </div>
                 </section>
                 <div class="row">

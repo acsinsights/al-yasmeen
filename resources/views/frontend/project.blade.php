@@ -120,55 +120,5 @@
         </div>
     </section>
 
-
-
-
-    <!-- Project Section End -->
-    <!-- Testimonials Section Start -->
-    <section class="testimonial-style2-section pdt-40 pdb-110 bg-no-repeat bg-cover bg-pos-cb"
-        data-background="{{ asset('user-assets/images/bg/abs-bg7.png') }}">
-        <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-8">
-                        <div class="title-box-center">
-                            <h5 class="sub-title-line-bottom text-primary-color mrb-10">Testimonials</h5>
-                            <h2 class="title">What Our <span class="text-primary-color">Clients</span> Say about us?</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section-content">
-            <div class="container">
-                <div class="row">
-                    <div class="owl-carousel testmonial_3col testimonial-style2 text-left">
-                        @foreach ($testimonials as $tt)
-                            <div class="testimonial-item">
-                                <div class="testimonial-thumb">
-                                    <img src="/testiimages/{{ $tt->custimg }}" alt="" />
-                                </div>
-                                <div class="testimonial-content">
-                                    <p class="comments"> {{ $tt->custreview }}</p>
-                                    <h4 class="client-name">{{ $tt->custname }}</h4>
-                                    <h6 class="client-designation">{{ $tt->custdesignation }}, {{ $tt->custcompany }}
-                                    </h6>
-                                </div>
-                            </div>
-                        @endforeach
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-    <!-- Testimonials Section End -->
-
-
+ 
 @endsection

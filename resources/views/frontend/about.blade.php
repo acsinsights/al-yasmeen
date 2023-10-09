@@ -59,7 +59,7 @@
                     <h5 class="side-line-left subtitle text-primary-color">About Our Company</h5>
 
                     <h2 class="mrb-45 mrb-lg-35">Creating imaginative designs, turning spaces into art.</h2>
-                    <p class="about-text-block mrb-40">Making Exceptional interiors The pursuit of excellence,
+                    <p style="background: #def2ff;" class="about-text-block mrb-40">Making Exceptional interiors The pursuit of excellence,
                         inventiveness, and specialized solutions fuels our passion. Planning, design, and project management
                         are all included in our comprehensive services. We create functional works of art in all kinds of
                         settings, from hotels to offices, fusing creativity with utility.
@@ -149,10 +149,10 @@
                             <div class="before-after-slider1 style2 twentytwenty-container"
                                 style="height: 397.5px;">
                                 <!-- The before image is first -->
-                                <img src="{{ asset('user-assets/images/before-after/1.jpg') }}" alt="img1"
+                                <img src="{{ asset('user-assets/images/before-after/music-studio-before.jpg') }}" alt="img1"
                                     class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
                                 <!-- The after image is last -->
-                                <img src="{{ asset('user-assets/images/before-after/2.jpg') }}" alt="img1"
+                                <img src="{{ asset('user-assets/images/before-after/music-studio-after.jpg') }}" alt="img1"
                                     class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
                                 <div class="twentytwenty-overlay">
                                     <div class="twentytwenty-before-label" data-content="Before"></div>
@@ -173,10 +173,10 @@
                             <div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container"
                                 style="height: 397.5px;">
                                 <!-- The before image is first -->
-                                <img src="{{ asset('user-assets/images/before-after/3.jpg') }}" alt="img1"
+                                <img src="{{ asset('user-assets/images/before-after/laboratory-befor.jpg') }}" alt="img1"
                                     class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
                                 <!-- The after image is last -->
-                                <img src="{{ asset('user-assets/images/before-after/4.jpg') }}" alt="img1"
+                                <img src="{{ asset('user-assets/images/before-after/laboratory-after.jpg') }}" alt="img1"
                                     class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
                                 <div class="twentytwenty-overlay">
                                     <div class="twentytwenty-before-label" data-content="Before"></div>
@@ -321,10 +321,10 @@
                 <div class="row">
                     <div class="owl-carousel testmonial_3col testimonial-style2 text-left">
                         @foreach ($testimonials as $tt)
-                            <div class="testimonial-item">
+                            <div style="    background: #def2ff;" class="testimonial-item">
                                 <div class="testimonial-thumb">
                                     <img src="/testiimages/{{ $tt->custimg }}"
-                                        alt="" />
+                                  style="height: 50px!important" alt="" />
                                 </div>
                                 <div class="testimonial-content">
                                     <p class="comments"> {{ $tt->custreview }}</p>
