@@ -81,6 +81,4 @@ class DashboardController extends Controller
         $forms = Message::truncate();
         return back()->with('success', 'All messages deleted successfully');
     }
-
-
 }
