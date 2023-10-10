@@ -62,7 +62,7 @@
                                         <!-- general tab -->
                                         <div role="tabpanel" class="tab-pane active" id="account-vertical-general"
                                             aria-labelledby="account-pill-general" aria-expanded="true">
-                                            <form method="post" action="{{ route('profile.update') }}"
+                                            <form method="post" enctype="multipart/form-data" action="{{ route('profile.update') }}"
                                                 class="mt-6 space-y-6">
                                                 @csrf
                                                 @method('patch')
@@ -81,8 +81,6 @@
                                                         <p>Dimensions (85x85) px</p>
                                                     </div>
                                                 </div>
-
-
                                                 {{-- <form class="validate-form mt-2"> --}}
                                                 <div style="margin-top: 15px;" class="row">
                                                     <div class="col-12 col-sm-6">
