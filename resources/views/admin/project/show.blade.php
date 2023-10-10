@@ -69,7 +69,7 @@
 
                                         Description -
 
-                                        <div style="padding: 0px 0px;gap: 229px;" class="col-12 d-flex">
+                                        <div style="padding: 0px 0px;gap: 160px;" class="col-12 d-flex">
                                             <p style="padding: 0px 0px;" class="col-6 text-justify card-text">
                                                 GPS, Always-On Retina display, 30% larger screen, Swimproof, ECG app,
                                                 Electrical and optical heart sensors,

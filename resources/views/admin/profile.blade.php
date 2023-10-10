@@ -90,7 +90,7 @@
                                                         <x-text-input id="name" name="name" type="text"
                                                             class="form-control" value="{{ Auth::user()->name }}" autofocus
                                                             autocomplete="name" />
-                                                        <x-input-error class="mt-2" :messages="$errors->get('name')" /> 
+                                                        <x-input-error class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 " :messages="$errors->get('name')" />
                                                     </div>
 
                                                     <div class="col-12 col-sm-6">
@@ -98,14 +98,14 @@
                                                         <x-text-input id="company_name" name="company_name" type="text"
                                                             class="form-control" value="{{ Auth::user()->company_name }}"
                                                             autofocus autocomplete="company_name" />
-                                                        <x-input-error class="mt-2" :messages="$errors->get('company_name')" />
+                                                        <x-input-error class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 " :messages="$errors->get('company_name')" />
                                                     </div>
                                                     <div class="col-12 col-sm-6">
                                                         <x-input-label for="email" :value="__('Email')" />
                                                         <x-text-input id="email" name="email" type="email"
                                                             class="form-control" value="{{ Auth::user()->email }}" autofocus
                                                             autocomplete="email" />
-                                                        <x-input-error class="mt-2" :messages="$errors->get('email')" />
+                                                        <x-input-error class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 " :messages="$errors->get('email')" />
                                                     </div>
                                                     <div class="col-12 col-sm-6">
                                                         <div class="form-group">
@@ -119,6 +119,16 @@
                                                     <div class="col-12">
                                                         <button type="submit" class="btn btn-primary mt-2 mr-1">Save
                                                             changes</button>
+
+                                                            @if (session('status') === 'profile-updated')
+                                                            <p
+                                                                x-data="{ show: true }"
+                                                                x-show="show"
+                                                                x-transition
+                                                                x-init="setTimeout(() => show = false, 2000)"
+                                                                class="text-sm text-gray-600 dark:text-gray-400"
+                                                            >{{ __('Profile Saved Successfully.') }}</p>
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </form>
