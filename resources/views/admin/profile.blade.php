@@ -78,8 +78,8 @@
                                             </form> --}}
 
 
-
-                                            <div class="mb-20 media">
+                                        {{-- admin profile image --}}
+                                            {{-- <div class="mb-20 media">
                                                 <a href="javascript:void(0);" class="mr-25">
                                                     @if (Auth::user()->profile_img)
                                                         <img src="/profile-img/{{ Auth::user()->profile_img }}"
@@ -101,7 +101,7 @@
                                                     </div>
                                                     <button type="submit" class="btn btn-sm btn-primary ml-1 mb-75 mr-75">upload</button>
                                                 </form>
-                                            </div>
+                                            </div> --}}
 
 
 
@@ -109,9 +109,9 @@
                                                 action="{{ route('profile.update') }}" class="mt-6 space-y-6">
                                                 @csrf
                                                 @method('patch')
-                                                {{-- <div class="mb-20 media">
+                                            <div class="mb-20 media">
                                                     <a href="javascript:void(0);" class="mr-25">
-                                                        <img src="/profile-img/{{ Auth::user()->profile_img }}"
+                                                        <img src="/profile-img/6-small.png"
                                                             id="account-upload-img" class="rounded mr-50"
                                                             alt="profile image" height="80" width="80">
                                                     </a>
@@ -123,7 +123,7 @@
                                                             hidden="" accept="image/*">
                                                         <p>Dimensions (85x85) px</p>
                                                     </div>
-                                                </div> --}}
+                                                </div>
                                                 {{-- <form class="validate-form mt-2"> --}}
                                                 <div style="margin-top: 15px;" class="row">
                                                     <div class="col-12 col-sm-6">
