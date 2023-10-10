@@ -51,9 +51,6 @@
                                 </li>
                             </ul>
                         </div>
-                        <!--/ left menu section -->
-
-                        <!-- right content section -->
                         <div class="col-md-9">
 
                             {{-- <x-input-error :messages="$errors->updatePassword->get('current_password')" class="alert alert-danger alert-validation-msg err-msg" />
@@ -71,7 +68,7 @@
                                                 @method('patch')
                                                <div class="mb-20 media">
                                                     <a href="javascript:void(0);" class="mr-25">
-                                                        <img src="/profile-img/6-small.png"
+                                                        <img src="/profile-img/{{ Auth::user()->profile_img }}"
                                                             id="account-upload-img" class="rounded mr-50"
                                                             alt="profile image" height="80" width="80">
                                                     </a>
@@ -79,11 +76,13 @@
                                                         <label for="account-upload"
                                                             class="btn btn-sm btn-primary mb-75 mr-75">Change Profile
                                                             Picture</label>
-                                                        <input type="file" name="cover" id="account-upload"
+                                                        <input type="file" name="profile_img" id="account-upload"
                                                             hidden="" accept="image/*">
                                                         <p>Dimensions (85x85) px</p>
                                                     </div>
                                                 </div>
+
+
                                                 {{-- <form class="validate-form mt-2"> --}}
                                                 <div style="margin-top: 15px;" class="row">
                                                     <div class="col-12 col-sm-6">
@@ -91,7 +90,7 @@
                                                         <x-text-input id="name" name="name" type="text"
                                                             class="form-control" value="{{ Auth::user()->name }}" autofocus
                                                             autocomplete="name" />
-                                                        <x-input-error class="mt-2" :messages="$errors->get('name')" />
+                                                        <x-input-error class="mt-2" :messages="$errors->get('name')" /> 
                                                     </div>
 
                                                     <div class="col-12 col-sm-6">
@@ -101,40 +100,12 @@
                                                             autofocus autocomplete="company_name" />
                                                         <x-input-error class="mt-2" :messages="$errors->get('company_name')" />
                                                     </div>
-                                                    {{-- <div class="col-12 col-sm-6">
-                                                        <div class="form-group">
-                                                            <label for="account-e-mail">Email (for contact and smtp
-                                                                purpose)</label>
-                                                            <input type="email" class="form-control"
-                                                                id="account-e-mail" name="email" placeholder="Email"
-                                                                value="{{ Auth::user()->email }}">
-                                                            <x-input-error class="mt-2" :messages="$errors->get('email')" />
-                                                        </div>
-                                                    </div> --}}
                                                     <div class="col-12 col-sm-6">
                                                         <x-input-label for="email" :value="__('Email')" />
                                                         <x-text-input id="email" name="email" type="email"
                                                             class="form-control" value="{{ Auth::user()->email }}" autofocus
                                                             autocomplete="email" />
                                                         <x-input-error class="mt-2" :messages="$errors->get('email')" />
-
-                                                        {{-- @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && !$user->hasVerifiedEmail())
-                                                            <div>
-                                                                <p class="text-sm mt-2 text-gray-800 dark:text-gray-200">
-                                                                    {{ __('Your email address is unverified.') }}
-
-                                                                    <button form="send-verification" class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800">
-                                                                        {{ __('Click here to re-send the verification email.') }}
-                                                                    </button>
-                                                                </p>
-
-                                                                @if (session('status') === 'verification-link-sent')
-                                                                    <p class="mt-2 font-medium text-sm text-green-600 dark:text-green-400">
-                                                                        {{ __('A new verification link has been sent to your email address.') }}
-                                                                    </p>
-                                                                @endif
-                                                            </div>
-                                                        @endif --}}
                                                     </div>
                                                     <div class="col-12 col-sm-6">
                                                         <div class="form-group">
@@ -142,7 +113,7 @@
                                                             <x-text-input id="phone_no" name="phone_no" type="text"
                                                                 class="form-control" value="{{ Auth::user()->phone_no }}" autofocus
                                                                 autocomplete="phone_no" />
-                                                            <x-input-error class="mt-2" :messages="$errors->get('phone_no')" />
+                                                                <x-input-error :messages="$errors->get('phone_no')" class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 " />
                                                         </div>
                                                     </div>
                                                     <div class="col-12">

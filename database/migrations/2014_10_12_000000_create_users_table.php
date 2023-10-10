@@ -19,13 +19,11 @@ return new class extends Migration
             $table->string('password');
             $table->string('profile_img');
             $table->string('phone_no');
-            // $table->string('username');
             $table->string('company_name');
             $table->rememberToken();
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */
