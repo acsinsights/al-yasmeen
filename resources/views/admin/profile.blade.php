@@ -66,7 +66,7 @@
                                                 class="mt-6 space-y-6">
                                                 @csrf
                                                 @method('patch')
-                                               <div class="mb-20 media">
+                                                <div class="mb-20 media">
                                                     <a href="javascript:void(0);" class="mr-25">
                                                         <img src="/profile-img/{{ Auth::user()->profile_img }}"
                                                             id="account-upload-img" class="rounded mr-50"
@@ -90,7 +90,9 @@
                                                         <x-text-input id="name" name="name" type="text"
                                                             class="form-control" value="{{ Auth::user()->name }}" autofocus
                                                             autocomplete="name" />
-                                                        <x-input-error class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 " :messages="$errors->get('name')" />
+                                                        <x-input-error
+                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
+                                                            :messages="$errors->get('name')" />
                                                     </div>
 
                                                     <div class="col-12 col-sm-6">
@@ -98,36 +100,39 @@
                                                         <x-text-input id="company_name" name="company_name" type="text"
                                                             class="form-control" value="{{ Auth::user()->company_name }}"
                                                             autofocus autocomplete="company_name" />
-                                                        <x-input-error class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 " :messages="$errors->get('company_name')" />
+                                                        <x-input-error
+                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
+                                                            :messages="$errors->get('company_name')" />
                                                     </div>
                                                     <div class="col-12 col-sm-6">
                                                         <x-input-label for="email" :value="__('Email')" />
                                                         <x-text-input id="email" name="email" type="email"
                                                             class="form-control" value="{{ Auth::user()->email }}" autofocus
                                                             autocomplete="email" />
-                                                        <x-input-error class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 " :messages="$errors->get('email')" />
+                                                        <x-input-error
+                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
+                                                            :messages="$errors->get('email')" />
                                                     </div>
                                                     <div class="col-12 col-sm-6">
                                                         <div class="form-group">
                                                             <x-input-label for="phone_no" :value="__('phone no')" />
                                                             <x-text-input id="phone_no" name="phone_no" type="text"
-                                                                class="form-control" value="{{ Auth::user()->phone_no }}" autofocus
-                                                                autocomplete="phone_no" />
-                                                                <x-input-error :messages="$errors->get('phone_no')" class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 " />
+                                                                class="form-control" value="{{ Auth::user()->phone_no }}"
+                                                                autofocus autocomplete="phone_no" />
+                                                            <x-input-error :messages="$errors->get('phone_no')"
+                                                                class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 " />
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <button type="submit" class="btn btn-primary mt-2 mr-1">Save
                                                             changes</button>
 
-                                                            @if (session('status') === 'profile-updated')
-                                                            <p
-                                                                x-data="{ show: true }"
-                                                                x-show="show"
-                                                                x-transition
+                                                        @if (session('status') === 'profile-updated')
+                                                            <p x-data="{ show: true }" x-show="show" x-transition
                                                                 x-init="setTimeout(() => show = false, 2000)"
-                                                                class="text-sm text-gray-600 dark:text-gray-400"
-                                                            >{{ __('Profile Saved Successfully.') }}</p>
+                                                                class="text-sm text-gray-600 dark:text-gray-400">
+                                                                {{ __('Profile Saved Successfully.') }}
+                                                            </p>
                                                         @endif
                                                     </div>
                                                 </div>
@@ -160,7 +165,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="err-msg"/>
+                                                            <x-input-error :messages="$errors->updatePassword->get('current_password')" class="err-msg" />
                                                         </div>
                                                     </div>
 
@@ -178,40 +183,47 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <x-input-error :messages="$errors->updatePassword->get('password')" class="err-msg/>
+                                                            <x-input-error :messages="$errors->updatePassword->get('password')"
+                                                                class="err-msg/>
                                                         </div>
                                                     </div>
 
-                                                    <div class="col-12 col-sm-6">
-                                                        <div class="form-group">
-                                                            <label for="password_confirmation">Confirm Password</label>
-                                                            <br>
-                                                            <div
-                                                                class="input-group form-password-toggle input-group-merge">
-                                                                <x-text-input id="password_confirmation"
-                                                                    name="password_confirmation" type="password"
-                                                                    class="form-control" autocomplete="new-password" />
-                                                                <div class="input-group-append">
-                                                                    <div class="input-group-text cursor-pointer">
-                                                                        <i data-feather="eye"></i>
+                                                    <div class="col-12
+                                                                col-sm-6">
+                                                                <div class="form-group">
+                                                                    <label for="password_confirmation">Confirm
+                                                                        Password</label>
+                                                                    <br>
+                                                                    <div
+                                                                        class="input-group form-password-toggle input-group-merge">
+                                                                        <x-text-input id="password_confirmation"
+                                                                            name="password_confirmation" type="password"
+                                                                            class="form-control"
+                                                                            autocomplete="new-password" />
+                                                                        <div class="input-group-append">
+                                                                            <div class="input-group-text cursor-pointer">
+                                                                                <i data-feather="eye"></i>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                            <x-input-error :messages="$errors->updatePassword->get('password_confirmation', )" class="err-msg/>
+                                                                    <x-input-error :messages="$errors->updatePassword->get(
+                                                                        'password_confirmation',
+                                                                    )"
+                                                                        class="err-msg/>
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
-                                                        <button class="btn btn-primary mr-1 mt-1">Save
-                                                            changes</button>
-                                                        @if (session('status') === 'password-updated')
-                                                            <p x-data="{ show: true }" x-show="show" x-transition
-                                                                x-init="setTimeout(() => show = false, 2000)"
-                                                                class="text-sm text-gray-600 dark:text-gray-400">
-                                                                {{ __('Saved.') }}
-                                                            </p>
-                                                        @endif
-                                                    </div>
-                                                    {{-- <div class="flex items-center gap-4">
+                                                                        <button class="btn btn-primary mr-1 mt-1">Save
+                                                                            changes</button>
+                                                                        @if (session('status') === 'password-updated')
+                                                                            <p x-data="{ show: true }" x-show="show"
+                                                                                x-transition x-init="setTimeout(() => show = false, 2000)"
+                                                                                class="text-sm text-gray-600 dark:text-gray-400">
+                                                                                {{ __('Saved.') }}
+                                                                            </p>
+                                                                        @endif
+                                                                </div>
+                                                                {{-- <div class="flex items-center gap-4">
                                                         <x-primary-button>{{ __('Save') }}</x-primary-button>
                                                     </div> --}}
                                                 </form>

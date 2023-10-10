@@ -61,7 +61,6 @@
                                         <span class="card-text item-company">By <a href="javascript:void(0)"
                                                 class="company-name">
                                                 {{ $project->company_name }}</a></span>
-
                                         <p style="margin: 12px 0 1px 0" class="card-text">Date - <span class="text-success">
                                                 {{ $project->date }}</span></p>
                                         <p class="card-text">Location - <span class="text-success">
