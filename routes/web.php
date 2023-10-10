@@ -74,8 +74,6 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 
-        Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
-        Route::put('/update-profile/{id}', [DashboardController::class, 'update']);
 
 
         Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
