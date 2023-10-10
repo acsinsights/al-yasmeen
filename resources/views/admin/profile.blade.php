@@ -62,6 +62,9 @@
                                         <!-- general tab -->
                                         <div role="tabpanel" class="tab-pane active" id="account-vertical-general"
                                             aria-labelledby="account-pill-general" aria-expanded="true">
+
+
+
                                             <form method="post" enctype="multipart/form-data" action="{{ route('profile.update') }}"
                                                 class="mt-6 space-y-6">
                                                 @csrf
