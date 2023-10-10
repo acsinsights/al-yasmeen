@@ -36,6 +36,18 @@ class DashboardController extends Controller
         $users = User::all();
         return view('admin.profile', compact('users'));
     }
+    public function upload(Request $request)
+    {
+        if($request->hasFile('profile_img')){
+            $filename = $request->profile_img->getClientOriginalName();
+            $destinationPath = public_path('profile-img/');
+            Auth()->user()->update(['profile_img'=>$filename]);
+        }
+        return redirect()->back();
+    }
+
+
+
 
     protected function formmessage(Request $request,$id)
     {

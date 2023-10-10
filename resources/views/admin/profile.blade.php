@@ -65,11 +65,51 @@
 
 
 
-                                            <form method="post" enctype="multipart/form-data" action="{{ route('profile.update') }}"
-                                                class="mt-6 space-y-6">
+                                            {{-- <img class="image rounded-circle"
+                                                src="{{ asset('/profile-img/' . Auth::user()->profile_img) }}"
+                                                alt="profile_image"
+                                                style="width: 80px;height: 80px; padding: 10px; margin: 0px; ">
+
+                                            <form action="{{ route('admin.profile-img') }}" method="POST"
+                                                enctype="multipart/form-data">
+                                                @csrf
+                                                <input type="file" name="profile_img">
+                                                <input type="submit" value="Upload">
+                                            </form> --}}
+
+
+
+                                            <div class="mb-20 media">
+                                                <a href="javascript:void(0);" class="mr-25">
+                                                    @if (Auth::user()->profile_img)
+                                                        <img src="/profile-img/{{ Auth::user()->profile_img }}"
+                                                            id="account-upload-img" class="rounded mr-50"
+                                                            alt="profile image" height="80" width="80">
+                                                    @endif
+                                                </a>
+
+                                                <form action="{{ route('admin.profile-img') }}" method="POST"
+                                                    enctype="multipart/form-data">
+                                                    @csrf
+                                                    <div class="media-body mt-75 ml-1">
+                                                        <label for="account-upload"
+                                                            class="btn btn-sm btn-primary mb-75 mr-75">Change Profile
+                                                            Picture</label>
+                                                        <input type="file" name="profile_img" id="account-upload"
+                                                            hidden="" accept="image/*">
+                                                        <p>Dimensions (85x85) px</p>
+                                                    </div>
+                                                    <input type="submit" value="Upload">
+                                                </form>
+                                            </div>
+
+
+
+                                            <form method="post" enctype="multipart/form-data"
+                                                action="{{ route('profile.update') }}" class="mt-6 space-y-6">
                                                 @csrf
                                                 @method('patch')
-                                                <div class="mb-20 media">
+                                                {{-- <div class="mb-20 media">
                                                     <a href="javascript:void(0);" class="mr-25">
                                                         <img src="/profile-img/{{ Auth::user()->profile_img }}"
                                                             id="account-upload-img" class="rounded mr-50"
@@ -83,14 +123,14 @@
                                                             hidden="" accept="image/*">
                                                         <p>Dimensions (85x85) px</p>
                                                     </div>
-                                                </div>
+                                                </div> --}}
                                                 {{-- <form class="validate-form mt-2"> --}}
                                                 <div style="margin-top: 15px;" class="row">
                                                     <div class="col-12 col-sm-6">
                                                         <x-input-label for="name" :value="__('Name')" />
                                                         <x-text-input id="name" name="name" type="text"
-                                                            class="form-control" value="{{ Auth::user()->name }}" autofocus
-                                                            autocomplete="name" />
+                                                            class="form-control" value="{{ Auth::user()->name }}"
+                                                            autofocus autocomplete="name" />
                                                         <x-input-error
                                                             class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
                                                             :messages="$errors->get('name')" />
@@ -98,9 +138,10 @@
 
                                                     <div class="col-12 col-sm-6">
                                                         <x-input-label for="company_name" :value="__('Company Name')" />
-                                                        <x-text-input id="company_name" name="company_name" type="text"
-                                                            class="form-control" value="{{ Auth::user()->company_name }}"
-                                                            autofocus autocomplete="company_name" />
+                                                        <x-text-input id="company_name" name="company_name"
+                                                            type="text" class="form-control"
+                                                            value="{{ Auth::user()->company_name }}" autofocus
+                                                            autocomplete="company_name" />
                                                         <x-input-error
                                                             class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
                                                             :messages="$errors->get('company_name')" />
@@ -108,8 +149,8 @@
                                                     <div class="col-12 col-sm-6">
                                                         <x-input-label for="email" :value="__('Email')" />
                                                         <x-text-input id="email" name="email" type="email"
-                                                            class="form-control" value="{{ Auth::user()->email }}" autofocus
-                                                            autocomplete="email" />
+                                                            class="form-control" value="{{ Auth::user()->email }}"
+                                                            autofocus autocomplete="email" />
                                                         <x-input-error
                                                             class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
                                                             :messages="$errors->get('email')" />

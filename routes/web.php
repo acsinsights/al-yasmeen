@@ -10,6 +10,13 @@ use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\ProjectController;
 use App\Http\Controllers\admin\TestimonialController;
+
+
+
+
+use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Routes;
+use App\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -74,6 +81,9 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 
+
+
+        Route::post('/profile', [DashboardController::class, 'upload'])->name('admin.profile-img');
 
 
         Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
