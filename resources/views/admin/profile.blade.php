@@ -87,19 +87,19 @@
                                                             alt="profile image" height="80" width="80">
                                                     @endif
                                                 </a>
-
                                                 <form action="{{ route('admin.profile-img') }}" method="POST"
                                                     enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="media-body mt-75 ml-1">
                                                         <label for="account-upload"
                                                             class="btn btn-sm btn-primary mb-75 mr-75">Change Profile
-                                                            Picture</label>
+                                                            Picture
+                                                        </label>
                                                         <input type="file" name="profile_img" id="account-upload"
                                                             hidden="" accept="image/*">
                                                         <p>Dimensions (85x85) px</p>
                                                     </div>
-                                                    <input type="submit" value="Upload">
+                                                    <button type="submit" class="btn btn-sm btn-primary ml-1 mb-75 mr-75">upload</button>
                                                 </form>
                                             </div>
 

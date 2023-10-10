@@ -83,7 +83,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 
-        Route::post('/profile', [DashboardController::class, 'upload'])->name('admin.profile-img');
+     Route::post('/profile', [ProfileController::class, 'update'])->name('admin.profile-img');
 
 
         Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
