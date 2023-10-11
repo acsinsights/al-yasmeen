@@ -103,15 +103,13 @@
                                                 </form>
                                             </div> --}}
 
-
-
                                             <form method="post" enctype="multipart/form-data"
                                                 action="{{ route('profile.update') }}" class="mt-6 space-y-6">
                                                 @csrf
                                                 @method('patch')
                                             <div class="mb-20 media">
                                                     <a href="javascript:void(0);" class="mr-25">
-                                                        <img src="/profile-img/6-small.png"
+                                                        <img src="/profile-img/akhil-raj.jpg"
                                                             id="account-upload-img" class="rounded mr-50"
                                                             alt="profile image" height="80" width="80">
                                                     </a>

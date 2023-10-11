@@ -62,14 +62,11 @@
                                                         class="btn btn-flat-success border">
                                                         Manage
                                                     </a>
-
-                                                  
                                                     <a class="btn btn-flat-danger border"
                                                         onclick="return confirm('Are you sure?');"
                                                         href="{{ route('admin.project.destroy', $project->id) }}">
                                                         Delete
                                                     </a>
-
                                                 </td>
                                             </tr>
                                         @empty

@@ -29,7 +29,7 @@ class HomeController extends Controller
     }
     public function project()
     {
-        $projects = Project::with('images')->get();
+        $projects = Project::latest()->with('images')->paginate(4);
         $testimonials = Testimonial::all();
         return view('frontend.project', compact('projects', 'testimonials'));
     }

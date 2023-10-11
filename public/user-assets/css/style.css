@@ -10587,10 +10587,12 @@ select {
     padding: 40px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     border-radius: 30px;
+    width: 640px;
 }
 .slider-box{
     border-radius: 30px;
 }
+
 @media only screen and (min-width: 200px) and (max-width: 1200px) {
 
     .project-box{

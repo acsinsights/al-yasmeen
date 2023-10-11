@@ -49,8 +49,7 @@
                             </div> --}}
                             <div class="card-body">
                                 <div class="row my-2">
-                                    <div
-                                        class="col-12 col-md-5 d-flex align-items-center justify-content-center mb-2 mb-md-0">
+                                    <div class="col-12 col-md-5 d-flex align-items-center justify-content-center mb-2 mb-md-0">
                                         <div class="d-flex align-items-center justify-content-center">
                                             <img src="{{ url('project/preview/' . $project->preview_img) }}"
                                                 class="img-fluid projectimg-responsive product-img" alt="product image">

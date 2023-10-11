@@ -45,9 +45,9 @@
         <div class="section-content">
             <div class="container">
                 <div class="row">
-                    <div  class="project-box projects-container">
+                    <div class="project-box projects-container">
                         @forelse ($projects as $project_key=> $project)
-                            <div class="pro-box   ">
+                            <div class="pro-box bx-size">
                                 <div id="project-slider-{{ $project_key }}" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-indicators">
                                         <button type="button" data-bs-target="#project-slider-{{ $project_key }}"
@@ -68,8 +68,7 @@
                                         </div>
                                         @forelse ($project->images as $img)
                                             <div class="carousel-item">
-                                                <img src="{{ url('project/image/' . $img->image) }}"
-                                                    class="d-block w-100">
+                                                <img src="{{ url('project/image/' . $img->image) }}" class="d-block w-100">
                                             </div>
                                         @empty
                                         @endforelse
@@ -100,13 +99,14 @@
                                                     Date: <br> {{ date('d-m-Y', strtotime($project->date)) }}
                                                 </h5>
                                             </div>
-                                            <div  class="col-xl-4 col-lg-4 mt-4 col-md-12">
+                                            <div class="col-xl-4 col-lg-4 mt-4 col-md-12">
 
-                                                <img style="height: 100px;" src="{{ url('project/client/' . $project->company_logo) }}"
+                                                <img style="height: 100px;"
+                                                    src="{{ url('project/client/' . $project->company_logo) }}"
                                                     alt="company-logo">
-                                                    <h5 style="font-weight: 100;">
-                                                        Company Logo
-                                                    </h5>
+                                                <h5 style="font-weight: 100;">
+                                                    Company Logo
+                                                </h5>
                                             </div>
                                         </div>
                                     </div>
@@ -115,10 +115,13 @@
                         @empty
                         @endforelse
                     </div>
+                    <div class="d-flex mt-5 justify-content-center">
+                        {{ $projects->links() }}
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
- 
+
 @endsection

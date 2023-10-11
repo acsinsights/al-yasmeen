@@ -6,7 +6,7 @@
                     <ul class="topbar-info">
                         <li>
                             <i class="base-icon-email1"></i>
-                            <a href="mailto:sales@alyasmeen.com">sales@alyasmeen.com</a>
+                            <a href="mailto:sales@alyasmeenkw.com">sales@alyasmeenkw.com</a>
                         </li>
 
                     </ul>
