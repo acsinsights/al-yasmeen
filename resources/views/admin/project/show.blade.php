@@ -90,7 +90,10 @@
                                             </div>
                                         </div>
                                         <div class="d-flex flex-column flex-sm-row pt-1">
-
+                                            <a href="{{ route('admin.project.edit', $project->id) }}"
+                                                class="btn btn-success mr-0 mr-sm-1 mb-1 mb-sm-0">
+                                                Edit
+                                            </a>
                                             <!-- Button trigger modal -->
                                             <button type="button" class="btn btn-primary mr-0 mr-sm-1 mb-1 mb-sm-0"
                                                 data-toggle="modal" data-target="#addImagePopup">
