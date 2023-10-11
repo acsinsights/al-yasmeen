@@ -90,10 +90,89 @@
                                             </div>
                                         </div>
                                         <div class="d-flex flex-column flex-sm-row pt-1">
-                                            <a href="{{ route('admin.project.image.create', $project->id) }}"
-                                                class="btn btn-primary btn-cart mr-0 mr-sm-1 mb-1 mb-sm-0 waves-effect waves-float waves-light">
-                                                <span class="add-to-cart">Add Images</span>
+                                            <a href="{{ route('admin.project.edit', $project->id) }}"
+                                                class="btn btn-success mr-0 mr-sm-1 mb-1 mb-sm-0">
+                                                Edit
                                             </a>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-primary mr-0 mr-sm-1 mb-1 mb-sm-0"
+                                                data-toggle="modal" data-target="#addImagePopup">
+                                                Add Images
+                                            </button>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="addImagePopup" tabindex="-1" role="dialog"
+                                                aria-labelledby="addImagePopupLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="addImagePopupLabel">
+                                                                Add Image
+                                                            </h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form class="form"
+                                                                action="{{ route('admin.project.image.store', $project->id) }}"
+                                                                method="post" enctype="multipart/form-data">
+                                                                @csrf
+                                                                <div class="row">
+                                                                    <div class=" col-12">
+                                                                        <div class="form-group">
+                                                                            <label for="project_image"> Project Image
+                                                                                <span class="text-danger">
+                                                                                    (300 x 200 px)
+                                                                                </span>
+                                                                            </label>
+                                                                            <div class="custom-file">
+                                                                                <input type="file" name="project_image"
+                                                                                    class="custom-file-input"
+                                                                                    id="project_image">
+                                                                                <label class="custom-file-label"
+                                                                                    for="project_image">
+                                                                                    Choose file
+                                                                                </label>
+                                                                            </div>
+                                                                            @error('project_image')
+                                                                                <span class="text-danger">
+                                                                                    {{ $message }}
+                                                                                </span>
+                                                                            @enderror
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class=" col-12">
+                                                                        <div class="form-group">
+                                                                            <label for="image_alt">About image</label>
+                                                                            <input type="text" id="image_alt"
+                                                                                class="form-control" name="image_alt"
+                                                                                placeholder="About image"
+                                                                                value="{{ old('image_alt') }}">
+                                                                            @error('image_alt')
+                                                                                <span class="text-danger">
+                                                                                    {{ $message }}
+                                                                                </span>
+                                                                            @enderror
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                        <button type="submit"
+                                                                            class="btn btn-primary mr-1">Submit</button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">
+                                                                Close
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <a href="{{ route('admin.project.destroy', $project->id) }}"
                                                 onclick="return confirm('Are you sure?');"
                                                 class="btn btn-danger btn-cart mr-0 mr-sm-1 mb-1 mb-sm-0 waves-effect waves-float waves-light">
@@ -138,8 +217,8 @@
                                                             height="14" viewBox="0 0 24 24" fill="none"
                                                             stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                                             stroke-linejoin="round" class="feather feather-instagram">
-                                                            <rect x="2" y="2" width="20"
-                                                                height="20" rx="5" ry="5"></rect>
+                                                            <rect x="2" y="2" width="20" height="20"
+                                                                rx="5" ry="5"></rect>
                                                             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z">
                                                             </path>
                                                             <line x1="17.5" y1="6.5" x2="17.51"
@@ -191,4 +270,11 @@
             </div>
         </div>
     </div>
+@endsection
+@section('js')
+    @if ($errors->any())
+        <script>
+            $('#addImagePopup').modal('show')
+        </script>
+    @endif
 @endsection

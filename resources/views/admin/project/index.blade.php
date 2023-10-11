@@ -60,16 +60,10 @@
                                                 <td style="text-align: center;">
                                                     <a href="{{ route('admin.project.show', $project->id) }}"
                                                         class="btn btn-flat-success border">
-                                                   View
+                                                        Manage
                                                     </a>
-                                                    <a href="{{ route('admin.project.image.create', $project->id) }}"
-                                                        class="btn btn-flat-warning border">
-                                                      Add More Images
-                                                    </a>
-                                                    <a href="{{ route('admin.project.edit', $project->id) }}"
-                                                        class="btn btn-flat-primary border">
-                                                        Edit
-                                                    </a>
+
+                                                  
                                                     <a class="btn btn-flat-danger border"
                                                         onclick="return confirm('Are you sure?');"
                                                         href="{{ route('admin.project.destroy', $project->id) }}">
