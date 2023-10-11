@@ -134,7 +134,8 @@ class ProjectController extends Controller
             File::delete("project/preview/" . $project->preview_img);
         }
         $project->delete();
-        return back()->with('success', 'Project deleted successfully.');
+        return redirect()->route('admin.project.index')->with('success', 'Project deleted successfully.');
+
     }
 
     public function create_image($project_id)
