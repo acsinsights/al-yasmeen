@@ -56,8 +56,8 @@
       <div class="mobile-nav-container"></div>
       <ul class="list-items mobile-sidebar-contact">
         <li><span class="fa fa-map-marker-alt mrr-10 text-primary-color"></span>121 King Street, Australia</li>
-        <li><span class="fas fa-envelope mrr-10 text-primary-color"></span><a href="mailto:sales@alyasmeen.com">sales@alyasmeen.com</a></li>
-        <li><span class="fas fa-phone-alt mrr-10 text-primary-color"></span><a href="tel:+123-456-7890">+123-456-7890</a></li>
+        <li><span class="fas fa-envelope mrr-10 text-primary-color"></span><a href="mailto:sales@alyasmeenkw.com">sales@alyasmeenkw.com</a></li>
+        <li><span class="fas fa-phone-alt mrr-10 text-primary-color"></span><a href="tel:+12 345 666 789">+12 345 666 789</a></li>
       </ul>
       <ul class="social-list list-primary-color">
         <li>

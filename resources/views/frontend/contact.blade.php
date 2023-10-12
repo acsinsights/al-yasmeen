@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="contact-details mrl-30">
                                     <h5 class="icon-box-title mrb-10">Phone Number</h5>
-                                    <p class="mrb-0"> <a style="color: #555" href="tel:+123-456-7890"> +123-456-7890</a>
+                                    <p class="mrb-0"> <a style="color: #555" href="tel:+12 345 666 789"> +12 345 666 789</a>
                                     </p>
                                 </div>
                             </div>
