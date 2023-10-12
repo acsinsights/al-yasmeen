@@ -61,7 +61,6 @@
                                     </div>
                                     @include('admin.message')
                                 </div>
-
                             </div>
                         </form>
                     </div>
@@ -424,7 +423,7 @@
 
 
     <!-- Project Section Start -->
-    <section style="    padding-bottom: 50px;" class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-105">
+    <section style="padding-bottom: 50px;" class="bg-secondary-color bg-no-repeat bg-cover bg-pos-cb pdt-105">
         <div class="section-title mrb-60 mrb-md-15 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
             <div class="container">
                 <div class="row align-items-end">

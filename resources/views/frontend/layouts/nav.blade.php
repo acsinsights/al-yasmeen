@@ -8,7 +8,6 @@
                             <i class="base-icon-email1"></i>
                             <a href="mailto:sales@alyasmeenkw.com">sales@alyasmeenkw.com</a>
                         </li>
-
                     </ul>
                     <ul class="topbar-social">
                         <li>
@@ -42,17 +41,14 @@
                         </li>
                         <li class=" {{ URL::current() == url('/services') ? 'active' : '' }}">
                             <a href="{{ '/services' }}">Services</a>
-
                         </li>
                         <li class="{{ URL::current() == url('/projects') ? 'active' : '' }}">
                             <a href="{{ '/projects' }}">Projects</a>
-
                         </li>
                         <li class="{{ URL::current() == url('/about') ? 'active' : '' }}">
                             <a href="{{ '/about' }}">About Us</a>
-
                         </li>
-                        <li class="{{ URL::current() == url('/contact') ? 'active' : '' }}">
+                        <li class="{{ URL::current() == url('/contact') ? 'active'  : '' }}">
                             <a href="{{ '/contact' }}">Contact</a>
                         </li>
                     </ul>

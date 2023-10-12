@@ -22,7 +22,7 @@
     </section>
 
 
-    <section class="service-inner-page-section-style1 pdt-70  ">
+    <section class="service-inner-page-section-style1 pdt-70">
         <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms"
             style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
             <div class="container">
