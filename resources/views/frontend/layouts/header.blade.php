@@ -5,7 +5,7 @@
 <meta name="description" content="Interior & Architecture" />
 <meta name="keywords" content="architecture, interior, decoration, design, corporate, modern" />
 <title>AL Yasmeen - Interior & Architecture</title>
-<link href="{{ asset('user-assets\images\al-yasmeen.svg') }}" rel="shortcut icon" type="image/png" />
+<link href="{{ asset('user-assets\images\favicon.svg') }}" rel="shortcut icon" type="image/png" />
 <!-- Main Stylesheet -->
 <link rel="stylesheet" href="  {{ asset('user-assets/css/style.css') }}"  />
 <link rel="stylesheet" href=" {{ asset('user-assets/css/responsive.css') }}" />

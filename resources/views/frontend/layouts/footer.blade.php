@@ -2,10 +2,10 @@
     <footer class="footer bg-cover" data-background="{{ asset('user-assets/images/bg/5.jpg') }}" data-overlay-light="98">
         <div class="footer-main-area">
             <div class="footer-section-obj1">
-                <img src="images/objects/footer-obj1.png" alt="" />
+                <img src="{{ url('user-assets/images/objects/footer-obj1.png') }}" alt="" />
             </div>
             <div class="footer-section-obj2">
-                <img src="images/objects/footer-obj2.png" alt="" />
+                <img src="{{ url('user-assets/images/objects/footer-obj2.png') }}" alt="" />
             </div>
             <div class="container">
                 <div class="row">
@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-xl-2 col-lg-6">
                         <div class="widget footer-widget">
-                            <h5 class="widget-title text-black mrb-30">Navigation</h5>
+                            <h5 class="widget-title text-black mrb-30">Useful Links</h5>
                             <ul class="footer-widget-list">
                                 <li><a href="{{ '/' }}">Home</a></li>
                                 <li><a href="{{ '/services' }}">Services</a></li>
