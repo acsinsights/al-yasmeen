@@ -6,21 +6,19 @@
                     <ul class="topbar-info">
                         <li>
                             <i class="base-icon-email1"></i>
-                            <a href="mailto:sales@alyasmeenkw.com">sales@alyasmeenkw.com</a>
+                            <a href="mailto:{{ Auth::user()->email }}">{{ Auth::user()->email }}</a>
                         </li>
                     </ul>
                     <ul class="topbar-social">
                         <li>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="{{ Auth::user()->linkedin }}"><i class="fab fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="{{ Auth::user()->facebook }}"><i class="fab fa-facebook"></i></a>
                         </li>
+
                         <li>
-                            <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="{{ Auth::user()->instagram }}"><i class="fab fa-instagram"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -59,13 +57,13 @@
                             <span></span>
                         </a>
                         <div class="header-contact-info">
-                            <div style="    background: linear-gradient(45deg, #205999, #1083c6);"
+                            <div style="background: linear-gradient(45deg, #205999, #1083c6);"
                                 class="header-contact-info-icon">
                                 <i class="base-icon-011-phone-1"></i>
                             </div>
                             <div class="header-contact-info-text">
                                 <p class="call-text">Call Anytime</p>
-                                <h5 class="phone-no"><a href="tel:12345666789">+12 345 666 789</a></h5>
+                                <h5 class="phone-no"><a href="tel:{{ Auth::user()->phone_no }}">{{ Auth::user()->phone_no }}</a></h5>
                             </div>
                         </div>
                     </div>

@@ -55,22 +55,20 @@
       </div>
       <div class="mobile-nav-container"></div>
       <ul class="list-items mobile-sidebar-contact">
-        <li><span class="fa fa-map-marker-alt mrr-10 text-primary-color"></span>121 King Street, Australia</li>
-        <li><span class="fas fa-envelope mrr-10 text-primary-color"></span><a href="mailto:sales@alyasmeenkw.com">sales@alyasmeenkw.com</a></li>
-        <li><span class="fas fa-phone-alt mrr-10 text-primary-color"></span><a href="tel:+12 345 666 789">+12 345 666 789</a></li>
+        <li><span class="fa fa-map-marker-alt mrr-10 text-primary-color"></span>   {{ Auth::user()->company_address }}</li>
+        <li><span class="fas fa-envelope mrr-10 text-primary-color"></span><a href="mailto:{{ Auth::user()->email }}">   {{ Auth::user()->email }}</a></li>
+        <li><span class="fas fa-phone-alt mrr-10 text-primary-color"></span><a href="tel:{{ Auth::user()->phone_no }}">{{ Auth::user()->phone_no }}</a></li>
       </ul>
       <ul class="social-list list-primary-color">
         <li>
-          <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="{{ Auth::user()->linkedin }}"><i class="fab fa-linkedin"></i></a>
         </li>
         <li>
-          <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="{{ Auth::user()->facebook }}"><i class="fab fa-facebook"></i></a>
         </li>
+
         <li>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-google-plus"></i></a>
+            <a href="{{ Auth::user()->instagram }}"><i class="fab fa-instagram"></i></a>
         </li>
       </ul>
     </div>

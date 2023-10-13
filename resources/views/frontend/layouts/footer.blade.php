@@ -11,19 +11,13 @@
                 <div class="row">
                     <div class="col-xl-4 col-lg-6">
                         <div class="widget footer-widget mrr-60 mrr-md-0">
-                            <h5 class="widget-title text-black mrb-30">Newsletter</h5>
-                            <p class="mrb-30">Seamlessly visualize quality intellectual ideal without collaboration
+                            <div class="logo-box">
+                                <a href="{{ '/' }}" aria-label="logo image">
+                                  <img style="width:170px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
+                                </a>
+                              </div>
+                            <p class="mrb-30 mt-3">Seamlessly visualize quality intellectual ideal without collaboration
                                 superior montes soon maecenas capita idea listically</p>
-                            {{-- <div class="newsletter-from">
-                    <div class="email">
-                      <input type="email" name="EMAIL" placeholder="Enter your email" required="" />
-                    </div>
-                    <div class="submit">
-                      <button type="submit">
-                        <i class="base-icon-arrow-right"></i>
-                      </button>
-                    </div>
-                  </div> --}}
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-6">
@@ -37,18 +31,23 @@
                             </ul>
                         </div>
                     </div>
+
+
+
                     <div class="col-xl-3 col-lg-6">
                         <div class="widget footer-widget mrr-30 mrr-md-0">
                             <h5 class="widget-title text-black mrb-30">Contact</h5>
                             <address class="mrb-0">
-                                <p>32 Dora Creek, tuntable creek, New South Wales 2480, Australia</p>
+                                <p>{{ Auth::user()->company_address }}</p>
                                 <div class="mrb-10">
-                                    <a href="tel:+12345666789"><i class="fas fa-phone-alt mrr-10"></i>+12 345 666
-                                        789</a>
+                                    <a href="tel:+12345666789">
+                                        <i class="fas fa-phone-alt mrr-10"></i>
+                                        {{ Auth::user()->sales_no }}
+                                    </a>
                                 </div>
                                 <div class="mrb-10">
-                                    <a href="mailto:sales@alyasmeenkw.com"><i
-                                            class="fas fa-envelope mrr-10"></i>sales@alyasmeenkw.com</a>
+                                    <a href="mailto:{{ Auth::user()->email }}"><i
+                                            class="fas fa-envelope mrr-10"></i>{{ Auth::user()->email }}</a>
                                 </div>
                                 <div class="mrb-0">
                                     <a href="#"><i class="fas fa-globe mrr-10"></i>www.alyasmeen.com</a>
@@ -58,21 +57,18 @@
                     </div>
                     <div class="col-xl-3 col-lg-6">
                         <div class="widget footer-widget mrr-60 mrr-md-0">
-                            <p class="mrb-25">There are many vari of pass but majority have suffered some injected of a
-                                humour</p>
+                            <h5 class="widget-title text-black mrb-30">Social Links</h5>
                             <ul class="social-list">
                                 <li>
-                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="{{ Auth::user()->facebook }}"><i class="fab fa-facebook-f"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="{{ Auth::user()->linkedin }}"><i class="fab fa-linkedin"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="{{ Auth::user()->instagram }}"><i class="fab fa-instagram"></i></a>
                                 </li>
-                                <li>
-                                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -82,8 +78,10 @@
                         <div class="text-center">
                             <span>Copyright ©2023 AL Yasmeen All Rights Reserved Developed by
                                 <span>
-                                    <a style="color: #ec2024;" href="https://publicize360.com/" target="_blank">Publicize 360</a>
-                                    CMS by <a style="color: #04733b;" href="https://acsinsights.com/" target="_blank"   >ACS Insights</a>
+                                    <a style="color: #ec2024;" href="https://publicize360.com/"
+                                        target="_blank">Publicize 360</a>
+                                    CMS by <a style="color: #04733b;" href="https://acsinsights.com/"
+                                        target="_blank">ACS Insights</a>
                                 </span>
                             </span>
                         </div>

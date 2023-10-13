@@ -50,7 +50,7 @@
                                             {{-- <th>Logo</th> --}}
                                             <th>Customer Name</th>
                                             <th>Customer Designation</th>
-                                            <th>Customer Review</th>
+                                            {{-- <th>Customer Review</th> --}}
                                             <th>Customer Company</th>
                                             <th>Date</th>
                                             <th style="text-align: center;">Edit</th>
@@ -68,13 +68,7 @@
                                                 <td>{{ $tsti->custname }}</td>
                                                 <td>{{ $tsti->custdesignation }}</td>
                                                 <td>{{ $tsti->custcompany }}</td>
-                                                <td>
-                                                    </button>
-                                                    <div class="form-group">
-                                                        <label for="exampleFormControlTextarea1">Textarea</label>
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Textarea">{{ $tsti->custreview }}</textarea>
-                                                    </div>
-                                                </td>
+                                             
                                                 <td>{{ $tsti->date }}</td>
 
                                                 <td style="text-align: center;"><a

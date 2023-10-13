@@ -32,13 +32,13 @@
                     </h2>
                     <ul class="social-list list-lg list-primary-color list-flat mrb-lg-60 clearfix">
                         <li>
-                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="{{ Auth::user()->facebook }}"><i class="fab fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="{{ Auth::user()->linkedin }}"><i class="fab fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="{{ Auth::user()->instagram }}"><i class="fab fa-instagram"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -52,7 +52,7 @@
                                 <div style="background-color: #f0f9ff;" class="contact-details mrl-30">
                                     <h5 class="icon-box-title mrb-10">Email Us</h5>
                                     <p class="mrb-0"><a style="color: #555"
-                                            href="mailto:sales@alyasmeen.com">sales@alyasmeen.com</a> </p>
+                                            href="mailto:{{ Auth::user()->email }}">{{ Auth::user()->email }}</a> </p>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                                 </div>
                                 <div class="contact-details mrl-30">
                                     <h5 class="icon-box-title mrb-10">Phone Number</h5>
-                                    <p class="mrb-0"> <a style="color: #555" href="tel:+12 345 666 789"> +12 345 666 789</a>
+                                    <p class="mrb-0"> <a style="color: #555" href="tel:{{ Auth::user()->phone_no }}"> {{ Auth::user()->phone_no }}</a>
                                     </p>
                                 </div>
                             </div>
