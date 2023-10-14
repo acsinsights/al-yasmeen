@@ -38,6 +38,7 @@
                         <div class="widget footer-widget mrr-30 mrr-md-0">
                             <h5 class="widget-title text-black mrb-30">Contact</h5>
                             <address class="mrb-0">
+                                @auth
                                 <p>{{ Auth::user()->company_address }}</p>
                                 <div class="mrb-10">
                                     <a href="tel:+12345666789">
@@ -52,12 +53,14 @@
                                 <div class="mrb-0">
                                     <a href="#"><i class="fas fa-globe mrr-10"></i>www.alyasmeen.com</a>
                                 </div>
+                                @endauth
                             </address>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6">
                         <div class="widget footer-widget mrr-60 mrr-md-0">
                             <h5 class="widget-title text-black mrb-30">Social Links</h5>
+                            @auth
                             <ul class="social-list">
                                 <li>
                                     <a href="{{ Auth::user()->facebook }}"><i class="fab fa-facebook-f"></i></a>
@@ -70,6 +73,7 @@
                                 </li>
 
                             </ul>
+                            @endauth
                         </div>
                     </div>
                 </div>

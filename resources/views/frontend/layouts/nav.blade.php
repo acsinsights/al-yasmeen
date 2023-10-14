@@ -6,9 +6,12 @@
                     <ul class="topbar-info">
                         <li>
                             <i class="base-icon-email1"></i>
+                            @auth
                             <a href="mailto:{{ Auth::user()->email }}">{{ Auth::user()->email }}</a>
+                            @endauth
                         </li>
                     </ul>
+                    @auth
                     <ul class="topbar-social">
                         <li>
                             <a href="{{ Auth::user()->linkedin }}"><i class="fab fa-linkedin"></i></a>
@@ -20,7 +23,9 @@
                         <li>
                             <a href="{{ Auth::user()->instagram }}"><i class="fab fa-instagram"></i></a>
                         </li>
+
                     </ul>
+                    @endauth
                 </div>
             </div>
         </div>
@@ -63,7 +68,13 @@
                             </div>
                             <div class="header-contact-info-text">
                                 <p class="call-text">Call Anytime</p>
-                                <h5 class="phone-no"><a href="tel:{{ Auth::user()->phone_no }}">{{ Auth::user()->phone_no }}</a></h5>
+
+                                <h5 class="phone-no">
+                                    @auth
+                                    <a href="tel:{{ Auth::user()->sales_no }}">{{ Auth::user()->sales_no }}</a>
+                                    @endauth
+                                </h5>
+
                             </div>
                         </div>
                     </div>

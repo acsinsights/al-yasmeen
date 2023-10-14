@@ -19,6 +19,7 @@ class ProfileUpdateRequest extends FormRequest
             'name' => ['string', 'max:255'],
             'phone_no' => ['integer'],
             'sales_no' => ['integer'],
+            'sales_mail' => ['string'],
             'company_name' => ['string'],
             'company_address' => ['string'],
             'facebook' => ['string'],
