@@ -145,7 +145,7 @@
                                             <form method="post" enctype="multipart/form-data"
                                                 action="{{ route('profile.update') }}" class="mt-6 space-y-6">
                                                 @csrf
-                                                @method('post')
+                                                @method('patch')
                                                 <div class="row">
 
                                                     <div class="col-12  ">

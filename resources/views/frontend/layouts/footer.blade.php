@@ -71,7 +71,6 @@
                                 <li>
                                     <a href="{{ Auth::user()->instagram }}"><i class="fab fa-instagram"></i></a>
                                 </li>
-
                             </ul>
                             @endauth
                         </div>
