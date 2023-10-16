@@ -66,10 +66,16 @@
                     </div>
                 </section>
                 <div class="row">
+
+
                 </div>
             </div>
+
         </div>
     </div>
 
+
     <!-- END: Content-->
 @endsection
+
+@include('admin.includes.footer')

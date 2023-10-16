@@ -30,19 +30,19 @@
                     <h5 class="side-line-left text-primary-color mrt-0 mrb-5">Get In Touch</h5>
                     <h2 style="font-size: 1.7rem;" class="faq-title mrb-30">For more information and inquiries, contact us
                     </h2>
-                    @auth
-                        <ul class="social-list list-lg list-primary-color list-flat mrb-lg-60 clearfix">
-                            <li>
-                                <a href="{{ Auth::user()->facebook }}"><i class="fab fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{ Auth::user()->linkedin }}"><i class="fab fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{ Auth::user()->instagram }}"><i class="fab fa-instagram"></i></a>
-                            </li>
-                        </ul>
-                    @endauth
+                    <ul class="social-list list-lg list-primary-color list-flat mrb-lg-60 clearfix">
+                        @foreach ($users as $user)
+                        <li>
+                            <a href="{{ $user->facebook }}"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="{{ $user->linkedin }}"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a href="{{ $user->instagram }}"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        @endforeach
+                    </ul>
                 </div>
                 <div class="col-md-12 col-lg-12 col-xl-8">
                     <div class="row">
@@ -54,11 +54,11 @@
                                 <div style="background-color: #f0f9ff;" class="contact-details mrl-30">
                                     <h5 class="icon-box-title mrb-10">Email Us</h5>
                                     <p class="mrb-0">
-                                        @auth
-                                            <a style="color: #555"
-                                                href="mailto:{{ Auth::user()->sales_mail }}">{{ Auth::user()->sales_mail }}
-                                            </a>
-                                        @endauth
+
+                                        @foreach ($users as $user)
+                                        <a style="color: #555" href="mailto:{{ $user->sales_mail }}">   {{ $user->sales_mail }}
+                                        </a>
+                                        @endforeach
 
                                     </p>
                                 </div>
@@ -70,13 +70,14 @@
                                     <i class="base-icon-011-phone-1"></i>
                                 </div>
                                 <div class="contact-details mrl-30">
+
                                     <h5 class="icon-box-title mrb-10">Phone Number</h5>
                                     <p class="mrb-0">
-                                        @auth
-                                            <a style="color: #555" href="tel:{{ Auth::user()->sales_no }}">
-                                                {{ Auth::user()->sales_no }}
-                                            </a>
-                                        @endauth
+                                       @foreach ($users as $user)
+                                        <a style="color: #555" href="tel:{{ $user->sales_no }}">
+                                            {{ $user->sales_no }}
+                                        </a>
+                                        @endforeach
                                     </p>
                                 </div>
                             </div>
@@ -131,9 +132,17 @@
                     <!-- Google Map Start -->
                     <div class="mapouter fixed-height">
                         <div class="gmap_canvas">
-                            @auth
+
+                            @foreach ($users as $user)
+
+                            {!! $user->company_location!!}
+
+                            @endforeach
+
+                         {{-- @auth
                             {!! Auth::user()->company_location  !!}
-                            @endauth
+                            @endauth --}}
+
                             <a href="https://www.whatismyip-address.com"></a>
                         </div>
                     </div>

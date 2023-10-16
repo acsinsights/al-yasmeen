@@ -501,15 +501,11 @@
             <div class="container">
                 <div class="row">
                     <div class="owl-carousel testmonial_3col testimonial-style2 text-left owl-loaded owl-drag">
-
-
-
-
                         <div class="owl-stage-outer">
                             <div class="owl-stage"
                                 style="transform: translate3d(-2210px, 0px, 0px); transition: all 0.25s ease 0s; width: 3978px;">
                                 <div class="owl-item cloned" style="width: 412px; margin-right: 30px;">
-                                    <div style="    background: #def2ff;" class="testimonial-item">
+                                    <div style="background: #def2ff;" class="testimonial-item">
                                         <div class="testimonial-thumb">
                                             <img src="/testiimages/1696852297_1-small.png" style="height: 50px!important"
                                                 alt="">
@@ -523,7 +519,7 @@
                                     </div>
                                 </div>
                                 <div class="owl-item cloned" style="width: 412px; margin-right: 30px;">
-                                    <div style="    background: #def2ff;" class="testimonial-item">
+                                    <div style="background: #def2ff;" class="testimonial-item">
                                         <div class="testimonial-thumb">
                                             <img src="/testiimages/1696852311_6-small.png" style="height: 50px!important"
                                                 alt="">
@@ -537,7 +533,7 @@
                                     </div>
                                 </div>
                                 <div class="owl-item cloned" style="width: 412px; margin-right: 30px;">
-                                    <div style="    background: #def2ff;" class="testimonial-item">
+                                    <div style="background: #def2ff;" class="testimonial-item">
                                         <div class="testimonial-thumb">
                                             <img src="/testiimages/1696852319_11-small.png" style="height: 50px!important"
                                                 alt="">

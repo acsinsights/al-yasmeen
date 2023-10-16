@@ -71,3 +71,4 @@
 
 
 @endsection
+@include('admin.includes.footer')

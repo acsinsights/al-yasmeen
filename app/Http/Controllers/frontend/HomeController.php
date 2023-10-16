@@ -9,6 +9,7 @@ use App\Models\Message;
 use App\Models\Enquiry;
 use App\Models\Testimonial;
 use Carbon\Carbon;
+use App\Models\User;
 
 use Illuminate\Support\Facades\File;
 
@@ -20,27 +21,32 @@ class HomeController extends Controller
     // }
     public function index()
     {
+        $users = User::all();
         $projects = Project::all();
-        return view('frontend.home')->with('projects', $projects);
+        return view('frontend.home',compact('projects', 'users'));
     }
     public function services()
     {
-        return view('frontend.services');
+        $users = User::all();
+        return view('frontend.services' , compact('users'));
     }
     public function project()
     {
+        $users = User::all();
         $projects = Project::latest()->with('images')->paginate(4);
         $testimonials = Testimonial::all();
-        return view('frontend.project', compact('projects', 'testimonials'));
+        return view('frontend.project', compact('projects', 'testimonials','users'));
     }
     public function about()
     {
+        $users = User::all();
         $testimonials = Testimonial::all();
-        return view('frontend.about', compact('testimonials'));
+        return view('frontend.about', compact('testimonials','users'));
     }
     public function contact()
     {
-        return view('frontend.contact');
+        $users = User::all();
+        return view('frontend.contact')->with('users', $users);
     }
 
     protected function submit(Request $request)

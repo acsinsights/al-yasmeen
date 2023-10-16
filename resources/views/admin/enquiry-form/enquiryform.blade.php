@@ -88,7 +88,7 @@
                                                         </td>
                                                         <td colspan="1" class="text-center">
                                                             <form action="/admin/enquiry-delete/{{ $fm->id }}"
-                                                                method="POST">
+                                                                method="POST" onclick="return confirm('Are you sure?');">
                                                                 @csrf
                                                                 @method('delete')
                                                                 <button type="submit" class="btn btn-danger">

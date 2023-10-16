@@ -23,9 +23,9 @@ class ProfileUpdateRequest extends FormRequest
             'company_name' => ['string'],
             'company_location' => ['string', 'max:3000'],
             'company_address' => ['string'],
-            'facebook' => ['string'],
-            'instagram' => ['string'],
-            'linkedin' => ['string'],
+            'facebook' => ['nullable', 'string'],
+            'instagram' => ['nullable', 'string'],
+            'linkedin' => ['nullable', 'string'],
             'email' => ['email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
         ];
     }

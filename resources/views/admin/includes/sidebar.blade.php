@@ -30,7 +30,7 @@
                 </li>
                 <li class=" navigation-header">
                     <span data-i18n="Posts &amp; Pages">
-                        Posts
+                        Projects
                     </span>
                     <i data-feather="more-horizontal"></i>
                 </li>

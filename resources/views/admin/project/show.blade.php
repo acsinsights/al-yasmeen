@@ -277,3 +277,4 @@
         </script>
     @endif
 @endsection
+@include('admin.includes.footer')

@@ -137,3 +137,4 @@
     <!-- END: Content-->
 
 @endsection
+@include('admin.includes.footer')

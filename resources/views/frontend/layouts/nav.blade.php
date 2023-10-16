@@ -6,26 +6,26 @@
                     <ul class="topbar-info">
                         <li>
                             <i class="base-icon-email1"></i>
-                            @auth
-                            <a href="mailto:{{ Auth::user()->sales_mail }}">{{ Auth::user()->sales_mail }}</a>
-                            @endauth
+                            @foreach ($users as $user)
+                            <a style="color: #ffffff" href="mailto:{{ $user->sales_mail }}">   {{ $user->sales_mail }}
+                            </a>
+                            @endforeach
+                            {{-- <a href="mailto:{{ Auth::user()->sales_mail }}">{{ Auth::user()->sales_mail }}</a> --}}
                         </li>
                     </ul>
-                    @auth
                     <ul class="topbar-social">
+                        @foreach ($users as $user)
                         <li>
-                            <a href="{{ Auth::user()->linkedin }}"><i class="fab fa-linkedin"></i></a>
+                            <a href="{{ $user->facebook }}"><i class="fab fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href="{{ Auth::user()->facebook }}"><i class="fab fa-facebook"></i></a>
+                            <a href="{{ $user->linkedin }}"><i class="fab fa-linkedin"></i></a>
                         </li>
-
                         <li>
-                            <a href="{{ Auth::user()->instagram }}"><i class="fab fa-instagram"></i></a>
+                            <a href="{{ $user->instagram }}"><i class="fab fa-instagram"></i></a>
                         </li>
-
+                        @endforeach
                     </ul>
-                    @endauth
                 </div>
             </div>
         </div>
@@ -69,11 +69,16 @@
                             <div class="header-contact-info-text">
                                 <p class="call-text">Call Anytime</p>
 
-                                <h5 class="phone-no">
+                                {{-- <h5 class="phone-no">
                                     @auth
                                     <a href="tel:{{ Auth::user()->sales_no }}">{{ Auth::user()->sales_no }}</a>
                                     @endauth
-                                </h5>
+                                </h5> --}}
+                                @foreach ($users as $user)
+                                <a style="color: #555" href="tel:{{ $user->sales_no }}">
+                                    {{ $user->sales_no }}
+                                </a>
+                                @endforeach
 
                             </div>
                         </div>

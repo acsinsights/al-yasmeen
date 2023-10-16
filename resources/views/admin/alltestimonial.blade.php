@@ -68,7 +68,7 @@
                                                 <td>{{ $tsti->custname }}</td>
                                                 <td>{{ $tsti->custdesignation }}</td>
                                                 <td>{{ $tsti->custcompany }}</td>
-                                             
+
                                                 <td>{{ $tsti->date }}</td>
 
                                                 <td style="text-align: center;"><a
@@ -106,3 +106,4 @@
     <!-- END: Content-->
 
 @endsection
+@include('admin.includes.footer')

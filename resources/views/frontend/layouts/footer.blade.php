@@ -37,41 +37,50 @@
                         <div class="widget footer-widget mrr-30 mrr-md-0">
                             <h5 class="widget-title text-black mrb-30">Contact</h5>
                             <address class="mrb-0">
-                                @auth
-                                <p>{{ Auth::user()->company_address }}</p>
+
+                                <p>32 Dora Creek, tuntable creek, New South Wales 2480, Australia</p>
                                 <div class="mrb-10">
-                                    <a href="tel:+12345666789">
+
+                                    @foreach ($users as $user)
+                                    <a style="color: #555" href="tel:{{ $user->sales_no }}">
                                         <i class="fas fa-phone-alt mrr-10"></i>
-                                        {{ Auth::user()->sales_no }}
+                                        {{ $user->sales_no }}
                                     </a>
+                                    @endforeach
                                 </div>
                                 <div class="mrb-10">
-                                    <a href="mailto:{{ Auth::user()->sales_mail }}"><i
-                                            class="fas fa-envelope mrr-10"></i>{{ Auth::user()->sales_mail }}</a>
+                                    @foreach ($users as $user)
+                                    <a style="color: #555" href="mailto:{{ $user->sales_mail }}">
+                                        <i
+                                            class="fas fa-envelope mrr-10"></i>  {{ $user->sales_mail }}
+                                    </a>
+                                    @endforeach
                                 </div>
                                 <div class="mrb-0">
                                     <a href="#"><i class="fas fa-globe mrr-10"></i>www.alyasmeen.com</a>
                                 </div>
-                                @endauth
+
                             </address>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-6">
                         <div class="widget footer-widget mrr-60 mrr-md-0">
                             <h5 class="widget-title text-black mrb-30">Social Links</h5>
-                            @auth
+
                             <ul class="social-list">
+                                @foreach ($users as $user)
                                 <li>
-                                    <a href="{{ Auth::user()->facebook }}"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="{{ $user->facebook }}"><i class="fab fa-facebook"></i></a>
                                 </li>
                                 <li>
-                                    <a href="{{ Auth::user()->linkedin }}"><i class="fab fa-linkedin"></i></a>
+                                    <a href="{{ $user->linkedin }}"><i class="fab fa-linkedin"></i></a>
                                 </li>
                                 <li>
-                                    <a href="{{ Auth::user()->instagram }}"><i class="fab fa-instagram"></i></a>
+                                    <a href="{{ $user->instagram }}"><i class="fab fa-instagram"></i></a>
                                 </li>
+                                @endforeach
                             </ul>
-                            @endauth
+
                         </div>
                     </div>
                 </div>

@@ -130,3 +130,4 @@
         });
         </script>
 @endsection
+@include('admin.includes.footer')
