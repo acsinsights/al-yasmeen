@@ -11,9 +11,6 @@ use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\ProjectController;
 use App\Http\Controllers\admin\TestimonialController;
 
-
-
-
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Routes;
 use App\User;
@@ -88,17 +85,19 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
 
+
+
+
         Route::get('/alltestimonial', [TestimonialController::class, 'index'])->name('admin.alltestimonial');
         Route::get('/addtestimonial', [TestimonialController::class, 'create'])->name('admin.addtestimonial');
         Route::post('/add-testimonial', [TestimonialController::class, 'store'])->name('admin.add-testimonial');
+
 
 
         Route::get('/deletetestimonial/{id}', [TestimonialController::class, 'destroy'])->name('admin.deletetestimonial');
         Route::get('/edittestimonial/{id}', [TestimonialController::class, 'edit']);
         Route::delete('/delete-testimonial-image/{id}', [TestimonialController::class, 'deletecover']);
         Route::any('/updatetestimonial/{id}', [TestimonialController::class, 'update']);
-
-
 
         // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
          Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

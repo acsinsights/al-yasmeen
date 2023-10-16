@@ -57,7 +57,7 @@
       @auth
       <ul class="list-items mobile-sidebar-contact">
         <li><span class="fa fa-map-marker-alt mrr-10 text-primary-color"></span>   {{ Auth::user()->company_address }}</li>
-        <li><span class="fas fa-envelope mrr-10 text-primary-color"></span><a href="mailto:{{ Auth::user()->email }}">   {{ Auth::user()->email }}</a></li>
+        <li><span class="fas fa-envelope mrr-10 text-primary-color"></span><a href="mailto:{{ Auth::user()->sales_mail }}">   {{ Auth::user()->sales_mail }}</a></li>
         <li><span class="fas fa-phone-alt mrr-10 text-primary-color"></span><a href="tel:{{ Auth::user()->phone_no }}">{{ Auth::user()->phone_no }}</a></li>
       </ul>
       @endauth

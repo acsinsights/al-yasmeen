@@ -33,7 +33,6 @@
                     </div>
 
 
-
                     <div class="col-xl-3 col-lg-6">
                         <div class="widget footer-widget mrr-30 mrr-md-0">
                             <h5 class="widget-title text-black mrb-30">Contact</h5>
@@ -47,8 +46,8 @@
                                     </a>
                                 </div>
                                 <div class="mrb-10">
-                                    <a href="mailto:{{ Auth::user()->email }}"><i
-                                            class="fas fa-envelope mrr-10"></i>{{ Auth::user()->email }}</a>
+                                    <a href="mailto:{{ Auth::user()->sales_mail }}"><i
+                                            class="fas fa-envelope mrr-10"></i>{{ Auth::user()->sales_mail }}</a>
                                 </div>
                                 <div class="mrb-0">
                                     <a href="#"><i class="fas fa-globe mrr-10"></i>www.alyasmeen.com</a>

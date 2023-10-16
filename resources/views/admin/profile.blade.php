@@ -173,7 +173,26 @@
                                                             class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
                                                             :messages="$errors->get('sales_no')" />
                                                     </div>
-                                                    <div class="col-12 ">
+                                                    <div class="col-12 col-sm-6">
+                                                        <x-input-label for="sales_mail" :value="__('Sales Email')" />
+                                                        <x-text-input id="sales_mail" name="sales_mail" type="text"
+                                                            class="form-control" value="{{ Auth::user()->sales_mail }}"
+                                                            autofocus autocomplete="sales_mail" />
+                                                        <x-input-error
+                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
+                                                            :messages="$errors->get('sales_mail')" />
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 ">
+                                                        <x-input-label for="company_location" :value="__('Company Location')" />
+                                                        <x-text-input id="company_location" name="company_location"
+                                                            type="text" class="form-control"
+                                                            value="{{ Auth::user()->company_location }}" autofocus
+                                                            autocomplete="company_location" />
+                                                        <x-input-error
+                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
+                                                            :messages="$errors->get('company_location')" />
+                                                    </div>
+                                                    <div class="col-12 col-sm-6 ">
                                                         <x-input-label for="company_address" :value="__('Company Address')" />
                                                         <x-text-input id="company_address" name="company_address"
                                                             type="text" class="form-control"

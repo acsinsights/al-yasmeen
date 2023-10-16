@@ -7,7 +7,7 @@
                         <li>
                             <i class="base-icon-email1"></i>
                             @auth
-                            <a href="mailto:{{ Auth::user()->email }}">{{ Auth::user()->email }}</a>
+                            <a href="mailto:{{ Auth::user()->sales_mail }}">{{ Auth::user()->sales_mail }}</a>
                             @endauth
                         </li>
                     </ul>

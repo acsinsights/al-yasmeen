@@ -30,17 +30,19 @@
                     <h5 class="side-line-left text-primary-color mrt-0 mrb-5">Get In Touch</h5>
                     <h2 style="font-size: 1.7rem;" class="faq-title mrb-30">For more information and inquiries, contact us
                     </h2>
-                    <ul class="social-list list-lg list-primary-color list-flat mrb-lg-60 clearfix">
-                        <li>
-                            <a href="{{ Auth::user()->facebook }}"><i class="fab fa-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="{{ Auth::user()->linkedin }}"><i class="fab fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href="{{ Auth::user()->instagram }}"><i class="fab fa-instagram"></i></a>
-                        </li>
-                    </ul>
+                    @auth
+                        <ul class="social-list list-lg list-primary-color list-flat mrb-lg-60 clearfix">
+                            <li>
+                                <a href="{{ Auth::user()->facebook }}"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{ Auth::user()->linkedin }}"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{ Auth::user()->instagram }}"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    @endauth
                 </div>
                 <div class="col-md-12 col-lg-12 col-xl-8">
                     <div class="row">
@@ -51,8 +53,14 @@
                                 </div>
                                 <div style="background-color: #f0f9ff;" class="contact-details mrl-30">
                                     <h5 class="icon-box-title mrb-10">Email Us</h5>
-                                    <p class="mrb-0"><a style="color: #555"
-                                            href="mailto:{{ Auth::user()->email }}">{{ Auth::user()->email }}</a> </p>
+                                    <p class="mrb-0">
+                                        @auth
+                                            <a style="color: #555"
+                                                href="mailto:{{ Auth::user()->sales_mail }}">{{ Auth::user()->sales_mail }}
+                                            </a>
+                                        @endauth
+
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +71,12 @@
                                 </div>
                                 <div class="contact-details mrl-30">
                                     <h5 class="icon-box-title mrb-10">Phone Number</h5>
-                                    <p class="mrb-0"> <a style="color: #555" href="tel:{{ Auth::user()->phone_no }}"> {{ Auth::user()->phone_no }}</a>
+                                    <p class="mrb-0">
+                                        @auth
+                                            <a style="color: #555" href="tel:{{ Auth::user()->sales_no }}">
+                                                {{ Auth::user()->sales_no }}
+                                            </a>
+                                        @endauth
                                     </p>
                                 </div>
                             </div>
@@ -76,32 +89,37 @@
                     @include('admin.message')
                     <div class="contact-form">
                         <form action="/submit" name="contactForm" method="post">
-                              @csrf
-                                @method('put')
+                            @csrf
+                            @method('put')
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <div  class="form-group mrb-25">
-                                        <input style="background-color: #f0f9ff;!important" type="text" name="name" placeholder="Name" class="form-control" required>
+                                    <div class="form-group mrb-25">
+                                        <input style="background-color: #f0f9ff;!important" type="text" name="name"
+                                            placeholder="Name" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group mrb-25">
-                                        <input style="background-color: #f0f9ff;!important" type="text" name="phone" placeholder="Phone" class="form-control" required>
+                                        <input style="background-color: #f0f9ff;!important" type="text" name="phone"
+                                            placeholder="Phone" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group mrb-25">
-                                        <input style="background-color: #f0f9ff;!important" type="email" name="email" placeholder="Email" class="form-control" required>
+                                        <input style="background-color: #f0f9ff;!important" type="email" name="email"
+                                            placeholder="Email" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group mrb-25">
-                                        <textarea style="background-color: #f0f9ff;!important" rows="5" name="message" placeholder="Messages" class="form-control" required></textarea>
+                                        <textarea style="background-color: #f0f9ff;!important" rows="5" name="message" placeholder="Messages"
+                                            class="form-control" required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-lg-8">
                                     <div class="form-group">
-                                        <button style="border: 1px solid black;" type="submit" class="animate-btn-style3 btn-md mrb-lg-60">Submit Now</button>
+                                        <button style="border: 1px solid black;" type="submit"
+                                            class="animate-btn-style3 btn-md mrb-lg-60">Submit Now</button>
                                     </div>
                                 </div>
                             </div>
@@ -113,8 +131,9 @@
                     <!-- Google Map Start -->
                     <div class="mapouter fixed-height">
                         <div class="gmap_canvas">
-                            <iframe id="gmap_canvas"
-                                src="https://maps.google.com/maps?q=Graz&amp;t=&amp;z=11&amp;ie=UTF8&amp;iwloc=&amp;output=embed"></iframe>
+                            @auth
+                            {!! Auth::user()->company_location  !!}
+                            @endauth
                             <a href="https://www.whatismyip-address.com"></a>
                         </div>
                     </div>
