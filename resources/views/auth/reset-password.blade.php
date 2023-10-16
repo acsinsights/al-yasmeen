@@ -12,8 +12,8 @@
         content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
     <title>AL Yasmeen - Reset Password</title>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('user-assets/img/logo/favicon.ico') }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('user-assets\images\favicon.svg') }}" width="132" height="72" alt="logo">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('user-assets\images\favicon.svg') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
         rel="stylesheet">
 
@@ -82,7 +82,7 @@
 
                                     <!-- Password Reset Token -->
                                     <input type="hidden" name="token" value="{{ $request->route('token') }}">
-                                    
+
                                     <div class="form-group">
                                         <label for="email" class="form-label">Email</label>
                                         <input type="email" class="form-control" id="email" name="email"

@@ -13,7 +13,7 @@
     <meta name="author" content="PIXINVENT">
     <title>AL Yasmeen - Forgot Password</title>
     <link rel="apple-touch-icon" href="{{ asset('user-assets/img/logo/favicon.ico') }}">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('user-assets\images\favicon.svg') }}" width="132" height="72" alt="logo">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600"
         rel="stylesheet">
 
