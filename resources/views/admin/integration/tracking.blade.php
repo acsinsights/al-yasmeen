@@ -36,14 +36,14 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" id="account-pill-general" data-toggle="pill"
                                         href="#account-vertical-general" aria-expanded="true">
-                                        <i data-feather="user" class="font-medium-3 mr-1"></i>
+                                        <i class="fa-brands fa-meta font-medium-3 mr-1"></i>
                                         <span class="font-weight-bold">Meta Pixel</span>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="account-pill-general" data-toggle="pill"
                                         href="#account-vertical-business-profile" aria-expanded="true">
-                                        <i data-feather="user" class="font-medium-3 mr-1"></i>
+                                        <i class="fa-solid fa-chart-line font-medium-3 mr-1"></i>
                                         <span class="font-weight-bold">Google Analytics</span>
                                     </a>
                                 </li>

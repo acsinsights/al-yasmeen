@@ -60,7 +60,6 @@
                         <button type="submit" class="ml-2 mb-5 btn btn-primary">Export CSV</button>
                     </div>
                 </form>
-
             </div>
             <div class="content-body">
                 <div class="row" id="table-striped">
