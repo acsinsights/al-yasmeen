@@ -68,9 +68,7 @@
                                                 <div  class="row">
                                                     <div class="col-12">
                                                         <x-input-label for="chatbot_widgets" :value="__('Paste Your Code Here')" />
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Paste Your Code Here"
-                                                            id="chatbot_widgets" name="chatbot_widgets" type="text" class=" form-control">{{ Auth::user()->chatbot_widgets }}
-                                                        </textarea>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Paste Your Code Here" id="chatbot_widgets" name="chatbot_widgets" type="text" class=" form-control">{{ Auth::user()->chatbot_widgets }}</textarea>
 
                                                     </div>
 
@@ -101,10 +99,7 @@
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <x-input-label for="w_app_wid" :value="__('Paste Your Code Here')" />
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Paste Your Code Here"
-                                                            id="w_app_wid" name="w_app_wid" type="text" class=" form-control"
-                                                            autocomplete="w_app_wid" >{{ Auth::user()->w_app_wid }}
-                                                        </textarea>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Paste Your Code Here" id="w_app_wid" name="w_app_wid" type="text" class=" form-control" autocomplete="w_app_wid" >{{ Auth::user()->w_app_wid }}</textarea>
                                                         <x-input-error
                                                             class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
                                                             :messages="$errors->get('w_app_wid')"   />

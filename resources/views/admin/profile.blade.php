@@ -75,7 +75,7 @@
                                                 @method('patch')
                                                 <div class="mb-20 media">
                                                     <a href="javascript:void(0);" class="mr-25">
-                                                        <img src="/profile-img/{{ Auth::user()->profile_img }}" id="account-upload-img"
+                                                        <img src="{{ asset('profile-img/akhil-raj.jpg') }}" id="account-upload-img"
                                                             class="rounded mr-50" alt="profile image" height="80"
                                                             width="80">
                                                     </a>
@@ -345,5 +345,22 @@
         </div>
     </div>
     <!-- END: Content-->
+    <footer class="col-12 admin-footer footer-static footer-light">
+        <div class="row pdt-30 footer-copyright-area">
+            <div class="col-xl-12">
+                <div class="text-center">
+                    <span>Copyright ©2023 AL Yasmeen All Rights Reserved Developed by
+                        <span>
+                            <a style="color: #ec2024;" href="https://publicize360.com/"
+                                target="_blank">Publicize 360</a>
+                            CMS by <a style="color: #04733b;" href="https://acsinsights.com/"
+                                target="_blank">ACS Insights</a>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
 @endsection
-@include('admin.includes.footer')
+
+

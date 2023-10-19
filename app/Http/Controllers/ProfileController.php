@@ -29,11 +29,15 @@ class ProfileController extends Controller
             'user' => $request->user(),
         ]);
     }
+
+    protected function profile()
+    {
+        return view('admin.profile');
+    }
     /**
      * Update the user's profile information.
      */
-
-    public function update(ProfileUpdateRequest $request): RedirectResponse
+public function update(ProfileUpdateRequest $request): RedirectResponse
     {
 
 
@@ -65,8 +69,20 @@ class ProfileController extends Controller
         // }
 
 
-        $request->user()->save();
-        return Redirect::route('admin.profile')->with('status', 'profile-updated');
+        // $request->user()->save();
+
+
+        if ( $request->user()->save()) {
+            return Redirect::route('admin.profile')->with('status', 'profile-updated');
+        }
+        else {
+            return Redirect::route('admin.integration.tracking')->with('status', 'updated');
+        }
+
+
+
+
+        // return Redirect::route('admin.integration.widgets')->with('status', 'updated');
     }
 
 

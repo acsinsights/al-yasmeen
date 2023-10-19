@@ -29,6 +29,14 @@
                     </span>
                 </a>
             </li>
+            <li class="nav-item {{ URL::current() == route('admin.profile') ? 'active' : '' }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.profile') }}"">
+                    <i data-feather="user" class="font-medium-3 mr-1"></i>
+                    <span class="menu-title text-truncate" data-i18n="Email">
+                        Account Settings
+                    </span>
+                </a>
+            </li>
             <li class=" navigation-header">
                 <span data-i18n="Posts &amp; Pages">
                     Projects
@@ -51,6 +59,11 @@
                     </span>
                 </a>
             </li>
+
+
+
+
+
             <li class=" navigation-header">
                 <span data-i18n="OUR CLIENTELE">
                     OUR CLIENTELE
@@ -95,7 +108,7 @@
             </li>
             <li class="nav-item {{ URL::current() == route('admin.integration.tracking') ? 'active' : '' }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.integration.tracking') }}">
-                    <i class="fa-solid fa-address-book"></i>
+                    <i class="fa-solid fa-location-crosshairs"></i>
                     <span class="menu-title text-truncate" data-i18n="Colors">
                     Tracking
                     </span>
@@ -103,7 +116,7 @@
             </li>
             <li class="nav-item {{ URL::current() == route('admin.integration.widgets') ? 'active' : '' }}">
                 <a class="d-flex align-items-center" href="{{ route('admin.integration.widgets') }}">
-                    <i class="fa-solid fa-table-columns"></i>
+                    <i class="fa-solid fa-toolbox"></i>
                     <span class="menu-title text-truncate" data-i18n="Colors">
                         Widgets
                     </span>

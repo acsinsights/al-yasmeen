@@ -68,13 +68,10 @@
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <x-input-label for="meta_pixel" :value="__('Paste Your Code Here')" />
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Paste Your Code Here"
-                                                            id="meta_pixel" name="meta_pixel" type="text" class=" form-control" autocomplete="meta_pixel"
-                                                            required>{{ Auth::user()->meta_pixel }}
-                                                        </textarea>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Paste Your Code Here" id="meta_pixel" name="meta_pixel" type="text" class=" form-control" autocomplete="meta_pixel">{{ Auth::user()->meta_pixel }}</textarea>
                                                         <x-input-error
                                                             class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                            :messages="$errors->get('meta_pixel')" required />
+                                                            :messages="$errors->get('meta_pixel')" />
                                                     </div>
                                                     <div class="col-12">
                                                         <button type="submit" class="btn btn-primary mt-2 mr-1">Save
@@ -94,13 +91,10 @@
                                                 <div class="row">
                                                     <div class="col-12">
                                                         <x-input-label for="g_analytics" :value="__('Paste Your Code Here')" />
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Paste Your Code Here"
-                                                            id="g_analytics" name="g_analytics" type="text" class=" form-control" autocomplete="g_analytics"
-                                                            required>{{ Auth::user()->g_analytics }}
-                                                        </textarea>
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Paste Your Code Here"id="g_analytics" name="g_analytics" type="text" class=" form-control" autocomplete="g_analytics" >{{ Auth::user()->g_analytics }}</textarea>
                                                         <x-input-error
                                                             class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                            :messages="$errors->get('g_analytics')" required />
+                                                            :messages="$errors->get('g_analytics')" />
                                                     </div>
                                                     <div class="col-12">
                                                         <button type="submit" class="btn btn-primary mt-2 mr-1">Save

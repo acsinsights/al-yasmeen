@@ -91,11 +91,16 @@ Route::group(['prefix' => 'admin'], function () {
 
 
 
-        Route::post('/profile', [ProfileController::class, 'update'])->name('admin.profile-img');
+      Route::get('/profile', [ProfileController::class, 'profile'])->name('admin.profile');
+        // Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
 
 
-        Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
 
+        // csv
+
+        // Route::get('contact-form', [ContactFormController::class, 'index'])->name('contact-form.index');
+        Route::post('contact-form/export', [DashboardController::class, 'export'])->name('contact-form.export');
+        // Route::delete('contact-form/delete/{contact_form}', [ContactFormController::class, 'destroy'])->name('contact-form.destroy');
 
 
 
