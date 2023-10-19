@@ -35,10 +35,14 @@ class ProfileController extends Controller
 
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
+
+
+        $users = User::all();
         $request->user()->fill($request->validated());
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
         }
+
 
         // if($request->hasFile('profile_img')){
         //     $filename = $request->profile_img->getClientOriginalName();
@@ -66,11 +70,11 @@ class ProfileController extends Controller
     }
 
 
-     public function tracking(ProfileUpdateRequest $request): RedirectResponse
-     {
-         $request->user()->save();
-         return Redirect::route('admin.integration.tracking')->with('status', 'updated');
-     }
+    //  public function tracking(ProfileUpdateRequest $request): RedirectResponse
+    //  {
+    //      $request->user()->save();
+    //      return Redirect::route('admin.integration.tracking')->with('status', 'updated');
+    //  }
 
     /**
      * Delete the user's account.

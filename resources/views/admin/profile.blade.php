@@ -75,7 +75,7 @@
                                                 @method('patch')
                                                 <div class="mb-20 media">
                                                     <a href="javascript:void(0);" class="mr-25">
-                                                        <img src="/profile-img/akhil-raj.jpg" id="account-upload-img"
+                                                        <img src="/profile-img/{{ Auth::user()->profile_img }}" id="account-upload-img"
                                                             class="rounded mr-50" alt="profile image" height="80"
                                                             width="80">
                                                     </a>

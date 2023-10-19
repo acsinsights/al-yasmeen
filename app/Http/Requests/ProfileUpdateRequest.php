@@ -30,6 +30,7 @@ class ProfileUpdateRequest extends FormRequest
             'facebook' => ['nullable', 'string'],
             'instagram' => ['nullable', 'string'],
             'linkedin' => ['nullable', 'string'],
+            // 'profile_img' => ['required','image'],
             'email' => ['email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
         ];
     }
