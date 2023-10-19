@@ -59,7 +59,8 @@
                     <h5 class="side-line-left subtitle text-primary-color">About Our Company</h5>
 
                     <h2 class="mrb-45 mrb-lg-35">Creating imaginative designs, turning spaces into art.</h2>
-                    <p style="background: #def2ff;" class="about-text-block mrb-40">Making Exceptional interiors The pursuit of excellence,
+                    <p style="background: #def2ff;" class="about-text-block mrb-40">Making Exceptional interiors The pursuit
+                        of excellenc e,
                         inventiveness, and specialized solutions fuels our passion. Planning, design, and project management
                         are all included in our comprehensive services. We create functional works of art in all kinds of
                         settings, from hotels to offices, fusing creativity with utility.
@@ -140,20 +141,19 @@
                             and beyond for our clients. We aspire to design spaces that have a lasting
                             influence and improve how people live, work, and interact with their surroundings. We are
                             incessantly in search of excellence</p>
-
                     </div>
-                    <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms"
-                        data-wow-duration="800ms"
+                    <div class="col-md-10 col-lg-10 col-xl-6 wow fadeInUp" data-wow-delay="100ms" data-wow-duration="800ms"
                         style="visibility: visible; animation-duration: 800ms; animation-delay: 100ms; animation-name: fadeInUp;">
                         <div class="twentytwenty-wrapper twentytwenty-horizontal">
-                            <div class="before-after-slider1 style2 twentytwenty-container"
-                                style="height: 397.5px;">
+                            <div class="before-after-slider1 style2 twentytwenty-container" style="height: 397.5px;">
                                 <!-- The before image is first -->
-                                <img src="{{ asset('user-assets/images/before-after/music-studio-before.jpg') }}" alt="img1"
-                                    class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
+                                <img src="{{ asset('user-assets/images/before-after/music-studio-before.jpg') }}"
+                                    alt="img1" class="twentytwenty-before"
+                                    style="clip: rect(0px, 318px, 397.5px, 0px);">
                                 <!-- The after image is last -->
-                                <img src="{{ asset('user-assets/images/before-after/music-studio-after.jpg') }}" alt="img1"
-                                    class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
+                                <img src="{{ asset('user-assets/images/before-after/music-studio-after.jpg') }}"
+                                    alt="img1" class="twentytwenty-after"
+                                    style="clip: rect(0px, 636px, 397.5px, 318px);">
                                 <div class="twentytwenty-overlay">
                                     <div class="twentytwenty-before-label" data-content="Before"></div>
                                     <div class="twentytwenty-after-label" data-content="After"></div>
@@ -173,11 +173,13 @@
                             <div class="before-after-slider1 style2 mrt-lg-60 twentytwenty-container"
                                 style="height: 397.5px;">
                                 <!-- The before image is first -->
-                                <img src="{{ asset('user-assets/images/before-after/laboratory-befor.jpg') }}" alt="img1"
-                                    class="twentytwenty-before" style="clip: rect(0px, 318px, 397.5px, 0px);">
+                                <img src="{{ asset('user-assets/images/before-after/laboratory-befor.jpg') }}"
+                                    alt="img1" class="twentytwenty-before"
+                                    style="clip: rect(0px, 318px, 397.5px, 0px);">
                                 <!-- The after image is last -->
-                                <img src="{{ asset('user-assets/images/before-after/laboratory-after.jpg') }}" alt="img1"
-                                    class="twentytwenty-after" style="clip: rect(0px, 636px, 397.5px, 318px);">
+                                <img src="{{ asset('user-assets/images/before-after/laboratory-after.jpg') }}"
+                                    alt="img1" class="twentytwenty-after"
+                                    style="clip: rect(0px, 636px, 397.5px, 318px);">
                                 <div class="twentytwenty-overlay">
                                     <div class="twentytwenty-before-label" data-content="Before"></div>
                                     <div class="twentytwenty-after-label" data-content="After"></div>
@@ -323,13 +325,14 @@
                         @foreach ($testimonials as $tt)
                             <div style="    background: #def2ff;" class="testimonial-item">
                                 <div class="testimonial-thumb">
-                                    <img src="/testiimages/{{ $tt->custimg }}"
-                                  style="height: 50px!important" alt="" />
+                                    <img src="/testiimages/{{ $tt->custimg }}" style="height: 50px!important"
+                                        alt="" />
                                 </div>
                                 <div class="testimonial-content">
                                     <p class="comments"> {{ $tt->custreview }}</p>
                                     <h4 class="client-name">{{ $tt->custname }}</h4>
-                                    <h6 class="client-designation">{{ $tt->custdesignation }}, {{ $tt->custcompany }}</h6>
+                                    <h6 class="client-designation">{{ $tt->custdesignation }}, {{ $tt->custcompany }}
+                                    </h6>
                                 </div>
                             </div>
                         @endforeach

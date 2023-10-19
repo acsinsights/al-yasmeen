@@ -1,5 +1,5 @@
 @extends('admin.includes.app')
-@section('title', 'Dashboard')
+@section('title', 'Profile')
 @section('content')
 
 
@@ -89,7 +89,7 @@
                                                     </div>
                                                 </div>
                                                 <div style="margin-top: 15px;" class="row">
-                                                    <div class="col-12 col-sm-6">
+                                                    <div class="col-12 mb-2 col-sm-6">
                                                         <x-input-label for="name" :value="__('Name')" />
                                                         <x-text-input id="name" name="name" type="text"
                                                             class="form-control" value="{{ Auth::user()->name }}" autofocus
@@ -111,7 +111,7 @@
                                                     </div>
                                                     <div class="col-12 col-sm-6">
                                                         <div class="form-group">
-                                                            <x-input-label for="phone_no" :value="__('phone no')" />
+                                                            <x-input-label for="phone_no" :value="__('Phone no')" />
                                                             <x-text-input id="phone_no" name="phone_no" type="text"
                                                                 class="form-control" value="{{ Auth::user()->phone_no }}"
                                                                 autofocus autocomplete="phone_no" />
@@ -151,10 +151,10 @@
                                                     <div class="col-12  ">
                                                         <div class="d-flex align-items-center mb-2">
                                                             {{-- <i data-feather="link" class="font-medium-3"></i> --}}
-                                                            <h4 class="mb-0 ml-75">Profile Details</h4>
+                                                            <h4 class="mb-0">Profile Details</h4>
                                                         </div>
                                                     </div>
-                                                    <div class="col-12 col-sm-6">
+                                                    <div class="col-12 mb-2 col-sm-6">
                                                         <x-input-label for="company_name" :value="__('Company Name')" />
                                                         <x-text-input id="company_name" name="company_name"
                                                             type="text" class="form-control"
@@ -162,7 +162,7 @@
                                                             autocomplete="company_name" />
                                                         <x-input-error
                                                             class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                            :messages="$errors->get('company_name')"/>
+                                                            :messages="$errors->get('company_name')" />
                                                     </div>
                                                     <div class="col-12 col-sm-6">
                                                         <x-input-label for="sales_no" :value="__('Sales No')" />
@@ -171,45 +171,49 @@
                                                             autofocus autocomplete="sales_no" />
                                                         <x-input-error
                                                             class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                            :messages="$errors->get('sales_no')" required/>
+                                                            :messages="$errors->get('sales_no')" required />
                                                     </div>
-                                                    <div class="col-12 col-sm-6">
+                                                    <div class="col-12 mb-2 col-sm-6">
                                                         <x-input-label for="sales_mail" :value="__('Sales Email')" />
                                                         <x-text-input id="sales_mail" name="sales_mail" type="text"
                                                             class="form-control" value="{{ Auth::user()->sales_mail }}"
                                                             autofocus autocomplete="sales_mail" />
                                                         <x-input-error
                                                             class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                            :messages="$errors->get('sales_mail')" required/>
+                                                            :messages="$errors->get('sales_mail')" required />
                                                     </div>
-                                                    <div class="col-12 col-sm-6 ">
-                                                        <x-input-label for="company_location" :value="__('Company Location')" />
-                                                        <x-text-input id="company_location" name="company_location"
-                                                            type="text" class="form-control"
-                                                            value="{{ Auth::user()->company_location }}" autofocus
-                                                            autocomplete="company_location" required/>
-                                                        <x-input-error
-                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                            :messages="$errors->get('company_location')" required/>
-                                                    </div>
+
                                                     <div class="col-12 col-sm-6 ">
                                                         <x-input-label for="company_address" :value="__('Company Address')" />
                                                         <x-text-input id="company_address" name="company_address"
                                                             type="text" class="form-control"
                                                             value="{{ Auth::user()->company_address }}" autofocus
-                                                            autocomplete="company_address" required/>
+                                                            autocomplete="company_address" required />
                                                         <x-input-error
                                                             class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
                                                             :messages="$errors->get('company_address')" />
                                                     </div>
+                                                    <div class="col-12">
+                                                        <x-input-label for="company_location" :value="__('Company Location')" />
+                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Company Location"
+                                                            id="company_location" name="company_location" type="text" class=" form-control"
+                                                            autocomplete="company_location" required>{{ Auth::user()->company_location }}
+                                                        </textarea>
+                                                        <x-input-error
+                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
+                                                            :messages="$errors->get('company_location')" required />
+                                                    </div>
                                                     <div class="col-12 mt-2">
                                                         <div class="d-flex align-items-center mb-2">
-                                                            <h4 class="mb-0 ml-75">Social Links</h4>
+                                                            <h4 class="mb-0">Social Links</h4>
                                                         </div>
                                                     </div>
 
+
+
+
                                                     <!-- facebook link input -->
-                                                    <div class="col-12 col-sm-6">
+                                                    <div class="col-12 mb-2 col-sm-6">
                                                         <x-input-label for="facebook" :value="__('Facebook')" />
                                                         <x-text-input id="facebook" name="facebook" type="url"
                                                             class="form-control" value="{{ Auth::user()->facebook }}"
@@ -306,23 +310,22 @@
                                                                 </div>
                                                             </div>
                                                             <x-input-error :messages="$errors->updatePassword->get(
-                                                                                'password_confirmation',)"class="err-msg"/>
-                                                                                </div>
-                                                                            </div>
-                                                                                <div class="col-12">
-                                                                                <button class="btn btn-primary mr-1 mt-1">Save
-                                                                                    changes</button>
-                                                                                  @if (session('status') === 'password-updated')
-                                                                <p x-data="{ show: true }" x-show="show" x-transition
-                                                                    x-init="setTimeout(() => show = false, 2000)"
-                                                                    class="text-sm text-gray-600 dark:text-gray-400">
-                                                                    {{ __('Saved.') }}
-                                                                </p>
-                                                                @endif
+                                                                'password_confirmation',
+                                                            )"class="err-msg" />
                                                         </div>
-                                                        {{-- <div class="flex items-center gap-4">
-                                                        <x-primary-button>{{ __('Save') }}</x-primary-button>
-                                                    </div> --}}
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <button class="btn btn-primary mr-1 ">Save
+                                                            changes</button>
+                                                        @if (session('status') === 'password-updated')
+                                                            <p x-data="{ show: true }" x-show="show" x-transition
+                                                                x-init="setTimeout(() => show = false, 2000)"
+                                                                class="text-sm text-gray-600 dark:text-gray-400">
+                                                                {{ __('Saved.') }}
+                                                            </p>
+                                                        @endif
+                                                    </div>
+
                                                 </form>
                                             </section>
                                         </div>

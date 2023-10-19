@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
 
-    <title>AL Yasmeen</title>
+    <title> AL Yasmeen | @yield('title')</title>
     <link rel="apple-touch-icon" href="{{ asset('user-assets\images\favicon.svg') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('user-assets\images\favicon.svg') }}" width="132"
         height="72" alt="logo">
@@ -64,19 +64,9 @@
             @include('admin.includes.header')
             @yield('content')
 
-
-
-
         </div>
     </div>
     <!-- End app-content-->
-
-
-
-
-
-
-
 
     <div class="sidenav-overlay"></div>
     <div class="drag-target"></div>
@@ -85,14 +75,6 @@
 
     <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>
     <!-- END: Footer-->
-
-
-
-
-
-
-
-
 
     <!-- BEGIN: Vendor JS-->
     <script src="{{ asset('admin-assets/vendors/js/vendors.min.js') }}""></script>
@@ -130,8 +112,6 @@
         })
     </script>
     @yield('js')
-
 </body>
 <!-- END: Body-->
-
 </html>

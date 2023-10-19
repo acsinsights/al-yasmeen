@@ -269,6 +269,7 @@
             </div>
         </div>
     </div>
+    
 @endsection
 @section('js')
     @if ($errors->any())
@@ -277,4 +278,4 @@
         </script>
     @endif
 @endsection
-@include('admin.includes.footer')
+

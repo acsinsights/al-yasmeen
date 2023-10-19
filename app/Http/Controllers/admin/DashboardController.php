@@ -7,10 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\User;
 use App\Models\Enquiry;
-
 use App\Models\Message;
 use Carbon\Carbon;
-
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Request as FacadesRequest;
@@ -46,9 +44,6 @@ class DashboardController extends Controller
         return redirect()->back();
     }
 
-
-
-
     protected function formmessage(Request $request,$id)
     {
         $forms= Message::findOrFail($id);
@@ -66,12 +61,24 @@ class DashboardController extends Controller
         return view('admin.enquiry-form.enquiryform',compact('enquiryforms'));
     }
 
+    protected function widgets()
+    {
+        $users= User::all();
+        return view('admin.integration.widgets',compact('users'));
+    }
+    //  protected function trackingpg()
+    //  {
+    //      return view('admin.integration.tracking');
+    //  }
+     protected function tracking()
+     {
+         return view('admin.integration.tracking');
+     }
     protected function enquiry()
     {
         $enquiryforms= Enquiry::all();
         return view('admin.enquiry-form',compact('enquiryforms'));
     }
-
     protected function d_form($id)
     {
         // contact form
@@ -79,7 +86,6 @@ class DashboardController extends Controller
         $forms->delete();
         return back()->with('success', 'Deleted successfully');
     }
-
     protected function enquiry_form($id)
     {
         // enquiry form
@@ -87,7 +93,6 @@ class DashboardController extends Controller
         $enquiryforms->delete();
         return back()->with('success', 'Deleted successfully');
     }
-
     protected function all_d_form()
     {
         $forms = Message::truncate();

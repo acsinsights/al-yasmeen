@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
-
+use App\Models\User;
 
 
 // use App\Models\User;
@@ -64,6 +64,14 @@ class ProfileController extends Controller
         $request->user()->save();
         return Redirect::route('admin.profile')->with('status', 'profile-updated');
     }
+
+
+     public function tracking(ProfileUpdateRequest $request): RedirectResponse
+     {
+         $request->user()->save();
+         return Redirect::route('admin.integration.tracking')->with('status', 'updated');
+     }
+
     /**
      * Delete the user's account.
      */

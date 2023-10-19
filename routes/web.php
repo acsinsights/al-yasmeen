@@ -10,6 +10,7 @@ use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\ProjectController;
 use App\Http\Controllers\admin\TestimonialController;
+use App\Http\Controllers\admin\IntegrationController;
 
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Routes;
@@ -61,9 +62,13 @@ Route::group(['prefix' => 'admin'], function () {
         Route::delete('/enquiry-delete/{id}', [DashboardController::class, 'enquiry_form']);
         Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
 
+        // integration
+
+         Route::get('/Tracking', [DashboardController::class, 'tracking'])->name('admin.integration.tracking');
+        Route::get('/Widgets', [DashboardController::class, 'widgets'])->name('admin.integration.widgets');
 
 
-
+        // projects
         Route::get('/projects', [ProjectController::class, 'index'])->name('admin.project.index');
         Route::get('/projects/show/{id}', [ProjectController::class, 'show'])->name('admin.project.show');
         Route::get('/projects/create', [ProjectController::class, 'create'])->name('admin.project.create');
@@ -77,13 +82,20 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/projects/{project_id}/image/destroy/{image_id}', [ProjectController::class, 'destroy_image'])->name('admin.project.image.destroy');
 
 
+        // Integration
+        // Route::get('/tracking', [IntegrationController::class, 'tracking'])->name('admin.integration.tracking');
+
+
+        // WIdgets
+        // Route::get('/widgets', [IntegrationController::class, 'widgets'])->name('admin.integration.widgets');
 
 
 
-     Route::post('/profile', [ProfileController::class, 'update'])->name('admin.profile-img');
+        Route::post('/profile', [ProfileController::class, 'update'])->name('admin.profile-img');
 
 
         Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
+
 
 
 
@@ -101,6 +113,8 @@ Route::group(['prefix' => 'admin'], function () {
 
         // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
          Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+        //  Route::patch('/tracking', [ProfileController::class, 'tracking'])->name('admin.integration.tracking');
+        //  Route::patch('/widgets', [ProfileController::class, 'widgets'])->name('admin.integration.widgets');
         // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
 });

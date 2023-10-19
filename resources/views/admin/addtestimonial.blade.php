@@ -1,5 +1,5 @@
 @extends('admin.includes.app')
-@section('title', 'Dashboard')
+@section('title', 'Add Testimonial')
 @section('content')
 
 
