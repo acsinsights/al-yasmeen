@@ -61,19 +61,16 @@ class DashboardController extends Controller
         return view('admin.enquiry-form.enquiryform',compact('enquiryforms'));
     }
 
-    protected function widgets()
-    {
-        $users= User::all();
-        return view('admin.integration.widgets',compact('users'));
-    }
-    //  protected function trackingpg()
+    // protected function widgets()
+    // {
+    //     $users= User::all();
+    //     return view('admin.integration.widgets',compact('users'));
+    // }
+
+    //  protected function tracking()
     //  {
     //      return view('admin.integration.tracking');
     //  }
-     protected function tracking()
-     {
-         return view('admin.integration.tracking');
-     }
     protected function enquiry()
     {
         $enquiryforms= Enquiry::all();

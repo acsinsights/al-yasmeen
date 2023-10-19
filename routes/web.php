@@ -83,11 +83,11 @@ Route::group(['prefix' => 'admin'], function () {
 
 
         // Integration
-        // Route::get('/tracking', [IntegrationController::class, 'tracking'])->name('admin.integration.tracking');
+       Route::get('/tracking', [IntegrationController::class, 'tracking'])->name('admin.integration.tracking');
 
 
         // WIdgets
-        // Route::get('/widgets', [IntegrationController::class, 'widgets'])->name('admin.integration.widgets');
+          Route::get('/widgets', [IntegrationController::class, 'widgets'])->name('admin.integration.widgets');
 
 
 

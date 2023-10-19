@@ -70,11 +70,11 @@ class ProfileController extends Controller
     }
 
 
-    //  public function tracking(ProfileUpdateRequest $request): RedirectResponse
-    //  {
-    //      $request->user()->save();
-    //      return Redirect::route('admin.integration.tracking')->with('status', 'updated');
-    //  }
+    //   public function tracking(ProfileUpdateRequest $request): RedirectResponse
+    //   {
+    //       $request->user()->save();
+    //       return Redirect::route('admin.integration.tracking')->with('status', 'updated');
+    //   }
 
     /**
      * Delete the user's account.
