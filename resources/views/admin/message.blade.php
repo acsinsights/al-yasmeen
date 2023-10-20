@@ -35,15 +35,19 @@
 
 @if (Session::has('success'))
 
-<div class="mb-1 demo-spacing-0">
+{{-- <div class="mb-1 demo-spacing-0">
     <div class="alert alert-success mt-1 alert-validation-msg" role="alert">
         <div class="alert-body">
             <i data-feather="info" class="mr-50 align-middle"></i>
             <span>{{ Session::get('success') }}</span>
         </div>
     </div>
+</div> --}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+   {{ Session::get('success') }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert"
+        aria-label="Close"></button>
 </div>
-
 
 @endif
 
