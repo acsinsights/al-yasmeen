@@ -32,15 +32,15 @@
                     </h2>
                     <ul class="social-list list-lg list-primary-color list-flat mrb-lg-60 clearfix">
                         @foreach ($users as $user)
-                        <li>
-                            <a href="{{ $user->facebook }}"><i class="fab fa-facebook"></i></a>
-                        </li>
-                        <li>
-                            <a href="{{ $user->linkedin }}"><i class="fab fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href="{{ $user->instagram }}"><i class="fab fa-instagram"></i></a>
-                        </li>
+                            <li>
+                                <a href="{{ $user->facebook }}"><i class="fab fa-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{ $user->linkedin }}"><i class="fab fa-linkedin"></i></a>
+                            </li>
+                            <li>
+                                <a href="{{ $user->instagram }}"><i class="fab fa-instagram"></i></a>
+                            </li>
                         @endforeach
                     </ul>
                 </div>
@@ -56,8 +56,9 @@
                                     <p class="mrb-0">
 
                                         @foreach ($users as $user)
-                                        <a style="color: #555" href="mailto:{{ $user->sales_mail }}">   {{ $user->sales_mail }}
-                                        </a>
+                                            <a style="color: #555" href="mailto:{{ $user->sales_mail }}">
+                                                {{ $user->sales_mail }}
+                                            </a>
                                         @endforeach
 
                                     </p>
@@ -73,10 +74,10 @@
 
                                     <h5 class="icon-box-title mrb-10">Phone Number</h5>
                                     <p class="mrb-0">
-                                       @foreach ($users as $user)
-                                        <a style="color: #555" href="tel:{{ $user->sales_no }}">
-                                            {{ $user->sales_no }}
-                                        </a>
+                                        @foreach ($users as $user)
+                                            <a style="color: #555" href="tel:{{ $user->sales_no }}">
+                                                {{ $user->sales_no }}
+                                            </a>
                                         @endforeach
                                     </p>
                                 </div>
@@ -89,32 +90,53 @@
                 <div class="col-xl-6">
                     @include('admin.message')
                     <div class="contact-form">
-                        <form action="/submit" name="contactForm" method="post">
+                        <form action="{{ route('frontend.contact.store') }}" method="post"
+                           >
                             @csrf
-                            @method('put')
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group mrb-25">
                                         <input style="background-color: #f0f9ff;!important" type="text" name="name"
-                                            placeholder="Name" class="form-control" required>
+                                            placeholder="Name" class="form-control" value="{{ old('name') }}"  {{ $errors->any() ? 'autofocus' : '' }}>
+                                        @error('name')
+                                            <span class="text-danger text-sm">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
+
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group mrb-25">
                                         <input style="background-color: #f0f9ff;!important" type="text" name="phone"
-                                            placeholder="Phone" class="form-control" required>
+                                            placeholder="Phone" class="form-control" value="{{ old('phone') }}">
+                                        @error('phone')
+                                            <span class="text-danger text-sm">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group mrb-25">
                                         <input style="background-color: #f0f9ff;!important" type="email" name="email"
-                                            placeholder="Email" class="form-control" required>
+                                            placeholder="Email" class="form-control" value="{{ old('email') }}">
+                                        @error('email')
+                                            <span class="text-danger text-sm">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-group mrb-25">
                                         <textarea style="background-color: #f0f9ff;!important" rows="5" name="message" placeholder="Messages"
-                                            class="form-control" required></textarea>
+                                            class="form-control">{{ old('message') }}</textarea>
+                                        @error('message')
+                                            <span class="text-danger text-sm">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-8">
@@ -133,17 +155,8 @@
                     <div class="mapouter fixed-height">
                         <div class="gmap_canvas">
 
-                            @foreach ($users as $user)
 
-                            {!! $user->company_location!!}
 
-                            @endforeach
-
-                         {{-- @auth
-                            {!! Auth::user()->company_location  !!}
-                            @endauth --}}
-
-                            <a href="https://www.whatismyip-address.com"></a>
                         </div>
                     </div>
                     <!-- Google Map End -->
