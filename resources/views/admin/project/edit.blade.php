@@ -14,7 +14,7 @@
                             <h2 class="content-header-title float-left mb-0"> Edit Project</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Dashboard</a>
+                                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a>
                                     </li>
                                     <li class="breadcrumb-item">
                                         <a href="#">edit project</a>
@@ -160,23 +160,28 @@
                                                 <div class="border rounded p-2">
                                                     <h4 class="mb-1">Featured Image</h4>
                                                     <div class="media flex-column flex-md-row">
-                                                        <img src="{{ url('project/preview/' . $project->preview_img) }}" id="blog-feature-image" class="rounded mr-2 mb-1 mb-md-0" width="100" height="100" alt="Blog Featured Image">
+                                                        <img src="{{ url('project/preview/' . $project->preview_img) }}"
+                                                            id="blog-feature-image" class="rounded mr-2 mb-1 mb-md-0"
+                                                            width="100" height="100" alt="Blog Featured Image">
                                                         <div class="media-body">
-                                                            <small class="text-muted">Required image resolution 800x400, image size 10mb.</small>
+                                                            <small class="text-muted">Required image resolution 800x400,
+                                                                image size 10mb.</small>
                                                             <p class="my-50">
                                                                 <a href="javascript:void(0);" id="blog-image-text"></a>
                                                             </p>
                                                             <div class="d-inline-block">
                                                                 <div class="form-group mb-0">
                                                                     <div class="custom-file">
-                                                                        <input type="file" name="preview_img" class="custom-file-input" id="preview_img">
-                                                                        <label class="custom-file-label" for="preview_img">Choose file</label>
+                                                                        <input type="file" name="preview_img"
+                                                                            class="custom-file-input" id="preview_img">
+                                                                        <label class="custom-file-label"
+                                                                            for="preview_img">Choose file</label>
                                                                     </div>
                                                                     @error('company_logo')
-                                                                    <span class="text-danger">
-                                                                        {{ $message }}
-                                                                    </span>
-                                                                @enderror
+                                                                        <span class="text-danger">
+                                                                            {{ $message }}
+                                                                        </span>
+                                                                    @enderror
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -190,23 +195,28 @@
                                                 <div class="border rounded p-2">
                                                     <h4 class="mb-1">Company Logo</h4>
                                                     <div class="media flex-column flex-md-row">
-                                                        <img src="{{ url('project/client/' . $project->company_logo) }}" id="blog-feature-image" class="rounded mr-2 mb-1 mb-md-0" width="100" height="100" alt="Blog Featured Image">
+                                                        <img src="{{ url('project/client/' . $project->company_logo) }}"
+                                                            id="blog-feature-image" class="rounded mr-2 mb-1 mb-md-0"
+                                                            width="100" height="100" alt="Blog Featured Image">
                                                         <div class="media-body">
-                                                            <small class="text-muted">Required image resolution 800x400, image size 10mb.</small>
+                                                            <small class="text-muted">Required image resolution 800x400,
+                                                                image size 10mb.</small>
                                                             <p class="my-50">
                                                                 <a href="javascript:void(0);" id="blog-image-text"></a>
                                                             </p>
                                                             <div class="d-inline-block">
                                                                 <div class="form-group mb-0">
                                                                     <div class="custom-file">
-                                                                        <input type="file" name="company_logo" class="custom-file-input" id="company_logo">
-                                                                        <label class="custom-file-label" for="company_logo">Choose file</label>
+                                                                        <input type="file" name="company_logo"
+                                                                            class="custom-file-input" id="company_logo">
+                                                                        <label class="custom-file-label"
+                                                                            for="company_logo">Choose file</label>
                                                                     </div>
                                                                     @error('company_logo')
-                                                                    <span class="text-danger">
-                                                                        {{ $message }}
-                                                                    </span>
-                                                                @enderror
+                                                                        <span class="text-danger">
+                                                                            {{ $message }}
+                                                                        </span>
+                                                                    @enderror
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -233,10 +243,9 @@
                 <div class="text-center">
                     <span>Copyright ©2023 AL Yasmeen All Rights Reserved Developed by
                         <span>
-                            <a style="color: #ec2024;" href="https://publicize360.com/"
-                                target="_blank">Publicize 360</a>
-                            CMS by <a style="color: #04733b;" href="https://acsinsights.com/"
-                                target="_blank">ACS Insights</a>
+                            <a style="color: #ec2024;" href="https://publicize360.com/" target="_blank">Publicize 360</a>
+                            CMS by <a style="color: #04733b;" href="https://acsinsights.com/" target="_blank">ACS
+                                Insights</a>
                         </span>
                     </span>
                 </div>
@@ -245,4 +254,3 @@
     </footer>
 
 @endsection
-

@@ -14,7 +14,7 @@
                             <h2 class="content-header-title float-left mb-0"> Edit Project</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Dashboard</a>
+                                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a>
                                     </li>
                                     <li class="breadcrumb-item">
                                         <a href="#">edit project</a>
@@ -111,7 +111,8 @@
                                                         old image: <br>
                                                         <img src="{{ url('project/client/' . $project->company_logo) }}"
                                                             class="img-responsive w-25  "
-                                                            style="height:100px; width:100px;object-fit:contain" alt=""><br>
+                                                            style="height:100px; width:100px;object-fit:contain"
+                                                            alt=""><br>
                                                         Select new image if you want to change
                                                     </div>
                                                     <div class="custom-file">
@@ -139,7 +140,8 @@
                                                         old image: <br>
                                                         <img src="{{ url('project/preview/' . $project->preview_img) }}"
                                                             class="img-responsive w-25  "
-                                                            style="height:100px; width:100px;object-fit:contain" alt=""><br>
+                                                            style="height:100px; width:100px;object-fit:contain"
+                                                            alt=""><br>
                                                         Select new image if you want to change
                                                     </div>
                                                     <div class="custom-file">

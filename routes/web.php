@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\frontend\PageController;
 
 use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\admin\FormController;
 use App\Http\Controllers\admin\ProjectController;
 use App\Http\Controllers\admin\TestimonialController;
 use App\Http\Controllers\admin\IntegrationController;
@@ -38,8 +39,6 @@ Route::name('frontend.')->group(function () {
 
     Route::get('/contact', [PageController::class, 'contact'])->name('contact');
     Route::post('/contact/store', [PageController::class, 'contact_store'])->name('contact.store');
-
-
 });
 
 
@@ -49,19 +48,18 @@ Route::group(['prefix' => 'admin'], function () {
 
         Route::group(['middleware' => 'admin.auth'], function () {
 
+            Route::get('/dashboard', [DashboardController::class, 'index'])->name('index');
             Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
             // contact form
-            Route::get('/message/{id}', [DashboardController::class, 'formmessage'])->name('message');
-            Route::get('/inbox', [DashboardController::class, 'inbox'])->name('inbox');
-            Route::delete('/f-delete/{id}', [DashboardController::class, 'd_form']);
-            Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
-
+            Route::get('/message', [FormController::class, 'message_index'])->name('message.index');
+            Route::get('/message/destroy/{id}', [FormController::class, 'message_destroy'])->name('message.destroy');
+            Route::post('/message/export', [FormController::class, 'message_export'])->name('message.export');
 
             // enquiry form
-            Route::get('/enquiryinbox', [DashboardController::class, 'enquiryinbox'])->name('enquiryinbox');
-            Route::delete('/enquiry-delete/{id}', [DashboardController::class, 'enquiry_form']);
-            Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
+            Route::get('/enquiry', [FormController::class, 'enquiry_index'])->name('enquiry.index');
+            Route::get('/enquiry/destroy/{id}', [FormController::class, 'enquiry_destroy'])->name('enquiry.destroy');
+            Route::post('/enquiry/export', [FormController::class, 'enquiry_export'])->name('enquiry.export');
 
 
             // projects
@@ -79,25 +77,13 @@ Route::group(['prefix' => 'admin'], function () {
                 Route::get('/projects/{project_id}/image/destroy/{image_id}', [ProjectController::class, 'destroy_image'])->name('image.destroy');
             });
 
-            // Integration
-            Route::get('/tracking', [IntegrationController::class, 'tracking'])->name('integration.tracking');
 
-
-            // WIdgets
-            Route::get('/widgets', [IntegrationController::class, 'widgets'])->name('integration.widgets');
 
 
 
             Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
             // Route::get('/profile', [DashboardController::class, 'profile'])->name('profile');
 
-
-
-            // csv
-
-            // Route::get('contact-form', [ContactFormController::class, 'index'])->name('contact-form.index');
-            Route::post('contact-form/export', [DashboardController::class, 'export'])->name('contact-form.export');
-            // Route::delete('contact-form/delete/{contact_form}', [ContactFormController::class, 'destroy'])->name('contact-form.destroy');
 
 
 

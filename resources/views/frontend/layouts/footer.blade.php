@@ -13,9 +13,10 @@
                         <div class="widget footer-widget mrr-60 mrr-md-0">
                             <div class="logo-box">
                                 <a href="{{ '/' }}" aria-label="logo image">
-                                  <img style="width:170px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
+                                    <img style="width:170px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}"
+                                        width="132" height="72" alt="logo" />
                                 </a>
-                              </div>
+                            </div>
                             <p class="mrb-30 mt-3">Seamlessly visualize quality intellectual ideal without collaboration
                                 superior montes soon maecenas capita idea listically</p>
                         </div>
@@ -27,7 +28,7 @@
                                 <li><a href="{{ '/' }}">Home</a></li>
                                 <li><a href="{{ '/services' }}">Services</a></li>
                                 <li><a href="{{ '/projects' }}">Projects</a></li>
-                                <li><a href=" {{ '/about' }}">About Us</a></li>
+                                <li><a href="{{ '/about' }}">About Us</a></li>
                             </ul>
                         </div>
                     </div>
@@ -42,18 +43,17 @@
                                 <div class="mrb-10">
 
                                     @foreach ($users as $user)
-                                    <a style="color: #555" href="tel:{{ $user->sales_no }}">
-                                        <i class="fas fa-phone-alt mrr-10"></i>
-                                        {{ $user->sales_no }}
-                                    </a>
+                                        <a style="color: #555" href="tel:{{ $user->sales_no }}">
+                                            <i class="fas fa-phone-alt mrr-10"></i>
+                                            {{ $user->sales_no }}
+                                        </a>
                                     @endforeach
                                 </div>
                                 <div class="mrb-10">
                                     @foreach ($users as $user)
-                                    <a style="color: #555" href="mailto:{{ $user->sales_mail }}">
-                                        <i
-                                            class="fas fa-envelope mrr-10"></i>  {{ $user->sales_mail }}
-                                    </a>
+                                        <a style="color: #555" href="mailto:{{ $user->sales_mail }}">
+                                            <i class="fas fa-envelope mrr-10"></i> {{ $user->sales_mail }}
+                                        </a>
                                     @endforeach
                                 </div>
                                 <div class="mrb-0">
@@ -69,15 +69,15 @@
 
                             <ul class="social-list">
                                 @foreach ($users as $user)
-                                <li>
-                                    <a href="{{ $user->facebook }}"><i class="fab fa-facebook"></i></a>
-                                </li>
-                                <li>
-                                    <a href="{{ $user->linkedin }}"><i class="fab fa-linkedin"></i></a>
-                                </li>
-                                <li>
-                                    <a href="{{ $user->instagram }}"><i class="fab fa-instagram"></i></a>
-                                </li>
+                                    <li>
+                                        <a href="{{ $user->facebook }}"><i class="fab fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ $user->linkedin }}"><i class="fab fa-linkedin"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ $user->instagram }}"><i class="fab fa-instagram"></i></a>
+                                    </li>
                                 @endforeach
                             </ul>
 
@@ -87,7 +87,7 @@
                 <div class="row pdt-30 footer-copyright-area">
                     <div class="col-xl-12">
                         <div class="text-center">
-                            <span>Copyright ©2023 AL Yasmeen All Rights Reserved Developed by
+                            <span>Copyright ©{{ date('Y') }} AL Yasmeen All Rights Reserved Developed by
                                 <span>
                                     <a style="color: #ec2024;" href="https://publicize360.com/"
                                         target="_blank">Publicize 360</a>

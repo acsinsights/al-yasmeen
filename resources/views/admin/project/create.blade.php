@@ -14,7 +14,7 @@
                             <h2 class="content-header-title float-left mb-0">Add Project</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Dashboard</a>
+                                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a>
                                     </li>
                                     <li class="breadcrumb-item">
                                         <a href="#">Add Project</a>
@@ -162,10 +162,9 @@
                 <div class="text-center">
                     <span>Copyright ©2023 AL Yasmeen All Rights Reserved Developed by
                         <span>
-                            <a style="color: #ec2024;" href="https://publicize360.com/"
-                                target="_blank">Publicize 360</a>
-                            CMS by <a style="color: #04733b;" href="https://acsinsights.com/"
-                                target="_blank">ACS Insights</a>
+                            <a style="color: #ec2024;" href="https://publicize360.com/" target="_blank">Publicize 360</a>
+                            CMS by <a style="color: #04733b;" href="https://acsinsights.com/" target="_blank">ACS
+                                Insights</a>
                         </span>
                     </span>
                 </div>
@@ -174,4 +173,3 @@
     </footer>
 
 @endsection
-

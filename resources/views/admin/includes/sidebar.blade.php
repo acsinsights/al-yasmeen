@@ -2,18 +2,9 @@
     <div style="margin-bottom: 20px;" class="navbar-header">
         <ul class="nav navbar-nav flex-row">
             <li class="nav-item mr-auto">
-                <a class="navbar-brand" href="index.html">
-                    <a href="{{ '/' }}" aria-label="logo image">
-                        <img style="width:190px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132"
-                            height="72" alt="logo" />
-                    </a>
-                </a>
-            </li>
-            <li class="nav-item nav-toggle">
-                <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
-                    {{-- <i class="d-block d-xl-none text-primary toggle-icon font-medium-4" data-feather="x"></i> --}}
-                    {{-- <i class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary"
-                                data-feather="disc" data-ticon="disc"></i> --}}
+                <a class="navbar-brand"href="{{ '/' }}" aria-label="logo image">
+                    <img style="width:190px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132"
+                        height="72" alt="logo" />
                 </a>
             </li>
         </ul>
@@ -84,16 +75,16 @@
                 </span>
                 <i data-feather="more-horizontal"></i>
             </li>
-            <li class=" nav-item {{ URL::current() == route('admin.inbox') ? 'active' : '' }}">
-                <a class="d-flex align-items-center" href="{{ route('admin.inbox') }}">
+            <li class=" nav-item {{ URL::current() == route('admin.message.index') ? 'active' : '' }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.message.index') }}">
                     <i class="fa-solid fa-table-columns"></i>
                     <span class="menu-title text-truncate" data-i18n="Colors">
                         Contact Form
                     </span>
                 </a>
             </li>
-            <li class=" nav-item {{ URL::current() == route('admin.enquiryinbox') ? 'active' : '' }}">
-                <a class="d-flex align-items-center" href="{{ route('admin.enquiryinbox') }}">
+            <li class=" nav-item {{ URL::current() == route('admin.enquiry.index') ? 'active' : '' }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.enquiry.index') }}">
                     <i class="fa-solid fa-address-book"></i>
                     <span class="menu-title text-truncate" data-i18n="Colors">
                         Enquiry Form
@@ -106,16 +97,9 @@
                 </span>
                 <i data-feather="more-horizontal"></i>
             </li>
-            <li class="nav-item {{ URL::current() == route('admin.integration.tracking') ? 'active' : '' }}">
-                <a class="d-flex align-items-center" href="{{ route('admin.integration.tracking') }}">
-                    <i class="fa-solid fa-location-crosshairs"></i>
-                    <span class="menu-title text-truncate" data-i18n="Colors">
-                    Tracking
-                    </span>
-                </a>
-            </li>
-            <li class="nav-item {{ URL::current() == route('admin.integration.widgets') ? 'active' : '' }}">
-                <a class="d-flex align-items-center" href="{{ route('admin.integration.widgets') }}">
+
+            <li class="nav-item  ">
+                <a class="d-flex align-items-center" href=" ">
                     <i class="fa-solid fa-toolbox"></i>
                     <span class="menu-title text-truncate" data-i18n="Colors">
                         Widgets

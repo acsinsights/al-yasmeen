@@ -14,7 +14,7 @@
                             <h2 class="content-header-title float-left mb-0">Add Project</h2>
                             <div class="breadcrumb-wrapper">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="{{ route('admin.index') }}">Dashboard</a>
+                                    <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Dashboard</a>
                                     </li>
                                     <li class="breadcrumb-item">
                                         <a href="#">Add Project</a>
@@ -31,8 +31,8 @@
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
-                                    <form class="form" action="{{ route('admin.project.image.store',$project->id) }}" method="post"
-                                        enctype="multipart/form-data">
+                                    <form class="form" action="{{ route('admin.project.image.store', $project->id) }}"
+                                        method="post" enctype="multipart/form-data">
                                         @csrf
                                         <div class="row">
                                             <div class="col-md-6 col-12">
