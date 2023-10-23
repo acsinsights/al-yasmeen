@@ -90,8 +90,7 @@
                 <div class="col-xl-6">
                     @include('admin.message')
                     <div class="contact-form">
-                        <form action="{{ route('frontend.contact.store') }}" method="post"
-                           >
+                        <form action="{{ route('frontend.contact.store') }}" method="post">
                             @csrf
                             <div class="row">
                                 <div class="col-lg-6">

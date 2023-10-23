@@ -32,24 +32,44 @@
                                 <div class="col-xl-12">
                                     <div class="mrb-20">
                                         <input type="text" placeholder="Name" name="name" class="form-control"
-                                            required />
+                                            value="{{ old('name') }}" />
+                                        @error('name')
+                                            <span class="text-danger text-sm">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="mrb-20">
                                         <input type="phone" placeholder="Phone" name="phone" class="form-control"
-                                            required />
+                                            value="{{ old('phone no.') }}" />
+                                        @error('phone')
+                                            <span class="text-danger text-sm">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div class="mrb-20">
                                         <input type="email" placeholder="Email" name="email" class="form-control"
-                                            required />
+                                            value="{{ old('email') }}" />
+                                        @error('email')
+                                            <span class="text-danger text-sm">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="mrb-20">
-                                        <textarea rows="4" name="message" name="message" placeholder="Messages" class="form-control" required=""></textarea>
+                                        <textarea rows="4" name="message" name="message" placeholder="Messages" class="form-control">{{ old('message') }}</textarea>
+                                        @error('message')
+                                            <span class="text-danger text-sm">
+                                                {{ $message }}
+                                            </span>
+                                        @enderror
                                     </div>
                                 </div>
                                 <div class="col-xl-12">
@@ -131,7 +151,8 @@
                                 <i class="service-icon webextheme-icon-architect"></i>
                                 <h4 class="service-title"> Fit Out Solution</h4>
                                 <div class="services-count"></div>
-                                <p class="service-description">Our Fit Out Solutions cover every step, from project planning
+                                <p class="service-description">Our Fit Out Solutions cover every step, from project
+                                    planning
                                     to completion, ensuring your vision becomes reality.</p>
                                 {{-- <div class="services-link">
                       <a class="text-btn" href="service-architecture.html">Read More</a>
