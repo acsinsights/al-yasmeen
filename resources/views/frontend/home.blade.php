@@ -26,9 +26,8 @@
                 <div class="col-md-12 col-lg-10 col-xl-5 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                     <div class="request-a-call-back-form-style2">
                         <h3 class="mrt-0 mrb-30">Need Any Help?</h3>
-                        <form action="/enquirysubmit" name="contactForm" method="post">
+                        <form action="{{ route('frontend.enquiry.store') }}" method="post">
                             @csrf
-                            @method('put')
                             <div class="row">
                                 <div class="col-xl-12">
                                     <div class="mrb-20">
@@ -452,8 +451,8 @@
                                 @foreach ($projects as $project)
                                     <div class="project-item-style1">
                                         <div class="project-item-thumb">
-                                            <img
-                                                class="img-full"src="{{ url('project/preview/' . $project->preview_img) }}"alt="" />
+                                            <img class="img-full"src="{{ url('project/preview/' . $project->preview_img) }}"
+                                                alt="" />
                                             <div class="project-item-details">
                                                 <h6 style="color: #fff" class="text-center">
                                                     {{ $project->title }}

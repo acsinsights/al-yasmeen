@@ -5,7 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
-use App\Http\Controllers\frontend\HomeController;
+use App\Http\Controllers\frontend\PageController;
 
 use App\Http\Controllers\admin\DashboardController;
 use App\Http\Controllers\admin\ProjectController;
@@ -26,101 +26,99 @@ use App\User;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', [HomeController::class, 'about']);
-Route::get('/services', [HomeController::class, 'services']);
-Route::get('/contact', [HomeController::class, 'contact']);
-Route::get('/projects', [HomeController::class, 'project']);
+Route::name('frontend.')->group(function () {
 
-Route::put('/submit', [HomeController::class, 'submit']);
-Route::put('/enquirysubmit', [HomeController::class, 'enquirysubmit']);
+    Route::get('/', [PageController::class, 'home'])->name('home');
+    Route::post('/enquiry/store', [PageController::class, 'enquiry_store'])->name('enquiry.store');
+
+    Route::get('/about', [PageController::class, 'about'])->name('about');
+    Route::get('/services', [PageController::class, 'services'])->name('services');
+
+    Route::get('/projects', [PageController::class, 'project'])->name('projects');
+
+    Route::get('/contact', [PageController::class, 'contact'])->name('contact');
+    Route::post('/contact/store', [PageController::class, 'contact_store'])->name('contact.store');
+
+
+});
+
 
 
 Route::group(['prefix' => 'admin'], function () {
+    Route::name('admin.')->group(function () {
 
-    Route::group(['middleware' => 'admin.guest'], function () {
-        Route::get('/dashboard', function () {
-            return view('dashboard');
-        })->middleware(['auth', 'verified'])->name('dashboard');
-    });
-    Route::group(['middleware' => 'admin.auth'], function () {
+        Route::group(['middleware' => 'admin.auth'], function () {
 
-        Route::redirect('/', '/admin/dashboard', 301)->name('admin.index');
+            Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-        Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
-
-
-        // contact form
-        Route::get('/message/{id}', [DashboardController::class, 'formmessage'])->name('admin.message');
-        Route::get('/inbox', [DashboardController::class, 'inbox'])->name('admin.inbox');
-        Route::delete('/f-delete/{id}', [DashboardController::class, 'd_form']);
-        Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
+            // contact form
+            Route::get('/message/{id}', [DashboardController::class, 'formmessage'])->name('message');
+            Route::get('/inbox', [DashboardController::class, 'inbox'])->name('inbox');
+            Route::delete('/f-delete/{id}', [DashboardController::class, 'd_form']);
+            Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
 
 
-        // enquiry form
-        Route::get('/enquiryinbox', [DashboardController::class, 'enquiryinbox'])->name('admin.enquiryinbox');
-        Route::delete('/enquiry-delete/{id}', [DashboardController::class, 'enquiry_form']);
-        Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
-
-        // integration
-
-         Route::get('/Tracking', [DashboardController::class, 'tracking'])->name('admin.integration.tracking');
-        Route::get('/Widgets', [DashboardController::class, 'widgets'])->name('admin.integration.widgets');
+            // enquiry form
+            Route::get('/enquiryinbox', [DashboardController::class, 'enquiryinbox'])->name('enquiryinbox');
+            Route::delete('/enquiry-delete/{id}', [DashboardController::class, 'enquiry_form']);
+            Route::delete('/all-delete', [DashboardController::class, 'all_d_form']);
 
 
-        // projects
-        Route::get('/projects', [ProjectController::class, 'index'])->name('admin.project.index');
-        Route::get('/projects/show/{id}', [ProjectController::class, 'show'])->name('admin.project.show');
-        Route::get('/projects/create', [ProjectController::class, 'create'])->name('admin.project.create');
-        Route::post('/projects/store', [ProjectController::class, 'store'])->name('admin.project.store');
-        Route::get('/projects/edit/{id}', [ProjectController::class, 'edit'])->name('admin.project.edit');
-        Route::post('/projects/update/{id}', [ProjectController::class, 'update'])->name('admin.project.update');
-        Route::get('/projects/destroy/{id}', [ProjectController::class, 'destroy'])->name('admin.project.destroy');
+            // projects
+            Route::name('project.')->group(function () {
+                Route::get('/projects', [ProjectController::class, 'index'])->name('index');
+                Route::get('/projects/show/{id}', [ProjectController::class, 'show'])->name('show');
+                Route::get('/projects/create', [ProjectController::class, 'create'])->name('create');
+                Route::post('/projects/store', [ProjectController::class, 'store'])->name('store');
+                Route::get('/projects/edit/{id}', [ProjectController::class, 'edit'])->name('edit');
+                Route::post('/projects/update/{id}', [ProjectController::class, 'update'])->name('update');
+                Route::get('/projects/destroy/{id}', [ProjectController::class, 'destroy'])->name('destroy');
 
-        Route::get('/projects/{project_id}/image/create', [ProjectController::class, 'create_image'])->name('admin.project.image.create');
-        Route::post('/projects/{project_id}/image/store', [ProjectController::class, 'store_image'])->name('admin.project.image.store');
-        Route::get('/projects/{project_id}/image/destroy/{image_id}', [ProjectController::class, 'destroy_image'])->name('admin.project.image.destroy');
+                Route::get('/projects/{project_id}/image/create', [ProjectController::class, 'create_image'])->name('image.create');
+                Route::post('/projects/{project_id}/image/store', [ProjectController::class, 'store_image'])->name('image.store');
+                Route::get('/projects/{project_id}/image/destroy/{image_id}', [ProjectController::class, 'destroy_image'])->name('image.destroy');
+            });
+
+            // Integration
+            Route::get('/tracking', [IntegrationController::class, 'tracking'])->name('integration.tracking');
 
 
-        // Integration
-       Route::get('/tracking', [IntegrationController::class, 'tracking'])->name('admin.integration.tracking');
-
-
-        // WIdgets
-          Route::get('/widgets', [IntegrationController::class, 'widgets'])->name('admin.integration.widgets');
+            // WIdgets
+            Route::get('/widgets', [IntegrationController::class, 'widgets'])->name('integration.widgets');
 
 
 
-      Route::get('/profile', [ProfileController::class, 'profile'])->name('admin.profile');
-        // Route::get('/profile', [DashboardController::class, 'profile'])->name('admin.profile');
+            Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+            // Route::get('/profile', [DashboardController::class, 'profile'])->name('profile');
 
 
 
-        // csv
+            // csv
 
-        // Route::get('contact-form', [ContactFormController::class, 'index'])->name('contact-form.index');
-        Route::post('contact-form/export', [DashboardController::class, 'export'])->name('contact-form.export');
-        // Route::delete('contact-form/delete/{contact_form}', [ContactFormController::class, 'destroy'])->name('contact-form.destroy');
+            // Route::get('contact-form', [ContactFormController::class, 'index'])->name('contact-form.index');
+            Route::post('contact-form/export', [DashboardController::class, 'export'])->name('contact-form.export');
+            // Route::delete('contact-form/delete/{contact_form}', [ContactFormController::class, 'destroy'])->name('contact-form.destroy');
 
 
 
 
-        Route::get('/alltestimonial', [TestimonialController::class, 'index'])->name('admin.alltestimonial');
-        Route::get('/addtestimonial', [TestimonialController::class, 'create'])->name('admin.addtestimonial');
-        Route::post('/add-testimonial', [TestimonialController::class, 'store'])->name('admin.add-testimonial');
+            Route::get('/alltestimonial', [TestimonialController::class, 'index'])->name('alltestimonial');
+            Route::get('/addtestimonial', [TestimonialController::class, 'create'])->name('addtestimonial');
+            Route::post('/add-testimonial', [TestimonialController::class, 'store'])->name('add-testimonial');
 
 
 
-        Route::get('/deletetestimonial/{id}', [TestimonialController::class, 'destroy'])->name('admin.deletetestimonial');
-        Route::get('/edittestimonial/{id}', [TestimonialController::class, 'edit']);
-        Route::delete('/delete-testimonial-image/{id}', [TestimonialController::class, 'deletecover']);
-        Route::any('/updatetestimonial/{id}', [TestimonialController::class, 'update']);
+            Route::get('/deletetestimonial/{id}', [TestimonialController::class, 'destroy'])->name('deletetestimonial');
+            Route::get('/edittestimonial/{id}', [TestimonialController::class, 'edit']);
+            Route::delete('/delete-testimonial-image/{id}', [TestimonialController::class, 'deletecover']);
+            Route::any('/updatetestimonial/{id}', [TestimonialController::class, 'update']);
 
-        // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-        //  Route::patch('/tracking', [ProfileController::class, 'tracking'])->name('admin.integration.tracking');
-        //  Route::patch('/widgets', [ProfileController::class, 'widgets'])->name('admin.integration.widgets');
-        // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+            // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+            Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+            //  Route::patch('/tracking', [ProfileController::class, 'tracking'])->name('admin.integration.tracking');
+            //  Route::patch('/widgets', [ProfileController::class, 'widgets'])->name('admin.integration.widgets');
+            // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+        });
     });
 });
 require __DIR__ . '/auth.php';
