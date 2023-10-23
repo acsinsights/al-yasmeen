@@ -17,16 +17,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('profile_img');
-            $table->string('phone_no');
-            $table->string('company_name');
-            $table->string('company_location');
-            $table->string('company_address');
-            $table->string('sales_no');
-            $table->string('sales_mail');
-            $table->string('facebook');
-            $table->string('instagram');
-            $table->string('linkedin');
+            $table->string('profile_img')->nullable();
+            $table->string('phone_no')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
@@ -39,4 +31,3 @@ return new class extends Migration
         Schema::dropIfExists('users');
     }
 };
- 

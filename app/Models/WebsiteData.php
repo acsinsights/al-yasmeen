@@ -5,14 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Integration extends Model
+class WebsiteData extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'pixel',
-        'g_analytics',
-        'whatsapp',
-        'chatbot',
-    ];
 }
-
