@@ -4,7 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Testimonial; 
+use App\Models\Testimonial;
 use Illuminate\Support\Facades\File;
 
 class TestimonialController extends Controller
@@ -12,16 +12,26 @@ class TestimonialController extends Controller
     public function index()
     {
         $testimonials = Testimonial::all();
-        return view('admin.alltestimonial')->with('testimonials', $testimonials);
+        return view('admin.testimonial.index')->with('testimonials', $testimonials);
     }
 
     public function create()
     {
-        return view('admin.addtestimonial');
+        return view('admin.testimonial.create');
     }
 
     public function store(Request $request)
     {
+
+        $request->validate([
+            "name" => "required|string",
+            "custdesignation" => "required|string",
+            "review" => "required|string",
+            "custcompany" => "required|string",
+            "cover" => "required|image|mimes:jpeg,png,jpg",
+            "date" => "required|date",
+        ]);
+
         if ($request->hasFile("cover")) {
             $file = $request->file("cover");
             $imageName = time() . '_' . $file->getClientOriginalName();
@@ -32,26 +42,35 @@ class TestimonialController extends Controller
                 "custdesignation" => $request->custdesignation,
                 "custreview" => $request->review,
                 "custimg" => $imageName,
-            //   "custlogo" => $imageName,
                 "custcompany" => $request->custcompany,
                 "date" => $request->date,
             ]);
             $testimonials->save();
         }
 
-        return redirect("/admin/alltestimonial")->with('success', 'Added Successfully');
+        return redirect()->route('admin.testimonial.index')->with('success', 'Added Successfully');
     }
 
     // ?Edit function for posts
     public function edit($id)
     {
         $testimonials = Testimonial::findOrFail($id);
-        return view('admin.edittestimonial')->with('testimonials', $testimonials);
+        return view('admin.testimonial.edit', compact('testimonials'));
     }
 
     // ?Update function for posts
     public function update(Request $request, $id)
     {
+
+        $request->validate([
+            "name" => "required|string",
+            "custdesignation" => "required|string",
+            "review" => "required|string",
+            "custcompany" => "required|string",
+            "custimg" => "nullable|image|mimes:jpeg,png,jpg",
+            "date" => "required|date",
+        ]);
+
         $post = Testimonial::findOrFail($id);
         if ($request->hasFile("cover")) {
             if (file::exists("testiimages/" . $post->custimg)) {
@@ -67,11 +86,10 @@ class TestimonialController extends Controller
             "custdesignation" => $request->custdesignation,
             "custreview" => $request->review,
              "custimg" =>  $post->custimg,
-        //    "custlogo" => $request->cover,
             "custcompany" => $request->custcompany,
             "date" => $request->date,
         ]);
-        return redirect("/admin/alltestimonial")->with('success', 'Updated Successfully');
+        return redirect()->route('admin.testimonial.index')->with('success', 'Updated Successfully');
     }
     public function destroy($id)
     {

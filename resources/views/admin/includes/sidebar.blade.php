@@ -61,8 +61,8 @@
                 </span>
                 <i data-feather="more-horizontal"></i>
             </li>
-            <li class=" nav-item {{ URL::current() == route('admin.alltestimonial') ? 'active' : '' }}">
-                <a class="d-flex align-items-center" href="{{ route('admin.alltestimonial') }}">
+            <li class=" nav-item {{ URL::current() == route('admin.testimonial.index') ? 'active' : '' }}">
+                <a class="d-flex align-items-center" href="{{ route('admin.testimonial.index') }}">
                     <i class="fa-solid fa-star-half-stroke"></i>
                     <span class="menu-title text-truncate" data-i18n="Colors">
                         Testimonial

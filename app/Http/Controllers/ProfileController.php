@@ -69,15 +69,13 @@ public function update(ProfileUpdateRequest $request): RedirectResponse
         // }
 
 
-        // $request->user()->save();
+      $request->user()->save();
 
 
-        if ( $request->user()->save()) {
+
             return Redirect::route('admin.profile')->with('status', 'profile-updated');
-        }
-        else {
-            return Redirect::route('admin.integration.tracking')->with('status', 'updated');
-        }
+       
+
 
 
 

@@ -25,10 +25,10 @@ class DashboardController extends Controller
         return view('admin.dashboard', compact('projects', 'users','forms','mytime'));
     }
 
-    
+
     public function testimonial()
     {
-        return view('admin.alltestimonial');
+        return view('admin.testimonial.index');
     }
 
     public function profile()
