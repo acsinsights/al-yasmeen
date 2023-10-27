@@ -352,7 +352,6 @@ input:checked + .slider:before {
 .admin-footer{
     text-align: center;
     position: absolute;
-    bottom: 10px;
 }
 
 @media only screen and (min-width: 1601px) and (max-width: 4000px) {

@@ -40,10 +40,10 @@
                     </div>
                     <ul class="main-nav-menu">
                         <li class=" {{ URL::current() == url('/') ? 'active' : '' }}">
-                            <a href="{{ '/' }}">Home</a>
+                            <a href="{{ route('frontend.home') }}">Home</a>
                         </li>
                         <li class=" {{ URL::current() == url('/services') ? 'active' : '' }}">
-                            <a href="{{ '/services' }}">Services</a>
+                            <a href="{{ route('frontend.services') }}">Services</a>
                         </li>
                         <li class="{{ URL::current() == url('/projects') ? 'active' : '' }}">
                             <a href="{{ '/projects' }}">Projects</a>

@@ -112,6 +112,7 @@
         })
     </script>
     @yield('js')
+    @include('admin.includes.footer')
 </body>
 <!-- END: Body-->
 </html>

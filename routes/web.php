@@ -79,40 +79,19 @@ Route::group(['prefix' => 'admin'], function () {
 
 
             // Testimonials
-
-
-
-            Route::get('/testimonials', [TestimonialController::class, 'index'])->name('testimonial.index');
-            Route::get('/testimonials/create', [TestimonialController::class, 'create'])->name('testimonial.create');
-            Route::post('/testimonials/store', [TestimonialController::class, 'store'])->name('testimonial.store');
-            Route::get('/testimonials/edit/{id}', [TestimonialController::class, 'edit'])->name('testimonial.edit');
-            Route::post('/testimonials/update/{id}', [TestimonialController::class, 'update'])->name('testimonial.update');
-            Route::get('/testimonials/destroy/{id}', [TestimonialController::class, 'destroy'])->name('testimonial.destroy');
-
-
-
-
-
-
-
-            // Route::get('/alltestimonial', [TestimonialController::class, 'index'])->name('alltestimonial');
-            // Route::get('/addtestimonial', [TestimonialController::class, 'create'])->name('addtestimonial');
-            // Route::post('/add-testimonial', [TestimonialController::class, 'store'])->name('add-testimonial');
-
-            // Route::get('/deletetestimonial/{id}', [TestimonialController::class, 'destroy'])->name('deletetestimonial');
-            // Route::get('/edittestimonial/{id}', [TestimonialController::class, 'edit']);
-            // Route::delete('/delete-testimonial-image/{id}', [TestimonialController::class, 'deletecover']);
-            // Route::any('/updatetestimonial/{id}', [TestimonialController::class, 'update']);
-
+            Route::name('testimonial.')->group(function () {
+                Route::get('/testimonials', [TestimonialController::class, 'index'])->name('index');
+                Route::get('/testimonials/create', [TestimonialController::class, 'create'])->name('create');
+                Route::post('/testimonials/store', [TestimonialController::class, 'store'])->name('store');
+                Route::get('/testimonials/edit/{id}', [TestimonialController::class, 'edit'])->name('edit');
+                Route::post('/testimonials/update/{id}', [TestimonialController::class, 'update'])->name('update');
+                Route::get('/testimonials/destroy/{id}', [TestimonialController::class, 'destroy'])->name('destroy');
+            });
 
 
             Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
         });
     });
-    // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    //  Route::patch('/tracking', [ProfileController::class, 'tracking'])->name('admin.integration.tracking');
-    //  Route::patch('/widgets', [ProfileController::class, 'widgets'])->name('admin.integration.widgets');
-    // Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 require __DIR__ . '/auth.php';
