@@ -26,14 +26,6 @@
  @endforeach
 
 
-{{-- Google Analytics code --}}
-{{-- @foreach ($users as $user)
-
-{{ $user->chatbot_widgets }}
-{{ $user->w_app_wid }}
-
-@endforeach --}}
-
 <!-- Main Stylesheet -->
 <link rel="stylesheet" href="  {{ asset('user-assets/css/style.css') }}"  />
 <link rel="stylesheet" href=" {{ asset('user-assets/css/responsive.css') }}" />

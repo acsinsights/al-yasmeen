@@ -49,7 +49,7 @@
         <span></span>
       </a>
       <div class="logo-box">
-        <a href="{{ '/' }}" aria-label="logo image">
+        <a href="{{ route('frontend.home') }}" aria-label="logo image">
           <img style="width:170px;" src="{{ asset('user-assets\images\al-yasmeen.svg') }}" width="132" height="72" alt="logo" />
         </a>
       </div>
@@ -93,6 +93,7 @@
     </div>
   </div>
   <!-- Header Search Popup End -->
+  
   <!-- Back to Top Start -->
   <div class="anim-scroll-to-top">
     <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -100,11 +101,9 @@
     </svg>
   </div>
   <!-- Back to Top end -->
+
+
   <!-- Integrated important scripts here -->
-
-
-
-
   <script src="{{ asset('user-assets/js/jquery-3.6.0.min.js') }}"></script>
   <script src="{{ asset('user-assets/js/jquery.nice-select.min.js') }}"></script>
   <script src="{{ asset('user-assets/js/bootstrap.min.js') }}"></script>
@@ -119,5 +118,4 @@
   <script src="{{ asset('user-assets/js/trigger.js') }}"></script>
 
 </body>
-
 </html>

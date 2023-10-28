@@ -46,13 +46,13 @@
                             <a href="{{ route('frontend.services') }}">Services</a>
                         </li>
                         <li class="{{ URL::current() == url('/projects') ? 'active' : '' }}">
-                            <a href="{{ '/projects' }}">Projects</a>
+                            <a href="{{ route('frontend.projects') }}">Projects</a>
                         </li>
                         <li class="{{ URL::current() == url('/about') ? 'active' : '' }}">
-                            <a href="{{ '/about' }}">About Us</a>
+                            <a href="{{ route('frontend.about') }}">About Us</a>
                         </li>
                         <li class="{{ URL::current() == url('/contact') ? 'active'  : '' }}">
-                            <a href="{{ '/contact' }}">Contact</a>
+                            <a href="{{ route('frontend.contact') }}">Contact</a>
                         </li>
                     </ul>
                     <div class="main-menu-right">
