@@ -12,22 +12,24 @@
 {{-- @foreach ($users as $user)
 <script>
 {{  $user->meta_pixel  }}
-{{  $user->g_analytics  }}
 </script>
 @endforeach --}}
-
+<div class="d-none">
+    {{ $data['meta-pixel-code'] }}
+</div>
+<div class="d-none">
+    {{ $data['google-analytics-code'] }}
+</div>
 
 <!--  Widgets code  -->
- {{-- @foreach ($users as $user)
- <script>
- {{ $user->chatbot_widgets }}
- {{ $user->w_app_wid }}
-</script>
- @endforeach --}}
+<div class="d-none">
+    {{ $data['whats-app'] }}
+</div>
+<div class="d-none">
+    {{ $data['chat-bot-code'] }}
+</div>
 
 
 <!-- Main Stylesheet -->
-<link rel="stylesheet" href="  {{ asset('user-assets/css/style.css') }}"  />
+<link rel="stylesheet" href="  {{ asset('user-assets/css/style.css') }}" />
 <link rel="stylesheet" href=" {{ asset('user-assets/css/responsive.css') }}" />
-
-

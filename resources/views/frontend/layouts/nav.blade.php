@@ -10,19 +10,19 @@
                             <a style="color: #ffffff" href="mailto:">
                             </a>
 
-                            {{-- <a href="mailto:{{ Auth::user()->sales_mail }}">{{ Auth::user()->sales_mail }}</a> --}}
+                       <a href="mailto: {{ $data['sales-email'] }}"> {{ $data['sales-email'] }}</a>
                         </li>
                     </ul>
                     <ul class="topbar-social">
 
                         <li>
-                            <a href=""><i class="fab fa-facebook"></i></a>
+                            <a href=" {{ $data['facebook-link'] }}"><i class="fab fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="fab fa-linkedin"></i></a>
+                            <a href=" {{ $data['instagram-link'] }}"><i class="fab fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href=" "><i class="fab fa-instagram"></i></a>
+                            <a href=" {{ $data['linkedin-link'] }} "><i class="fab fa-instagram"></i></a>
                         </li>
 
                     </ul>
@@ -69,11 +69,11 @@
                             <div class="header-contact-info-text">
                                 <p class="call-text">Call Anytime</p>
 
-                                {{-- <h5 class="phone-no">
-                                    @auth
-                                    <a href="tel:{{ Auth::user()->sales_no }}">{{ Auth::user()->sales_no }}</a>
-                                    @endauth
-                                </h5> --}}
+                           <h5 class="phone-no">
+                                   
+                                    <a href="tel: {{ $data['sales-number'] }}"> {{ $data['sales-number'] }}</a>
+
+                                </h5>
 
                                 <a style="color: #555" href="tel: ">
 

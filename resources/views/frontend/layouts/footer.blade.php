@@ -36,13 +36,13 @@
                         <div class="widget footer-widget mrr-30 mrr-md-0">
                             <h5 class="widget-title text-black mrb-30">Contact</h5>
                             <address class="mrb-0">
-                                <p>32 Dora Creek, tuntable creek, New South Wales 2480, Australia</p>
+                                <p> {{ $data['company-address'] }}</p>
                                 <div class="mrb-10">
 
 
                                         <a style="color: #555" href="tel:">
                                             <i class="fas fa-phone-alt mrr-10"></i>
-
+                                            <a href="tel: {{ $data['sales-number'] }}"> {{ $data['sales-number'] }}</a>
                                         </a>
 
                                 </div>
@@ -50,6 +50,7 @@
 
                                         <a style="color: #555" href="mailto:">
                                             <i class="fas fa-envelope mrr-10"></i>
+                                            <a href="mailto: {{ $data['sales-email'] }}"> {{ $data['sales-email'] }}</a>
                                         </a>
 
                                 </div>
@@ -66,15 +67,15 @@
 
                             <ul class="social-list">
 
-                                    <li>
-                                        <a href=""><i class="fab fa-facebook"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href=""><i class="fab fa-linkedin"></i></a>
-                                    </li>
-                                    <li>
-                                        <a href=""><i class="fab fa-instagram"></i></a>
-                                    </li>
+                                <li>
+                                    <a href=" {{ $data['facebook-link'] }}"><i class="fab fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href=" {{ $data['instagram-link'] }}"><i class="fab fa-linkedin"></i></a>
+                                </li>
+                                <li>
+                                    <a href=" {{ $data['linkedin-link'] }} "><i class="fab fa-instagram"></i></a>
+                                </li>
 
                             </ul>
                         </div>

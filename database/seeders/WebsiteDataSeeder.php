@@ -50,8 +50,8 @@ class WebsiteDataSeeder extends Seeder
                     'value' => null,
                 ],
                 [
-                    'name' => 'Map',
-                    'slug' => 'map-embbed-code',
+                    'name' => 'Map Embed Code',
+                    'slug' => 'map-embed-code',
                     'value' => null,
                 ],
                 [
@@ -65,7 +65,7 @@ class WebsiteDataSeeder extends Seeder
                     'value' => null,
                 ],
                 [
-                    'name' => 'Whats App',
+                    'name' => 'WhatsApp ',
                     'slug' => 'whats-app',
                     'value' => null,
                 ],
