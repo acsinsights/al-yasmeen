@@ -2,8 +2,6 @@
 @section('title', 'Website Settings')
 @section('content')
 
-
-    <!-- BEGIN: Content-->
     <div class="app-content content ">
         <div class="content-overlay"></div>
         <div class="header-navbar-shadow"></div>
@@ -22,13 +20,6 @@
                                 </ol>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
-                    <div class="card-options">
-                        <a href="{{ route('admin.project.create') }}" class="btn btn-primary mr-1">
-                            Add Project
-                        </a>
                     </div>
                 </div>
             </div>
@@ -72,7 +63,6 @@
                                 </table>
                             </div>
                         </div>
-                        {{-- {{ $projects->links() }} --}}
                     </div>
                 </div>
             </div>

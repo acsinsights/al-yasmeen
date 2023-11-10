@@ -96,7 +96,7 @@ Route::group(['prefix' => 'admin'], function () {
 
             Route::get('/website-settings', [WebsiteSettingController::class, 'index'])->name('website-settings.index');
             Route::get('/website-settings/edit/{slug}', [WebsiteSettingController::class, 'edit'])->name('website-settings.edit');
-            Route::get('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
+            Route::post('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
         });
     });
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

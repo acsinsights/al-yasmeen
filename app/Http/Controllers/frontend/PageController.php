@@ -10,17 +10,27 @@ use App\Models\Enquiry;
 use App\Models\Testimonial;
 use Carbon\Carbon;
 use App\Models\User;
-
+use App\Models\WebsiteData;
 use Illuminate\Support\Facades\File;
 
 class PageController extends Controller
 {
+    public function getWebsiteSettings()
+    {
+        $settings = WebsiteData::all();
+        $data = [];
+        foreach ($settings as  $setting) {
+            $data[$setting->slug] =   $setting->value;
+        }
+        return $data;
+    }
 
     public function home()
     {
+        $data = $this->getWebsiteSettings();
         $users = User::all();
         $projects = Project::all();
-        return view('frontend.home', compact('projects', 'users'));
+        return view('frontend.home', compact('projects', 'users','data'));
     }
     public function  enquiry_store(Request $request)
     {

@@ -1,5 +1,5 @@
 @extends('admin.includes.app')
-@section('title', 'Edit Website Settings')
+@section('title', 'Edit '. $setting->name)
 @section('content')
     <!-- BEGIN: Content-->
     <div class="app-content content ">
@@ -37,7 +37,6 @@
                                         action="{{ route('admin.website-settings.update', $setting->slug) }}"
                                         class="mt-6 space-y-6">
                                         @csrf
-                                        @method('patch')
                                         <div class="row">
 
                                             <div class="col-12  ">
@@ -48,13 +47,13 @@
                                             </div>
 
                                             <div class="col-12">
-                                                <x-input-label for="company_location" :value="$setting->name . ' here'" />
+                                                <x-input-label for="value" :value="$setting->name . ' here'" />
                                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Company Location"
-                                                    id="company_location" name="company_location" type="text" class=" form-control" autocomplete="company_location"
+                                                    id="value" name="value" type="text" class=" form-control" autocomplete="value"
                                                     required>{{ $setting->value }}</textarea>
                                                 <x-input-error
                                                     class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                    :messages="$errors->get('company_location')" required />
+                                                    :messages="$errors->get('value')" required />
                                             </div>
 
                                             <div class="col-12">

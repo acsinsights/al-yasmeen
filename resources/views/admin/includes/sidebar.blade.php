@@ -100,7 +100,7 @@
 
             <li class="nav-item  ">
                 <a class="d-flex align-items-center" href="{{ route('admin.website-settings.index') }}">
-                    <i class="fa-solid fa-toolbox"></i>
+                    <i class="fa-solid fa-gear"></i>
                     <span class="menu-title text-truncate" data-i18n="Colors">
                         Website Settings
                     </span>

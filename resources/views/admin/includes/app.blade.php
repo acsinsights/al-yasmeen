@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
 
-    <title> AL Yasmeen | @yield('title')</title>
+    <title> @yield('title') | AL Yasmeen</title>
     <link rel="apple-touch-icon" href="{{ asset('user-assets\images\favicon.svg') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('user-assets\images\favicon.svg') }}" width="132"
         height="72" alt="logo">
@@ -79,7 +79,7 @@
     <script src="{{ asset('admin-assets/vendors/js/vendors.min.js') }}""></script>
     <!-- BEGIN Vendor JS-->
 
-    <!-- BEGIN: Page Vendor JS--> 
+    <!-- BEGIN: Page Vendor JS-->
     <script src="{{ asset('admin-assets/vendors/js/extensions/toastr.min.js') }}""></script>
     <script src="{{ asset('admin-assets/vendors/js/extensions/moment.min.js') }}""></script>
     <script src="{{ asset('admin-assets/vendors/js/tables/datatable/datatables.min.js') }}""></script>
