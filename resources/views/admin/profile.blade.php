@@ -26,6 +26,7 @@
                 </div>
 
             </div>
+
             <div class="content-body">
                 <!-- account setting page -->
                 <section id="page-account-settings">
@@ -35,17 +36,19 @@
                             <ul class="nav nav-pills flex-column nav-left">
                                 <!-- general -->
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="account-pill-general" data-toggle="pill"
-                                        href="#account-vertical-general" aria-expanded="true">
+                                    <a class="nav-link {{ $errors->updatePassword->any() ? '' : 'active' }} "
+                                        id="account-pill-general" data-toggle="pill" href="#account-vertical-general"
+                                        aria-expanded="true">
                                         <i data-feather="user" class="font-medium-3 mr-1"></i>
                                         <span class="font-weight-bold">Admin Profile</span>
                                     </a>
                                 </li>
-                          
+
                                 <!-- change password -->
                                 <li class="nav-item">
-                                    <a class="nav-link" id="account-pill-password" data-toggle="pill"
-                                        href="#account-vertical-password" aria-expanded="false">
+                                    <a class="nav-link  {{ $errors->updatePassword->any() ? 'active' : '' }}"
+                                        id="account-pill-password" data-toggle="pill" href="#account-vertical-password"
+                                        aria-expanded="false">
                                         <i data-feather="lock" class="font-medium-3 mr-1"></i>
                                         <span class="font-weight-bold">Change Password</span>
                                     </a>
@@ -61,17 +64,18 @@
                                 <div class="card-body">
                                     <div class="tab-content">
                                         <!-- general tab -->
-                                        <div role="tabpanel" class="tab-pane active" id="account-vertical-general"
-                                            aria-labelledby="account-pill-general" aria-expanded="true">
+                                        <div role="tabpanel"
+                                            class="tab-pane  {{ $errors->updatePassword->any() ? 'fade' : 'active' }}"
+                                            id="account-vertical-general" aria-labelledby="account-pill-general">
                                             <form method="post" enctype="multipart/form-data"
                                                 action="{{ route('profile.update') }}" class="mt-6 space-y-6">
                                                 @csrf
                                                 @method('patch')
                                                 <div class="mb-20 media">
                                                     <a href="javascript:void(0);" class="mr-25">
-                                                        <img src="{{ asset('profile-img/akhil-raj.jpg') }}" id="account-upload-img"
-                                                            class="rounded mr-50" alt="profile image" height="80"
-                                                            width="80">
+                                                        <img src="{{ asset('profile-img/akhil-raj.jpg') }}"
+                                                            id="account-upload-img" class="rounded mr-50"
+                                                            alt="profile image" height="80" width="80">
                                                     </a>
                                                     <div class="media-body mt-75 ml-1">
                                                         <label for="account-upload"
@@ -130,12 +134,10 @@
                                                 </div>
                                             </form>
                                         </div>
-
-
-
                                         <!-- change password -->
-                                        <div class="tab-pane fade" id="account-vertical-password" role="tabpanel"
-                                            aria-labelledby="account-pill-password" aria-expanded="false">
+                                        <div class="tab-pane   {{ $errors->updatePassword->any() ? 'active' : 'fade' }}"
+                                            id="account-vertical-password" role="tabpanel"
+                                            aria-labelledby="account-pill-password">
                                             <!-- form -->
                                             <section>
                                                 <form method="post" action="{{ route('password.update') }}"
@@ -216,9 +218,6 @@
                                             </section>
                                         </div>
                                         <!--/ change password -->
-
-
-
                                     </div>
                                 </div>
                             </div>
@@ -237,10 +236,9 @@
                 <div class="text-center">
                     <span>Copyright ©2023 AL Yasmeen All Rights Reserved Developed by
                         <span>
-                            <a style="color: #ec2024;" href="https://publicize360.com/"
-                                target="_blank">Publicize 360</a>
-                            CMS by <a style="color: #04733b;" href="https://acsinsights.com/"
-                                target="_blank">ACS Insights</a>
+                            <a style="color: #ec2024;" href="https://publicize360.com/" target="_blank">Publicize 360</a>
+                            CMS by <a style="color: #04733b;" href="https://acsinsights.com/" target="_blank">ACS
+                                Insights</a>
                         </span>
                     </span>
                 </div>
@@ -248,5 +246,3 @@
         </div>
     </footer>
 @endsection
-
-
