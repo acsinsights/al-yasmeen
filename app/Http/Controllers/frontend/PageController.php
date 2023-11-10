@@ -29,8 +29,9 @@ class PageController extends Controller
     {
         $data = $this->getWebsiteSettings();
         $projects = Project::all();
+        $testimonials = Testimonial::all();
         // dd($data["facebook-link"]);
-        return view('frontend.home', compact('projects','data'));
+        return view('frontend.home', compact('projects','data','testimonials'));
     }
     public function  enquiry_store(Request $request)
     {

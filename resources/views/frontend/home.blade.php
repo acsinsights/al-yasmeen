@@ -501,11 +501,10 @@
     </section>
     <!-- Project Section End -->
 
+    <!-- Testimonials Section Start -->
     <section class="testimonial-style2-section pdt-40 pdb-110 bg-no-repeat bg-cover bg-pos-cb"
-        data-background="http://127.0.0.1:8000/user-assets/images/bg/abs-bg7.png"
-        style="background-image: url(&quot;http://127.0.0.1:8000/user-assets/images/bg/abs-bg7.png&quot;);">
-        <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms"
-            style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInUp;">
+        data-background="{{ asset('user-assets/images/bg/abs-bg7.png') }}">
+        <div class="section-title text-center wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-8">
@@ -520,140 +519,22 @@
         <div class="section-content">
             <div class="container">
                 <div class="row">
-                    <div class="owl-carousel testmonial_3col testimonial-style2 text-left owl-loaded owl-drag">
-                        <div class="owl-stage-outer">
-                            <div class="owl-stage"
-                                style="transform: translate3d(-2210px, 0px, 0px); transition: all 0.25s ease 0s; width: 3978px;">
-                                <div class="owl-item cloned" style="width: 412px; margin-right: 30px;">
-                                    <div style="background: #def2ff;" class="testimonial-item">
-                                        <div class="testimonial-thumb">
-                                            <img src="/testiimages/1696852297_1-small.png" style="height: 50px!important"
-                                                alt="">
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <p class="comments"> In ea quia debitis consequatur Est enim quisquam non
-                                                labore possimus labore</p>
-                                            <h4 class="client-name">Gareth</h4>
-                                            <h6 class="client-designation">Nihil sint pariatur, Devin</h6>
-                                        </div>
-                                    </div>
+                    <div class="owl-carousel testmonial_3col testimonial-style2 text-left">
+                        @foreach ($testimonials as $tt)
+                            <div style="    background: #def2ff;" class="testimonial-item">
+                                <div class="testimonial-thumb">
+                                    <img src="/testiimages/{{ $tt->custimg }}" style="height: 50px!important"
+                                        alt="" />
                                 </div>
-                                <div class="owl-item cloned" style="width: 412px; margin-right: 30px;">
-                                    <div style="background: #def2ff;" class="testimonial-item">
-                                        <div class="testimonial-thumb">
-                                            <img src="/testiimages/1696852311_6-small.png" style="height: 50px!important"
-                                                alt="">
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <p class="comments"> Optio mollit deserunt quis nulla esse molestiae quasi
-                                                maxime aut illum</p>
-                                            <h4 class="client-name">Luke</h4>
-                                            <h6 class="client-designation">Fugit quis et tempo, Omar</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item cloned" style="width: 412px; margin-right: 30px;">
-                                    <div style="background: #def2ff;" class="testimonial-item">
-                                        <div class="testimonial-thumb">
-                                            <img src="/testiimages/1696852319_11-small.png" style="height: 50px!important"
-                                                alt="">
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <p class="comments"> Cumque ipsum rerum magnam qui in obcaecati duis</p>
-                                            <h4 class="client-name">Lenore</h4>
-                                            <h6 class="client-designation">Sed aute magna rerum, Tatum</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item" style="width: 412px; margin-right: 30px;">
-                                    <div style="    background: #def2ff;" class="testimonial-item">
-                                        <div class="testimonial-thumb">
-                                            <img src="/testiimages/1696852297_1-small.png" style="height: 50px!important"
-                                                alt="">
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <p class="comments"> In ea quia debitis consequatur Est enim quisquam non
-                                                labore possimus labore</p>
-                                            <h4 class="client-name">Gareth</h4>
-                                            <h6 class="client-designation">Nihil sint pariatur, Devin</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item" style="width: 412px; margin-right: 30px;">
-                                    <div style="    background: #def2ff;" class="testimonial-item">
-                                        <div class="testimonial-thumb">
-                                            <img src="/testiimages/1696852311_6-small.png" style="height: 50px!important"
-                                                alt="">
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <p class="comments"> Optio mollit deserunt quis nulla esse molestiae quasi
-                                                maxime aut illum</p>
-                                            <h4 class="client-name">Luke</h4>
-                                            <h6 class="client-designation">Fugit quis et tempo, Omar</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item active" style="width: 412px; margin-right: 30px;">
-                                    <div style="    background: #def2ff;" class="testimonial-item">
-                                        <div class="testimonial-thumb">
-                                            <img src="/testiimages/1696852319_11-small.png" style="height: 50px!important"
-                                                alt="">
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <p class="comments"> Cumque ipsum rerum magnam qui in obcaecati duis</p>
-                                            <h4 class="client-name">Lenore</h4>
-                                            <h6 class="client-designation">Sed aute magna rerum, Tatum</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item cloned active" style="width: 412px; margin-right: 30px;">
-                                    <div style="    background: #def2ff;" class="testimonial-item">
-                                        <div class="testimonial-thumb">
-                                            <img src="/testiimages/1696852297_1-small.png" style="height: 50px!important"
-                                                alt="">
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <p class="comments"> In ea quia debitis consequatur Est enim quisquam non
-                                                labore possimus labore</p>
-                                            <h4 class="client-name">Gareth</h4>
-                                            <h6 class="client-designation">Nihil sint pariatur, Devin</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item cloned active" style="width: 412px; margin-right: 30px;">
-                                    <div style="    background: #def2ff;" class="testimonial-item">
-                                        <div class="testimonial-thumb">
-                                            <img src="/testiimages/1696852311_6-small.png" style="height: 50px!important"
-                                                alt="">
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <p class="comments"> Optio mollit deserunt quis nulla esse molestiae quasi
-                                                maxime aut illum</p>
-                                            <h4 class="client-name">Luke</h4>
-                                            <h6 class="client-designation">Fugit quis et tempo, Omar</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="owl-item cloned" style="width: 412px; margin-right: 30px;">
-                                    <div style="    background: #def2ff;" class="testimonial-item">
-                                        <div class="testimonial-thumb">
-                                            <img src="/testiimages/1696852319_11-small.png" style="height: 50px!important"
-                                                alt="">
-                                        </div>
-                                        <div class="testimonial-content">
-                                            <p class="comments"> Cumque ipsum rerum magnam qui in obcaecati duis</p>
-                                            <h4 class="client-name">Lenore</h4>
-                                            <h6 class="client-designation">Sed aute magna rerum, Tatum</h6>
-                                        </div>
-                                    </div>
+                                <div class="testimonial-content">
+                                    <p class="comments"> {{ $tt->custreview }}</p>
+                                    <h4 class="client-name">{{ $tt->custname }}</h4>
+                                    <h6 class="client-designation">{{ $tt->custdesignation }}, {{ $tt->custcompany }}
+                                    </h6>
                                 </div>
                             </div>
-                        </div>
-                        <div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><i
-                                    class="base-icon-left-chevron"></i></button><button type="button"
-                                role="presentation" class="owl-next"><i class="base-icon-right-chevron"></i></button>
-                        </div>
-                        <div class="owl-dots disabled"></div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
