@@ -29,6 +29,51 @@ class WebsiteDataSeeder extends Seeder
                     'slug' => 'instagram-link',
                     'value' => 'http://instagram.com',
                 ],
+                [
+                    'name' => 'Linkedin Link',
+                    'slug' => 'linkedin-link',
+                    'value' => 'http://linkedin.com',
+                ],
+                [
+                    'name' => 'Sales Email',
+                    'slug' => 'sales-email',
+                    'value' => 'sales@alyasmeenkw.com',
+                ],
+                [
+                    'name' => 'Sales Number',
+                    'slug' => 'sales-number',
+                    'value' => null,
+                ],
+                [
+                    'name' => 'Company Address',
+                    'slug' => 'company-address',
+                    'value' => null,
+                ],
+                [
+                    'name' => 'Map',
+                    'slug' => 'map',
+                    'value' => null,
+                ],
+                [
+                    'name' => 'Meta Pixel',
+                    'slug' => 'meta-pixel',
+                    'value' => null,
+                ],
+                [
+                    'name' => 'Google Analytics',
+                    'slug' => 'google-analytics',
+                    'value' => null,
+                ],
+                [
+                    'name' => 'Whats App',
+                    'slug' => 'whats-app',
+                    'value' => null,
+                ],
+                [
+                    'name' => 'Chat Bot',
+                    'slug' => 'chat-bot',
+                    'value' => null,
+                ],
             ]
 
         );
