@@ -39,19 +39,19 @@
                                 <p>32 Dora Creek, tuntable creek, New South Wales 2480, Australia</p>
                                 <div class="mrb-10">
 
-                                    @foreach ($users as $user)
-                                        <a style="color: #555" href="tel:{{ $user->sales_no }}">
+
+                                        <a style="color: #555" href="tel:">
                                             <i class="fas fa-phone-alt mrr-10"></i>
-                                            {{ $user->sales_no }}
+
                                         </a>
-                                    @endforeach
+
                                 </div>
                                 <div class="mrb-10">
-                                    @foreach ($users as $user)
-                                        <a style="color: #555" href="mailto:{{ $user->sales_mail }}">
-                                            <i class="fas fa-envelope mrr-10"></i> {{ $user->sales_mail }}
+
+                                        <a style="color: #555" href="mailto:">
+                                            <i class="fas fa-envelope mrr-10"></i>
                                         </a>
-                                    @endforeach
+
                                 </div>
                                 <div class="mrb-0">
                                     <a href="#"><i class="fas fa-globe mrr-10"></i>www.alyasmeen.com</a>
@@ -65,17 +65,17 @@
                             <h5 class="widget-title text-black mrb-30">Social Links</h5>
 
                             <ul class="social-list">
-                                @foreach ($users as $user)
+
                                     <li>
-                                        <a href="{{ $user->facebook }}"><i class="fab fa-facebook"></i></a>
+                                        <a href=""><i class="fab fa-facebook"></i></a>
                                     </li>
                                     <li>
-                                        <a href="{{ $user->linkedin }}"><i class="fab fa-linkedin"></i></a>
+                                        <a href=""><i class="fab fa-linkedin"></i></a>
                                     </li>
                                     <li>
-                                        <a href="{{ $user->instagram }}"><i class="fab fa-instagram"></i></a>
+                                        <a href=""><i class="fab fa-instagram"></i></a>
                                     </li>
-                                @endforeach
+
                             </ul>
                         </div>
                     </div>

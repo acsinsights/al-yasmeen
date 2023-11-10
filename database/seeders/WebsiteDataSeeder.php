@@ -51,17 +51,17 @@ class WebsiteDataSeeder extends Seeder
                 ],
                 [
                     'name' => 'Map',
-                    'slug' => 'map',
+                    'slug' => 'map-embbed-code',
                     'value' => null,
                 ],
                 [
                     'name' => 'Meta Pixel',
-                    'slug' => 'meta-pixel',
+                    'slug' => 'meta-pixel-code',
                     'value' => null,
                 ],
                 [
                     'name' => 'Google Analytics',
-                    'slug' => 'google-analytics',
+                    'slug' => 'google-analytics-code',
                     'value' => null,
                 ],
                 [
@@ -71,7 +71,7 @@ class WebsiteDataSeeder extends Seeder
                 ],
                 [
                     'name' => 'Chat Bot',
-                    'slug' => 'chat-bot',
+                    'slug' => 'chat-bot-code',
                     'value' => null,
                 ],
             ]

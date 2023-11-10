@@ -28,9 +28,9 @@ class PageController extends Controller
     public function home()
     {
         $data = $this->getWebsiteSettings();
-        $users = User::all();
         $projects = Project::all();
-        return view('frontend.home', compact('projects', 'users','data'));
+        // dd($data["facebook-link"]);
+        return view('frontend.home', compact('projects','data'));
     }
     public function  enquiry_store(Request $request)
     {
@@ -53,27 +53,27 @@ class PageController extends Controller
     }
     public function about()
     {
-        $users = User::all();
+        $data = $this->getWebsiteSettings();
         $testimonials = Testimonial::all();
-        return view('frontend.about', compact('testimonials', 'users'));
+        return view('frontend.about', compact('testimonials','data'));
     }
     public function services()
     {
-        $users = User::all();
-        return view('frontend.services', compact('users'));
+        $data = $this->getWebsiteSettings();
+        return view('frontend.services', compact('data'));
     }
 
     public function project()
     {
-        $users = User::all();
+        $data = $this->getWebsiteSettings();
         $projects = Project::latest()->with('images')->paginate(4);
         $testimonials = Testimonial::all();
-        return view('frontend.project', compact('projects', 'testimonials', 'users'));
+        return view('frontend.project', compact('projects', 'testimonials', 'data'));
     }
     public function contact()
     {
-        $users = User::all();
-        return view('frontend.contact')->with('users', $users);
+        $data = $this->getWebsiteSettings();
+        return view('frontend.contact',compact('data'));
     }
 
     protected function contact_store(Request $request)

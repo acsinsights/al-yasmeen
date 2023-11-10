@@ -6,25 +6,25 @@
                     <ul class="topbar-info">
                         <li>
                             <i class="base-icon-email1"></i>
-                            @foreach ($users as $user)
-                            <a style="color: #ffffff" href="mailto:{{ $user->sales_mail }}">   {{ $user->sales_mail }}
+
+                            <a style="color: #ffffff" href="mailto:">
                             </a>
-                            @endforeach
+
                             {{-- <a href="mailto:{{ Auth::user()->sales_mail }}">{{ Auth::user()->sales_mail }}</a> --}}
                         </li>
                     </ul>
                     <ul class="topbar-social">
-                        @foreach ($users as $user)
+
                         <li>
-                            <a href="{{ $user->facebook }}"><i class="fab fa-facebook"></i></a>
+                            <a href=""><i class="fab fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a href="{{ $user->linkedin }}"><i class="fab fa-linkedin"></i></a>
+                            <a href=""><i class="fab fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href="{{ $user->instagram }}"><i class="fab fa-instagram"></i></a>
+                            <a href=" "><i class="fab fa-instagram"></i></a>
                         </li>
-                        @endforeach
+
                     </ul>
                 </div>
             </div>
@@ -74,11 +74,11 @@
                                     <a href="tel:{{ Auth::user()->sales_no }}">{{ Auth::user()->sales_no }}</a>
                                     @endauth
                                 </h5> --}}
-                                @foreach ($users as $user)
-                                <a style="color: #555" href="tel:{{ $user->sales_no }}">
-                                    {{ $user->sales_no }}
+
+                                <a style="color: #555" href="tel: ">
+
                                 </a>
-                                @endforeach
+
 
                             </div>
                         </div>

@@ -9,21 +9,21 @@
 
 
 <!--  Pixel code  -->
-@foreach ($users as $user)
+{{-- @foreach ($users as $user)
 <script>
 {{  $user->meta_pixel  }}
 {{  $user->g_analytics  }}
 </script>
-@endforeach
+@endforeach --}}
 
 
 <!--  Widgets code  -->
- @foreach ($users as $user)
+ {{-- @foreach ($users as $user)
  <script>
  {{ $user->chatbot_widgets }}
  {{ $user->w_app_wid }}
 </script>
- @endforeach
+ @endforeach --}}
 
 
 <!-- Main Stylesheet -->
