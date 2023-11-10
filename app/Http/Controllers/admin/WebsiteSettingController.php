@@ -18,9 +18,14 @@ class WebsiteSettingController extends Controller
         $setting = WebsiteData::where('slug', $slug)->first();
         return view('admin.website-data.edit', compact('setting'));
     }
-    public function update($slug)
+    public function update($slug , Request $request)
     {
-        $setting = WebsiteData::where('slug', "=", $slug)->first();
-
+        $request->validate([
+            'value'=> 'nullable|string',
+        ]);
+        $setting = WebsiteData::where('slug', $slug)->first();
+        $setting->value = $request->value;
+        $setting->save();
+        return redirect()->route('admin.website-settings.index')->with('success','updated ');
     }
 }
