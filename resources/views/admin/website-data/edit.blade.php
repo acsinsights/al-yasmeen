@@ -1,5 +1,5 @@
 @extends('admin.includes.app')
-@section('title', 'Add Projects')
+@section('title', 'Edit Website Settings')
 @section('content')
     <!-- BEGIN: Content-->
     <div class="app-content content ">
@@ -42,7 +42,7 @@
 
                                             <div class="col-12  ">
                                                 <div class="d-flex align-items-center mb-2">
-                                                    <i data-feather="link" class="font-medium-3"></i> 
+                                                    <i data-feather="link" class="font-medium-3"></i>
                                                     <h4 class="mb-0">Update {{ $setting->name }}</h4>
                                                 </div>
                                             </div>
