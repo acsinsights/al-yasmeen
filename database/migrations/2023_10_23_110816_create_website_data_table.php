@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('website_data', function (Blueprint $table) {
             $table->id();
+            $table->string('slug')->unique();
             $table->string('name');
             $table->longText('value')->nullable();
-            $table->timestamps();
         });
     }
 

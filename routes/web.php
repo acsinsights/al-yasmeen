@@ -12,6 +12,7 @@ use App\Http\Controllers\admin\FormController;
 use App\Http\Controllers\admin\ProjectController;
 use App\Http\Controllers\admin\TestimonialController;
 use App\Http\Controllers\admin\IntegrationController;
+use App\Http\Controllers\admin\WebsiteSettingController;
 
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Routes;
@@ -42,13 +43,15 @@ Route::name('frontend.')->group(function () {
 });
 
 
+Route::redirect("/admin", "/login");
 
 Route::group(['prefix' => 'admin'], function () {
     Route::name('admin.')->group(function () {
 
         Route::group(['middleware' => 'admin.auth'], function () {
 
-            Route::get('/dashboard', [DashboardController::class, 'index'])->name('index');
+
+            // Route::get('/', [DashboardController::class, 'index'])->name('index');
             Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
             // contact form
@@ -60,7 +63,6 @@ Route::group(['prefix' => 'admin'], function () {
             Route::get('/enquiry', [FormController::class, 'enquiry_index'])->name('enquiry.index');
             Route::get('/enquiry/destroy/{id}', [FormController::class, 'enquiry_destroy'])->name('enquiry.destroy');
             Route::post('/enquiry/export', [FormController::class, 'enquiry_export'])->name('enquiry.export');
-
 
             // projects
             Route::name('project.')->group(function () {
@@ -90,6 +92,11 @@ Route::group(['prefix' => 'admin'], function () {
 
 
             Route::get('/profile', [ProfileController::class, 'profile'])->name('profile');
+
+
+            Route::get('/website-settings', [WebsiteSettingController::class, 'index'])->name('website-settings.index');
+            Route::get('/website-settings/edit/{slug}', [WebsiteSettingController::class, 'edit'])->name('website-settings.edit');
+            Route::get('/website-settings/update/{slug}', [WebsiteSettingController::class, 'update'])->name('website-settings.update');
         });
     });
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

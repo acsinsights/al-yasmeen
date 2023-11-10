@@ -99,10 +99,10 @@
             </li>
 
             <li class="nav-item  ">
-                <a class="d-flex align-items-center" href=" ">
+                <a class="d-flex align-items-center" href="{{ route('admin.website-settings.index') }}">
                     <i class="fa-solid fa-toolbox"></i>
                     <span class="menu-title text-truncate" data-i18n="Colors">
-                        Widgets
+                        Website Settings
                     </span>
                 </a>
             </li>

@@ -41,13 +41,7 @@
                                         <span class="font-weight-bold">Admin Profile</span>
                                     </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="account-pill-general" data-toggle="pill"
-                                        href="#account-vertical-business-profile" aria-expanded="true">
-                                        <i data-feather="user" class="font-medium-3 mr-1"></i>
-                                        <span class="font-weight-bold">Business Profile</span>
-                                    </a>
-                                </li>
+                          
                                 <!-- change password -->
                                 <li class="nav-item">
                                     <a class="nav-link" id="account-pill-password" data-toggle="pill"
@@ -137,115 +131,7 @@
                                             </form>
                                         </div>
 
-                                        <!-- social -->
-                                        <div class="tab-pane fade" id="account-vertical-business-profile" role="tabpanel"
-                                            aria-labelledby="account-pill-social" aria-expanded="false">
 
-
-                                            <form method="post" enctype="multipart/form-data"
-                                                action="{{ route('profile.update') }}" class="mt-6 space-y-6">
-                                                @csrf
-                                                @method('patch')
-                                                <div class="row">
-
-                                                    <div class="col-12  ">
-                                                        <div class="d-flex align-items-center mb-2">
-                                                            {{-- <i data-feather="link" class="font-medium-3"></i> --}}
-                                                            <h4 class="mb-0">Profile Details</h4>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-12 mb-2 col-sm-6">
-                                                        <x-input-label for="company_name" :value="__('Company Name')" />
-                                                        <x-text-input id="company_name" name="company_name"
-                                                            type="text" class="form-control"
-                                                            value="{{ Auth::user()->company_name }}" autofocus
-                                                            autocomplete="company_name" />
-                                                        <x-input-error
-                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                            :messages="$errors->get('company_name')" />
-                                                    </div>
-                                                    <div class="col-12 col-sm-6">
-                                                        <x-input-label for="sales_no" :value="__('Sales No')" />
-                                                        <x-text-input id="sales_no" name="sales_no" type="text"
-                                                            class="form-control" value="{{ Auth::user()->sales_no }}"
-                                                            autofocus autocomplete="sales_no" />
-                                                        <x-input-error
-                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                            :messages="$errors->get('sales_no')" required />
-                                                    </div>
-                                                    <div class="col-12 mb-2 col-sm-6">
-                                                        <x-input-label for="sales_mail" :value="__('Sales Email')" />
-                                                        <x-text-input id="sales_mail" name="sales_mail" type="text"
-                                                            class="form-control" value="{{ Auth::user()->sales_mail }}"
-                                                            autofocus autocomplete="sales_mail" />
-                                                        <x-input-error
-                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                            :messages="$errors->get('sales_mail')" required />
-                                                    </div>
-
-                                                    <div class="col-12 col-sm-6 ">
-                                                        <x-input-label for="company_address" :value="__('Company Address')" />
-                                                        <x-text-input id="company_address" name="company_address"
-                                                            type="text" class="form-control"
-                                                            value="{{ Auth::user()->company_address }}" autofocus
-                                                            autocomplete="company_address" required />
-                                                        <x-input-error
-                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                            :messages="$errors->get('company_address')" />
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <x-input-label for="company_location" :value="__('Company Location')" />
-                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Company Location"
-                                                            id="company_location" name="company_location" type="text" class=" form-control"
-                                                            autocomplete="company_location" required>{{ Auth::user()->company_location }}
-                                                        </textarea>
-                                                        <x-input-error
-                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                            :messages="$errors->get('company_location')" required />
-                                                    </div>
-                                                    <div class="col-12 mt-2">
-                                                        <div class="d-flex align-items-center mb-2">
-                                                            <h4 class="mb-0">Social Links</h4>
-                                                        </div>
-                                                    </div>
-
-
-
-
-                                                    <!-- facebook link input -->
-                                                    <div class="col-12 mb-2 col-sm-6">
-                                                        <x-input-label for="facebook" :value="__('Facebook')" />
-                                                        <x-text-input id="facebook" name="facebook" type="url"
-                                                            class="form-control" value="{{ Auth::user()->facebook }}"
-                                                            autofocus autocomplete="facebook" />
-
-                                                    </div>
-                                                    <!-- linkedin link input -->
-                                                    <div class="col-12 col-sm-6">
-                                                        <x-input-label for="instagram" :value="__('Instagram')" />
-                                                        <x-text-input id="instagram" name="instagram" type="url"
-                                                            class="form-control" value="{{ Auth::user()->instagram }}" />
-                                                    </div>
-                                                    <!-- instagram link input -->
-                                                    <div class="col-12 col-sm-6">
-                                                        <x-input-label for="linkedin" :value="__('LinkedIn')" />
-                                                        <x-text-input name="linkedin" type="url" class="form-control"
-                                                            value="{{ Auth::user()->linkedin }}" />
-                                                        <x-input-error
-                                                            class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                            :messages="$errors->get('linkedin')" />
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <button type="submit" class="btn btn-primary mt-2 mr-1">Save
-                                                            changes</button>
-
-
-                                                    </div>
-                                                </div>
-                                            </form>
-                                            <!--/ form -->
-                                        </div>
-                                        <!--/ social -->
 
                                         <!-- change password -->
                                         <div class="tab-pane fade" id="account-vertical-password" role="tabpanel"

@@ -39,7 +39,6 @@
     <link rel="stylesheet" type="text/css"
         href="{{ asset('admin-assets/css/core/menu/menu-types/vertical-menu.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('admin-assets/css/pages/dashboard-ecommerce.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('admin-assets/css/plugins/charts/chart-apex.css') }}">
     <link rel="stylesheet" type="text/css"
         href="{{ asset('admin-assets/css/plugins/extensions/ext-component-toastr.css') }}">
     <!-- END: Page CSS-->
@@ -80,8 +79,7 @@
     <script src="{{ asset('admin-assets/vendors/js/vendors.min.js') }}""></script>
     <!-- BEGIN Vendor JS-->
 
-    <!-- BEGIN: Page Vendor JS-->
-    <script src="{{ asset('admin-assets/vendors/js/charts/apexcharts.min.js') }}""></script>
+    <!-- BEGIN: Page Vendor JS--> 
     <script src="{{ asset('admin-assets/vendors/js/extensions/toastr.min.js') }}""></script>
     <script src="{{ asset('admin-assets/vendors/js/extensions/moment.min.js') }}""></script>
     <script src="{{ asset('admin-assets/vendors/js/tables/datatable/datatables.min.js') }}""></script>
