@@ -1,5 +1,5 @@
 @extends('admin.includes.app')
-@section('title', 'Edit '. $setting->name)
+@section('title', 'Edit ' . $setting->name)
 @section('content')
     <!-- BEGIN: Content-->
     <div class="app-content content ">
@@ -49,11 +49,13 @@
                                             <div class="col-12">
                                                 <x-input-label for="value" :value="$setting->name . ' here'" />
                                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Company Location"
-                                                    id="value" name="value" type="text" class=" form-control" autocomplete="value"
-                                                    required>{{ $setting->value }}</textarea>
+                                                    id="value" name="value" type="text" class=" form-control" autocomplete="value">{{ $setting->value }}</textarea>
                                                 <x-input-error
                                                     class="alert alert-danger mt-1 alert-validation-msg err-msg mt-2 "
-                                                    :messages="$errors->get('value')" required />
+                                                    :messages="$errors->get('value')" />
+                                                <span class="text-warning">
+                                                    Make or leave input empty if you want to remove
+                                                </span>
                                             </div>
 
                                             <div class="col-12">
