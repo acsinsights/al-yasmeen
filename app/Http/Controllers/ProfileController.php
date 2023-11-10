@@ -6,8 +6,12 @@ use App\Http\Requests\ProfileUpdateRequest;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ImageResizer;
+use Intervention\Image\ImageManagerStatic;
+
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use Illuminate\Support\Str;
 
 use App\Models\User;
 
@@ -37,58 +41,18 @@ class ProfileController extends Controller
     /**
      * Update the user's profile information.
      */
-public function update(ProfileUpdateRequest $request): RedirectResponse
+    public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-
-
-        $users = User::all();
         $request->user()->fill($request->validated());
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
         }
+        $request->user()->save();
 
-
-        // if($request->hasFile('profile_img')){
-        //     $filename = $request->profile_img->getClientOriginalName();
-        //     $destinationPath = public_path('profile-img/');
-        //     Auth()->user()->update(['profile_img'=>$filename]);
-        // }
-
-        // $users = User::all();
-        // if ($request->hasFile("profile_img")) {
-        //     $profile_img_file = $request->file("profile_img");
-        //     $profile_img_image =  ImageResizer::resizeImage($profile_img_file, 300);
-        //     $profile_img_name =time() . "_" . $profile_img_file->getClientOriginalName();
-        //     $destinationPath = public_path('profile-img/');
-        //     $profile_img_image->save($destinationPath . $profile_img_name);
-        //       delete old image
-        //       if (File::exists("profile-img/" . $users->profile_img))
-        //        {
-        //           File::delete("profile-img/" . $users->profile_img);
-        //       }
-        // }
-
-
-      $request->user()->save();
-
-
-
-            return Redirect::route('admin.profile')->with('status', 'profile-updated');
-       
-
-
-
-
-
-        // return Redirect::route('admin.integration.widgets')->with('status', 'updated');
+        return Redirect::route('admin.profile')->with('status', 'profile-updated');
     }
 
 
-    //   public function tracking(ProfileUpdateRequest $request): RedirectResponse
-    //   {
-    //       $request->user()->save();
-    //       return Redirect::route('admin.integration.tracking')->with('status', 'updated');
-    //   }
 
     /**
      * Delete the user's account.
@@ -109,5 +73,54 @@ public function update(ProfileUpdateRequest $request): RedirectResponse
         $request->session()->regenerateToken();
 
         return Redirect::to('/');
+    }
+
+    public function image_update(Request $request)
+    {
+        $request->validate([
+            'profile_image' => 'required|image'
+        ]);
+
+
+
+        if ($request->hasFile("profile_image")) {
+
+            $profile_image_file = $request->file("profile_image");
+
+            $image_name =   'user.' . time() . '.' . $profile_image_file->getClientOriginalExtension();
+            $image_resize = ImageManagerStatic::make($profile_image_file->getRealPath());
+            $image_resize->fit(300, 300);
+            $image_resize->save(public_path('profile/' . $image_name));
+        }
+
+        $id = Auth::user()->id;
+        $user = User::find($id);
+        if ($user->profile_img) {
+            $image_path = public_path('profile/' . $user->profile_img);
+
+            if (is_file($image_path)) {
+                unlink($image_path);
+            }
+        }
+        $user->profile_img = $image_name;
+        $user->save();
+        return redirect()->back();
+    }
+
+    public function image_destroy()
+    {
+        $id = Auth::user()->id;
+        $user = User::find($id);
+        if ($user->profile_img) {
+        }
+        $image_path = public_path('profile/' . $user->profile_img);
+        //    delete image from folder by core php
+        if (is_file($image_path)) {
+            unlink($image_path);
+        }
+
+        $user->profile_img = null;
+        $user->save();
+        return redirect()->back();
     }
 }

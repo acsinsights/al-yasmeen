@@ -100,5 +100,8 @@ Route::group(['prefix' => 'admin'], function () {
         });
     });
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    
+    Route::post('/profile/image/update', [ProfileController::class, 'image_update'])->name('profile.image.update');
+    Route::get('/profile/image/destroy', [ProfileController::class, 'image_destroy'])->name('profile.image.destroy');
 });
 require __DIR__ . '/auth.php';

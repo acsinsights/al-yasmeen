@@ -3,7 +3,7 @@
 namespace  App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Intervention\Image\ImageManagerStatic;;
+use Intervention\Image\ImageManagerStatic;
 
 
 class ImageResizer extends Controller
