@@ -31,17 +31,15 @@
                     <h2 style="font-size: 1.7rem;" class="faq-title mrb-30">For more information and inquiries, contact us
                     </h2>
                     <ul class="social-list list-lg list-primary-color list-flat mrb-lg-60 clearfix">
-                        @foreach ($users as $user)
-                            <li>
-                                <a href="{{ $user->facebook }}"><i class="fab fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{ $user->linkedin }}"><i class="fab fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="{{ $user->instagram }}"><i class="fab fa-instagram"></i></a>
-                            </li>
-                        @endforeach
+                        <li>
+                            <a href=" {{ $data['facebook-link'] }}"><i class="fab fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href=" {{ $data['instagram-link'] }}"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a href=" {{ $data['linkedin-link'] }} "><i class="fab fa-instagram"></i></a>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-md-12 col-lg-12 col-xl-8">
@@ -55,11 +53,7 @@
                                     <h5 class="icon-box-title mrb-10">Email Us</h5>
                                     <p class="mrb-0">
 
-                                        @foreach ($users as $user)
-                                            <a style="color: #555" href="mailto:{{ $user->sales_mail }}">
-                                                {{ $user->sales_mail }}
-                                            </a>
-                                        @endforeach
+                                        <a href="mailto: {{ $data['sales-email'] }}"> {{ $data['sales-email'] }}</a>
 
                                     </p>
                                 </div>
@@ -74,11 +68,7 @@
 
                                     <h5 class="icon-box-title mrb-10">Phone Number</h5>
                                     <p class="mrb-0">
-                                        @foreach ($users as $user)
-                                            <a style="color: #555" href="tel:{{ $user->sales_no }}">
-                                                {{ $user->sales_no }}
-                                            </a>
-                                        @endforeach
+                                        <a href="tel: {{ $data['sales-number'] }}"> {{ $data['sales-number'] }}</a>
                                     </p>
                                 </div>
                             </div>
@@ -152,7 +142,7 @@
                     <!-- Google Map Start -->
                     <div class="mapouter fixed-height">
                         <div class="gmap_canvas">
-
+                            {!! $data['map-embed-code']!!}
 
 
                         </div>
