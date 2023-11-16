@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Mail\FormSubmitMail;
 use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\Message;
@@ -12,6 +13,7 @@ use Carbon\Carbon;
 use App\Models\User;
 use App\Models\WebsiteData;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
 {
@@ -31,7 +33,7 @@ class PageController extends Controller
         $projects = Project::all();
         $testimonials = Testimonial::all();
         // dd($data["facebook-link"]);
-        return view('frontend.home', compact('projects','data','testimonials'));
+        return view('frontend.home', compact('projects', 'data', 'testimonials'));
     }
     public function  enquiry_store(Request $request)
     {
@@ -50,13 +52,14 @@ class PageController extends Controller
         ]);
         $enquiry->save();
 
+        Mail::to(config('app.mail_to_address'))->send(new FormSubmitMail($enquiry, 'Enquiry'));
         return back()->with('success', 'Form submitted successfully');
     }
     public function about()
     {
         $data = $this->getWebsiteSettings();
         $testimonials = Testimonial::all();
-        return view('frontend.about', compact('testimonials','data'));
+        return view('frontend.about', compact('testimonials', 'data'));
     }
     public function services()
     {
@@ -74,7 +77,7 @@ class PageController extends Controller
     public function contact()
     {
         $data = $this->getWebsiteSettings();
-        return view('frontend.contact',compact('data'));
+        return view('frontend.contact', compact('data'));
     }
 
     protected function contact_store(Request $request)
@@ -93,8 +96,9 @@ class PageController extends Controller
             "phone" => $request->phone,
             "message" => $request->message,
         ]);
-        $form->save();
 
+        $form->save();
+        Mail::to(config('app.mail_to_address'))->send(new FormSubmitMail($form, 'Contact'));
         return back()->with('success', 'Form submitted successfully');
     }
 }
