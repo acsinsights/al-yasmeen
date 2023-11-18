@@ -18,7 +18,26 @@ class WebsiteDataSeeder extends Seeder
 
         DB::table('website_data')->insert(
             [
-
+                [
+                    'name' => 'Sales Number',
+                    'slug' => 'sales-number',
+                    'value' => null,
+                ],
+                [
+                    'name' => 'Sales Email',
+                    'slug' => 'sales-email',
+                    'value' => 'sales@alyasmeenkw.com',
+                ],
+                [
+                    'name' => 'Company Address',
+                    'slug' => 'company-address',
+                    'value' => null,
+                ],
+                [
+                    'name' => 'Map Embed Code',
+                    'slug' => 'map-embed-code',
+                    'value' => null,
+                ],
                 [
                     'name' => 'Facebook Link',
                     'slug' => 'facebook-link',
@@ -35,23 +54,8 @@ class WebsiteDataSeeder extends Seeder
                     'value' => 'http://linkedin.com',
                 ],
                 [
-                    'name' => 'Sales Email',
-                    'slug' => 'sales-email',
-                    'value' => 'sales@alyasmeenkw.com',
-                ],
-                [
-                    'name' => 'Sales Number',
-                    'slug' => 'sales-number',
-                    'value' => null,
-                ],
-                [
-                    'name' => 'Company Address',
-                    'slug' => 'company-address',
-                    'value' => null,
-                ],
-                [
-                    'name' => 'Map Embed Code',
-                    'slug' => 'map-embed-code',
+                    'name' => 'WhatsApp ',
+                    'slug' => 'whats-app',
                     'value' => null,
                 ],
                 [
@@ -62,11 +66,6 @@ class WebsiteDataSeeder extends Seeder
                 [
                     'name' => 'Google Analytics',
                     'slug' => 'google-analytics-code',
-                    'value' => null,
-                ],
-                [
-                    'name' => 'WhatsApp ',
-                    'slug' => 'whats-app',
                     'value' => null,
                 ],
                 [

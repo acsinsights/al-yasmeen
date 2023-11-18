@@ -45,13 +45,13 @@
 
                                                 <td>{{ $setting->name }}</td>
                                                 <td>{{ $setting->value }}</td>
+
                                                 <td style="text-align: center;">
                                                     <a href="{{ route('admin.website-settings.edit', $setting->slug) }}"
-                                                        class="btn btn-flat-success border">
-                                                        <i class="fa fa-edit"></i>
+                                                        class="btn btn-flat-primary border">
+
                                                         Edit
                                                     </a>
-
                                                 </td>
                                             </tr>
                                         @empty
