@@ -35,7 +35,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div cla s="col-lg-3 col-sm-6 col-12">
+                        <div class="col-lg-3 col-sm-6 col-12">
                             <div class="card">
                                 <div class="card-header flex-column align-items-start pb-0">
                                     <div class="avatar bg-light-primary p-50 m-0">
@@ -57,8 +57,8 @@
                                             <i data-feather="users" class="font-medium-5"></i>
                                         </div>
                                     </div>
-                                    <h2 class="font-weight-bolder mt-1">0{{ $users->count() }}</h2>
-                                    <p class="card-text">Total Users</p>
+                                    <h2 class="font-weight-bolder mt-1">{{ $testimonials->count() }}</h2>
+                                    <p class="card-text">Total Testimonials</p>
                                 </div>
                                 <div id="order-chart"></div>
                             </div>

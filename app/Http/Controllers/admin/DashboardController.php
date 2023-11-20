@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Project;
 use App\Models\User;
+use App\Models\Testimonial;
 use App\Models\Enquiry;
 use App\Models\Message;
 use Carbon\Carbon;
@@ -19,7 +20,8 @@ class DashboardController extends Controller
     {
         $projects = Project::all();
         $users= User::all();
-        return view('admin.dashboard', compact('projects', 'users'));
+        $testimonials = Testimonial::all();
+        return view('admin.dashboard', compact('projects', 'users', 'testimonials'));
     }
 
 
