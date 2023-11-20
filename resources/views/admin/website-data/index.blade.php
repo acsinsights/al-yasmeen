@@ -32,7 +32,7 @@
                                     <thead>
                                         <tr>
                                             <th style="text-align: center;">#No</th>
-                                            <th>Name</th>
+                                            <th>Setting Name</th>
                                             <th>Value</th>
                                             <th style="text-align: center;">Action</th>
                                         </tr>
